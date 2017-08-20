@@ -327,7 +327,7 @@ html {
       font-size: 80%; } }
 
 body {
-  font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Avenir", "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 1.428571429;
   color: #566973;
@@ -611,7 +611,7 @@ ol {
     font-size: 14px !important;
     line-height: 100%;
     margin: 5px 0 15px;
-    font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+    font-family: "Avenir", "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif; }
 
 .list-lg li {
   padding-bottom: 15px; }
@@ -3893,7 +3893,7 @@ header {
       display: block; } }
 .hero h1 {
   font-size: 42px;
-  font-weight: 400;
+  font-weight: 500;
   margin: 0 0 25px; }
   @media (max-width: 767px) {
     .hero h1 {
@@ -3908,10 +3908,11 @@ header {
   width: 100%;
   max-width: 300px; }
 .hero .icons {
-  margin: 50px 0; }
+  margin: 50px 0;
+  width: 100%;
+  max-width: 580px; }
   @media (max-width: 991px) {
     .hero .icons {
-      width: 100%;
       max-width: 530px;
       margin: 50px auto;
       text-align: left; } }
@@ -3928,7 +3929,7 @@ header {
   .hero .icons span {
     vertical-align: middle;
     display: inline-block;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: bold; }
   .hero .icons img {
     width: 40px;
@@ -3941,11 +3942,22 @@ header {
 .feature {
   padding: 100px 0;
   background: url(../images/divider.png) 50% 100% no-repeat, url(../images/divider-gradient.png) 50% 100% no-repeat; }
+  @media (max-width: 991px) {
+    .feature {
+      padding: 50px 0; } }
+  @media (max-width: 991px) {
+    .feature .table > div > div {
+      display: block;
+      padding: 30px !important;
+      width: 100%; } }
   .feature .text {
     padding-right: 100px; }
-  @media screen and (max-width: 992px) {
+    @media (max-width: 991px) {
+      .feature .text {
+        padding-left: 0; } }
+  @media screen and (max-width: 991px) {
     .feature .video {
-      width: 300px; }
+      text-align: center; }
       .feature .video video {
         max-width: 100%; } }
   .feature h2 {
@@ -3955,24 +3967,24 @@ header {
       height: 15px; }
   .feature h3 {
     font-size: 20px;
-    color: #566973; }
-  @media screen and (max-width: 991px) {
-    .feature .tags {
-      display: block; } }
-  .feature .tags b {
-    display: inline-block;
-    padding: 5px 10px;
-    color: white;
-    border-radius: 5px;
-    font-size: 18px;
-    font-weight: normal;
-    vertical-align: text-bottom; }
-    .feature .tags b.important {
-      background: #CA3737; }
-    .feature .tags b.urgent {
-      background: #00c109; }
-    .feature .tags b.difficult {
-      background: #e15e0f; }
+    color: #6c8490;
+    font-weight: 300; }
+  .feature .tags {
+    white-space: nowrap; }
+    .feature .tags b {
+      display: inline-block;
+      padding: 5px 10px;
+      color: white;
+      border-radius: 5px;
+      font-size: 18px;
+      font-weight: normal;
+      vertical-align: text-bottom; }
+      .feature .tags b.important {
+        background: #CA3737; }
+      .feature .tags b.urgent {
+        background: #00c109; }
+      .feature .tags b.difficult {
+        background: #e15e0f; }
   .feature .button {
     border-radius: 1000px;
     line-height: 36px;
@@ -3991,6 +4003,38 @@ video {
 
 select {
   background: white;
-  border: 2px solid; }
+  border: 2px solid #ccc;
+  font-size: .8em;
+  line-height: 1.5em;
+  cursor: pointer;
+  padding: 0 1em 0 .5em;
+  vertical-align: middle;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: linear-gradient(45deg, transparent 50%, gray 50%), linear-gradient(135deg, gray 50%, transparent 50%);
+  background-position: calc(100% - 10px) calc(50%), calc(100% - 5px) calc(50%);
+  background-size: 5px 5px, 5px 5px;
+  background-repeat: no-repeat; }
+
+/*select:focus {
+	background-image:
+	linear-gradient(45deg, green 50%, transparent 50%),
+	linear-gradient(135deg, transparent 50%, green 50%),
+	linear-gradient(to right, #ccc, #ccc);
+	background-position:
+	calc(100% - 15px) 1em,
+	calc(100% - 20px) 1em,
+	calc(100% - 2.5em) 0.5em;
+	background-size:
+	5px 5px,
+	5px 5px,
+	1px 1.5em;
+	background-repeat: no-repeat;
+	border-color: green;
+	outline: 0;
+}*/
+select:-moz-focusring {
+  color: transparent;
+  text-shadow: 0 0 0 #000; }
 
 /*# sourceMappingURL=style.css.map */

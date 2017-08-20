@@ -3893,7 +3893,7 @@ header {
 .hero h1 {
   font-size: 42px;
   font-weight: 400;
-  margin: 25px 0; }
+  margin: 0 0 25px 0; }
   @media (max-width: 767px) {
     .hero h1 {
       font-size: 26px; } }

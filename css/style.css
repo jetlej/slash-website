@@ -3964,14 +3964,23 @@ header {
   .feature h2 {
     margin: 0 0 30px;
     font-weight: 500; }
+    @media (max-width: 767px) {
+      .feature h2 {
+        font-size: 26px; } }
     .feature h2 .break {
       height: 15px; }
   .feature h3 {
     font-size: 20px;
     color: #6c8490;
     font-weight: 300; }
+    @media (max-width: 767px) {
+      .feature h3 {
+        font-size: 18px; } }
   .feature .tags {
     white-space: nowrap; }
+    .feature .tags i {
+      padding: 0 4px;
+      font-style: normal; }
     .feature .tags b {
       display: inline-block;
       padding: 5px 10px;
@@ -3979,10 +3988,11 @@ header {
       border-radius: 5px;
       font-size: 18px;
       font-weight: normal;
-      vertical-align: text-bottom; }
+      vertical-align: middle; }
       @media (max-width: 767px) {
         .feature .tags b {
-          font-size: 14px; } }
+          font-size: 14px;
+          padding: 5px 7px; } }
       .feature .tags b.important {
         background: #CA3737; }
       .feature .tags b.urgent {

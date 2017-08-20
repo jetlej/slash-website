@@ -228,7 +228,7 @@ header{
 		font-weight: 500;
 
 		@media (max-width: $screen-xs-max) {
-
+			font-size: 26px;
 		}
 
 		.break{
@@ -240,10 +240,19 @@ header{
 		font-size: 20px;
 		color: lighten($gray-dark, 10%);
 		font-weight: 300;
+
+		@media (max-width: $screen-xs-max) {
+			font-size: 18px;
+		}
 	}
 
 	.tags{
 		white-space: nowrap;
+
+		i{
+			padding: 0 4px;
+			font-style: normal;
+		}
 
 		b{
 			display: inline-block;
@@ -252,10 +261,11 @@ header{
 			border-radius: 5px;
 			font-size: 18px;
 			font-weight: normal;
-			vertical-align: text-bottom;
+			vertical-align: middle;
 
 			@media (max-width: $screen-xs-max) {
 				font-size: 14px;
+				padding: 5px 7px;
 			}
 
 			&.important{

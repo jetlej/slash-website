@@ -3980,6 +3980,9 @@ header {
       font-size: 18px;
       font-weight: normal;
       vertical-align: text-bottom; }
+      @media (max-width: 767px) {
+        .feature .tags b {
+          font-size: 14px; } }
       .feature .tags b.important {
         background: #CA3737; }
       .feature .tags b.urgent {

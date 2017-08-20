@@ -1,0 +1,193 @@
+//
+// Grid system
+// --------------------------------------------------
+
+
+// Container widths
+//
+// Set the container width, and override it for fixed navbars in media queries.
+
+.container {
+	@include container-fixed();
+
+	@media (min-width: $screen-sm-min) {
+		width: $container-sm;
+	}
+	@media (min-width: $screen-md-min) {
+		width: $container-md;
+	}
+	@media (min-width: $screen-lg-min) {
+		width: $container-lg;
+	}
+	@media (min-width: $screen-xl-min) {
+		width: $container-xl;
+	}
+	max-width: 100%;
+	min-width: 320px;
+
+	&.container-sm{
+		width: 970px !important;
+	}
+
+	&.slim, &.container-xs{
+		width: 768px !important;
+	}
+}
+
+.section{
+	padding: 2.5rem;
+
+	@media (max-width: $screen-xs-min) {
+			padding: 1.7rem .8rem;
+	}
+}
+
+.sectionh{
+	padding: 0 2.5rem;
+
+	@media (max-width: $screen-xs-min) {
+			padding: 0 .8rem;
+	}
+}
+
+.sectionv{
+	padding: 2.5rem 0;
+
+	@media (max-width: $screen-xs-min) {
+			padding: 1.7rem 0;
+	}
+}
+
+// Fluid container
+//
+// Utilizes the mixin meant for fixed width containers, but without any defined
+// width for fluid, full width layouts.
+
+.container-fluid {
+	@include container-fixed();
+	min-width: 320px;
+	max-width: 100%;
+	width: $container-xl;
+	&.full{
+		padding: 0;
+	}
+}
+
+.container-full {
+	@include container-fixed();
+	min-width: 320px;
+	width: 100% !important;
+	max-width: 100%;
+}
+
+.container-xl {
+	@include container-fixed();
+	min-width: 320px;
+	width: 100% !important;
+	max-width: 1600px;
+	position: static;
+}
+
+.container-thin{
+	width: 800px;
+	max-width: 100%;
+	margin: 0 auto;
+}
+
+// Row
+//
+// Rows contain and clear the floats of your columns.
+
+.row {
+	@include make-row();
+}
+
+.row-tight{
+	@include make-row-tight();
+
+	@include make-grid-tight-columns();
+}
+
+.row-no-padding {
+	@include make-row();
+	margin: 0 !important;
+
+	> [class*="col-"] {
+		padding-left: 0 !important;
+		padding-right: 0 !important;
+	}
+}
+
+// Columns
+//
+// Common styles for small and large grid columns
+
+@include make-grid-columns();
+
+
+// Extra small grid
+//
+// Columns, offsets, pushes, and pulls for extra small devices like
+// smartphones.
+
+
+.row.no-padding > div{padding-left: 0; padding-right: 0;}
+
+@include make-grid(xs);
+
+@media (max-width: $screen-sm-min) {
+
+	.fullwidth-xs{
+		padding: 0;
+	}
+
+}
+
+// Small grid
+//
+// Columns, offsets, pushes, and pulls for the small device range, from phones
+// to tablets.
+
+@media (min-width: $screen-sm-min) {
+	@include make-grid(sm);
+
+	.col-sm-1-5{
+		@include make-sm-column(2.4)
+	}
+
+	.col-pad-left{
+		padding-left: $grid-gutter-width !important;
+	}
+
+	.col-pad-right{
+		padding-right: $grid-gutter-width !important;
+	}
+}
+
+
+// Medium grid
+//
+// Columns, offsets, pushes, and pulls for the desktop device range.
+
+@media (min-width: $screen-md-min) {
+	@include make-grid(md);
+
+	.col-md-1-5{
+		@include make-md-column(2.4)
+	}
+}
+
+
+// Large grid
+//
+// Columns, offsets, pushes, and pulls for the large desktop device range.
+
+@media (min-width: $screen-lg-min) {
+	@include make-grid(lg);
+}
+
+@media (max-width: $screen-xs-min) {
+	.col-xxs-12{
+		width: 100%;
+	}
+}

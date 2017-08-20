@@ -1,0 +1,274 @@
+body{
+	font-size: 16px;
+	font-weight: 200;
+	background: white;
+	color: black;
+}
+
+header{
+	position: absolute;
+	top: 20px;
+	left: 20px;
+	display: none;
+
+	@media (max-width: $screen-sm-max) {
+		position: static;
+		text-align: center;
+		margin-bottom: 100px;
+		display: block;
+	}
+
+	@media (max-width: $screen-xs-max) {
+		margin-bottom: 50px;
+	}
+}
+
+.hero{
+
+	.table{
+		width: 100%;
+
+		> div > div{
+			height: 100vh;
+			padding: 0 80px;
+
+			@media (max-width: $screen-lg-max) {
+				padding: 0 40px;
+			}
+
+			@media (max-width: $screen-md-max) {
+				padding: 0 25px;
+			}
+
+			@media (max-width: $screen-sm-max) {
+				padding: 100px 50px;
+				width: auto;
+				display: block;
+				height: auto;
+			}
+
+			@media (max-width: $screen-xs-max) {
+				padding: 100px 20px;
+			}
+		}
+	}
+
+	.text{
+		text-align: left;
+		border-bottom: 1px solid $gray-lighter;
+		width: 100%;
+		background: url(../images/divider.png) 50% 100% no-repeat, url(../images/divider-gradient.png) 50% 100% no-repeat;
+
+		@media (max-width: $screen-sm-max) {
+			padding-top: 20px !important;
+			background: none;
+		}
+
+		> div{
+			max-width: 800px;
+			width: 100%;
+
+			@media (max-width: $screen-sm-max) {
+				width: auto;
+				margin: 0 auto;
+				text-align: center;
+			}
+		}
+	}
+
+	.screenshot{
+		background-color: #6100ea;
+		background: url('../images/bg2.jpg') repeat;
+		background-size: 600px 600px;
+		position: relative;
+
+		@media (max-width: $screen-xs-max) {
+			padding: 40px 20px !important;
+		}
+
+		.logo{
+			position: absolute;
+			left: 50%;
+			top: 20px;
+			transform: translate(-50%, 0);
+		}
+
+		> div{
+			width: 400px;
+
+			@media (max-width: $screen-xs-max) {
+				width: 100%;
+			}
+		}
+	}
+
+	.screenshot1{
+		@media (max-width: $screen-sm-max) {
+			display: none !important;
+		}
+	}
+
+	.screenshot2{
+		display: none;
+		text-align: center;
+
+		@media (max-width: $screen-sm-max) {
+			display: block;
+		}
+	}
+
+	h1{
+		font-size: 42px;
+		font-weight: 400;
+		margin: 25px 0;
+
+		@media (max-width: $screen-xs-max) {
+			font-size: 26px;
+		}
+	}
+
+	h2{
+		color: $gray-dark;
+		font-size: 22px;
+
+		@media (max-width: $screen-xs-max) {
+			font-size: 16px;
+		}
+	}
+
+	.btn{
+		width: 100%;
+		max-width: 300px;
+	}
+
+	.icons{
+		margin: 50px 0;
+
+		@media (max-width: $screen-sm-max) {
+			width: 100%;
+			max-width: 530px;
+			margin: 50px auto;
+			text-align: left;
+		}
+
+		@media (max-width: $screen-xs-max) {
+			width: 230px;
+		}
+
+		> div > div{
+			height: 60px;
+
+			@media (max-width: $screen-sm-max) {
+				line-height: 50px;
+				padding-top: 5px;
+				padding-bottom: 5px;
+			}
+		}
+
+		span{
+			vertical-align: middle;
+			display: inline-block;
+			font-size: 18px;
+			font-weight: bold;
+		}
+
+		img{
+			width: 40px;
+			margin-right: 10px;
+		}
+
+		.icon{
+			margin-right: 10px;
+			font-size: 30px;
+			display: none;
+		}
+	}
+
+}
+
+.feature{
+	padding: 100px 0;
+	background: url(../images/divider.png) 50% 100% no-repeat, url(../images/divider-gradient.png) 50% 100% no-repeat;
+
+	.text{
+		padding-right: 100px;
+	}
+
+	.video{
+		@media screen and (max-width: $screen-md-min) {
+			width: 300px;
+
+			video{
+				max-width: 100%;
+			}
+		}
+	}
+
+	h2{
+		margin: 0 0 30px;
+		//line-height: 150%;
+		font-weight: 500;
+
+		.break{
+			height: 15px;
+		}
+	}
+
+	h3{
+		font-size: 20px;
+		color: $gray-dark;
+	}
+
+	.tags{
+
+		@media screen and (max-width: $screen-sm-max) {
+			display: block;
+		}
+
+		b{
+			display: inline-block;
+			padding: 5px 10px;
+			color: white;
+			border-radius: 5px;
+			font-size: 18px;
+			font-weight: normal;
+			vertical-align: text-bottom;
+
+			&.important{
+				background: $brand-danger;
+			}
+
+			&.urgent{
+				background: $brand-success;
+			}
+
+			&.difficult{
+				background: $brand-warning;
+			}
+		}
+	}
+
+	.button{
+		border-radius: 1000px;
+		line-height: 36px;
+		color: white;
+		padding: 0 30px;
+		background: $brand-primary;
+		font-style: normal;
+		font-size: 16px;
+		display: inline-block;
+		vertical-align: middle;
+		margin: 0 5px;
+	}
+
+}
+
+video{
+	border-radius: 5px;
+	box-shadow: 0 2px 5px rgba(0,0,0,.2);
+}
+
+select{
+	background: white;
+	border: 2px solid
+}

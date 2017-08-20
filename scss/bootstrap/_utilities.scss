@@ -1,0 +1,290 @@
+//
+// Utility classes
+// --------------------------------------------------
+
+.table{
+	display: table;
+
+	> div{
+		display: table-row;
+
+		> div{
+			display: table-cell;
+			vertical-align: middle;
+		}
+	}
+}
+
+.center{text-align:center !important;}
+
+.left, .alignLeft{text-align:left !important;}
+
+.alignRight{text-align:right !important;}
+
+.noScroll, .noScrollVisible{
+    overflow: hidden !important;
+    height: 100% !important;
+}
+
+.animate{
+    -webkit-transition: all 500ms cubic-bezier(0.19, 1, 0.22, 1);
+    -moz-transition: all 500ms cubic-bezier(0.19, 1, 0.22, 1);
+    transition: all 500ms cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.scrollable{
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.relative{
+    position: relative !important;
+}
+
+.bold{
+    font-weight: bold !important;
+}
+
+.noBorder{border:none !important;}
+
+.noMargin{margin:0 !important;}
+
+.noPadding{padding: 0 !important;}
+
+.noUnderline, .noUnderline:hover{text-decoration: none !important;}
+
+.borderRight{border-right: 1px solid $gray-lighter !important}
+
+.borderLeft{border-left: 1px solid $gray-lighter !important}
+
+.borderBottom{border-bottom: 1px solid $gray-lighter !important}
+
+.inlineOffset, .margin-right-sm{margin-right: 7px !important;}
+
+a.js{cursor: pointer;}
+
+.marginRight{margin-right: 15px !important;}
+
+.inlineBlock, .inline-block{display: inline-block !important;}
+
+.inlineMiddle{display:inline-block !important; vertical-align:middle;}
+
+.colMiddle{display:inline-block; vertical-align:middle; float: none;}
+
+.alignMiddle{vertical-align:middle !important;}
+
+.halfMargin, .margin-md{margin: 0 0 ($line-height-computed / 2) !important;}
+
+.quarterMargin, .margin-sm{margin: 0 0 ($line-height-computed / 4) !important;}
+
+.bottomMargin{margin: 0 0 $line-height-computed !important;}
+
+.topMargin{margin: $line-height-computed 0 0  !important;}
+
+.sectionThin, .row-padded{ padding: 25px 0;}
+
+.section-padding-top{ padding-bottom: 0;}
+
+.section-padding-bottom{ padding-top: 0;}
+
+.slimWidth, .width-md{margin:0 auto; max-width: 100%; width: 800px;}
+
+.width-xs{margin:0 auto; max-width: 100%; width: 400px;}
+
+.small11{
+  font-size: 11px;
+}
+
+.small12{
+  font-size: 12px;
+}
+
+.input-medium{
+  width: 200px !important;
+}
+
+.module{
+  margin-bottom: 40px !important;
+}
+
+.moduleTight{
+  margin-bottom: 20px !important;
+}
+
+.moduleTighter{
+  margin-bottom: 10px !important;
+}
+
+.moduleBorder{
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid $gray;
+  padding: 20px;
+}
+
+.underline{text-decoration: underline;}
+
+// Colors
+
+.white{color:white !important;}
+
+.whiteBG{background: white !important;}
+
+.blue{color: $brand-primary !important;}
+
+.blueBG{
+    background: $brand-primary !important;
+    color: white;
+
+    a{color: white;}
+}
+
+.black{color:black !important;}
+
+.blackBG{color:white !important; background-color:black !important;}
+
+.lightBG{background: #f6f6f6 !important;}
+
+.gray{color: $gray;}
+
+.grayBG{background: $gray-light !important;}
+
+.grayLighterBG{background: $gray-lighter !important;}
+
+.darkBG{
+    background: $gray-darker !important;
+    color: white;
+
+    a{color: white;}
+}
+
+.dark{color: $gray-darker;}
+
+.crazyBG{
+background: #1e789f !important; /* Old browsers */
+background: -moz-linear-gradient(-45deg,  #00d4f1 0%, #86c400 100%) !important; /* FF3.6+ */
+background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#00d4f1), color-stop(100%,#86c400)) !important; /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(-45deg,  #00d4f1 0%,#86c400 100%) !important; /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(-45deg,  #00d4f1 0%,#86c400 100%) !important; /* Opera 11.10+ */
+background: -ms-linear-gradient(-45deg,  #00d4f1 0%,#86c400 100%) !important; /* IE10+ */
+background: linear-gradient(135deg,  #00d4f1 0%,#86c400 100%) !important; /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00d4f1', endColorstr='#86c400',GradientType=1 ) !important; /* IE6-9 fallback on horizontal gradient */
+color:white;
+}
+
+.green{
+  color: $brand-success !important;
+}
+
+.yellow{
+  color: $brand-warning !important;
+}
+
+// Floats
+// -------------------------
+
+.clearfix {
+  @include clearfix();
+  width: 100% !important;
+  clear: both !important;
+  float: none !important;
+}
+
+.clearfix-5{
+  @include clearfix();
+  height: 5px;
+}
+
+.clearfix-10{
+  @include clearfix();
+  height: 10px;
+}
+
+.clearfix-15{
+  @include clearfix();
+  height: 15px;
+}
+
+.clearfix-30{
+  @include clearfix();
+  height: 30px;
+}
+
+.hr-lg{
+  margin: 30px 0;
+}
+
+.center-block {
+  @include center-block();
+}
+.pull-right {
+  float: right !important;
+}
+.pull-left {
+  float: left !important;
+}
+
+
+// Toggling content
+// -------------------------
+
+// Note: Deprecated .hide in favor of .hidden or .sr-only (as appropriate) in v3.0.1
+.hide {
+  display: none;
+}
+.show {
+  display: block !important;
+}
+.invisible {
+  visibility: hidden;
+}
+.text-hide {
+  @include text-hide();
+}
+
+
+// Hide from screenreaders and browsers
+//
+// Credit: HTML5 Boilerplate
+
+.hidden {
+  display: none !important;
+  visibility: hidden;
+}
+
+
+// For Affix plugin
+// -------------------------
+
+.affix {
+  position: fixed;
+}
+
+/* Responsive Utilities */
+
+@media (max-width: $screen-md-min) {
+  .container-full-md{
+    padding: 0;
+}
+}
+
+@media (max-width: $screen-sm-max) {
+
+}
+
+@media (max-width: $screen-xs-max) {
+  .col-xs-full{
+    padding: 0 !important;
+}
+
+.colMiddle{
+  display: block;
+}
+
+.mobile-fullwidth{
+    padding-left: 0;
+    padding-right: 0;
+    width: 100;
+}
+
+}

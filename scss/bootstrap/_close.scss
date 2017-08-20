@@ -1,0 +1,35 @@
+//
+// Close icons
+// --------------------------------------------------
+
+
+a.close {
+  float: right;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 1;
+  color: $gray-light;
+  //text-shadow: $close-text-shadow;
+  @include opacity(.5);
+
+  &:hover,
+  &:focus {
+    color: $close-color;
+    text-decoration: none;
+    cursor: pointer;
+    @include opacity(1);
+  }
+
+  // [converter] extracted button& to button.close
+}
+
+// Additional properties for button version
+// iOS requires the button element instead of an anchor tag.
+// If you want the anchor version, it requires `href="#"`.
+button.close {
+  padding: 0;
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+  -webkit-appearance: none;
+}

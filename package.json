@@ -1,0 +1,21 @@
+{
+  "name": "hethen",
+  "version": "5.0.0",
+  "repository": {
+    "type": "git",
+    "url": "https://jetlej@highexistence.git.beanstalkapp.com/highexistence"
+  },
+  "author": "Jordan Lejuwaan",
+  "devDependencies": {
+    "coffee-script": "^1.9.3",
+    "grunt": "~0.4.5",
+    "grunt-autoprefixer": "^3.0.3",
+    "grunt-browser-sync": "~1.5.3",
+    "grunt-cache-breaker": "~1.0.1",
+    "grunt-contrib-sass": "~0.8.1",
+    "grunt-contrib-uglify": "~0.6.0",
+    "grunt-contrib-watch": "~0.6.1",
+    "grunt-webfont": "~0.4.8",
+    "load-grunt-tasks": "~0.6.0"
+  }
+}

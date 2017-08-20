@@ -3897,7 +3897,7 @@ header {
   margin: 0 0 25px; }
   @media (max-width: 767px) {
     .hero h1 {
-      font-size: 26px; } }
+      font-size: 30px; } }
 .hero h2 {
   color: #566973;
   font-size: 22px; }
@@ -3918,7 +3918,8 @@ header {
       text-align: left; } }
   @media (max-width: 767px) {
     .hero .icons {
-      width: 230px; } }
+      width: 230px;
+      margin: 40px auto; } }
   .hero .icons > div > div {
     height: 60px; }
     @media (max-width: 991px) {

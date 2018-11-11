@@ -4045,14 +4045,23 @@ header {
       display: none; } }
 
 .footer {
-  padding: 100px 0;
+  padding: 100px 0 130px;
   background: #6100ea;
-  color: white; }
+  color: white;
+  position: relative; }
   .footer h2 {
     text-align: center;
     margin-bottom: 30px; }
     @media (max-width: 991px) {
       .footer h2 {
         font-size: 1.8rem; } }
+  .footer footer {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-size: 11px;
+    font-weight: 500; }
 
 /*# sourceMappingURL=style.css.map */

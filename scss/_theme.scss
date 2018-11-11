@@ -388,9 +388,10 @@ header{
 }
 
 .footer{
-	padding: 100px 0;
+	padding: 100px 0 130px;
 	background: $brand-primary;
 	color: white;
+	position: relative;
 
 	h2{
 		text-align: center;
@@ -399,5 +400,15 @@ header{
 		@media (max-width: $screen-sm-max) {
 			font-size: 1.8rem;
 		}
+	}
+
+	footer{
+		position: absolute;
+		bottom: 10px;
+		left: 0;
+		right: 0;
+		text-align: center;
+		font-size: 11px;
+		font-weight: 500;
 	}
 }

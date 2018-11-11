@@ -11,16 +11,17 @@ $bootstrap-sass-asset-helper: (twbs-font-path("") != unquote('twbs-font-path("")
 //
 //## Gray and brand colors for use across Bootstrap.
 
-$gray-darker:            #222328 !default;
-$gray-dark:              #566973 !default;
+$black: 				 #111111 !default;
+$gray-darker:            #23262F !default;
+$gray-dark:              #676B75 !default;
 $gray:                   #8f96a8 !default;
-$gray-light:             lighten(#8f96a8, 15%) !default;
-$gray-lighter:           #F3F5F6 !default;
+$gray-light:             #E9E9E9 !default;
+$gray-lighter:           #F9FAFC !default;
 
 $brand-primary:         #6100ea !default;
 $brand-success:         #00c109 !default;
 $brand-info:            $gray !default;
-$brand-warning:         #e15e0f !default;
+$brand-warning:         #F34001 !default;
 $brand-danger:          #CA3737 !default;
 
 $brand-lighter: #ECF8F8;
@@ -80,7 +81,7 @@ $line-height-computed:    floor(($font-size-base * $line-height-base)) !default;
 
 //** By default, this inherits from the `<body>`.
 $headings-font-family:    inherit !default;
-$headings-font-weight:    300 !default;
+$headings-font-weight:    600 !default;
 $headings-line-height:    1.4 !default;
 $headings-color:          inherit !default;
 
@@ -120,10 +121,10 @@ $line-height-xl:         1.8 !default;
 $line-height-large:         1.33 !default;
 $line-height-small:         1.5 !default;
 
-$border-radius-base:        2px !default;
-$border-radius-xl:            2px !default;
-$border-radius-large:       2px !default;
-$border-radius-small:       2px !default;
+$border-radius-base:        5px !default;
+$border-radius-xl:            5px !default;
+$border-radius-large:       5px !default;
+$border-radius-small:       5px !default;
 $border-radius-round:       1000px !default;
 
 //** Global color for active items (e.g., navs or dropdowns).
@@ -162,7 +163,7 @@ $table-border-color:          $gray-lighter !default;
 //
 //## For each of Bootstrap's buttons, define text, background and border color.
 
-$btn-font-weight:                300 !default;
+$btn-font-weight:                600 !default;
 
 $btn-default-color:              $gray !default;
 $btn-default-bg:                 $gray-lighter !default;

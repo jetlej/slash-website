@@ -7,6 +7,10 @@ body{
 
 section{
 	padding: 75px 0;
+
+	@media (max-width: $screen-sm-max) {
+		padding: 50px 0;
+	}
 }
 
 header{
@@ -22,6 +26,12 @@ header{
 	max-width: 300px;
 	text-transform: uppercase;
 	font-size: 1.2rem;
+
+	@media (max-width: $screen-sm-max) {
+		max-width: 250px;
+		line-height: 50px;
+		height: 50px;
+	}
 }
 
 .cta2{
@@ -46,7 +56,7 @@ header{
 		}
 
 		@media (max-width: $screen-xs-max) {
-			font-size: 30px;
+			font-size: 2rem;
 		}
 	}
 
@@ -67,7 +77,7 @@ header{
 		}
 
 		@media (max-width: $screen-xs-max) {
-			font-size: 16px;
+			font-size: 1.3rem;
 		}
 	}
 
@@ -83,6 +93,15 @@ header{
 			display: inline-block;
 			vertical-align: top;
 
+			@media (max-width: $screen-sm-max) {
+				display: flex;
+				flex-direction: row;
+				flex-wrap: nowrap;
+				align-items: center;
+				justify-content: flex-start;
+				margin-bottom: 10px;
+			}
+
 			> div{
 				height: 70px;
 				width: 70px;
@@ -93,9 +112,18 @@ header{
 				margin: 0 auto;
 
 				@media (max-width: $screen-sm-max) {
+					height: 50px;
+					width: 50px;
 					line-height: 50px;
-					padding-top: 5px;
-					padding-bottom: 5px;
+					margin: 0 20px 0 0;
+				}
+
+				img{
+					width: 35px;
+
+					@media (max-width: $screen-sm-max) {
+						width: 25px;
+					}
 				}
 			}
 
@@ -104,10 +132,10 @@ header{
 				font-size: 16px;
 				font-weight: bold;
 				padding: 10px 0 0;
-			}
 
-			img{
-				width: 35px;
+				@media (max-width: $screen-sm-max) {
+					padding: 0;
+				}
 			}
 
 		}
@@ -128,6 +156,10 @@ header{
 		align-items: center;
 		justify-content: flex-start;
 		margin-bottom: 30px;
+
+		@media (max-width: $screen-sm-max) {
+			display: block;
+		}
 		
 		span{
 			box-sizing: border-box;
@@ -135,6 +167,11 @@ header{
 			font-weight: bold;
 			color: $gray-darker;
 			padding-right: 50px;
+
+			@media (max-width: $screen-sm-max) {
+				display: block;
+				padding: 0;
+			}
 		}
 
 		h3{
@@ -143,6 +180,10 @@ header{
 			flex: flex-shrink;
 			margin: 0;
 			font-weight: 300;
+
+			@media (max-width: $screen-sm-max) {
+				font-size: 1.3rem;
+			}
 
 			.important{
 				color: $brand-warning;
@@ -199,6 +240,13 @@ header{
 			line-height: 50px;
 			height: 50px;
 			width: 200px;
+
+			@media (max-width: $screen-sm-max) {
+				
+				&:first-of-type{
+					margin-bottom: 15px;
+				}
+			}
 		}
 
 	}
@@ -240,6 +288,21 @@ header{
 				padding: 50px 0 0 50px;
 			}
 		}
+
+		@media (max-width: $screen-sm-max) {
+			display: block;
+
+			> div{
+				width: 100%;
+				padding: 20px 0 !important;
+				border: none !important;
+				border-bottom: 1px solid $gray-light !important;
+
+				&:last-of-type{
+					border-bottom: none !important;
+				}
+			}
+		}
 	}
 	
 	h3{
@@ -258,6 +321,16 @@ header{
 		text-align: center;
 		margin: 30px 0  55px;
 		font-size: 2.5rem;
+
+		@media (max-width: $screen-sm-max) {
+			font-size: 1.5rem;
+
+			b{
+				display: block;
+				font-size: 2.3rem;
+				margin-bottom: 15px;
+			}
+		}
 	}
 
 	.flex{
@@ -275,6 +348,10 @@ header{
 			color: $brand-primary;
 			width: 90px;
 			flex-shrink: 0;
+
+			@media (max-width: $screen-sm-max) {
+				width: 50px;
+			}
 		}
 
 		p{
@@ -282,15 +359,28 @@ header{
 			color: $gray-dark;
 			font-size: 1.5rem;
 
+			@media (max-width: $screen-sm-max) {
+				font-size: 1.2rem;
+			}
+
 			b{
 				color: $brand-primary;
 				display: block;
 				margin-bottom: 10px;
 			}
+		}
 
-			&.result{
+		&.result{
+
+			p{
 				color: $gray-darker;
 				font-weight: 500;
+			}
+
+			@media (max-width: $screen-sm-max) {
+				span{
+					display: none;
+				}
 			}
 		}
 	}
@@ -305,5 +395,9 @@ header{
 	h2{
 		text-align: center;
 		margin-bottom: 30px;
+
+		@media (max-width: $screen-sm-max) {
+			font-size: 1.8rem;
+		}
 	}
 }

@@ -16,6 +16,16 @@ section{
 header{
 	text-align: center;
 	padding: 20px 0 100px;
+
+	@media (max-width: $screen-sm-max) {
+		padding-bottom: 75px;
+	}
+
+	img{
+		@media (max-width: $screen-sm-max) {
+			width: 170px;
+		}
+	}
 }
 
 
@@ -49,14 +59,16 @@ header{
 		font-weight: 800;
 		margin: 0 0 30px;
 		color: $gray-darker;
+		line-height: 120%;
 
 		u{
-			text-decoration: none;
-			border-bottom: 3px solid $gray;
+			//text-decoration: none;
+			//border-bottom: 3px solid $gray;
 		}
 
 		@media (max-width: $screen-xs-max) {
-			font-size: 2rem;
+			font-size: 3rem;
+			text-align: left;
 		}
 	}
 
@@ -78,34 +90,30 @@ header{
 
 		@media (max-width: $screen-xs-max) {
 			font-size: 1.3rem;
+			text-align: left;
 		}
 	}
 
 	.btn{
 		margin: 75px auto;
+
+		@media (max-width: $screen-sm-max) {
+			margin: 50px auto;
+		}
 	}
 
 	.features{
-		width: 100%;
 
-		> div {
-			margin: 0 30px;
-			display: inline-block;
-			vertical-align: top;
+		.row > div {
 
 			@media (max-width: $screen-sm-max) {
-				display: flex;
-				flex-direction: row;
-				flex-wrap: nowrap;
-				align-items: center;
-				justify-content: flex-start;
-				margin-bottom: 10px;
+				margin-bottom: 35px;
 			}
 
 			> div{
-				height: 70px;
-				width: 70px;
-				line-height: 70px;
+				height: 60px;
+				width: 60px;
+				line-height: 60px;
 				background: $brand-primary;
 				border-radius: 20px;
 				text-align: center;
@@ -115,11 +123,10 @@ header{
 					height: 50px;
 					width: 50px;
 					line-height: 50px;
-					margin: 0 20px 0 0;
 				}
 
 				img{
-					width: 35px;
+					width: 30px;
 
 					@media (max-width: $screen-sm-max) {
 						width: 25px;
@@ -130,11 +137,11 @@ header{
 			span{
 				display: block;
 				font-size: 16px;
-				font-weight: bold;
+				font-weight: 500;
 				padding: 10px 0 0;
 
 				@media (max-width: $screen-sm-max) {
-					padding: 0;
+					font-size: 14px;
 				}
 			}
 
@@ -183,6 +190,7 @@ header{
 
 			@media (max-width: $screen-sm-max) {
 				font-size: 1.3rem;
+				font-weight: 400;
 			}
 
 			.important{
@@ -199,7 +207,27 @@ header{
 		}
 	}
 
-	.image-border{
+	.image{
+
+		&.mobile-scroll{
+			
+			@media (max-width: $screen-xs-max) {
+				margin: 0 -15px;
+				overflow: scroll;
+				padding-left: 25px;
+			}
+
+			> div{
+
+				@media (max-width: $screen-xs-max) {
+					width: 150%;
+					max-width: 1000px;
+				}
+			}
+		}
+	}
+
+	.image-border > div{
 		border-radius: 20px;
 		background: $black;
 		text-align: center;
@@ -218,8 +246,12 @@ header{
 
 	&.feature3{
 
-		.image{
+		.image > div{
 			padding: 40px 0 50px;
+
+			@media (max-width: $screen-sm-max) {
+				padding: 15px 0;
+			}
 		}
 
 		p{
@@ -227,11 +259,20 @@ header{
 			font-weight: bold;
 			font-size: 3rem;
 			margin: 0;
+			line-height: 100%;
+
+			@media (max-width: $screen-sm-max) {
+				font-size: 2rem;
+			}
 		}
 
 		img{
 			display: block;
 			margin: 30px auto;
+
+			@media (max-width: $screen-sm-max) {
+				margin: 15px auto;
+			}
 		}
 
 		.btn{
@@ -242,10 +283,8 @@ header{
 			width: 200px;
 
 			@media (max-width: $screen-sm-max) {
-				
-				&:first-of-type{
-					margin-bottom: 15px;
-				}
+				width: 130px;
+				margin: 0 auto;
 			}
 		}
 
@@ -378,6 +417,10 @@ header{
 			}
 
 			@media (max-width: $screen-sm-max) {
+				p{
+					font-size: 18px;
+				}
+
 				span{
 					display: none;
 				}

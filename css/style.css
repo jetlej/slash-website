@@ -250,6 +250,36 @@ th {
   .table-bordered td {
     border: 1px solid #ddd !important; } }
 @font-face {
+  font-family: 'Avenir LT';
+  font-style: normal;
+  font-weight: 300;
+  src: local("Avenir LT Std 55 Roman"), url("../fonts/AvenirLTStd-Roman.woff") format("woff"); }
+@font-face {
+  font-family: 'Avenir LT';
+  font-style: normal;
+  font-weight: 200;
+  src: local("Avenir LT"), url("../fonts/AvenirLTStd-Light.woff") format("woff"); }
+@font-face {
+  font-family: 'Avenir LT';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Avenir LT"), url("../fonts/AvenirLTStd-Book.woff") format("woff"); }
+@font-face {
+  font-family: 'Avenir LT';
+  font-style: normal;
+  font-weight: 500;
+  src: local("Avenir LT"), url("../fonts/AvenirLTStd-Medium.woff") format("woff"); }
+@font-face {
+  font-family: 'Avenir LT';
+  font-style: normal;
+  font-weight: 600;
+  src: local("Avenir LT"), url("../fonts/AvenirLTStd-Heavy.woff") format("woff"); }
+@font-face {
+  font-family: 'Avenir LT';
+  font-style: normal;
+  font-weight: 800;
+  src: local("Avenir LT"), url("../fonts/AvenirLTStd-Black.woff") format("woff"); }
+@font-face {
   font-family: "icons";
   src: url("../fonts/icons-648cdfe70f578a65237517c5f07b0228.eot");
   font-weight: normal;
@@ -308,7 +338,7 @@ html {
       font-size: 80%; } }
 
 body {
-  font-family: "Avenir", "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Avenir LT", "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 1.428571429;
   color: #676B75;
@@ -592,7 +622,7 @@ ol {
     font-size: 14px !important;
     line-height: 100%;
     margin: 5px 0 15px;
-    font-family: "Avenir", "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+    font-family: "Avenir LT", "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif; }
 
 .list-lg li {
   padding-bottom: 15px; }
@@ -3798,9 +3828,11 @@ header {
   @media (max-width: 991px) {
     header {
       padding-bottom: 75px; } }
-  @media (max-width: 991px) {
-    header img {
-      width: 170px; } }
+  header img {
+    width: 175px; }
+    @media (max-width: 991px) {
+      header img {
+        width: 170px; } }
 
 .cta {
   display: block;
@@ -3808,7 +3840,8 @@ header {
   width: 100%;
   max-width: 300px;
   text-transform: uppercase;
-  font-size: 1.2rem; }
+  font-size: 1.2rem;
+  font-weight: bold; }
   @media (max-width: 991px) {
     .cta {
       max-width: 300px;
@@ -3841,9 +3874,10 @@ header {
     font-size: 1.9rem;
     max-width: 800px;
     margin: 0 auto;
-    font-weight: 300; }
+    font-weight: 200; }
     .hero h2 b:first-of-type {
-      color: #6100ea; }
+      color: #6100ea;
+      font-weight: 600; }
     .hero h2 b:last-of-type {
       color: #23262F;
       font-weight: 500; }
@@ -3911,7 +3945,7 @@ header {
     font-size: 1.8rem;
     flex: flex-shrink;
     margin: 0;
-    font-weight: 300; }
+    font-weight: 200; }
     @media (max-width: 991px) {
       .feature .text h3 {
         font-size: 1.3rem;
@@ -3949,6 +3983,8 @@ header {
   @media (max-width: 991px) {
     .feature.feature3 .image > div {
       padding: 15px 0; } }
+.feature.feature3 h3 b {
+  font-weight: 600; }
 .feature.feature3 p {
   color: white;
   font-weight: bold;

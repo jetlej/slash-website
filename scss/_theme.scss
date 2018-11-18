@@ -22,6 +22,8 @@ header{
 	}
 
 	img{
+		width: 175px;
+
 		@media (max-width: $screen-sm-max) {
 			width: 170px;
 		}
@@ -36,6 +38,7 @@ header{
 	max-width: 300px;
 	text-transform: uppercase;
 	font-size: 1.2rem;
+	font-weight: bold;
 
 	@media (max-width: $screen-sm-max) {
 		max-width: 300px;
@@ -81,10 +84,11 @@ header{
 		font-size: 1.9rem;
 		max-width: 800px;
 		margin: 0 auto;
-		font-weight: 300;
+		font-weight: 200;
 
 		b:first-of-type{
 			color: $brand-primary;
+			font-weight: 600;
 		}
 
 		b:last-of-type{
@@ -190,7 +194,7 @@ header{
 			font-size: 1.8rem;
 			flex: flex-shrink;
 			margin: 0;
-			font-weight: 300;
+			font-weight: 200;
 
 			@media (max-width: $screen-sm-max) {
 				font-size: 1.3rem;
@@ -215,7 +219,7 @@ header{
 
 		video{
 			@media (max-width: $screen-sm-max) {
-				width: 400px;
+				width: 400px;	
 			}
 		}
 
@@ -262,6 +266,10 @@ header{
 			@media (max-width: $screen-sm-max) {
 				padding: 15px 0;
 			}
+		}
+
+		h3 b{
+			font-weight: 600;
 		}
 
 		p{

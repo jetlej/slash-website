@@ -213,6 +213,12 @@ header{
 
 	.image{
 
+		video{
+			@media (max-width: $screen-sm-max) {
+				width: 400px;
+			}
+		}
+
 		&.mobile-scroll{
 			
 			@media (max-width: $screen-xs-max) {

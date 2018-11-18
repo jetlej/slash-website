@@ -3922,6 +3922,9 @@ header {
       color: #00c109; }
     .feature .text h3 .difficult {
       color: #6100ea; }
+@media (max-width: 991px) {
+  .feature .image video {
+    width: 400px; } }
 @media (max-width: 767px) {
   .feature .image.mobile-scroll {
     margin: 0 -15px;

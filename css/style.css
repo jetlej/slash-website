@@ -3870,7 +3870,7 @@ header {
     line-height: 120%; }
     @media (max-width: 767px) {
       .hero h1 {
-        font-size: 4rem;
+        font-size: 3.6rem;
         text-align: left; } }
   .hero h2 {
     color: #676B75;

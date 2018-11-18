@@ -3859,6 +3859,9 @@ header {
   background: #F9FAFC;
   border-bottom: 1px solid #E9E9E9;
   padding-top: 0; }
+  @media (max-width: 767px) {
+    .hero .container {
+      padding: 0 30px; } }
   .hero h1 {
     font-size: 3.75rem;
     font-weight: 800;
@@ -3867,7 +3870,7 @@ header {
     line-height: 120%; }
     @media (max-width: 767px) {
       .hero h1 {
-        font-size: 3rem;
+        font-size: 4rem;
         text-align: left; } }
   .hero h2 {
     color: #676B75;
@@ -3883,7 +3886,7 @@ header {
       font-weight: 500; }
     @media (max-width: 767px) {
       .hero h2 {
-        font-size: 1.3rem;
+        font-size: 1.6rem;
         text-align: left; } }
   .hero .btn {
     margin: 75px auto; }
@@ -4062,17 +4065,18 @@ header {
 .why h2 {
   text-align: center;
   margin: 30px 0  55px;
-  font-size: 2.5rem; }
+  font-size: 2.5rem;
+  font-weight: bold; }
   .why h2 b {
     color: #8f96a8;
     font-weight: 200;
     padding-right: 10px; }
   @media (max-width: 991px) {
     .why h2 {
-      font-size: 1.5rem; }
+      font-size: 2.1rem; }
       .why h2 b {
         display: block;
-        font-size: 2.3rem;
+        font-size: 1.5rem;
         margin-bottom: 15px;
         padding-right: 0; } }
 .why .flex {

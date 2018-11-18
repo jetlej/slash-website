@@ -723,9 +723,7 @@ address {
     .container {
       width: 1130px; } }
   .container.container-sm {
-    width: 970px !important; }
-  .container.slim, .container.container-xs {
-    width: 768px !important; }
+    width: 800px !important; }
 
 .section {
   padding: 2.5rem; }
@@ -789,11 +787,6 @@ address {
     display: table; }
   .container-xl:after {
     clear: both; }
-
-.container-thin {
-  width: 800px;
-  max-width: 100%;
-  margin: 0 auto; }
 
 .row {
   margin-left: -15px;
@@ -3818,9 +3811,12 @@ header {
   font-size: 1.2rem; }
   @media (max-width: 991px) {
     .cta {
-      max-width: 250px;
+      max-width: 300px;
       line-height: 50px;
       height: 50px; } }
+  @media (max-width: 991px) {
+    .cta {
+      width: 250px; } }
 
 .cta2 {
   transform: translate(0, 50%); }
@@ -3912,7 +3908,7 @@ header {
         padding: 0; } }
   .feature .text h3 {
     color: #23262F;
-    font-size: 2rem;
+    font-size: 1.8rem;
     flex: flex-shrink;
     margin: 0;
     font-weight: 300; }
@@ -3953,7 +3949,7 @@ header {
 .feature.feature3 p {
   color: white;
   font-weight: bold;
-  font-size: 3rem;
+  font-size: 2rem;
   margin: 0;
   line-height: 100%; }
   @media (max-width: 991px) {
@@ -3961,12 +3957,13 @@ header {
       font-size: 2rem; } }
 .feature.feature3 img {
   display: block;
-  margin: 30px auto; }
+  margin: 30px auto;
+  width: 400px; }
   @media (max-width: 991px) {
     .feature.feature3 img {
       margin: 15px auto; } }
 .feature.feature3 .btn {
-  margin: 0 15px;
+  margin: 0 10px;
   font-size: 1.3rem;
   line-height: 50px;
   height: 50px;
@@ -4015,18 +4012,30 @@ header {
   .extras p {
     color: #676B75;
     font-size: 1.3rem; }
+  .extras span {
+    background: #6100ea;
+    color: white;
+    padding: 2px 10px;
+    font-weight: bold;
+    border-radius: 20px;
+    font-size: 13px; }
 
 .why h2 {
   text-align: center;
   margin: 30px 0  55px;
   font-size: 2.5rem; }
+  .why h2 b {
+    color: #8f96a8;
+    font-weight: 200;
+    padding-right: 10px; }
   @media (max-width: 991px) {
     .why h2 {
       font-size: 1.5rem; }
       .why h2 b {
         display: block;
         font-size: 2.3rem;
-        margin-bottom: 15px; } }
+        margin-bottom: 15px;
+        padding-right: 0; } }
 .why .flex {
   width: 800px;
   max-width: 100%;

@@ -3951,7 +3951,7 @@ header {
     font-weight: 200; }
     @media (max-width: 991px) {
       .feature .text h3 {
-        font-size: 1.3rem;
+        font-size: 1.6rem;
         font-weight: 400; } }
     .feature .text h3 .important {
       color: #F34001; }
@@ -4102,7 +4102,7 @@ header {
     font-size: 1.5rem; }
     @media (max-width: 991px) {
       .why .flex p {
-        font-size: 1.2rem; } }
+        font-size: 1.3rem; } }
     .why .flex p b {
       color: #6100ea;
       display: block;

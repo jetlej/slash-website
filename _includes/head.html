@@ -1,0 +1,24 @@
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
+	<meta name="description" content="{{ page.description | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
+	<meta property="og:image" content="https://globalgiftproject.org/images/{% if page.ogimage %}{{ page.ogimage }}{% else %}facebook.jpg{% endif %}"/>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="shortcut icon" href="images/favicon.png"/>
+	<link rel="apple-touch-icon" href="icon-128.png">
+
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/style.css?rel=1542729278830">
+	<script src="js/modernizr-2.8.3.min.js"></script>
+
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-108127023-1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+		gtag('config', 'UA-108127023-1');
+	</script>
+
+</head>

@@ -3,17 +3,41 @@ module.exports = function(grunt) {
     // Project configuration.
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
+        shell: {
+            jekyllBuild: {
+                command: 'jekyll build'
+            },
+            jekyllServe: {
+                command: 'sudo jekyll serve --watch --incremental --host 127.0.0.1 --port 80 --livereload'
+            }
+        },
         watch: {
+            css: {
+                files: ['css/style.css'],
+                options: {
+                    livereload : true,
+                    spawn: false
+                }
+            },
             sass: {
                 files: ['scss/**/*.{scss,sass}','scss/**/**/*.{scss,sass}'],
-                tasks: ['sass:main', 'cachebreaker:css']
+                tasks: ['sass:main', 'cachebreaker:css'],
+                options: {
+                    livereload : false,
+                    spawn: true
+                }
             },
             js:{
                 files: [
                 'js/plugins/*',
-                'js/main.js',
                 ],
                 tasks: ['uglify', 'cachebreaker:js']
+            },
+            mainjs:{
+                files: [
+                'js/main.js',
+                ],
+                tasks: ['cachebreaker:mainjs']
             },
             icons:{
                 files: ['images/icons/*'],
@@ -49,19 +73,26 @@ module.exports = function(grunt) {
             my_target: {
                 files: {
                     'js/scripts.min.js': [
-                    'js/plugins/*',
-                    'js/main.js'
+                        'js/plugins/*',
                     ]
                 }
             }
         },
         cachebreaker: {
+            mainjs: {
+                options: {
+                    match: ['main.js'],
+                },
+                files: {
+                    src: ['_includes/footer.html']
+                }
+            },
             js: {
                 options: {
                     match: ['scripts.min.js'],
                 },
                 files: {
-                    src: ['index.html']
+                    src: ['_includes/footer.html']
                 }
             },
             css: {
@@ -69,7 +100,7 @@ module.exports = function(grunt) {
                     match: ['style.css'],
                 },
                 files: {
-                    src: ['index.html']
+                    src: ['_includes/head.html']
                 }
             }
         },
@@ -90,15 +121,34 @@ module.exports = function(grunt) {
                     }
                 }
             }
+        },
+        // run tasks in parallel
+        concurrent: {
+            serve: [
+                'watch',
+                'shell:jekyllServe'
+            ],
+            options: {
+                logConcurrentOutput: true
+            }
         }
     });
 
     // Load Grunt plugins
     require('load-grunt-tasks')(grunt);
 
-    // Default task(s).
-    grunt.registerTask('default', [
-      'watch'
-      ]);
+    // Register the grunt serve task
+    grunt.registerTask('serve', [
+        'concurrent:serve'
+    ]);
+
+    // Register the grunt build task
+    grunt.registerTask('build', [
+        'shell:jekyllBuild',
+        'sass:main'
+    ]);
+
+    // Register build as the default task fallback
+    grunt.registerTask('default', 'serve');
 
 };

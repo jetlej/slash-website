@@ -1,0 +1,15 @@
+---
+title: Redirecting...
+description: Redirecting you back to Task Slayer :)
+permalink: /redirect
+---
+
+<html>
+</html>
+<body>
+<script>
+	const params = new URLSearchParams(window.location.search)
+	const name = params.get('n')
+	window.location.replace('taskslayer://' + name)
+</script>
+</body>

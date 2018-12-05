@@ -4101,40 +4101,28 @@ header {
   background: #F9FAFC;
   border-top: 1px solid #E9E9E9;
   border-bottom: 1px solid #E9E9E9; }
+  .extras .hider {
+    overflow: hidden; }
   .extras .flex {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    align-items: center; }
+    align-items: center;
+    margin: 0 -1px -1px 0; }
     .extras .flex > div {
-      width: 50%; }
-      .extras .flex > div:first-of-type {
-        border-right: 1px solid #E9E9E9;
-        border-bottom: 1px solid #E9E9E9;
-        padding: 0 50px 50px 0; }
-      .extras .flex > div:nth-of-type(2) {
-        border-bottom: 1px solid #E9E9E9;
-        padding: 0 0 50px 50px; }
-      .extras .flex > div:nth-of-type(3) {
-        border-right: 1px solid #E9E9E9;
-        padding: 50px 50px 0 0; }
-      .extras .flex > div:nth-of-type(4) {
-        padding: 50px 0 0 50px; }
+      flex: 1 0 350px;
+      height: 250px;
+      border-right: 1px solid #E9E9E9;
+      border-bottom: 1px solid #E9E9E9;
+      padding: 30px 40px; }
     @media (max-width: 991px) {
-      .extras .flex {
-        display: block; }
-        .extras .flex > div {
-          width: 100%;
-          padding: 20px 0 !important;
-          border: none !important;
-          border-bottom: 1px solid #E9E9E9 !important; }
-          .extras .flex > div:last-of-type {
-            border-bottom: none !important; } }
+      .extras .flex > div {
+        height: auto; } }
   .extras h3 {
     font-weight: bold; }
   .extras p {
     color: #676B75;
-    font-size: 1.3rem; }
+    font-size: 1.15rem; }
   .extras span {
     background: #6100ea;
     color: white;

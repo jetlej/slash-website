@@ -2197,15 +2197,15 @@ select[multiple].input-lg {
   height: auto; }
 
 .input-xl {
-  height: 70px;
+  height: 60px;
   padding: 12px 22px;
   font-size: 24px;
-  line-height: 70px;
+  line-height: 60px;
   border-radius: 5px; }
 
 select.input-xl {
-  height: 70px;
-  line-height: 70px; }
+  height: 60px;
+  line-height: 60px; }
 
 textarea.input-xl,
 select[multiple].input-xl {
@@ -2599,9 +2599,9 @@ select[multiple].input-xl {
 
 .btn-xl {
   padding: 0 22px;
-  height: 70px;
+  height: 60px;
   font-size: 24px;
-  line-height: 66px;
+  line-height: 56px;
   border-radius: 5px;
   padding-left: 30px;
   padding-right: 30px; }
@@ -3906,7 +3906,8 @@ header {
         margin: 50px auto; } }
   @media (max-width: 991px) {
     .hero .features .row > div {
-      margin-bottom: 35px; } }
+      margin-bottom: 35px;
+      height: 100px; } }
   .hero .features .row > div > div {
     height: 60px;
     width: 60px;
@@ -3935,30 +3936,34 @@ header {
         font-size: 14px; } }
 
 .feature .text {
+  /*	
   display: flex;
   flex-direction: row;
-  flex-wrap: nowrap;
   align-items: center;
   justify-content: flex-start;
+  */
   margin-bottom: 30px; }
   @media (max-width: 991px) {
     .feature .text {
       display: block; } }
   .feature .text span {
     box-sizing: border-box;
-    font-size: 5rem;
+    font-size: 3.5rem;
     font-weight: bold;
     color: #23262F;
-    padding-right: 50px; }
+    padding-right: 50px;
+    display: block;
+    text-align: center;
+    margin-bottom: 20px; }
     @media (max-width: 991px) {
       .feature .text span {
         display: block;
         padding: 0; } }
   .feature .text h3 {
     color: #23262F;
-    font-size: 1.8rem;
+    font-size: 1.7rem;
     flex: flex-shrink;
-    margin: 0;
+    margin: 0 0 40px;
     font-weight: 200; }
     @media (max-width: 991px) {
       .feature .text h3 {
@@ -4095,6 +4100,9 @@ header {
 .feature.feature3.active img, .feature.feature3.active p, .feature.feature3.active .btn {
   opacity: 1;
   transform: translate(0, 0); }
+.feature.feature4 video {
+  display: block;
+  max-width: 100%; }
 
 .extras {
   padding-top: 120px;
@@ -4184,6 +4192,22 @@ header {
       font-size: 18px; }
     .why .flex.result span {
       display: none; } }
+
+.roadmap {
+  text-align: center;
+  background: #6100ea;
+  color: white; }
+  .roadmap h4 {
+    font-size: 1.4rem;
+    font-weight: 300; }
+  .roadmap p {
+    font-weight: bold;
+    font-size: 1.6rem;
+    padding-top: 10px;
+    margin: 0; }
+  .roadmap a {
+    text-decoration: underline;
+    color: white; }
 
 .footer {
   padding: 100px 0 130px;

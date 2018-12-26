@@ -36,4 +36,10 @@ $(function(){
 		}
 	})
 
+	var waypoint4 = $('.feature4').waypoint({
+		handler: function(direction) {
+			$('.feature4 video').get(0).play()
+		}
+	})
+
 })

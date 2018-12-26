@@ -140,6 +140,7 @@ header{
 
 			@media (max-width: $screen-sm-max) {
 				margin-bottom: 35px;
+				height: 100px;
 			}
 
 			> div{
@@ -188,12 +189,13 @@ header{
 
 	}
 
-	.text{	
+	.text{
+		/*	
 		display: flex;
 		flex-direction: row;
-		flex-wrap: nowrap;
 		align-items: center;
 		justify-content: flex-start;
+		*/
 		margin-bottom: 30px;
 
 		@media (max-width: $screen-sm-max) {
@@ -202,10 +204,13 @@ header{
 		
 		span{
 			box-sizing: border-box;
-			font-size: 5rem;
+			font-size: 3.5rem;
 			font-weight: bold;
 			color: $gray-darker;
 			padding-right: 50px;
+			display: block;
+			text-align: center;
+			margin-bottom: 20px;
 
 			@media (max-width: $screen-sm-max) {
 				display: block;
@@ -215,9 +220,9 @@ header{
 
 		h3{
 			color: $gray-darker;
-			font-size: 1.8rem;
+			font-size: 1.7rem;
 			flex: flex-shrink;
-			margin: 0;
+			margin: 0 0 40px;
 			font-weight: 200;
 
 			@media (max-width: $screen-sm-max) {
@@ -429,6 +434,15 @@ header{
 
 	}
 
+	&.feature4{
+
+		video{
+			display: block;
+			max-width: 100%;
+		}
+
+	}
+
 }
 
 .extras{
@@ -565,6 +579,29 @@ header{
 		}
 	}
 
+}
+
+.roadmap{
+	text-align: center;
+	background: $brand-primary;
+	color: white;
+
+	h4{
+		font-size: 1.4rem;
+		font-weight: 300;
+	}
+
+	p{	
+		font-weight: bold;
+		font-size: 1.6rem;
+		padding-top: 10px;
+		margin: 0;
+	}
+
+	a{
+		text-decoration: underline;
+		color: white;
+	}
 }
 
 .footer{

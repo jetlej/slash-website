@@ -15,11 +15,7 @@ section{
 
 header{
 	text-align: center;
-	padding: 20px 0 100px;
-
-	@media (max-width: $screen-sm-max) {
-		padding-bottom: 75px;
-	}
+	padding: 20px 0 0;
 
 	img{
 		width: 175px;
@@ -29,7 +25,6 @@ header{
 		}
 	}
 }
-
 
 .cta{
 	display: block;
@@ -82,6 +77,14 @@ header{
 	@media (max-width: $screen-xs-max) {
 		.container{
 			padding: 0 30px;
+		}
+	}
+
+	header{
+		padding-bottom: 100px;
+
+		@media (max-width: $screen-sm-max) {
+			padding-bottom: 75px;
 		}
 	}
 
@@ -604,7 +607,7 @@ header{
 	}
 }
 
-.footer{
+.bottom-cta{
 	padding: 100px 0 130px;
 	background: $brand-primary;
 	color: white;
@@ -635,5 +638,42 @@ header{
 		text-align: center;
 		font-size: 11px;
 		font-weight: 500;
+	}
+}
+
+.page{
+
+	h1{
+		text-align: center;
+		font-size: 2rem;
+		padding-bottom: 50px;
+		color: black;
+	}
+
+	&.text{
+		color: #555;
+
+		h2{
+			font-size: 1.2rem;
+			color: black;
+			padding-top: 20px;
+		}
+	}
+}
+
+footer{
+	text-align: center;
+	padding: 50px;
+
+	a, span{
+		display: inline-block;
+		margin: 0 10px;
+		font-size: 11px;
+		color: #777;
+		font-weight: 500;
+
+		&:hover{
+			color: #555;
+		}
 	}
 }

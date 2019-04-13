@@ -818,6 +818,21 @@ address {
   .container-xl:after {
     clear: both; }
 
+.container-sm {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  min-width: 320px;
+  width: 100% !important;
+  max-width: 700px;
+  position: static; }
+  .container-sm:before, .container-sm:after {
+    content: " ";
+    display: table; }
+  .container-sm:after {
+    clear: both; }
+
 .row {
   margin-left: -15px;
   margin-right: -15px; }
@@ -3824,10 +3839,7 @@ section {
 
 header {
   text-align: center;
-  padding: 20px 0 100px; }
-  @media (max-width: 991px) {
-    header {
-      padding-bottom: 75px; } }
+  padding: 20px 0 0; }
   header img {
     width: 175px; }
     @media (max-width: 991px) {
@@ -3873,6 +3885,11 @@ header {
   @media (max-width: 767px) {
     .hero .container {
       padding: 0 30px; } }
+  .hero header {
+    padding-bottom: 100px; }
+    @media (max-width: 991px) {
+      .hero header {
+        padding-bottom: 75px; } }
   .hero h1 {
     font-size: 3.75rem;
     font-weight: 800;
@@ -4209,22 +4226,22 @@ header {
     text-decoration: underline;
     color: white; }
 
-.footer {
+.bottom-cta {
   padding: 100px 0 130px;
   background: #6100ea;
   color: white;
   position: relative; }
-  .footer h2 {
+  .bottom-cta h2 {
     text-align: center;
     margin-bottom: 30px; }
     @media (max-width: 991px) {
-      .footer h2 {
+      .bottom-cta h2 {
         font-size: 1.8rem; } }
-  .footer .cta.mobile {
+  .bottom-cta .cta.mobile {
     color: white;
     background-color: transparent;
     border: 1px dashed white; }
-  .footer footer {
+  .bottom-cta footer {
     position: absolute;
     bottom: 10px;
     left: 0;
@@ -4232,5 +4249,29 @@ header {
     text-align: center;
     font-size: 11px;
     font-weight: 500; }
+
+.page h1 {
+  text-align: center;
+  font-size: 2rem;
+  padding-bottom: 50px;
+  color: black; }
+.page.text {
+  color: #555; }
+  .page.text h2 {
+    font-size: 1.2rem;
+    color: black;
+    padding-top: 20px; }
+
+footer {
+  text-align: center;
+  padding: 50px; }
+  footer a, footer span {
+    display: inline-block;
+    margin: 0 10px;
+    font-size: 11px;
+    color: #777;
+    font-weight: 500; }
+    footer a:hover, footer span:hover {
+      color: #555; }
 
 /*# sourceMappingURL=style.css.map */

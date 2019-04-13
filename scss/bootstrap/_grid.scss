@@ -64,6 +64,7 @@
 	min-width: 320px;
 	max-width: 100%;
 	width: $container-xl;
+	
 	&.full{
 		padding: 0;
 	}
@@ -81,6 +82,14 @@
 	min-width: 320px;
 	width: 100% !important;
 	max-width: 1600px;
+	position: static;
+}
+
+.container-sm {
+	@include container-fixed();
+	min-width: 320px;
+	width: 100% !important;
+	max-width: 700px;
 	position: static;
 }
 

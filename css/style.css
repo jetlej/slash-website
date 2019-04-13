@@ -752,8 +752,6 @@ address {
   @media (min-width: 1240px) {
     .container {
       width: 1130px; } }
-  .container.container-sm {
-    width: 800px !important; }
 
 .section {
   padding: 2.5rem; }
@@ -824,8 +822,8 @@ address {
   padding-left: 15px;
   padding-right: 15px;
   min-width: 320px;
-  width: 100% !important;
-  max-width: 700px;
+  max-width: 100%;
+  width: 700px;
   position: static; }
   .container-sm:before, .container-sm:after {
     content: " ";
@@ -4250,17 +4248,19 @@ header {
     font-size: 11px;
     font-weight: 500; }
 
-.page h1 {
-  text-align: center;
-  font-size: 2rem;
-  padding-bottom: 50px;
-  color: black; }
-.page.text {
-  color: #555; }
-  .page.text h2 {
-    font-size: 1.2rem;
-    color: black;
-    padding-top: 20px; }
+.page {
+  padding: 0 20px; }
+  .page h1 {
+    text-align: center;
+    font-size: 2rem;
+    padding-bottom: 50px;
+    color: black; }
+  .page.text {
+    color: #555; }
+    .page.text h2 {
+      font-size: 1.2rem;
+      color: black;
+      padding-top: 20px; }
 
 footer {
   text-align: center;

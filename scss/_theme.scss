@@ -36,6 +36,10 @@ header{
 			margin-left: 25px;
 			color: $gray-dark;
 			font-weight: 600;
+
+			@media (max-width: $screen-sm-max) {
+				margin-left: 15px;
+			}
 		}
 	}
 }
@@ -51,10 +55,8 @@ header{
 		max-width: 300px;
 		line-height: 50px;
 		height: 50px;
-	}
-
-	@media (max-width: $screen-sm-max) {
 		width: 250px;
+		font-size: 1.3rem;
 	}
 
 	& + small{
@@ -234,9 +236,19 @@ header{
 			color: black;
 		}
 
+		@media (max-width: $screen-sm-max) {
+			font-size: 2.3rem;
+			padding: 0 50px;
+		}
+
 		@media (max-width: $screen-xs-max) {
-			font-size: 1.6rem;
+			font-size: 1.8rem;
 			text-align: left;
+			padding: 0;
+		}
+
+		@media (max-width: 400px) {
+			font-size: 1.7rem;
 		}
 	}
 
@@ -279,9 +291,12 @@ header{
 		width: 500px;
 		max-width: 100%;
 		flex-shrink: 0;
+		margin-right: 40px;
 
 		@media (max-width: $screen-sm-max) {
 			order: 1;
+			margin-right: 0 !important;
+			margin-left: 0 !important;
 		}
 		
 		h3{
@@ -289,7 +304,6 @@ header{
 			font-size: 3rem;
 			font-weight: bold;
 			color: $gray-darker;
-			padding-right: 50px;
 			display: block;
 			margin-bottom: 20px;
 
@@ -328,11 +342,17 @@ header{
 		}
 	}
 
+	&.even .text{
+		margin-right: 0;
+		margin-left: 40px;
+	}
+
 	.image{
 		flex-shrink: 2;
 
 		@media (max-width: $screen-sm-max) {
 			order: 2;
+			max-width: 600px;
 		}
 
 		video{
@@ -450,81 +470,88 @@ header{
 		}
 	}
 
-	&.feature2{
+	&.feature1{
 		@media (max-width: $screen-sm-max) {
 			padding-top: 70px;
 		}
 	}
 
-	&.feature3{
-
-		p b{
-			font-weight: 600;
-		}
+	&.feature2{
 
 		.image{
+			width: 500px;
+			max-width: 100%;
+			
 			> div{
-				padding: 40px 0 50px;
+				padding: 40px 0;
 
 				@media (max-width: $screen-sm-max) {
-					padding: 15px 0;
+					padding: 30px 0;
+				}
+			}
+
+			h3{
+				color: white;
+				font-weight: bold;
+				font-size: 1.2rem;
+				margin: 0 0 20px;
+				line-height: 100%;
+				transition: all .25s ease-in-out;
+				transform: translate(0, -10px);
+				opacity: 0;
+				font-weight: 300;
+
+				@media (max-width: $screen-sm-max) {
+					font-size: 1.2rem;
 				}
 			}
 
 			p{
 				color: white;
+				font-size: 1.9rem;
+				margin: 0 0 20px;
 				font-weight: bold;
-				font-size: 2rem;
-				margin: 0;
-				line-height: 100%;
-				opacity: 0;
 				transition: all .25s ease-in-out;
 				transform: translate(0, -10px);
-
-				@media (max-width: $screen-sm-max) {
-					font-size: 2rem;
-				}
-			}
-
-			img{
-				display: block;
-				margin: 30px auto;
-				width: 300px;
 				opacity: 0;
-				transition: all .25s ease-in-out;
-				transform: translate(0, -10px);
-				transition-delay: .5s;
-
-				@media (max-width: $screen-sm-max) {
-					margin: 15px auto;
-				}
 			}
 
 			.btn{
-				margin: 0 10px;
-				font-size: 1.3rem;
+				margin: 0 5px;
+				font-size: 1.2rem;
 				line-height: 50px;
 				height: 50px;
 				width: 200px;
-				opacity: 0;
+				max-width: calc(50% - 20px);
 				transition: all .25s ease-in-out;
 				transform: translate(0, -10px);
-				transition-delay: 1s;
+				opacity: 0;
+				outline: none;
 
 				@media (max-width: $screen-sm-max) {
 					width: 120px;
 					margin: 0 auto;
 					line-height: 35px;
 					height: 35px;
-					font-size: 1.1rem;
+					font-size: 1.2rem;
 				}
+			}
+
+			small{
+				display: block;
+				color: #999;
+				margin-top: 15px;
+				margin-bottom: -10px;
+				transition: all .25s ease-in-out;
+				transform: translate(0, -10px);
+				opacity: 0;
 			}
 
 		}
 
-		&.active{
+		&.active .image{
 			
-			img, p, .btn{
+			h3, p, .btn, small{
 				opacity: 1;
 				transform: translate(0,0);
 			}
@@ -532,15 +559,65 @@ header{
 
 	}
 
-	&.feature4{
+	&.feature3{
 
-		video{
-			display: block;
-			max-width: 100%;
+		.image{
+			display: flex;
+
+			> div{
+				border-radius: 15px;
+				width: 120px;
+				padding: 0 20px;
+				height: 80px;
+				line-height: 80px;
+				margin: 0 15px;
+				transition: all .75s cubic-bezier(0.19, 1, 0.22, 1);
+				transform: translate(-50px,0);
+				opacity: 0;
+				display: flex;
+				align-items: center;
+
+				&.trello{
+					background: #026aa7;
+					transition-delay: .25s;
+				}
+
+				&.todoist{
+					background: #e44232;
+					transition-delay: .5s;
+				}
+
+				&.asana{
+					background: #FF5768;
+				}
+
+				img.mobile{
+					display: none;
+				}
+
+				@media (max-width: $screen-xs-max) {
+					width: 60px;
+					height: 60px;
+					line-height: 60px;
+					padding: 18px;
+
+					img{
+						display: none;
+
+						&.mobile{
+							display: block;
+							width: 40px;
+						}
+					}
+				}
+			}
 		}
 
+		&.active .image > div{
+			opacity: 1;
+			transform: translate(0,0);
+		}
 	}
-
 }
 
 .extras{
@@ -566,6 +643,11 @@ header{
 			border-right: 1px solid $gray-light;
 			border-bottom: 1px solid $gray-light;
 			padding: 30px 40px;
+
+			@media (max-width: $screen-xs-max) {
+				padding: 30px 0;
+				flex: 1 0 100%;
+			}
 		}
 
 		@media (max-width: $screen-sm-max) {
@@ -612,7 +694,7 @@ header{
 		}
 
 		@media (max-width: $screen-sm-max) {
-			font-size: 2.1rem;
+			font-size: 2rem;
 
 			b{
 				display: block;
@@ -727,19 +809,10 @@ header{
 
 		b{
 			color: $brand-primary;
-			text-decoration: underline;
 		}
 
 		@media (max-width: $screen-sm-max) {
 			font-size: 1.8rem;
-		}
-	}
-
-	.cta{
-		&.mobile{
-			color: white;
-			background-color: transparent;
-			border: 1px dashed white;
 		}
 	}
 

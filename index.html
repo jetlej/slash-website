@@ -13,7 +13,6 @@ layout: home
 			<nav>
 				<a>Download</a>
 				<a>Pricing</a>
-				<a>Support</a>
 			</nav>
 		</header>
 
@@ -30,7 +29,7 @@ layout: home
 	</svg>
 </section>
 
-<section class="feature feature2">
+<section class="feature feature1">
 	<div class="container">
 		<div class="flex">
 			<div class="text">
@@ -49,25 +48,15 @@ layout: home
 	</div>
 </section>
 
-<section class="feature feature3">
+<section class="feature feature2 even">
 	<div class="container">
 		<div class="flex">
 			<div class="image image-border">
 				<div>
-					<p class="h2">Nice job!</p>
-					<img src="images/winning.gif"/>
-					<div class="buttons">
-						<button class="btn btn-info btn-lg">Take a Break</button>
-						<button class="btn btn-primary btn-lg">Next Task</button>
-					</div>
-					<!--
-					<div class="video">
-						<video width="404" loop muted autoplay>
-							<source src="videos/smart-sorting.mp4" type="video/mp4"/>
-							<source src="videos/smart-sorting.wemb" type="video/wemb"/>
-						</video>
-					</div>
-					-->
+					<h3>Nice job! Your next task is:</h3>
+					<p>Feed the cat</p>
+					<button class="btn btn-primary btn-lg">Next Task</button>
+					<small>or <u>take a break</u></small>
 				</div>
 			</div>
 			<div class="text">
@@ -78,18 +67,25 @@ layout: home
 	</div>
 </section>
 
-<section class="feature feature4">
+<section class="feature feature3">
 	<div class="container">
 		<div class="flex">
 			<div class="text">
 				<h3>Seamless Sync</h3>
 				<p>Keep using your existing apps. Sync lists from Trello, Asana and Todoist.</p>
 			</div>
-			<div class="image image-border mobile-scroll-1">
-				<div>
-					<video width="800" loop muted playsinline autobuffer>
-						<source src="videos/integrations.mp4" type="video/mp4"/>
-					</video>
+			<div class="image">
+				<div class="asana">
+					<img src="images/asana.svg"/>
+					<img class="mobile" src="images/asana-sm.svg"/>
+				</div>
+				<div class="trello">
+					<img src="images/trello.svg"/>
+					<img class="mobile" src="images/trello-sm.svg"/>
+				</div>
+				<div class="todoist">
+					<img src="images/todoist.svg"/>
+					<img class="mobile" src="images/todoist-sm.svg"/>
 				</div>
 			</div>
 		</div>
@@ -187,7 +183,3 @@ layout: home
 		<small>for macOS / <a href="/download">See all platforms</a></small>
 	</div>
 </section>
-
-<!--<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>-->
-<script>window.jQuery || document.write('<script src="js/jquery-1.12.0.min.js"><\/script>')</script>
-<script src="js/scripts.min.js?rel=1542729128338"></script>

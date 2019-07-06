@@ -22,7 +22,7 @@ $(function(){
 		$('.cta').attr('href', '').text('Only available for Mac').addClass('mobile')
 		$('.cta + small').remove()
 	} else {
-		$.getJSON('https://api.github.com/repos/jetlej/taskslayer-releases/releases/latest').done(function(release) {
+		$.getJSON('https://api.github.com/repos/jetlej/slash-releases/releases/latest').done(function(release) {
 			let url = ''
 			release.assets.forEach(function(asset){
 				console.log(asset.name)

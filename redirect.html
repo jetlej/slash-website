@@ -11,6 +11,6 @@ permalink: /redirect
 	const params = new URLSearchParams(window.location.search)
 	const name = params.get('n')
 	let query = window.location.search.split('?')[1]
-	window.location.replace('taskslayer://' + name + '?' + query)
+	window.location.replace('slash://' + name + '?' + query)
 </script>
 </body>

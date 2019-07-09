@@ -16,9 +16,16 @@ section{
 header{
 	text-align: center;
 	padding: 40px 0 0;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
+
+	@media (max-width: $screen-xs-max) {
+		padding: 25px 0 0;
+	}
+
+	> div > div{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
 
 	img{
 		width: 130px;
@@ -87,116 +94,22 @@ header{
 	}
 }
 
-.demo{
-	width: 100%;
-	height: 100vh;
-	padding: 0;
-	background: url(../images/desktop.png);
-	background-size: cover;
-	background-position: center top;
-	position: relative;
-
-	.app{
-		position: absolute;
-		top: 0;
-		left: 50%;
-		transform: translate(-50%, 0);
-		height: 100vh;
-		width: 100%;
-		background: #111;
-		transition: all .5s ease-in-out;
-
-		.tasks{
-			width: 600px;
-			margin: 0 auto;
-			padding-top: 100px;
-
-			.btn{
-				width: 100%;
-				margin-top: 10px;
-				font-size: 1.6rem;
-				padding: 0;
-			}
-
-			> div{
-				color: white;
-				font-weight: 600;
-				font-size: 1.6rem;
-				margin-bottom: 20px;
-			}
-
-			.timer{
-				opacity: 0;
-				text-align: center;
-				color: white;
-				font-size: .8rem;
-				transition: all .5s ease-in-out;
-			}
-		}
-
-		&.active{
-			border-radius: 10px;
-			height: 65px;
-			width: 350px;
-			top: calc(100vh - 85px);
-			display: flex;
-			align-items: center;
-
-			.tasks{
-				width: auto;
-				padding: 0;
-			}
-
-			.task, a{
-				display: none;
-			}
-
-			.task{
-				font-size: 1.15rem;
-				text-align: center;
-				margin-top: 10px;
-				opacity: 0;
-				margin: 0 0 3px;
-
-				&:first-of-type{
-					display: block;
-				}
-			}	
-		}
-
-		&.show-task{
-
-			.task:first-of-type{
-				opacity: 1;
-				transition: all .5s ease-in-out;
-			}
-
-			.timer{
-				opacity: 1;
-				display: block;
-			}
-		}
-	}
-}
-
 .hero{
 	text-align: center;
 	background: $gray-lighter;
 	//border-bottom: 1px solid $gray-light;
-	padding: 0;
 	margin-bottom: -10px;
+	margin-top: -100px;
+	padding: 200px 0 0;
+
+	@media (max-width: $screen-sm-max) {
+		padding-top: 150px;
+		margin-top: -75px;
+	}
 
 	@media (max-width: $screen-xs-max) {
 		.container{
 			padding: 0 30px;
-		}
-	}
-
-	header{
-		padding-bottom: 100px;
-
-		@media (max-width: $screen-sm-max) {
-			padding-bottom: 75px;
 		}
 	}
 
@@ -802,6 +715,14 @@ header{
 	padding: 70px 0 130px;
 	position: relative;
 
+	@media (max-width: $screen-sm-max) {
+		padding: 60px 0 80px;
+	}
+
+	&.gray-bg{
+		background: $gray-lighter;
+	}
+
 	h2{
 		text-align: center;
 		margin-bottom: 60px;
@@ -813,6 +734,7 @@ header{
 
 		@media (max-width: $screen-sm-max) {
 			font-size: 1.8rem;
+			margin-bottom: 30px;
 		}
 	}
 
@@ -844,6 +766,119 @@ header{
 			font-size: 1.2rem;
 			color: black;
 			padding-top: 20px;
+		}
+	}
+}
+
+.pricing{
+	margin-top: -100px;
+	padding-top: 200px;
+	background: $gray-lighter;
+
+	@media (max-width: $screen-sm-max) {
+		padding-top: 150px;
+		margin-top: -75px;
+	}
+	
+	h1{
+		text-align: center;
+		margin-bottom: 50px;
+
+		b{
+			color: $brand-primary;
+		}
+
+		@media (max-width: $screen-sm-max) {
+			font-size: 2.2rem;
+			line-height: 160%;
+		}
+
+		@media (max-width: 400px) {
+			font-size: 1.8rem;
+		}
+	}
+
+}
+
+.plans{
+	text-align: center;
+	padding: 120px 0;
+
+	@media (max-width: $screen-sm-max) {
+		padding: 60px 0;
+	}
+
+	h2{
+		margin-top: 0;
+		margin-bottom: 50px;
+		font-size: 2.2rem;
+
+		@media (max-width: $screen-sm-max) {
+			margin-bottom: 30px;
+		}
+	}
+
+	.plan{
+		width: 300px;
+		max-width: calc(100% - 30px);
+		display: inline-block;
+		margin: 0 15px;
+		vertical-align: top;
+
+		h3{
+			display: flex;
+			justify-content: space-between;
+			font-size: 1.5rem;
+			margin-bottom: 0;
+			font-weight: 600;
+
+			b{
+				font-weight: 600;
+			}
+
+			span{
+				color: $brand-primary;
+			}
+
+			@media (max-width: $screen-sm-max) {
+				font-size: 1.6rem;
+			}
+		}
+
+		> div{
+			padding: 20px 0;
+			border-top: 1px solid $gray;
+			border-bottom: 1px solid $gray;
+			margin-bottom: 25px;
+
+			@media (max-width: $screen-sm-max) {
+				border-bottom: none;
+				margin-bottom: 15px;
+				padding: 10px 0;
+			}
+
+			p{
+				font-size: 1.1rem;
+				color: $gray-dark;
+				margin: 10px 0;
+				font-weight: 500;
+
+				@media (max-width: $screen-sm-max) {
+					font-size: 1.3rem;
+					text-align: left;
+				}
+			}
+		}
+
+		small{
+			font-weight: 500;
+			text-align: right;
+			display: block;
+			color: $gray;
+
+			@media (max-width: $screen-sm-max) {
+				text-align: center;
+			}
 		}
 	}
 }

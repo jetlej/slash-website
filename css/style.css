@@ -3837,10 +3837,14 @@ section {
 
 header {
   text-align: center;
-  padding: 40px 0 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center; }
+  padding: 40px 0 0; }
+  @media (max-width: 767px) {
+    header {
+      padding: 25px 0 0; } }
+  header > div > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
   header img {
     width: 130px; }
     @media (max-width: 991px) {
@@ -3888,83 +3892,19 @@ header {
   .cta2.mobile {
     background-color: white; }
 
-.demo {
-  width: 100%;
-  height: 100vh;
-  padding: 0;
-  background: url(../images/desktop.png);
-  background-size: cover;
-  background-position: center top;
-  position: relative; }
-  .demo .app {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translate(-50%, 0);
-    height: 100vh;
-    width: 100%;
-    background: #111;
-    transition: all .5s ease-in-out; }
-    .demo .app .tasks {
-      width: 600px;
-      margin: 0 auto;
-      padding-top: 100px; }
-      .demo .app .tasks .btn {
-        width: 100%;
-        margin-top: 10px;
-        font-size: 1.6rem;
-        padding: 0; }
-      .demo .app .tasks > div {
-        color: white;
-        font-weight: 600;
-        font-size: 1.6rem;
-        margin-bottom: 20px; }
-      .demo .app .tasks .timer {
-        opacity: 0;
-        text-align: center;
-        color: white;
-        font-size: .8rem;
-        transition: all .5s ease-in-out; }
-    .demo .app.active {
-      border-radius: 10px;
-      height: 65px;
-      width: 350px;
-      top: calc(100vh - 85px);
-      display: flex;
-      align-items: center; }
-      .demo .app.active .tasks {
-        width: auto;
-        padding: 0; }
-      .demo .app.active .task, .demo .app.active a {
-        display: none; }
-      .demo .app.active .task {
-        font-size: 1.15rem;
-        text-align: center;
-        margin-top: 10px;
-        opacity: 0;
-        margin: 0 0 3px; }
-        .demo .app.active .task:first-of-type {
-          display: block; }
-    .demo .app.show-task .task:first-of-type {
-      opacity: 1;
-      transition: all .5s ease-in-out; }
-    .demo .app.show-task .timer {
-      opacity: 1;
-      display: block; }
-
 .hero {
   text-align: center;
   background: #F9FAFC;
-  padding: 0;
-  margin-bottom: -10px; }
+  margin-bottom: -10px;
+  margin-top: -100px;
+  padding: 200px 0 0; }
+  @media (max-width: 991px) {
+    .hero {
+      padding-top: 150px;
+      margin-top: -75px; } }
   @media (max-width: 767px) {
     .hero .container {
       padding: 0 30px; } }
-  .hero header {
-    padding-bottom: 100px; }
-    @media (max-width: 991px) {
-      .hero header {
-        padding-bottom: 75px; } }
   .hero h1 {
     font-size: 3.75rem;
     font-weight: 800;
@@ -4370,6 +4310,11 @@ header {
 .bottom-cta {
   padding: 70px 0 130px;
   position: relative; }
+  @media (max-width: 991px) {
+    .bottom-cta {
+      padding: 60px 0 80px; } }
+  .bottom-cta.gray-bg {
+    background: #F9FAFC; }
   .bottom-cta h2 {
     text-align: center;
     margin-bottom: 60px;
@@ -4378,7 +4323,8 @@ header {
       color: #7922FF; }
     @media (max-width: 991px) {
       .bottom-cta h2 {
-        font-size: 1.8rem; } }
+        font-size: 1.8rem;
+        margin-bottom: 30px; } }
   .bottom-cta footer {
     position: absolute;
     bottom: 10px;
@@ -4401,6 +4347,87 @@ header {
       font-size: 1.2rem;
       color: black;
       padding-top: 20px; }
+
+.pricing {
+  margin-top: -100px;
+  padding-top: 200px;
+  background: #F9FAFC; }
+  @media (max-width: 991px) {
+    .pricing {
+      padding-top: 150px;
+      margin-top: -75px; } }
+  .pricing h1 {
+    text-align: center;
+    margin-bottom: 50px; }
+    .pricing h1 b {
+      color: #7922FF; }
+    @media (max-width: 991px) {
+      .pricing h1 {
+        font-size: 2.2rem;
+        line-height: 160%; } }
+    @media (max-width: 400px) {
+      .pricing h1 {
+        font-size: 1.8rem; } }
+
+.plans {
+  text-align: center;
+  padding: 120px 0; }
+  @media (max-width: 991px) {
+    .plans {
+      padding: 60px 0; } }
+  .plans h2 {
+    margin-top: 0;
+    margin-bottom: 50px;
+    font-size: 2.2rem; }
+    @media (max-width: 991px) {
+      .plans h2 {
+        margin-bottom: 30px; } }
+  .plans .plan {
+    width: 300px;
+    max-width: calc(100% - 30px);
+    display: inline-block;
+    margin: 0 15px;
+    vertical-align: top; }
+    .plans .plan h3 {
+      display: flex;
+      justify-content: space-between;
+      font-size: 1.5rem;
+      margin-bottom: 0;
+      font-weight: 600; }
+      .plans .plan h3 b {
+        font-weight: 600; }
+      .plans .plan h3 span {
+        color: #7922FF; }
+      @media (max-width: 991px) {
+        .plans .plan h3 {
+          font-size: 1.6rem; } }
+    .plans .plan > div {
+      padding: 20px 0;
+      border-top: 1px solid #8f96a8;
+      border-bottom: 1px solid #8f96a8;
+      margin-bottom: 25px; }
+      @media (max-width: 991px) {
+        .plans .plan > div {
+          border-bottom: none;
+          margin-bottom: 15px;
+          padding: 10px 0; } }
+      .plans .plan > div p {
+        font-size: 1.1rem;
+        color: #414654;
+        margin: 10px 0;
+        font-weight: 500; }
+        @media (max-width: 991px) {
+          .plans .plan > div p {
+            font-size: 1.3rem;
+            text-align: left; } }
+    .plans .plan small {
+      font-weight: 500;
+      text-align: right;
+      display: block;
+      color: #8f96a8; }
+      @media (max-width: 991px) {
+        .plans .plan small {
+          text-align: center; } }
 
 footer {
   text-align: center;

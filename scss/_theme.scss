@@ -132,7 +132,7 @@ header{
 	}
 
 	h2{
-		color: $gray-dark;
+		color: $gray-darker;
 		font-size: 2.2rem;
 		max-width: 800px;
 		margin: 0 auto;
@@ -649,7 +649,6 @@ header{
 			}
 
 			b{
-				color: $brand-primary;
 				display: block;
 				margin-bottom: 10px;
 			}
@@ -712,8 +711,10 @@ header{
 }
 
 .bottom-cta{
-	padding: 70px 0 130px;
+	padding: 100px 0 130px;
 	position: relative;
+	background: white;
+	box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.02);
 
 	@media (max-width: $screen-sm-max) {
 		padding: 60px 0 80px;

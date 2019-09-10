@@ -13,6 +13,16 @@ section{
 	}
 }
 
+.flex{
+	display: flex;
+	align-items: middle;
+	 justify-content: center;
+}
+
+.gray-bg{
+	background: $gray-lighter;
+}
+
 header{
 	text-align: center;
 	padding: 40px 0 0;
@@ -43,12 +53,39 @@ header{
 			margin-left: 25px;
 			color: $gray-dark;
 			font-weight: 600;
+			position: relative;
+
+			&:hover{
+				color: $gray-dark;
+			}
+
+			&:after {    
+				background: none repeat scroll 0 0 transparent;
+				bottom: -2px;
+				content: "";
+				display: block;
+				height: 2px;
+				left: 50%;
+				position: absolute;
+				background: $brand-primary;
+				transition: width 0.3s ease 0s, left 0.3s ease 0s;
+				width: 0;
+			}
+			
+			&:hover:after, &.active:after { 
+				width: 100%; 
+				left: 0; 
+			}
 
 			@media (max-width: $screen-sm-max) {
 				margin-left: 15px;
 			}
 		}
 	}
+}
+
+.top{
+	min-height: calc(100vh - 52px);
 }
 
 .cta{
@@ -722,6 +759,7 @@ header{
 
 	&.gray-bg{
 		background: $gray-lighter;
+		box-shadow: inset 0px 5px 10px rgba(0, 0, 0, 0.02);
 	}
 
 	h2{
@@ -772,13 +810,11 @@ header{
 }
 
 .pricing{
-	margin-top: -100px;
-	padding-top: 200px;
+	padding-top: 100px;
 	background: $gray-lighter;
 
 	@media (max-width: $screen-sm-max) {
-		padding-top: 150px;
-		margin-top: -75px;
+		padding-top: 75px;
 	}
 	
 	h1{
@@ -848,8 +884,8 @@ header{
 
 		> div{
 			padding: 20px 0;
-			border-top: 1px solid $gray;
-			border-bottom: 1px solid $gray;
+			border-top: 2px solid $gray-light;
+			border-bottom: 2px solid $gray-light;
 			margin-bottom: 25px;
 
 			@media (max-width: $screen-sm-max) {
@@ -859,7 +895,7 @@ header{
 			}
 
 			p{
-				font-size: 1.1rem;
+				font-size: 1.2rem;
 				color: $gray-dark;
 				margin: 10px 0;
 				font-weight: 500;
@@ -879,6 +915,87 @@ header{
 
 			@media (max-width: $screen-sm-max) {
 				text-align: center;
+			}
+		}
+	}
+}
+
+.download{
+	background: $gray-lighter;
+	
+	h1{
+		text-align: center;
+		padding-bottom: 100px;
+
+		@media (max-width: $screen-md-max) {
+			padding-bottom: 50px;
+		}
+
+		@media (max-width: $screen-sm-max) {
+			font-size: 2.3rem;
+		}
+
+		b{
+			color: $brand-primary;
+		}
+	}
+
+	.flex {
+
+		@media (max-width: $screen-md-max) {
+			flex-direction: column;
+
+			> div:first-of-type{
+				margin-bottom: 80px;
+			}
+		}
+
+		> div{
+			width: 500px;
+			text-align: center;
+
+			@media (max-width: $screen-md-max) {
+				width: auto;
+			}
+		}
+	}
+
+	.platform{
+		text-align: center;
+		padding-bottom: 50px;
+	}
+
+	.btn-container{
+		
+		.btn{
+			width: 140px;
+		}
+
+		.btn, img{
+			margin: 0 3px;
+
+			@media (max-width: $screen-sm-max) {
+				display: block;
+				margin: 0 auto 5px;
+			}
+		}
+
+		.disabled{
+			position: relative;
+			opacity: 1 !important;
+			background: lighten($gray, 25%) !important;
+
+			&:after{
+				content: 'Coming!';
+				font-size: 10px;
+				color: white;
+				position: absolute;
+				top: -6px;
+				right: -6px;
+				line-height: 12px;
+				background: $brand-warning;
+				padding: 3px 10px;
+				border-radius: 5px;
 			}
 		}
 	}

@@ -963,6 +963,10 @@ header{
 	.platform{
 		text-align: center;
 		padding-bottom: 50px;
+
+		&.desktop{
+			margin: 2px 0;
+		}
 	}
 
 	.btn-container{
@@ -976,8 +980,13 @@ header{
 
 			@media (max-width: $screen-sm-max) {
 				display: block;
-				margin: 0 auto 5px;
+				margin: 0 auto 10px;
 			}
+		}
+
+		img{
+			height: 58px;
+			width: auto;
 		}
 
 		.disabled{

@@ -4484,6 +4484,8 @@ header {
   .download .platform {
     text-align: center;
     padding-bottom: 50px; }
+    .download .platform.desktop {
+      margin: 2px 0; }
   .download .btn-container .btn {
     width: 140px; }
   .download .btn-container .btn, .download .btn-container img {
@@ -4491,7 +4493,10 @@ header {
     @media (max-width: 991px) {
       .download .btn-container .btn, .download .btn-container img {
         display: block;
-        margin: 0 auto 5px; } }
+        margin: 0 auto 10px; } }
+  .download .btn-container img {
+    height: 58px;
+    width: auto; }
   .download .btn-container .disabled {
     position: relative;
     opacity: 1 !important;

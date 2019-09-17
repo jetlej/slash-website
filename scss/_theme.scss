@@ -571,7 +571,6 @@ header{
 }
 
 .extras{
-	padding-top: 120px;
 	background: $gray-lighter;
 	border-top: 1px solid $gray-light;
 	border-bottom: 1px solid $gray-light;
@@ -721,6 +720,7 @@ header{
 	h4{
 		font-size: 1.4rem;
 		font-weight: 300;
+		margin-top: 0;
 	}
 
 	p{	
@@ -751,7 +751,6 @@ header{
 	padding: 100px 0 130px;
 	position: relative;
 	background: white;
-	box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.02);
 
 	@media (max-width: $screen-sm-max) {
 		padding: 60px 0 80px;
@@ -1014,11 +1013,18 @@ footer{
 	text-align: center;
 	padding: 15px;
 
+	small{
+		font-weight: 600;
+		font-size: 15px;
+		display: block;
+		padding-bottom: 25px;
+	}
+
 	a, span{
 		display: inline-block;
 		margin: 0 10px;
 		font-size: 11px;
-		color: #777;
+		color: #aaa;
 		font-weight: 500;
 
 		&:hover{

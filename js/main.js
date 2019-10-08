@@ -35,24 +35,24 @@ $(function(){
 		});
 	}
 
-	var waypoint1 = $('.feature1').waypoint({
+	var waypoint1 = $('.feature-focus').waypoint({
 		offset: 200,
 		handler: function(direction) {
 			$('.focus-window').addClass('active')
 		}
 	})
 
-	var waypoint2 = $('.feature2').waypoint({
+	var waypoint2 = $('.feature-flow').waypoint({
 		offset: 200,
 		handler: function(direction) {
-			$('.feature2').addClass('active')
+			$('.feature-flow').addClass('active')
 		}
 	})
 
-	var waypoint3 = $('.feature3').waypoint({
+	var waypoint3 = $('.feature-settings').waypoint({
 		offset: 200,
 		handler: function(direction) {
-			$('.feature3').addClass('active')
+			$('.feature-settings').addClass('active')
 		}
 	})
 })

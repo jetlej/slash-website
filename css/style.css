@@ -4278,6 +4278,9 @@ header {
   .feature.feature-settings.active .image > div {
     opacity: 1;
     transform: translate(0, 0); }
+  .feature.feature-stats img {
+    border-radius: 6px;
+    box-shadow: 0 30px 40px 0 rgba(0, 0, 0, 0.2); }
 
 .extras h2 {
   text-align: center;

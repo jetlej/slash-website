@@ -662,6 +662,14 @@ header{
 			transform: translate(0,0);
 		}
 	}
+
+	&.feature-stats{
+
+		img{
+			border-radius: 6px;
+			box-shadow: 0 30px 40px 0 rgba(0,0,0,0.2);
+		}
+	}
 }
 
 .extras{

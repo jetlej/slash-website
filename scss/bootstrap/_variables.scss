@@ -13,7 +13,7 @@ $bootstrap-sass-asset-helper: (twbs-font-path("") != unquote('twbs-font-path("")
 
 $black: 				 #111111 !default;
 $gray-darker:            #23262F !default;
-$gray-dark:              #414654 !default;
+$gray-dark:              #5E6271 !default;
 $gray:                   #8f96a8 !default;
 $gray-light:             #E9E9E9 !default;
 $gray-lighter:           #f5f6f9 !default;
@@ -165,9 +165,9 @@ $table-border-color:          $gray-lighter !default;
 
 $btn-font-weight:                600 !default;
 
-$btn-default-color:              $gray !default;
-$btn-default-bg:                 $gray-lighter !default;
-$btn-default-border:             transparent !default;
+$btn-default-color:              $brand-primary !default;
+$btn-default-bg:                 white !default;
+$btn-default-border:             white !default;
 
 $btn-primary-color:              #fff !default;
 $btn-primary-bg:                 $brand-primary !default;
@@ -356,7 +356,7 @@ $container-large-desktop:      ((940px + $grid-gutter-width)) !default;
 //** For `$screen-lg-min` and up.
 $container-lg:                 $container-large-desktop !default;
 
-$container-xl:                 ((1100px + $grid-gutter-width)) !default;
+$container-xl:                 $container-large-desktop !default;
 
 
 //== Navbar

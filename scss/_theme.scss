@@ -67,7 +67,7 @@ header{
 				height: 2px;
 				left: 50%;
 				position: absolute;
-				background: $brand-primary;
+				background: $gray-dark;
 				transition: width 0.3s ease 0s, left 0.3s ease 0s;
 				width: 0;
 			}
@@ -94,6 +94,14 @@ header{
 	width: 100%;
 	max-width: 300px;
 	font-weight: bold;
+	box-shadow: 10px 10px 30px rgba(0,0,0,.1);
+	transition: all .2s ease-in-out;
+	border-width: 2px;
+
+	&:hover{
+		background: white;
+		border-color: $brand-primary;
+	}
 
 	@media (max-width: $screen-sm-max) {
 		max-width: 300px;
@@ -108,7 +116,8 @@ header{
 		text-align: center;
 		color: $gray;
 		font-weight: 500;
-		margin-top: 10px;
+		margin-top: 25px;
+		font-size: 12px;
 
 		a{
 			text-decoration: underline;
@@ -129,6 +138,24 @@ header{
 	&.mobile{
 		background-color: white;
 	}
+}
+
+p{
+	color: $gray-dark;
+	font-weight: 500;
+	font-size: 20px;
+
+	@media (max-width: $screen-xs-max) {
+		font-size: 17px;
+	}
+}
+
+h2{
+	font-size: 36px;
+}
+
+h3{
+	font-size: 24px;
 }
 
 .hero{
@@ -169,7 +196,7 @@ header{
 	}
 
 	h2{
-		color: $gray-darker;
+		color: black;
 		font-size: 2.2rem;
 		max-width: 800px;
 		margin: 0 auto;
@@ -216,10 +243,170 @@ header{
 
 }
 
+.science{
+	background: $gray-lighter;
+	text-align: center;
+	padding: 60px 0 40px;
+	position: relative;
+
+	h3{
+		margin: 0;
+		padding-bottom: 30px;
+
+		span{
+			@media (max-width: $screen-xs-max) {
+				display: block;
+			}
+		}
+	}
+
+	img{
+		width: 280px;
+		margin: 0 auto;
+		//transform: translate(10px, 0);
+
+		@media (max-width: $screen-sm-max) {
+			width: 200px;
+		}
+
+		@media (max-width: $screen-xs-max) {
+			width: 150px;
+			margin: 70px auto 40px;
+		}
+	}
+
+	p{
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		text-align: left;
+
+		@media (max-width: $screen-xs-max) {
+			font-size: 15px;
+		}
+
+		span{
+			display: block;
+			color: black;
+		}
+
+		&:first-of-type{
+			transform: translate(-300px, -25px);
+
+			@media (max-width: $screen-sm-max) {
+				transform: translate(-260px, -25px);
+			}
+
+			@media (max-width: $screen-xs-max) {
+				transform: translate(-130px, -80px);
+				text-align: center;
+			}
+		}
+
+		&:nth-of-type(2){
+			transform: translate(170px, 8px);
+
+			@media (max-width: $screen-sm-max) {
+				transform: translate(120px, 8px);
+			}
+
+			@media (max-width: $screen-xs-max) {
+				transform: translate(10px, 145px);
+				text-align: center;
+			}
+		}
+	}
+}
+
+.how{
+	background: white;
+	position: relative;
+	z-index: 2;
+
+	.icons{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-bottom: 30px;
+
+		> div{
+			width: 170px;
+			text-align: center;
+
+			h3{
+				display: inline-block;
+				position: relative;
+
+				@media (max-width: $screen-xs-max) {
+					font-size: 16px;
+				}
+
+				&:after {    
+					background: none repeat scroll 0 0 transparent;
+					bottom: -2px;
+					content: "";
+					display: block;
+					height: 2px;
+					left: 50%;
+					position: absolute;
+					background: black;
+					transition: width 0.3s ease 0s, left 0.3s ease 0s;
+					width: 0;
+				}
+			}
+
+			&:hover, &.active { 
+				cursor: pointer;
+
+				h3:after{
+					width: 100%; 
+					left: 0; 
+				}
+	
+			}
+
+			&:first-of-type{
+				img{
+					height: 26px;
+					margin-bottom: 4px;
+				}
+			}
+
+			img{
+				height: 30px;
+				width: auto;
+				display: block;
+				margin: 0 auto;
+
+				@media (max-width: $screen-xs-max) {
+					width: 24px;
+				}
+			}
+		}
+	}
+
+	.showcase{
+		text-align: center;
+
+		img{
+			width: 850px;
+			max-width: 100%;
+		}
+	}
+}
+
+.features{
+
+}
+
 .feature{
 	background: white;
 	position: relative;
 	z-index: 2;
+
+	&:first-of-type{
+		padding-top: 40px;
+	}
 
 	@media (max-width: $screen-sm-max) {
 
@@ -248,17 +435,20 @@ header{
 			margin-right: 0 !important;
 			margin-left: 0 !important;
 		}
+
+		div{
+			width: 330px;
+			max-width: 100%;
+			margin: 0 auto;
+		}
 		
-		h3{
+		h2{
 			box-sizing: border-box;
-			font-size: 3rem;
 			font-weight: bold;
 			color: $gray-darker;
-			display: block;
-			margin-bottom: 20px;
+			margin: 0 0 20px;
 
 			@media (max-width: $screen-sm-max) {
-				display: block;
 				padding: 0;
 				font-size: 2rem;
 				margin-bottom: 10px;
@@ -266,15 +456,10 @@ header{
 		}
 
 		p{
-			color: $gray-dark;
-			font-size: 1.5rem;
 			flex: flex-shrink;
-			margin: 0 0 40px;
-			font-weight: 200;
+			margin: 0;
 
 			@media (max-width: $screen-sm-max) {
-				font-size: 1.4rem;
-				font-weight: 400;
 				margin: 0 0 10px;
 			}
 
@@ -299,12 +484,11 @@ header{
 
 	.image{
 		flex-shrink: 0;
-		width: 500px;
+		width: 400px;
 		max-width: 100%;
 	
 		@media (max-width: $screen-sm-max) {
 			order: 2;
-			max-width: 500px;
 		}
 
 		video{
@@ -386,13 +570,14 @@ header{
 			transform-origin: center;
 			transition: all .5s ease-in-out;
 
-			p{
+			small{
 				position: absolute;
 				top: 50%;
 				left: 0;
 				right: 0;
 				text-align: center;
 				transform: translate(0, -50%);
+				display: block;
 			}
 
 			@media (max-width: $screen-sm-max) {
@@ -543,18 +728,19 @@ header{
 
 		.platforms{
 			position: absolute;
-			width: 700px;
+			width: 850px;
 			left: 0;
 			top: 50%;
-			transform: translate(0, -50%);
+			transform: translate(-20%, -50%);
 			z-index: 2;
 
 			@media (max-width: $screen-lg-max) {
-				width: 580px;
+				width: 700px;
+				transform: translate(-15%, -50%);
 			}
 
 			@media (max-width: $screen-md-max) {
-				width: 500px;
+				width: 600px;
 			}
 
 			@media (max-width: $screen-sm-max) {
@@ -565,6 +751,8 @@ header{
 		.platforms-sm{
 			width: 100%;
 			display: none;
+			transform: translate(-30px, 0);
+			margin-right: -30px;
 
 			@media (max-width: $screen-sm-max) {
 				display: block;
@@ -674,10 +862,13 @@ header{
 
 .extras{
 
-	h2{
+	h3{
 		text-align: center;
-		font-size: 1.6rem;
-		margin-bottom: 70px;
+		margin-bottom: 50px;
+
+		@media (max-width: $screen-sm-max) {
+			margin-bottom: 20px;
+		}
 	}
 
 	.hider{
@@ -692,7 +883,7 @@ header{
 		margin: 0 -1px -1px 0;
 
 		> div{
-			flex: 1 0 350px;
+			flex: 1 0 310px;
 			height: 250px;
 			border-right: 1px solid $gray-light;
 			border-bottom: 1px solid $gray-light;
@@ -711,14 +902,13 @@ header{
 			}
 		}
 	}
-	
-	h3{
-		font-weight: bold;
+
+	h2{
+		font-size: 24px;
 	}
 
 	p{
-		color: $gray-dark;
-		font-size: 1.15rem;
+		font-size: 18px;
 	}
 
 	span{
@@ -732,17 +922,15 @@ header{
 }
 
 .why{
-	background: $gray-lighter;
 	padding-bottom: 0;
 
-	h2{
+	h3{
 		text-align: center;
 		margin: 0 0 55px;
-		font-size: 2.5rem;
 		font-weight: bold;
 
 		b{
-			color: $gray;
+			color: $brand-primary;
 			font-weight: 200;
 			padding-right: 10px;
 		}
@@ -783,12 +971,6 @@ header{
 
 		p{
 			margin: 0;
-			color: $gray-dark;
-			font-size: 1.5rem;
-
-			@media (max-width: $screen-sm-max) {
-				font-size: 1.3rem;
-			}
 
 			b{
 				display: block;
@@ -837,7 +1019,7 @@ header{
 			background: lighten($brand-primary, 42%);
 		}
 
-		h4{
+		h3{
 			font-size: 1.6rem;
 			font-weight: 600;
 			margin: 0 0 5px;
@@ -859,7 +1041,7 @@ header{
 }
 
 .big-half-circle{
-	height: 50px;
+	height: 55px;
 
 	@media (max-width: $screen-sm-max) {
 		height: 20px !important;
@@ -868,7 +1050,7 @@ header{
 
 .bottom-cta{
 	position: relative;
-	background: white;
+	background: $gray-lighter;
 
 	@media (max-width: $screen-sm-max) {
 		padding: 60px 0 80px;
@@ -1140,7 +1322,7 @@ footer{
 
 	a, span{
 		display: inline-block;
-		margin: 0 10px;
+		margin: 0 7px;
 		font-size: 11px;
 		color: #aaa;
 		font-weight: 500;

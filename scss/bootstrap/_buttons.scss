@@ -102,18 +102,6 @@
   }
 }
 
-.btn-crazy{
-@include button-variant($btn-primary-color, $btn-primary-bg, $btn-primary-border);
-background: -moz-linear-gradient(-45deg,  #00d4f1 0%, #86c400 100%); /* FF3.6+ */
-background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#00d4f1), color-stop(100%,#86c400)); /* Chrome,Safari4+ */
-background: -webkit-linear-gradient(-45deg,  #00d4f1 0%,#86c400 100%); /* Chrome10+,Safari5.1+ */
-background: -o-linear-gradient(-45deg,  #00d4f1 0%,#86c400 100%); /* Opera 11.10+ */
-background: -ms-linear-gradient(-45deg,  #00d4f1 0%,#86c400 100%); /* IE10+ */
-background: linear-gradient(135deg,  #00d4f1 0%,#86c400 100%); /* W3C */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00d4f1', endColorstr='#86c400',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-}
-
-
 // Link buttons
 // -------------------------
 

@@ -17,7 +17,7 @@ bodyclass: gray-bg
 			<div class="">
 				<div class="platform desktop"><img src="/images/desktop.svg"/></div>
 				<div class="btn-container">
-					<a class="btn btn-warning btn-xl" href="" target="_blank">MacOS</a>
+					<a id="download-mac" class="btn btn-default btn-xl" href="https://github.com/repos/jetlej/slash-releases/releases/latest" target="_blank">MacOS</a>
 					<a class="btn btn-info disabled btn-xl" href="" target="_blank">Windows</a>
 					<a class="btn btn-info disabled btn-xl" href="" target="_blank">Linux</a>
 				</div>
@@ -26,7 +26,7 @@ bodyclass: gray-bg
 			<div class="">
 				<div class="platform"><img src="/images/mobile.svg"/></div>
 				<div class="btn-container">
-					<a href="" target="_blank">
+					<a href="https://apps.apple.com/us/app/slash-list/id1471831108" target="_blank">
 						<img src="/images/app-store.png"/>
 					</a>
 					<a href="" target="_blank">
@@ -38,3 +38,16 @@ bodyclass: gray-bg
 
 	</div>
 </section>
+
+<script>
+	$.getJSON('https://api.github.com/repos/jetlej/slash-releases/releases/latest').done(function(release) {
+		let mac, pc, linux
+		release.assets.forEach(function(asset){
+			console.log(asset.name)
+			if(asset.name.endsWith('.dmg')){
+				mac = asset.browser_download_url
+				if(mac) $('#download-mac').attr('href', mac)
+			}
+		});
+	});
+</script>

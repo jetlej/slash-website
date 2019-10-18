@@ -85,7 +85,7 @@ header{
 }
 
 .top{
-	min-height: calc(100vh - 52px);
+	min-height: calc(100vh - 113px);
 }
 
 .btn-default{
@@ -153,15 +153,6 @@ p{
 	}
 }
 
-h2{
-	font-size: 36px;
-	font-weight: 500;
-}
-
-h3{
-	font-size: 24px;
-}
-
 .hero{
 	text-align: center;
 	background: #f5f6f9;
@@ -180,7 +171,8 @@ h3{
 			padding: 0 30px;
 		}
 	}
-
+	
+	/*
 	h1{
 		font-size: 3.75rem;
 		font-weight: 800;
@@ -198,8 +190,9 @@ h3{
 			text-align: left;
 		}
 	}
+	*/
 
-	h2{
+	h1{
 		color: black;
 		font-size: 2.2rem;
 		max-width: 800px;
@@ -821,7 +814,8 @@ h3{
 	&.feature-customizable{
 
 		.image{
-			width: 450px;
+			width: 566px;
+			margin-bottom: -40px;
 		}
 
 	}
@@ -897,7 +891,7 @@ h3{
 
 .extras{
 
-	h3{
+	h2{
 		text-align: center;
 		margin-bottom: 50px;
 
@@ -938,9 +932,8 @@ h3{
 		}
 	}
 
-	h2{
+	h3{
 		font-size: 24px;
-		font-weight: 500;
 	}
 
 	p{
@@ -1338,13 +1331,14 @@ h3{
 
 footer{
 	text-align: center;
-	padding: 50px 15px 15px;
+	padding: 30px 25px 25px;
+	background: white;
 
 	small{
 		font-weight: 600;
 		font-size: 15px;
 		display: block;
-		padding-bottom: 25px;
+		padding-bottom: 15px;
 	}
 
 	a, span{

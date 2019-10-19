@@ -51,7 +51,7 @@ $(function(){
 				if(stepCount === 5) stepCount = 1
 				console.log(stepCount)
 				changeStep(stepCount)
-			}, 4000)
+			}, 3000)
 		}
 	})
 

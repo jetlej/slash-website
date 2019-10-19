@@ -44,25 +44,50 @@ layout: page
 	<section class="how">
 		<div class="container">
 			<div class="icons">
-				<div class="active">
-					<img src="images/list-active.svg"/>
+				<div class="active" data-step="1">
+					<img src="images/list.svg?v=2"/>
 					<h2>List</h2>
 				</div>
-				<div>
-					<img src="images/slash.svg"/>
+				<div data-step="2">
+					<img src="images/slash.svg?v=2"/>
 					<h2>Slash</h2>
 				</div>
-				<div>
-					<img src="images/reward.svg"/>
+				<div data-step="3">
+					<img src="images/reward.svg?v=2"/>
 					<h2>Reward</h2>
 				</div>
-				<div>
-					<img src="images/repeat.svg"/>
+				<div data-step="4">
+					<img src="images/repeat.svg?v=2"/>
 					<h2>Repeat</h2>
 				</div>
 			</div>
 			<div class="showcase">
-				<img src="images/platforms.jpg"/>
+				<img src="/images/macbook.jpg"/>
+				<div class="screen">
+					<div class="app step1 active">
+						<div class="list">
+							<!--
+							<div class="tasks">
+								<div class="task">Buy groceries</div>
+								<div class="task">Finish new homepage design</div>
+								<div class="task">Schedule meeting for tomorrow</div>
+								<a class="btn btn-primary btn-xl">Start Slaying</a>
+							</div>
+							-->
+						</div>
+						<div class="focus">
+							<p class="task-text">Buy groceries</p>
+							<span class="timer">0:00</span>
+						</div>
+						<div class="reward">
+							<h3>Nice job!</h3>
+							<img src="https://media.giphy.com/media/l3q2Z6S6n38zjPswo/giphy.gif"/>
+							<p><span>Next task:</span> Feed the cat</p>
+							<button class="btn btn-primary btn-lg">Keep Slashing</button>
+							<small>or <u>take a break</u></small>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	</section>
@@ -204,20 +229,6 @@ layout: page
 
 	</section>
 
-	<!--
-	<section class="demo">
-		<div class="app">
-			<div class="tasks">
-				<div class="task">Buy groceries</div>
-				<div class="task">Finish new homepage design</div>
-				<div class="task">Schedule meeting for tomorrow</div>
-				<a class="btn btn-primary btn-xl">Start Slaying</a>
-				<span class="timer">0:00</span>
-			</div>
-		</div>
-	</section>
-	-->
-
 	<section class="extras">
 		<div class="container">
 			<h2>More features to keep you focused.</h2>
@@ -292,3 +303,21 @@ layout: page
 	</section>
 
 </div>
+
+<script>
+	$(function(){
+		$('.icons img').each(function(){
+			var $img = $(this)
+			var imgClass = $img.attr('class')
+			var imgURL = $img.attr('src')
+			$.get(imgURL, function(data) {
+				var $svg = $(data).find('svg')
+				if(typeof imgClass !== 'undefined') {
+					$svg = $svg.attr('class', imgClass+' replaced-svg')
+				}
+				$svg = $svg.removeAttr('xmlns:a')
+				$img.replaceWith($svg)
+			}, 'xml')
+		})
+	})
+</script>

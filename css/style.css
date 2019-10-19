@@ -3810,6 +3810,17 @@ section {
 .gray-bg {
   background: #f5f6f9; }
 
+h2 {
+  margin-top: 0; }
+  @media (max-width: 767px) {
+    h2 {
+      font-size: 20px; } }
+
+@media (max-width: 767px) {
+  h3 {
+    font-size: 28px;
+    text-align: center; } }
+
 header {
   text-align: center;
   padding: 40px 0 0; }
@@ -3951,16 +3962,20 @@ p {
       color: black; }
     @media (max-width: 991px) {
       .hero h1 {
-        font-size: 2rem;
+        font-size: 1.9rem;
         padding: 0 50px; } }
     @media (max-width: 767px) {
       .hero h1 {
         font-size: 1.8rem;
         text-align: left;
-        padding: 0; } }
+        padding: 0;
+        text-align: center;
+        width: 550px;
+        max-width: 100%; } }
     @media (max-width: 400px) {
       .hero h1 {
-        font-size: 1.7rem; } }
+        font-size: 1.7rem;
+        text-align: center; } }
   .hero .btn-container {
     margin: 75px auto; }
     @media (max-width: 991px) {
@@ -4006,7 +4021,7 @@ p {
           transform: translate(-260px, -25px); } }
       @media (max-width: 767px) {
         .science p:first-of-type {
-          transform: translate(-130px, -80px);
+          transform: translate(-140px, -100px);
           text-align: center; } }
     .science p:nth-of-type(2) {
       transform: translate(170px, 8px); }
@@ -4015,7 +4030,7 @@ p {
           transform: translate(120px, 8px); } }
       @media (max-width: 767px) {
         .science p:nth-of-type(2) {
-          transform: translate(10px, 145px);
+          transform: translate(10px, 110px);
           text-align: center; } }
 
 .how {
@@ -4030,13 +4045,13 @@ p {
     .how .icons > div {
       width: 170px;
       text-align: center; }
-      .how .icons > div h3 {
+      .how .icons > div h2 {
         display: inline-block;
         position: relative; }
-        @media (max-width: 767px) {
-          .how .icons > div h3 {
+        @media (max-width: 480px) {
+          .how .icons > div h2 {
             font-size: 16px; } }
-        .how .icons > div h3:after {
+        .how .icons > div h2:after {
           background: none repeat scroll 0 0 transparent;
           bottom: -2px;
           content: "";
@@ -4049,25 +4064,270 @@ p {
           width: 0; }
       .how .icons > div:hover, .how .icons > div.active {
         cursor: pointer; }
-        .how .icons > div:hover h3:after, .how .icons > div.active h3:after {
+        .how .icons > div:hover h2:after, .how .icons > div.active h2:after {
           width: 100%;
           left: 0; }
       .how .icons > div:first-of-type img {
         height: 26px;
-        margin-bottom: 4px; }
-      .how .icons > div img {
+        margin-bottom: 24px; }
+      .how .icons > div img, .how .icons > div svg {
         height: 30px;
         width: auto;
         display: block;
-        margin: 0 auto; }
+        margin: 0 auto 20px; }
         @media (max-width: 767px) {
-          .how .icons > div img {
+          .how .icons > div img, .how .icons > div svg {
             width: 24px; } }
+      .how .icons > div .fill {
+        fill: #AFB3C4; }
+      .how .icons > div .stroke {
+        stroke: #AFB3C4; }
+      .how .icons > div.active .fill {
+        fill: #7922FF; }
+      .how .icons > div.active .stroke {
+        stroke: #7922FF; }
   .how .showcase {
-    text-align: center; }
-    .how .showcase img {
+    text-align: center;
+    position: relative; }
+    @media (max-width: 510px) {
+      .how .showcase {
+        height: 230px; } }
+    .how .showcase > img {
       width: 850px;
       max-width: 100%; }
+      @media (max-width: 1023px) {
+        .how .showcase > img {
+          width: 650px; } }
+      @media (max-width: 767px) {
+        .how .showcase > img {
+          width: 450px; } }
+      @media (max-width: 510px) {
+        .how .showcase > img {
+          position: absolute;
+          left: 50%;
+          top: 0;
+          transform: translate(-50%, 0);
+          width: 380px;
+          max-width: 1000px; } }
+  .how .screen {
+    position: absolute;
+    height: 415px;
+    width: 663px;
+    top: 19px;
+    left: 50%;
+    transform: translate(-50%, 0); }
+    @media (max-width: 1023px) {
+      .how .screen {
+        width: 506px;
+        height: 320px;
+        top: 12px; } }
+    @media (max-width: 767px) {
+      .how .screen {
+        width: 352px;
+        height: 221px;
+        top: 8px; } }
+    @media (max-width: 510px) {
+      .how .screen {
+        width: 296px;
+        height: 188px;
+        top: 7px; } }
+    .how .screen .app {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translate(-50%, 0);
+      height: 100%;
+      width: 100%;
+      background: #111;
+      transition: all .5s ease-in-out; }
+      .how .screen .app .list, .how .screen .app .focus, .how .screen .app .reward, .how .screen .app .repeat {
+        display: none; }
+      .how .screen .app.step1 {
+        				/*
+        				.tasks{
+        					width: 600px;
+        					margin: 0 auto;
+        					padding-top: 100px;
+        					display: none;
+        
+        					.btn{
+        						width: 100%;
+        						margin-top: 10px;
+        						font-size: 1.6rem;
+        						padding: 0;
+        					}
+        
+        					> div{
+        						color: white;
+        						font-weight: 600;
+        						font-size: 1.6rem;
+        						margin-bottom: 20px;
+        					}
+        				}
+        				*/ }
+        .how .screen .app.step1 .list {
+          position: absolute;
+          bottom: 0;
+          left: 50%;
+          transform: translate(-50%, 0);
+          height: 100%;
+          width: 100%;
+          background: url(../images/homescreen.jpg?v=3) no-repeat center center;
+          background-size: cover;
+          opacity: 0;
+          display: block;
+          transition: all .5s ease-in-out; }
+        .how .screen .app.step1.active .list {
+          opacity: 1; }
+      .how .screen .app.step2 {
+        border-radius: 10px;
+        height: 44px;
+        width: 250px;
+        bottom: 40px;
+        display: flex;
+        align-items: center;
+        background: rgba(17, 17, 17, 0.95);
+        text-align: center; }
+        .how .screen .app.step2 .focus {
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          width: 100%; }
+        .how .screen .app.step2 p {
+          opacity: 0;
+          font-size: 15px;
+          text-align: center;
+          margin-top: 10px;
+          opacity: 0;
+          margin: 0 0 1px;
+          color: white;
+          font-weight: 600; }
+        .how .screen .app.step2 .timer {
+          opacity: 0;
+          text-align: center;
+          color: white;
+          font-size: 10px;
+          transition: all .5s ease-in-out; }
+        .how .screen .app.step2.active p {
+          opacity: 1;
+          text-align: center;
+          transition: all .5s ease-in-out; }
+        .how .screen .app.step2.active .timer {
+          opacity: 1; }
+        @media (max-width: 1023px) {
+          .how .screen .app.step2 {
+            height: 44px;
+            width: 250px;
+            bottom: 30px; } }
+        @media (max-width: 767px) {
+          .how .screen .app.step2 {
+            height: 34px;
+            width: 180px;
+            bottom: 20px;
+            border-radius: 5px; }
+            .how .screen .app.step2 p {
+              font-size: 13px;
+              line-height: 100%; }
+            .how .screen .app.step2 .timer {
+              font-size: 9px; } }
+      .how .screen .app.step3 .reward {
+        display: block;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+        transition: all .5s ease-in-out; }
+        @media (max-width: 991px) {
+          .how .screen .app.step3 .reward {
+            padding: 30px 0; } }
+      .how .screen .app.step3.active .reward {
+        opacity: 1; }
+      .how .screen .app.step3 img {
+        width: 240px;
+        border-radius: 10px; }
+        @media (max-width: 1023px) {
+          .how .screen .app.step3 img {
+            width: 180px; } }
+        @media (max-width: 767px) {
+          .how .screen .app.step3 img {
+            width: 140px; } }
+        @media (max-width: 510px) {
+          .how .screen .app.step3 img {
+            width: 110px; } }
+      .how .screen .app.step3 h3 {
+        color: #8f96a8;
+        font-weight: bold;
+        font-size: 1rem;
+        margin: 0 0 20px;
+        line-height: 100%;
+        transition: all .25s ease-in-out;
+        font-weight: 300; }
+        @media (max-width: 991px) {
+          .how .screen .app.step3 h3 {
+            font-size: 1rem; } }
+        @media (max-width: 767px) {
+          .how .screen .app.step3 h3 {
+            font-size: .8rem;
+            margin: 0 0 10px; } }
+      .how .screen .app.step3 p {
+        color: #f5f6f9;
+        font-size: 1.2rem;
+        margin: 20px 0 20px;
+        transition: all .25s ease-in-out; }
+        @media (max-width: 1023px) {
+          .how .screen .app.step3 p {
+            font-size: 1rem;
+            margin: 15px 0; } }
+        @media (max-width: 767px) {
+          .how .screen .app.step3 p {
+            font-size: .9rem;
+            margin: 10px 0; } }
+      .how .screen .app.step3 .btn {
+        margin: 0 5px;
+        font-size: 1.2rem;
+        line-height: 46px;
+        height: 46px;
+        width: 200px;
+        max-width: calc(50% - 20px);
+        transition: all .25s ease-in-out;
+        outline: none;
+        border-radius: 5px; }
+        @media (max-width: 1023px) {
+          .how .screen .app.step3 .btn {
+            width: 160px;
+            margin: 0 auto;
+            line-height: 35px;
+            height: 35px;
+            font-size: 1rem; } }
+        @media (max-width: 767px) {
+          .how .screen .app.step3 .btn {
+            font-size: .8rem;
+            height: 30px;
+            line-height: 30px; } }
+        @media (max-width: 510px) {
+          .how .screen .app.step3 .btn {
+            line-height: 25px;
+            height: 25px;
+            width: 100px; } }
+      .how .screen .app.step3 small {
+        display: block;
+        color: #999;
+        margin-top: 15px;
+        margin-bottom: -10px;
+        transition: all .25s ease-in-out; }
+        @media (max-width: 1023px) {
+          .how .screen .app.step3 small {
+            font-size: 11px; } }
+        @media (max-width: 767px) {
+          .how .screen .app.step3 small {
+            display: none; } }
 
 .features {
   padding-bottom: 0; }
@@ -4310,7 +4570,7 @@ p {
     @media (max-width: 400px) {
       .feature.feature-platforms .image {
         max-width: 450px;
-        transform: translate(-50px, 0); } }
+        transform: translate(-75px, 0); } }
     .feature.feature-platforms .platforms {
       position: absolute;
       width: 850px;
@@ -4431,18 +4691,18 @@ p {
 
 .why {
   padding-bottom: 0; }
-  .why h3 {
+  .why h2 {
     text-align: center;
     margin: 0 0 55px;
-    font-weight: bold; }
-    .why h3 b {
+    font-size: 36px; }
+    .why h2 b {
       color: #7922FF;
-      font-weight: 200;
-      padding-right: 10px; }
+      padding-right: 10px;
+      font-weight: 600; }
     @media (max-width: 991px) {
-      .why h3 {
+      .why h2 {
         font-size: 2rem; }
-        .why h3 b {
+        .why h2 b {
           display: block;
           font-size: 1.5rem;
           margin-bottom: 15px;
@@ -4460,7 +4720,7 @@ p {
       font-size: 3rem;
       font-weight: bold;
       color: #7922FF;
-      width: 90px;
+      width: 70px;
       flex-shrink: 0; }
       @media (max-width: 991px) {
         .why .flex span {
@@ -4469,7 +4729,8 @@ p {
       margin: 0; }
       .why .flex p b {
         display: block;
-        margin-bottom: 10px; }
+        margin-bottom: 10px;
+        font-weight: 600; }
     .why .flex.result {
       padding-bottom: 50px; }
       .why .flex.result p {
@@ -4711,69 +4972,5 @@ footer {
     font-weight: 500; }
     footer a:hover, footer span:hover {
       color: #555; }
-
-.demo {
-  width: 100%;
-  height: 100vh;
-  padding: 0;
-  background: url(../images/desktop.png);
-  background-size: cover;
-  background-position: center top;
-  position: relative; }
-  .demo .app {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translate(-50%, 0);
-    height: 100vh;
-    width: 100%;
-    background: #111;
-    transition: all .5s ease-in-out; }
-    .demo .app .tasks {
-      width: 600px;
-      margin: 0 auto;
-      padding-top: 100px; }
-      .demo .app .tasks .btn {
-        width: 100%;
-        margin-top: 10px;
-        font-size: 1.6rem;
-        padding: 0; }
-      .demo .app .tasks > div {
-        color: white;
-        font-weight: 600;
-        font-size: 1.6rem;
-        margin-bottom: 20px; }
-      .demo .app .tasks .timer {
-        opacity: 0;
-        text-align: center;
-        color: white;
-        font-size: .8rem;
-        transition: all .5s ease-in-out; }
-    .demo .app.active {
-      border-radius: 10px;
-      height: 65px;
-      width: 350px;
-      top: calc(100vh - 85px);
-      display: flex;
-      align-items: center; }
-      .demo .app.active .tasks {
-        width: auto;
-        padding: 0; }
-      .demo .app.active .task, .demo .app.active a {
-        display: none; }
-      .demo .app.active .task {
-        font-size: 1.15rem;
-        text-align: center;
-        margin-top: 10px;
-        opacity: 0;
-        margin: 0 0 3px; }
-        .demo .app.active .task:first-of-type {
-          display: block; }
-    .demo .app.show-task .task:first-of-type {
-      opacity: 1;
-      transition: all .5s ease-in-out; }
-    .demo .app.show-task .timer {
-      opacity: 1;
-      display: block; }
 
 /*# sourceMappingURL=style.css.map */

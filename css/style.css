@@ -3816,10 +3816,12 @@ h2 {
     h2 {
       font-size: 20px; } }
 
-@media (max-width: 767px) {
-  h3 {
-    font-size: 28px;
-    text-align: center; } }
+h3 {
+  font-weight: 600; }
+  @media (max-width: 767px) {
+    h3 {
+      font-size: 28px;
+      text-align: center; } }
 
 header {
   text-align: center;
@@ -4353,16 +4355,19 @@ p {
     flex-shrink: 1;
     margin-right: 70px; }
     .feature .text span {
-      color: #7922FF;
-      border: 2px solid #7922FF;
-      background: none;
-      padding: 0px 10px;
+      font-size: 12px;
+      color: white;
       font-weight: bold;
-      border-radius: 20px;
-      font-size: 14px;
-      margin-bottom: 15px;
-      display: inline-block;
-      line-height: 22px; }
+      line-height: 18px;
+      background: #FF3535;
+      padding: 2px 10px;
+      border-radius: 5px;
+      display: inline-block; }
+      @media (max-width: 767px) {
+        .feature .text span {
+          margin: 0 auto;
+          display: block;
+          width: 100px; } }
     @media (max-width: 991px) {
       .feature .text {
         order: 1;
@@ -4430,6 +4435,9 @@ p {
   @media (max-width: 991px) {
     .feature.feature-focus {
       padding-top: 70px; } }
+  @media (max-width: 767px) {
+    .feature.feature-focus {
+      padding-top: 30px; } }
   .feature.feature-focus img {
     width: 500px;
     border-radius: 6px;
@@ -4616,27 +4624,46 @@ p {
     width: 566px;
     margin-bottom: -40px; }
   .feature.feature-integrations .image {
-    display: flex; }
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center; }
+    @media (max-width: 767px) {
+      .feature.feature-integrations .image {
+        width: 300px; } }
     .feature.feature-integrations .image > div {
       border-radius: 15px;
-      width: 120px;
-      padding: 0 20px;
+      width: 100px;
+      padding: 0 15px;
       height: 80px;
       line-height: 80px;
-      margin: 0 15px;
+      margin: 0 10px 20px;
       transition: all 0.75s cubic-bezier(0.19, 1, 0.22, 1);
       transform: translate(-50px, 0);
       opacity: 0;
       display: flex;
-      align-items: center; }
-      .feature.feature-integrations .image > div.trello {
-        background: #026aa7;
-        transition-delay: .25s; }
-      .feature.feature-integrations .image > div.todoist {
-        background: #e44232;
-        transition-delay: .5s; }
+      align-items: center;
+      background: #8f96a8; }
       .feature.feature-integrations .image > div.asana {
         background: #FF5768; }
+      .feature.feature-integrations .image > div.trello {
+        background: #026aa7;
+        transition-delay: .15s; }
+      .feature.feature-integrations .image > div.todoist {
+        background: #e44232;
+        transition-delay: .3s; }
+      .feature.feature-integrations .image > div.jira {
+        background: #0146B3;
+        transition-delay: .45s; }
+      .feature.feature-integrations .image > div.basecamp {
+        background: #FFE001;
+        transition-delay: .6s; }
+      .feature.feature-integrations .image > div.ellipses {
+        transition-delay: .75s;
+        text-align: center; }
+        .feature.feature-integrations .image > div.ellipses img {
+          width: 30px;
+          margin: 0 auto; }
       .feature.feature-integrations .image > div img.mobile {
         display: none; }
       @media (max-width: 767px) {

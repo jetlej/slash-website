@@ -32,6 +32,8 @@ h2{
 }
 
 h3{
+	font-weight: 600;
+
 	@media (max-width: $screen-xs-max) {
 		font-size: 28px;
 		text-align: center;
@@ -776,16 +778,20 @@ p{
 		margin-right: 70px;
 
 		span{
-			color: $brand-primary;
-			border: 2px solid $brand-primary;
-			background: none;
-			padding: 0px 10px;
+			font-size: 12px;
+			color: white;
 			font-weight: bold;
-			border-radius: 20px;
-			font-size: 14px;
-			margin-bottom: 15px;
+			line-height: 18px;
+			background: $brand-warning;
+			padding: 2px 10px;
+			border-radius: 5px;
 			display: inline-block;
-			line-height: 22px;
+
+			@media (max-width: $screen-xs-max) {
+				margin: 0 auto;
+				display: block;
+				width: 100px;
+			}
 		}
 
 		@media (max-width: $screen-sm-max) {
@@ -902,6 +908,10 @@ p{
 		
 		@media (max-width: $screen-sm-max) {
 			padding-top: 70px;
+		}
+
+		@media (max-width: $screen-xs-max) {
+			padding-top: 30px;
 		}
 
 		img{
@@ -1172,32 +1182,60 @@ p{
 
 		.image{
 			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			align-items: center;
+
+			@media (max-width: $screen-xs-max) {
+				width: 300px;
+			}
 
 			> div{
 				border-radius: 15px;
-				width: 120px;
-				padding: 0 20px;
+				width: 100px;
+				padding: 0 15px;
 				height: 80px;
 				line-height: 80px;
-				margin: 0 15px;
+				margin: 0 10px 20px;
 				transition: all .75s cubic-bezier(0.19, 1, 0.22, 1);
 				transform: translate(-50px,0);
 				opacity: 0;
 				display: flex;
 				align-items: center;
+				background: $gray;
+
+				&.asana{
+					background: #FF5768;
+				}
 
 				&.trello{
 					background: #026aa7;
-					transition-delay: .25s;
+					transition-delay: .15s;
 				}
 
 				&.todoist{
 					background: #e44232;
-					transition-delay: .5s;
+					transition-delay: .3s;
 				}
 
-				&.asana{
-					background: #FF5768;
+				&.jira{
+					background: #0146B3;
+					transition-delay: .45s;
+				}
+
+				&.basecamp{
+					background: #FFE001;
+					transition-delay: .6s;
+				}
+
+				&.ellipses{
+					transition-delay: .75s;
+					text-align: center;
+
+					img{
+						width: 30px;
+						margin: 0 auto;
+					}
 				}
 
 				img.mobile{

@@ -40,27 +40,47 @@ $(function(){
 		}
 	})
 
-	let interval
+	let interval, stepInterval
+
+	let waypoint4 = $('.icons').waypoint({
+		offset: 200,
+		handler: function(direction) {
+			let stepCount = 1
+			stepInterval = setInterval(function(){
+				stepCount++
+				if(stepCount === 5) stepCount = 1
+				console.log(stepCount)
+				changeStep(stepCount)
+			}, 4000)
+		}
+	})
 
 	$('.icons > div').on('click', (e) => {
-		$('.icons > div').removeClass('active')
-		$(event.currentTarget).addClass('active')
-		let step = $(event.currentTarget).data('step')
-		console.log('Step - ' + step)
+		clearInterval(stepInterval)
+		let stepNumber = $(event.currentTarget).data('step')
+		changeStep(stepNumber)
+	})
+})
 
-		if(step === 1) {
-			$('.app').removeClass('step2 step3 step4 active').addClass('step1')
-			setTimeout(() => {
-				$('.app').addClass('active')
-			}, 500)
-		}
+function changeStep(step){
 
-		if(step === 2 || step === 4) {
-			let time = 0
-			$('.app').removeClass('step1 step3 active').addClass('step2')
-			if(step === 2) $('.focus .task-text').text('Buy Groceries')
-			else $('.focus .task-text').text('Finish website design')
+	let interval
 
+	$('.icons > div').removeClass('active')
+	$('.icons [data-step="'+ step +'"]').addClass('active')
+
+	if(step === 1) {
+		$('.app').removeClass('step2 step3 step4 active').addClass('step1')
+		setTimeout(() => {
+			$('.app').addClass('active')
+		}, 500)
+	}
+
+	if(step === 2 || step === 4) {
+		let time = 0
+		$('.app').removeClass('step1 step3 active').addClass('step2')
+		if(step === 2) $('.focus .task-text').text('Buy Groceries')
+		else $('.focus .task-text').text('Finish website design')
 			setTimeout(() => {
 				$('.app').addClass('active')
 				interval = setInterval(function(){
@@ -69,18 +89,17 @@ $(function(){
 					$('.timer').text(formattedTime)
 				}, 1000)
 			}, 500)
-		}else{
-			clearInterval(interval)
-		}
+	}else{
+		clearInterval(interval)
+	}
 
-		if(step === 3) {
-			$('.app').removeClass('step1 step2 step4 active').addClass('step3')
-			setTimeout(() => {
-				$('.app').addClass('active')
-			}, 500)
-		}
-	})
-})
+	if(step === 3) {
+		$('.app').removeClass('step1 step2 step4 active').addClass('step3')
+		setTimeout(() => {
+			$('.app').addClass('active')
+		}, 500)
+	}
+}
 
 function getOS() {
 	var userAgent = window.navigator.userAgent,

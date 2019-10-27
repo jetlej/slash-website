@@ -1698,7 +1698,7 @@ p{
 		.disabled{
 			position: relative;
 			opacity: 1 !important;
-			background: lighten($gray, 25%) !important;
+			background: #bec0c7;
 
 			&:after{
 				content: 'Coming!';

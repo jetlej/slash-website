@@ -3795,6 +3795,8 @@ body {
   font-weight: 200;
   background: white;
   color: black; }
+  body.ph {
+    padding-top: 50px; }
 
 section {
   padding: 100px 0; }
@@ -4999,5 +5001,25 @@ footer {
     font-weight: 500; }
     footer a:hover, footer span:hover {
       color: #555; }
+
+.producthunt {
+  background: #fae9e4;
+  border-bottom: 1px solid #f1bfb0;
+  color: black;
+  text-align: center;
+  font-weight: 500;
+  font-size: 18px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  line-height: 50px; }
+  .producthunt span, .producthunt svg {
+    display: inline-block;
+    vertical-align: middle; }
+  .producthunt svg {
+    width: 36px; }
+  .producthunt span {
+    padding-left: 10px; }
 
 /*# sourceMappingURL=style.css.map */

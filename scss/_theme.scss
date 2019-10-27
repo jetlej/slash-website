@@ -3,6 +3,10 @@ body{
 	font-weight: 200;
 	background: white;
 	color: black;
+
+	&.ph{
+		padding-top: 50px;
+	}
 }
 
 section{
@@ -1738,5 +1742,32 @@ footer{
 		&:hover{
 			color: #555;
 		}
+	}
+}
+
+.producthunt{
+	background: lighten(#DA552E, 42%);
+	border-bottom: 1px solid lighten(#DA552E, 30%);
+	color: black;
+	text-align: center;
+	font-weight: 500;
+	font-size: 18px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	line-height: 50px;
+
+	span, svg{
+		display: inline-block;
+		vertical-align: middle;
+	}
+
+	svg{
+		width: 36px;
+	}
+
+	span{
+		padding-left: 10px;
 	}
 }

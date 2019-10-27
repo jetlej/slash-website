@@ -50,7 +50,7 @@ $(function(){
 				let stepCount = 2
 				setTimeout(()=>{
 					changeStep(stepCount)
-				}, 1000)
+				}, 400)
 				stepInterval = setInterval(function(){
 					stepCount++
 					if(stepCount === 5) stepCount = 1

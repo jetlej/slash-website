@@ -40,18 +40,20 @@ $(function(){
 		}
 	})
 
-	let interval, stepInterval
+	let interval, stepInterval, intervalSet = null
 
 	let waypoint4 = $('.icons').waypoint({
 		offset: 200,
 		handler: function(direction) {
-			let stepCount = 1
-			stepInterval = setInterval(function(){
-				stepCount++
-				if(stepCount === 5) stepCount = 1
-				console.log(stepCount)
-				changeStep(stepCount)
-			}, 3000)
+			let stepCount = 2
+			changeStep(stepCount)
+			if(!intervalSet){
+				stepInterval = setInterval(function(){
+					stepCount++
+					if(stepCount === 5) stepCount = 1
+					changeStep(stepCount)
+				}, 3000)
+			}
 		}
 	})
 

@@ -45,9 +45,12 @@ $(function(){
 	let waypoint4 = $('.icons').waypoint({
 		offset: 200,
 		handler: function(direction) {
-			let stepCount = 2
-			changeStep(stepCount)
 			if(!intervalSet){
+				intervalSet = true
+				let stepCount = 2
+				setTimeout(()=>{
+					changeStep(stepCount)
+				}, 1000)
 				stepInterval = setInterval(function(){
 					stepCount++
 					if(stepCount === 5) stepCount = 1

@@ -62,7 +62,7 @@ $font-family-base:        $font-family-sans-serif !default;
 
 $font-size-base:          14px !default;
 $font-size-xxl:         ceil(($font-size-base * 1.85)) !default;
-$font-size-xl:         ceil(($font-size-base * 1.45)) !default;
+$font-size-xl:         ceil(($font-size-base * 1.25)) !default;
 $font-size-large:         ceil(($font-size-base * 1.25)) !default; // ~18px
 $font-size-medium:         ceil(($font-size-base * 1.125)) !default; // ~18px
 $font-size-small:         ceil(($font-size-base * 0.85)) !default; // ~12px
@@ -122,7 +122,7 @@ $line-height-large:         1.33 !default;
 $line-height-small:         1.5 !default;
 
 $border-radius-base:        10px !default;
-$border-radius-xl:            5px !default;
+$border-radius-xl:            10px !default;
 $border-radius-large:       5px !default;
 $border-radius-small:       5px !default;
 $border-radius-round:       1000px !default;
@@ -211,7 +211,7 @@ $input-border-radius:            $border-radius-base !default;
 $input-border-focus:             lighten($brand-primary, 10%) !default;
 
 //** Placeholder text color
-$input-color-placeholder:        $gray-light !default;
+$input-color-placeholder:        lighten($gray, 8%) !default;
 
 //** Default `.form-control` height
 $input-height-base:              ($line-height-computed + ($padding-base-vertical * 2) + 2) !default;

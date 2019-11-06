@@ -65,6 +65,84 @@ $(function(){
 		let stepNumber = $(event.currentTarget).data('step')
 		changeStep(stepNumber)
 	})
+
+	$(document).on('submit', 'form', function(e){
+
+		e.preventDefault();
+
+		if($(this).parent().hasClass('subscribe')){
+
+			$(this).closest('.subscribe-form').removeClass('subscribe').addClass('submit')
+			$(this).find('input').focus()
+
+		}else if($(this).parent().hasClass('submit')){
+
+			ajaxMailChimpForm($("form"), $(".result"))
+
+			function ajaxMailChimpForm($form, $resultElement){
+				// Hijack the submission. We'll submit the form manually.
+
+				if (!isValidEmail($form)) {
+					var error =  "Please enter a valid email";
+					$resultElement.addClass('error');
+					$resultElement.html(error);
+				} else {
+					$resultElement.html('');
+					$resultElement.removeClass('error');
+					submitSubscribeForm($form, $resultElement);
+				}
+			}
+
+			// Validate the email address in the form
+			function isValidEmail($form) {
+				// If email is empty, show error message.
+				// contains just one @
+				var email = $form.find("input[type='email']").val();
+				if (!email || !email.length) {
+					return false;
+				} else if (email.indexOf("@") == -1) {
+					return false;
+				}
+				return true;
+			}
+
+			// Submit the form with an ajax/jsonp request.
+			// Based on http://stackoverflow.com/a/15120409/215821
+			function submitSubscribeForm($form, $resultElement) {
+
+				$('.subscribe-form').removeClass('submit').addClass('submitting');
+
+				$.ajax({
+					type: "GET",
+					url: "https://zerospace.us17.list-manage.com/subscribe/post-json?u=4663cd29e33d04e3e3c5c727e&amp;id=556756c5f6",
+					data: $form.serialize(),
+					cache: false,
+					dataType: "jsonp",
+					jsonp: "c", // trigger MailChimp to return a JSONP response
+					contentType: "application/json; charset=utf-8",
+					error: function(error){
+						// According to jquery docs, this is never called for cross-domain JSONP requests
+					},
+					success: function(data){
+						if (data.result != "success") {
+							var message = data.msg || "Something went wrong! Please refresh the page and try again.";
+							$resultElement.addClass('error');
+							if (data.msg && data.msg.indexOf("already subscribed") >= 0) {
+								message = "You already applied.";
+								$resultElement.removeClass('error');
+							}
+							$resultElement.html(message);
+							$('.subscribe-form').removeClass('submitting').addClass('submit');
+						} else {
+							$resultElement.removeClass('error');
+							$resultElement.html('Make sure you confirm your email.');
+							$form.find('span').text('You\'re on the list').closest('.subscribe-form').removeClass('submitting').addClass('success');
+						}
+					}
+				})
+			}
+		}
+	})
 })
 
 function changeStep(step){

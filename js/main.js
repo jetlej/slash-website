@@ -77,7 +77,7 @@ $(function(){
 
 		}else if($(this).parent().hasClass('submit')){
 
-			ajaxMailChimpForm($("form"), $(".result"))
+			ajaxMailChimpForm($(this), $(".result"))
 
 			function ajaxMailChimpForm($form, $resultElement){
 				// Hijack the submission. We'll submit the form manually.
@@ -114,7 +114,7 @@ $(function(){
 
 				$.ajax({
 					type: "GET",
-					url: "https://zerospace.us17.list-manage.com/subscribe/post-json?u=4663cd29e33d04e3e3c5c727e&amp;id=556756c5f6",
+					url: "https://getslash.us5.list-manage.com/subscribe/post-json?u=2e58ea2720a92579a1fd9ba6a&amp;id=bda01cf26f",
 					data: $form.serialize(),
 					cache: false,
 					dataType: "jsonp",

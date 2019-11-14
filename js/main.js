@@ -110,7 +110,7 @@ $(function(){
 			// Based on http://stackoverflow.com/a/15120409/215821
 			function submitSubscribeForm($form, $resultElement) {
 
-				$('.subscribe-form').removeClass('submit').addClass('submitting');
+				$('.subscribe-form').removeClass('submit').addClass('submitting')
 
 				$.ajax({
 					type: "GET",
@@ -119,24 +119,24 @@ $(function(){
 					cache: false,
 					dataType: "jsonp",
 					jsonp: "c", // trigger MailChimp to return a JSONP response
-					contentType: "application/json; charset=utf-8",
+					contentType: "application/json; charset=utf-8"
 					error: function(error){
 						// According to jquery docs, this is never called for cross-domain JSONP requests
 					},
 					success: function(data){
 						if (data.result != "success") {
-							var message = data.msg || "Something went wrong! Please refresh the page and try again.";
-							$resultElement.addClass('error');
+							var message = data.msg || "Something went wrong! Please refresh the page and try again."
+							$resultElement.addClass('error')
 							if (data.msg && data.msg.indexOf("already subscribed") >= 0) {
-								message = "You already applied.";
-								$resultElement.removeClass('error');
+								message = "You already applied."
+								$resultElement.removeClass('error')
 							}
 							$resultElement.html(message);
-							$('.subscribe-form').removeClass('submitting').addClass('submit');
+							$('.subscribe-form').removeClass('submitting').addClass('submit')
 						} else {
-							$resultElement.removeClass('error');
-							$resultElement.html('Make sure you confirm your email.');
-							$form.find('span').text('You\'re on the list').closest('.subscribe-form').removeClass('submitting').addClass('success');
+							$resultElement.removeClass('error')
+							$resultElement.html('Keep an eye on your inbox')
+							$form.find('span').text('You\'re on the list').closest('.subscribe-form').removeClass('submitting').addClass('success')
 						}
 					}
 				})

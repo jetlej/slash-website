@@ -145,9 +145,9 @@ $(function(){
 	})
 })
 
-function changeStep(step){
+let interval
 
-	let interval
+function changeStep(step){
 
 	$('.icons > div').removeClass('active')
 	$('.icons [data-step="'+ step +'"]').addClass('active')
@@ -161,19 +161,19 @@ function changeStep(step){
 
 	if(step === 2 || step === 4) {
 		let time = 0
+		$('.timer').text('0:00')
 		$('.app').removeClass('step1 step3 active').addClass('step2')
 		if(step === 2) $('.focus .task-text').text('Buy Groceries')
 		else $('.focus .task-text').text('Finish website design')
 			setTimeout(() => {
 				$('.app').addClass('active')
+				clearInterval(interval)
 				interval = setInterval(function(){
 					time++
 					let formattedTime = formatTimestamp(time)
 					$('.timer').text(formattedTime)
 				}, 1000)
 			}, 500)
-	}else{
-		clearInterval(interval)
 	}
 
 	if(step === 3) {

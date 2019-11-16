@@ -119,7 +119,7 @@ $(function(){
 					cache: false,
 					dataType: "jsonp",
 					jsonp: "c", // trigger MailChimp to return a JSONP response
-					contentType: "application/json; charset=utf-8"
+					contentType: "application/json; charset=utf-8",
 					error: function(error){
 						// According to jquery docs, this is never called for cross-domain JSONP requests
 					},

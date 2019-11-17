@@ -163,8 +163,8 @@ function changeStep(step){
 		let time = 0
 		$('.timer').text('0:00')
 		$('.app').removeClass('step1 step3 active').addClass('step2')
-		if(step === 2) $('.focus .task-text').text('Buy Groceries')
-		else $('.focus .task-text').text('Finish website design')
+		if(step === 2) $('.focus .task-text').text('Finish website design')
+		else $('.focus .task-text').text('Send beta invites')
 			setTimeout(() => {
 				$('.app').addClass('active')
 				clearInterval(interval)

@@ -5071,8 +5071,7 @@ footer {
     footer a:hover, footer span:hover {
       color: #555; }
 
-.producthunt {
-  background: #fae9e4;
+.top-alert {
   color: black;
   text-align: center;
   font-weight: 500;
@@ -5082,34 +5081,41 @@ footer {
   left: 0;
   right: 0;
   line-height: 50px; }
+  .top-alert.producthunt {
+    background: #fae9e4; }
+    .top-alert.producthunt span {
+      color: #cc4d29; }
+  .top-alert.hackernews {
+    background: #ffe7d7; }
+    .top-alert.hackernews span {
+      color: #FF6601; }
   @media (max-width: 991px) {
-    .producthunt {
+    .top-alert {
       padding: 5px 0; } }
-  .producthunt img {
+  .top-alert img {
     height: 38px !important;
     width: auto !important;
     position: relative;
     top: -1px; }
   @media (max-width: 991px) {
-    .producthunt a {
+    .top-alert a {
       display: none; } }
-  .producthunt span, .producthunt svg, .producthunt img {
+  .top-alert span, .top-alert svg, .top-alert img {
     display: inline-block !important;
     vertical-align: middle !important; }
-  .producthunt svg {
+  .top-alert svg {
     width: 36px; }
-  .producthunt b {
+  .top-alert b {
     font-weight: 600; }
     @media (max-width: 767px) {
-      .producthunt b {
+      .top-alert b {
         display: block; } }
-  .producthunt span {
+  .top-alert span {
     padding-left: 15px;
     line-height: 110%;
-    color: #cc4d29;
     font-weight: 300; }
     @media (max-width: 991px) {
-      .producthunt span {
+      .top-alert span {
         font-size: 14px;
         line-height: 130%; } }
 

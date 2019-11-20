@@ -1867,8 +1867,7 @@ footer{
 	}
 }
 
-.producthunt{
-	background: lighten(#DA552E, 42%);
+.top-alert{
 	//border-bottom: 1px solid lighten(#DA552E, 35%);
 	color: black;
 	text-align: center;
@@ -1879,6 +1878,22 @@ footer{
 	left: 0;
 	right: 0;
 	line-height: 50px;
+
+	&.producthunt{
+		background: lighten(#DA552E, 42%);
+
+		span{
+			color: #cc4d29;
+		}
+	}
+
+	&.hackernews{
+		background: lighten(#FF6601, 42%);
+
+		span{
+			color: #FF6601;
+		}
+	}
 
 	@media (max-width: $screen-sm-max) {
 		padding: 5px 0;
@@ -1917,7 +1932,6 @@ footer{
 	span{
 		padding-left: 15px;
 		line-height: 110%;
-		color: #cc4d29;
 		font-weight: 300;
 
 		@media (max-width: $screen-sm-max) {

@@ -6,6 +6,10 @@ body{
 
 	&.ph{
 		padding-top: 50px;
+
+		@media (max-width: $screen-sm-max) {
+			padding-top: 60px;
+		}
 	}
 }
 
@@ -1742,7 +1746,7 @@ p{
 	
 	h1{
 		text-align: center;
-		padding-bottom: 100px;
+		padding-bottom: 80px;
 
 		@media (max-width: $screen-md-max) {
 			padding-bottom: 50px;
@@ -1777,9 +1781,20 @@ p{
 		}
 	}
 
+	p{
+		font-size: 16px;
+		color: rgba(0,0,0,.9);
+		height: 50px;
+
+		@media (max-width: $screen-xs-max) {
+			max-width: 250px;
+			margin: 0 auto 20px;
+		}
+	}
+
 	.platform{
 		text-align: center;
-		padding-bottom: 50px;
+		padding-bottom: 25px;
 
 		&.desktop{
 			margin: 2px 0;
@@ -1802,7 +1817,7 @@ p{
 		}
 
 		img{
-			height: 58px;
+			height: 53px;
 			width: auto;
 		}
 
@@ -1854,7 +1869,7 @@ footer{
 
 .producthunt{
 	background: lighten(#DA552E, 42%);
-	//border-bottom: 1px solid lighten(#DA552E, 30%);
+	//border-bottom: 1px solid lighten(#DA552E, 35%);
 	color: black;
 	text-align: center;
 	font-weight: 500;
@@ -1865,9 +1880,21 @@ footer{
 	right: 0;
 	line-height: 50px;
 
+	@media (max-width: $screen-sm-max) {
+		padding: 5px 0;
+	}
+
 	img{
 		height: 38px !important;
 		width: auto !important;
+		position: relative;
+		top: -1px;
+	}
+
+	a{
+		@media (max-width: $screen-sm-max) {
+			display: none;
+		}
 	}
 
 	span, svg, img{
@@ -1879,7 +1906,23 @@ footer{
 		width: 36px;
 	}
 
+	b{
+		font-weight: 600;
+
+		@media (max-width: $screen-xs-max) {
+			display: block;
+		}
+	}
+
 	span{
 		padding-left: 15px;
+		line-height: 110%;
+		color: #cc4d29;
+		font-weight: 300;
+
+		@media (max-width: $screen-sm-max) {
+			font-size: 14px;
+			line-height: 130%;
+		}
 	}
 }

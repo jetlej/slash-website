@@ -3797,6 +3797,9 @@ body {
   color: black; }
   body.ph {
     padding-top: 50px; }
+    @media (max-width: 991px) {
+      body.ph {
+        padding-top: 60px; } }
 
 section {
   padding: 100px 0; }
@@ -4990,7 +4993,7 @@ p {
   background: #f5f6f9; }
   .download h1 {
     text-align: center;
-    padding-bottom: 100px; }
+    padding-bottom: 80px; }
     @media (max-width: 1023px) {
       .download h1 {
         padding-bottom: 50px; } }
@@ -5010,9 +5013,17 @@ p {
     @media (max-width: 1023px) {
       .download .flex > div {
         width: auto; } }
+  .download p {
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.9);
+    height: 50px; }
+    @media (max-width: 767px) {
+      .download p {
+        max-width: 250px;
+        margin: 0 auto 20px; } }
   .download .platform {
     text-align: center;
-    padding-bottom: 50px; }
+    padding-bottom: 25px; }
     .download .platform.desktop {
       margin: 2px 0; }
   .download .btn-container .btn {
@@ -5024,7 +5035,7 @@ p {
         display: block;
         margin: 0 auto 10px; } }
   .download .btn-container img {
-    height: 58px;
+    height: 53px;
     width: auto; }
   .download .btn-container .disabled {
     position: relative;
@@ -5071,15 +5082,35 @@ footer {
   left: 0;
   right: 0;
   line-height: 50px; }
+  @media (max-width: 991px) {
+    .producthunt {
+      padding: 5px 0; } }
   .producthunt img {
     height: 38px !important;
-    width: auto !important; }
+    width: auto !important;
+    position: relative;
+    top: -1px; }
+  @media (max-width: 991px) {
+    .producthunt a {
+      display: none; } }
   .producthunt span, .producthunt svg, .producthunt img {
     display: inline-block !important;
     vertical-align: middle !important; }
   .producthunt svg {
     width: 36px; }
+  .producthunt b {
+    font-weight: 600; }
+    @media (max-width: 767px) {
+      .producthunt b {
+        display: block; } }
   .producthunt span {
-    padding-left: 15px; }
+    padding-left: 15px;
+    line-height: 110%;
+    color: #cc4d29;
+    font-weight: 300; }
+    @media (max-width: 991px) {
+      .producthunt span {
+        font-size: 14px;
+        line-height: 130%; } }
 
 /*# sourceMappingURL=style.css.map */

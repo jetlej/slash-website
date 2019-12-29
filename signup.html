@@ -1,0 +1,33 @@
+---
+layout: page
+title: Slash — Sign Up
+description: A productivity machine that forces you to work smart and destroy your tasks one-by-one.
+permalink: /signup
+layout: page
+headerClass: hidden
+footerClass: hidden
+bodyClass: gray-bg
+---
+
+<section class="signup">
+  <img class="logo" alt="Slash" src="images/logo.svg"/>
+  <form id="signup-form">
+      <p>Create Account</p>
+      <div class="errors">
+          <div>Invalid email</div>
+          <div>Password must be at least 6 characters</div>
+      </div>
+      <div class="input-container">
+          <input class="form-control input-lg" id="email" type="email" placeholder="E-mail" required>
+      </div>
+      <div class="input-container">
+          <input class="form-control input-lg" id="password" placeholder="Password" type="password" required>
+      </div>
+      <div class="input-container">
+          <input class="form-control input-lg" id="code" type="text" placeholder="Invite Code (optional)" :disabled="loading">
+      </div>
+      <div>
+          <button type="submit" class="btn btn-primary btn-lg btn-block">Sign Up</button>
+      </div>
+  </form>
+</section>

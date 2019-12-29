@@ -3795,6 +3795,9 @@ body {
   font-weight: 200;
   background: white;
   color: black; }
+  body.dark {
+    color: white;
+    background: #111; }
   body.ph {
     padding-top: 50px; }
     @media (max-width: 991px) {
@@ -5118,5 +5121,63 @@ footer {
       .top-alert span {
         font-size: 14px;
         line-height: 130%; } }
+
+.signup {
+  font-family: Avenir, 'Helvetica Neue', Helvetica, sans-serif;
+  position: relative;
+  color: rgba(150, 150, 150, 0.5);
+  padding: 70px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 100vh; }
+  .signup form {
+    text-align: center;
+    max-width: 350px;
+    width: 100%;
+    min-height: 240px; }
+  .signup .errors {
+    min-height: 20px;
+    padding: 20px 0; }
+    .signup .errors > div {
+      text-align: left;
+      padding: 0;
+      color: #F34000;
+      font-size: 1.1rem;
+      line-height: 20px;
+      font-weight: 500;
+      margin: 0 0 10px; }
+      .signup .errors > div:last-child {
+        margin: 0; }
+  .signup p {
+    color: #666;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 2.6px;
+    line-height: 25px;
+    text-align: center;
+    margin: 25px 0 0;
+    text-transform: uppercase; }
+  .signup .btn-block {
+    display: block;
+    width: 100%; }
+  .signup .logo {
+    height: 60px;
+    margin-top: -50px; }
+  .signup input {
+    font-weight: 500; }
+  .signup .input-container {
+    position: relative;
+    text-align: left !important;
+    margin: 10px 0 !important; }
+  .signup button {
+    margin: 20px 0;
+    font-size: 20px; }
+
+.notice {
+  font-size: 1.2rem;
+  font-weight: bold; }
 
 /*# sourceMappingURL=style.css.map */

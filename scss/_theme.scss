@@ -1946,6 +1946,19 @@ footer{
 	}
 }
 
+.coming-soon{
+	text-align: center;
+
+	h1 b{
+		color: $brand-primary;
+	}
+
+	.subtitle{
+		font-size: 1.4rem;
+		padding: 20px 0 40px;
+	}
+}
+
 .signup {
   font-family: Avenir, 'Helvetica Neue', Helvetica, sans-serif;
   position: relative;

@@ -5122,6 +5122,14 @@ footer {
         font-size: 14px;
         line-height: 130%; } }
 
+.coming-soon {
+  text-align: center; }
+  .coming-soon h1 b {
+    color: #7922FF; }
+  .coming-soon .subtitle {
+    font-size: 1.4rem;
+    padding: 20px 0 40px; }
+
 .signup {
   font-family: Avenir, 'Helvetica Neue', Helvetica, sans-serif;
   position: relative;

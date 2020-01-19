@@ -128,7 +128,7 @@ $(function(){
 							var message = data.msg || "Something went wrong! Please refresh the page and try again."
 							$resultElement.addClass('error')
 							if (data.msg && data.msg.indexOf("already subscribed") >= 0) {
-								message = "You already applied."
+								message = "You're already subscribed."
 								$resultElement.removeClass('error')
 							}
 							$resultElement.html(message);

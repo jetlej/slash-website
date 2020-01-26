@@ -33,13 +33,25 @@ bodyClass: gray-bg
 
 <script>
   $(function(){
+
+    let tapfiliateId = null
+
+    tap('getTrackingId', null, function(trackingId) {
+      tapfiliateId = trackingId
+      console.log('Tapfiliate Tracking ID: ' + tapfiliateId)
+    })
+
     $('#signup-form').submit((e) => {
       e.preventDefault()
+
+      let data = { email: $('#email').val(), password: $('#password').val(), code: $('#code').val() }
+      if (tapfiliateId) data.affiliateId = tapfiliateId
+
       $.ajax({
         type: 'POST',
         dataType: 'json',
         url: 'https://api.taskslayer.io/auth/register',
-        data: { email: $('#email').val(), password: $('#password').val(), code: $('#code').val() },
+        data: data,
         success: function (message) {
           console.log(message)
           window.location.href = 'https://getslash.co/get-started'

@@ -118,12 +118,12 @@ $padding-xs-horizontal:     5px !default;
 
 $line-height-xxl:         2.3 !default;
 $line-height-xl:         1.5 !default;
-$line-height-large:         1.33 !default;
-$line-height-small:         1.5 !default;
+$line-height-large:         1.8 !default;
+$line-height-small:         2 !default;
 
 $border-radius-base:        10px !default;
 $border-radius-xl:            10px !default;
-$border-radius-large:       5px !default;
+$border-radius-large:       8px !default;
 $border-radius-small:       5px !default;
 $border-radius-round:       1000px !default;
 
@@ -204,7 +204,7 @@ $input-bg-disabled:              $gray-lighter !default;
 //** Text color for `<input>`s
 $input-color:                    $gray-darker !default;
 //** `<input>` border color
-$input-border:                   #ccc !default;
+$input-border:                   #ddd !default;
 //** `<input>` border radius
 $input-border-radius:            $border-radius-base !default;
 //** Border color for inputs on focus

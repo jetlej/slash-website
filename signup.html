@@ -14,20 +14,37 @@ bodyClass: gray-bg
   <form id="signup-form">
       <p>Create Account</p>
       <div class="errors">
-          <div>Invalid email</div>
-          <div>Password must be at least 6 characters</div>
+          <div></div>
       </div>
       <div class="input-container">
-          <input class="form-control input-lg" id="email" type="email" placeholder="E-mail" required>
+          <input name="email" class="form-control input-lg" id="email" type="email" placeholder="E-mail" required>
       </div>
       <div class="input-container">
-          <input class="form-control input-lg" id="password" placeholder="Password" type="password" required>
+          <input name="password" class="form-control input-lg" id="password" placeholder="Password" type="password" required>
       </div>
       <div class="input-container">
-          <input class="form-control input-lg" id="code" type="text" placeholder="Invite Code (optional)" :disabled="loading">
+          <input name="code" class="form-control input-lg" id="code" type="text" placeholder="Invite Code (optional)" :disabled="loading">
       </div>
       <div>
           <button type="submit" class="btn btn-primary btn-lg btn-block">Sign Up</button>
       </div>
   </form>
 </section>
+
+<script>
+  $(function(){
+    $('#signup-form').submit((e) => {
+      e.preventDefault()
+      $.ajax({
+        type: 'POST',
+        dataType: 'json',
+        url: 'https://api.taskslayer.io/auth/register',
+        data: { email: $('#email').val(), password: $('#password').val(), code: $('#code').val() },
+        success: function (message) {
+          console.log(message)
+          window.location.href = 'https://getslash.co/get-started'
+        }
+      })
+    })
+  })
+</script>

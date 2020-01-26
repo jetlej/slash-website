@@ -53,6 +53,34 @@ h3{
 	}
 }
 
+.page-title{
+	text-align: center;
+	padding-bottom: 80px;
+
+	@media (max-width: $screen-md-max) {
+		padding-bottom: 50px;
+	}
+
+	@media (max-width: $screen-sm-max) {
+		font-size: 2.3rem;
+	}
+
+	b{
+		color: $brand-primary;
+	}
+
+	&.has-subtitle{
+		padding-bottom: 0px !important;
+	}
+
+}
+
+.subtitle{
+	color: $gray;
+	font-size: 1.4rem;
+	text-align: center;
+	padding-bottom: 80px;
+}
 
 .subscribe-form{
 	width: 320px;
@@ -330,7 +358,7 @@ p{
 
 	h1{
 		color: black;
-		font-size: 2.2rem;
+		font-size: 3rem;
 		max-width: 800px;
 		margin: 0 auto;
 		font-weight: 300;
@@ -342,7 +370,7 @@ p{
 
 		b{
 			font-weight: 600;
-			text-decoration: underline;
+			//text-decoration: underline;
 			color: black;
 		}
 
@@ -363,6 +391,16 @@ p{
 		@media (max-width: 400px) {
 			font-size: 1.7rem;
 			text-align: center;
+		}
+	}
+
+	h2{
+		margin-top: 15px;
+		color: $gray-dark;
+
+		b{
+			font-weight: 500;
+			color: $gray-darker;
 		}
 	}
 
@@ -1746,25 +1784,64 @@ p{
 	}
 }
 
-.download{
-	background: $gray-lighter;
-	
-	h1{
-		text-align: center;
-		padding-bottom: 80px;
+.get-started{
 
-		@media (max-width: $screen-md-max) {
-			padding-bottom: 50px;
-		}
+ 	.page-title, .subtitle, > div > div{
+		opacity: 0;
+		transition: opacity .75s ease-in-out;
 
-		@media (max-width: $screen-sm-max) {
-			font-size: 2.3rem;
-		}
-
-		b{
-			color: $brand-primary;
+		&.visible{
+			opacity: 1;
 		}
 	}
+
+	.download-buttons{
+		padding-bottom: 100px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		@media (max-width: $screen-sm-max) {
+			display: block;
+		}
+
+		> b{
+			width: 70px;
+			height: 70px;
+			line-height: 70px;
+			border: 2px solid black;
+			border-radius: 100%;
+			margin-right: 50px;
+			text-align: center;
+			font-size: 1.4rem;
+
+			@media (max-width: $screen-sm-max) {
+				display: block;
+				margin: 0 auto 50px;
+				font-size: 1.4rem;
+			}
+		}
+			
+		> div{	
+			width: 500px;
+			max-width: 100%;
+
+			h3{
+				font-size: 1.7rem;
+				margin-bottom: 5px;
+				margin-top: 0;
+			}
+
+		 	p{
+				color: $gray;
+				font-size: 1.1rem;
+		 	}
+		}
+	}
+}
+
+.download{
+	background: $gray-lighter;
 
 	.flex {
 
@@ -1805,6 +1882,9 @@ p{
 			margin: 2px 0;
 		}
 	}
+}
+
+.download-buttons{
 
 	.btn-container{
 		

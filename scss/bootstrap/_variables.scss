@@ -61,7 +61,7 @@ $font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace !def
 $font-family-base:        $font-family-sans-serif !default;
 
 $font-size-base:          14px !default;
-$font-size-xxl:         ceil(($font-size-base * 1.85)) !default;
+$font-size-xxl:         ceil(($font-size-base * 1.65)) !default;
 $font-size-xl:         ceil(($font-size-base * 1.25)) !default;
 $font-size-large:         ceil(($font-size-base * 1.25)) !default; // ~18px
 $font-size-medium:         ceil(($font-size-base * 1.125)) !default; // ~18px
@@ -101,8 +101,8 @@ $icon-font-svg-id:        "glyphicons_halflingsregular" !default;
 $padding-base-vertical:     6px !default;
 $padding-base-horizontal:   15px !default;
 
-$padding-xxl-vertical:    12px !default;
-$padding-xxl-horizontal:  50px !default;
+$padding-xxl-vertical:    15px !default;
+$padding-xxl-horizontal:  25px !default;
 
 $padding-xl-vertical:    12px !default;
 $padding-xl-horizontal:  22px !default;
@@ -116,7 +116,7 @@ $padding-small-horizontal:  15px !default;
 $padding-xs-vertical:       1px !default;
 $padding-xs-horizontal:     5px !default;
 
-$line-height-xxl:         2.3 !default;
+$line-height-xxl:         1.5 !default;
 $line-height-xl:         1.5 !default;
 $line-height-large:         1.8 !default;
 $line-height-small:         2 !default;
@@ -218,6 +218,7 @@ $input-height-base:              ($line-height-computed + ($padding-base-vertica
 //** Large `.form-control` height
 $input-height-large:             (ceil($font-size-large * $line-height-large) + ($padding-large-vertical * 2) + 2) !default;
 //** Large `.form-control` height
+$input-height-xxl:             (ceil($font-size-xxl * $line-height-xxl) + ($padding-xxl-vertical * 2) + 2) !default;
 $input-height-xl:             (ceil($font-size-xl * $line-height-xl) + ($padding-xl-vertical * 2) + 2) !default;
 //** Small `.form-control` height
 $input-height-small:             (floor($font-size-small * $line-height-small) + ($padding-small-vertical * 2) + 2) !default;

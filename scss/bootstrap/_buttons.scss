@@ -149,7 +149,7 @@
 
 .btn-xxl {
   // line-height: ensure even-numbered height of button next to large input
-  @include button-size($padding-xxl-vertical, $padding-xxl-horizontal, $font-size-xxl, $line-height-xxl, $input-border-radius);
+  @include button-size($padding-xxl-vertical, $padding-xxl-horizontal, $font-size-xxl, $input-height-xxl, $input-border-radius);
   font-weight: bold;
   min-width: 280px;
 }

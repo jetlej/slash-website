@@ -16,6 +16,12 @@ body{
 			padding-top: 60px;
 		}
 	}
+
+	&.hide-header{
+		header{
+			display: none;
+		}
+	}
 }
 
 section{
@@ -49,7 +55,6 @@ h3{
 
 	@media (max-width: $screen-xs-max) {
 		font-size: 28px;
-		text-align: center;
 	}
 }
 
@@ -2117,4 +2122,233 @@ footer{
 .notice{
   font-size: 1.2rem;
   font-weight: bold;
+}
+
+.page-challenge{
+
+	.challenge-hero{
+		background: $brand-primary;
+		color: white;
+		padding: 0;
+		margin-bottom: -10px;
+
+		.container{
+			padding-top: 100px;
+			padding-bottom: 100px;
+		}
+
+		h1{
+			font-size: 4.7rem;
+			font-weight: bold;
+			text-align: center;
+			margin-bottom: 80px;
+
+			@media (max-width: $screen-sm-max) {
+				font-size: 4rem;
+			}
+
+			@media (max-width: $screen-xs-max) {
+				font-size: 2.5rem;
+
+				br{
+					display: none;
+				}
+			}
+
+			span{
+				border-bottom: 7px solid rgba(0,0,0,.5);
+				outline: none;
+				min-width: 530px;
+				display: inline-block;
+				text-align: left;
+				line-height: 100%;
+
+				@media (max-width: $screen-sm-max) {
+					min-width: 410px;
+				}	
+
+				@media (max-width: $screen-xs-max) {
+					min-width: 225px;
+				}
+
+				&:empty::before {
+					content: attr(placeholder);
+					color: white;
+				} 
+
+				&:empty:focus::before {
+					content: "";
+				}
+			}
+		}
+
+		.btn{
+			margin-bottom: 30px;
+		}
+
+		small{
+			display: block;
+			text-align: center;
+			color: rgba(255,255,255,.5);
+			font-size: 1.2rem;
+		}
+	}
+
+	.statement{
+		background: white;
+		position: relative;
+		z-index: 2;
+
+		.container{
+
+			@media (max-width: $screen-sm-max) {
+				width: 600px;
+				padding: 0 40px;
+			}
+		}
+
+		p{
+			font-size: 1.6rem;
+			color: black;
+			margin-bottom: 30px;
+			font-weight: 300;
+
+			@media (max-width: $screen-xs-max) {
+				font-size: 1.5rem;
+			}
+
+			&:last-child{
+				margin: 0;
+			}
+
+			a, span{
+				color: $brand-primary;
+			}
+		}
+	}
+
+	.cta-container{
+		background: $brand-primary;
+		text-align: center;
+
+		h2{
+			color: white;
+			margin-bottom: 40px;
+		}
+	}
+
+	h2{
+		font-size: 2rem;
+		color: $brand-primary;
+	}
+
+	.features{
+		overflow: hidden;
+
+		.flex{
+			justify-content: center;
+		}
+
+		.feature{
+			background: $gray-lighter;
+			height: 700px;
+			display: flex;
+			align-items: center;
+
+			@media (max-width: $screen-sm-max) {
+				height: auto;
+				padding: 70px 0;
+			}
+
+			h3{
+				font-size: 3rem;
+				margin-top: 0;
+
+				@media (max-width: $screen-xs-max) {
+					font-size: 2.5rem;
+				}
+			}
+
+			p{
+				font-size: 1.5rem;
+			}
+
+			.image{
+				width: 600px;
+
+				@media (max-width: $screen-sm-max) {
+					text-align: center;
+				}
+
+				img{
+					max-width: 750px;
+
+					@media (max-width: $screen-sm-max) {
+						max-width: 600px;
+					}
+
+					@media (max-width: $screen-xs-max) {
+						max-width: 400px;
+					}
+				}
+			}
+
+			.text{
+				padding-left: 50px;
+
+				@media (max-width: $screen-sm-max) {
+					padding: 0 !important;
+					text-align: left;
+				}
+
+				> div{
+					width: 400px;
+				}
+			}
+
+			&.even{
+				background: white;
+				
+				.text{
+					padding-left: 0;
+					padding-right: 50px;
+				}
+			}
+
+			&.odd{
+
+				.image{
+					img{
+						transform: translate(-250px, 0);
+
+						@media (max-width: $screen-sm-max) {
+							transform: translate(0, 0);
+						}
+					}
+				}
+			}
+
+			.btn{
+				margin-top: 25px;
+
+				@media (max-width: $screen-sm-max) {
+					margin-bottom: 25px;
+				}
+			}
+
+			&.feature-slash{
+				
+				img{
+					border-radius: 0;
+					box-shadow: none;
+				}
+			}
+		}
+
+		img{
+			border-radius: 25px;
+			box-shadow: 10px 10px 30px rgba(0,0,0, .1);
+		}
+	}
+
 }

@@ -4047,21 +4047,26 @@ p {
     .hero h1 b {
       font-weight: 600;
       color: black; }
+    .hero h1 br {
+      display: none; }
+      @media (max-width: 767px) {
+        .hero h1 br {
+          display: block; } }
     @media (max-width: 991px) {
       .hero h1 {
-        font-size: 1.9rem;
+        font-size: 2.5rem;
         padding: 0 50px; } }
     @media (max-width: 767px) {
       .hero h1 {
-        font-size: 1.8rem;
+        font-size: 2.7rem;
         text-align: left;
         padding: 0;
         text-align: center;
         width: 550px;
         max-width: 100%; } }
-    @media (max-width: 400px) {
+    @media (max-width: 385px) {
       .hero h1 {
-        font-size: 1.7rem;
+        font-size: 2rem;
         text-align: center; } }
   .hero h2 {
     margin-top: 15px;

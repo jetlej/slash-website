@@ -379,13 +379,21 @@ p{
 			color: black;
 		}
 
+		br{
+			display: none;
+
+			@media (max-width: $screen-xs-max) {
+				display: block;
+			}
+		}
+
 		@media (max-width: $screen-sm-max) {
-			font-size: 1.9rem;
+			font-size: 2.5rem;
 			padding: 0 50px;
 		}
 
 		@media (max-width: $screen-xs-max) {
-			font-size: 1.8rem;
+			font-size: 2.7rem;
 			text-align: left;
 			padding: 0;
 			text-align: center;
@@ -393,8 +401,8 @@ p{
 			max-width: 100%;
 		}
 
-		@media (max-width: 400px) {
-			font-size: 1.7rem;
+		@media (max-width: 385px) {
+			font-size: 2rem;
 			text-align: center;
 		}
 	}

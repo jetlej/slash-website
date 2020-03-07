@@ -1011,14 +1011,21 @@ p{
 		}
 	}
 
-	&.even .text{
-		margin-right: 0;
-		margin-left: 70px;
+	&:nth-child(even){
+
+		.flex{
+			flex-direction: row-reverse;	
+
+			.text{
+				margin-right: 0;
+				margin-left: 70px;
+			}
+		}
 	}
 
 	.image{
 		flex-shrink: 0;
-		width: 400px;
+		width: 500px;
 		max-width: 100%;
 
 		@media (max-width: $screen-sm-max) {
@@ -1173,7 +1180,7 @@ p{
 				border-radius: 6px;
 				background: $black;
 				text-align: center;
-				height: 250px;
+				height: 300px;
 				display: flex;
 				align-items: center;
 				flex-direction: column;
@@ -1363,7 +1370,7 @@ p{
 
 			> div{
 				border-radius: 15px;
-				width: 100px;
+				width: 120px;
 				padding: 0 15px;
 				height: 80px;
 				line-height: 80px;
@@ -1489,8 +1496,26 @@ p{
 		}
 	}
 
+	img{
+		width: 28px;
+		margin-right: 10px;
+
+		&.note{
+			width: 31px;
+		}
+
+		&.pomodoro{
+			width: 32px;
+		}
+
+		&.shortcuts{
+			width: 27px;
+		}
+	}
+
 	h3{
-		font-size: 24px;
+		font-size: 20px;
+		display: inline-block;
 	}
 
 	p{

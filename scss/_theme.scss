@@ -936,7 +936,7 @@ p{
 		justify-content: space-between;
 
 		@media (max-width: $screen-sm-max) {
-			flex-direction: column;
+			flex-direction: column !important;
 		}
 	}
 
@@ -1025,7 +1025,7 @@ p{
 
 	.image{
 		flex-shrink: 0;
-		width: 500px;
+		width: 600px;
 		max-width: 100%;
 
 		@media (max-width: $screen-sm-max) {
@@ -1093,7 +1093,7 @@ p{
 		}
 
 		img{
-			width: 500px;
+			width: 600px;
 			border-radius: 6px;
 			box-shadow: 0 30px 40px 0 rgba(0,0,0,0.2);
 		}
@@ -1134,14 +1134,14 @@ p{
 			}
 
 			&.active{
-				top: 85%;
+				top: 83%;
 				width: 30%;
-				font-size: .8rem;
-				height: 7%;
+				font-size: .9rem;
+				height: 8%;
 				border-radius: 2px;
 
 				@media (max-width: $screen-lg-max) {
-					font-size: .6rem;
+					font-size: .8rem;
 				}
 
 				@media (max-width: $screen-md-max) {
@@ -1180,7 +1180,7 @@ p{
 				border-radius: 6px;
 				background: $black;
 				text-align: center;
-				height: 300px;
+				height: 360px;
 				display: flex;
 				align-items: center;
 				flex-direction: column;
@@ -1188,6 +1188,7 @@ p{
 
 				@media (max-width: $screen-sm-max) {
 					padding: 30px 0;
+					height: 250px;
 				}
 			}
 
@@ -1277,7 +1278,7 @@ p{
 
 		.image{
 			@media (max-width: $screen-md-max) {
-				width: 450px;
+				width: 650px;
 			}
 
 			@media (max-width: 400px) {
@@ -1350,7 +1351,7 @@ p{
 	&.feature-customizable{
 
 		.image{
-			width: 566px;
+			width: 700px;
 			margin-bottom: -40px;
 		}
 
@@ -1370,7 +1371,7 @@ p{
 
 			> div{
 				border-radius: 15px;
-				width: 120px;
+				width: 150px;
 				padding: 0 15px;
 				height: 80px;
 				line-height: 80px;
@@ -1380,7 +1381,12 @@ p{
 				opacity: 0;
 				display: flex;
 				align-items: center;
+				justify-content: center;
 				background: $gray;
+
+				img{
+					width: 100px;
+				}
 
 				&.asana{
 					background: #FF5768;
@@ -1514,8 +1520,16 @@ p{
 	}
 
 	h3{
-		font-size: 20px;
+		font-size: 24px;
 		display: inline-block;
+
+		@media (max-width: $screen-lg-max) {
+			font-size: 20px;
+		}
+
+		@media (max-width: $screen-sm-max) {
+			font-size: 22px;
+		}
 	}
 
 	p{

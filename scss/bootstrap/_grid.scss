@@ -76,8 +76,16 @@
 .container-xl {
 	@include container-fixed();
 	min-width: 320px;
-	width: 100% !important;
-	max-width: 1600px;
+	width: 1600px;
+	max-width: 100%;
+	position: static;
+}
+
+.container-lg {
+	@include container-fixed();
+	min-width: 320px;
+	width: 1200px;
+	max-width: 100%;
 	position: static;
 }
 

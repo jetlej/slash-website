@@ -5237,16 +5237,19 @@ footer {
   justify-content: center;
   flex-direction: column;
   min-height: 100vh; }
+  @media (max-width: 991px) {
+    .signup {
+      padding: 40px; } }
   .signup form {
     text-align: center;
     max-width: 350px;
     width: 100%;
     min-height: 240px; }
   .signup .errors {
-    min-height: 20px;
-    padding: 20px 0; }
+    min-height: 60px;
+    padding: 30px 0 10px; }
     .signup .errors > div {
-      text-align: left;
+      text-align: center;
       padding: 0;
       color: #F34000;
       font-size: 1.1rem;
@@ -5255,6 +5258,9 @@ footer {
       margin: 0 0 10px; }
       .signup .errors > div:last-child {
         margin: 0; }
+      @media (max-width: 767px) {
+        .signup .errors > div {
+          font-size: 1.3rem; } }
   .signup p {
     color: #666;
     font-size: 18px;

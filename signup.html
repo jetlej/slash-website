@@ -46,6 +46,7 @@ bodyClass: gray-bg
 
       let data = { email: $('#email').val(), password: $('#password').val(), code: $('#code').val() }
       if (tapfiliateId) data.affiliateId = tapfiliateId
+      $('.errors > div').text('')
 
       $.ajax({
         type: 'POST',
@@ -55,6 +56,10 @@ bodyClass: gray-bg
         success: function (message) {
           console.log(message)
           window.location.href = 'https://getslash.co/get-started'
+        },
+        error: function (xhr, error) {
+          console.log(xhr.responseText)
+          $('.errors > div').text(xhr.responseText)
         }
       })
     })

@@ -28,9 +28,11 @@ $(function(){
 
 	$('body').on('click', '.download', (e) => {
 		let platform = $(e.currentTarget).data('platform')
+		if(!platform) platform = 'Download Page'
 		console.log(platform)
-		if (platform) ga('send', 'event', 'Download', 'click', platform)
-		else ga('send', 'event', 'Download', 'click', 'Download Page')
+		gtag('event', 'download', {
+			'platform': platform
+		})
 	})
 
 	var waypoint1 = $('.feature-focus').waypoint({

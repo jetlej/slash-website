@@ -5105,31 +5105,31 @@ p {
         .get-started .download-buttons > div p {
           text-align: center; } }
 
-.download {
+.page-download {
   background: #f5f6f9; }
   @media (max-width: 1023px) {
-    .download .flex {
+    .page-download .flex {
       flex-direction: column; }
-      .download .flex > div:first-of-type {
+      .page-download .flex > div:first-of-type {
         margin-bottom: 80px; } }
-  .download .flex > div {
+  .page-download .flex > div {
     width: 500px;
     text-align: center; }
     @media (max-width: 1023px) {
-      .download .flex > div {
+      .page-download .flex > div {
         width: auto; } }
-  .download p {
+  .page-download p {
     font-size: 16px;
     color: rgba(0, 0, 0, 0.9);
     height: 50px; }
     @media (max-width: 767px) {
-      .download p {
+      .page-download p {
         max-width: 250px;
         margin: 0 auto 20px; } }
-  .download .platform {
+  .page-download .platform {
     text-align: center;
     padding-bottom: 25px; }
-    .download .platform.desktop {
+    .page-download .platform.desktop {
       margin: 2px 0; }
 
 .download-buttons .btn-container .btn {

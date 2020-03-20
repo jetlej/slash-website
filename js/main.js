@@ -17,11 +17,21 @@ $(function(){
 			})
 			$('#download-mac').attr('href', macUrl)
 			$('#download-windows').attr('href', windowsUrl)
-			if(platform === 'Mac OS') directUrl = macUrl
-			if(platform === 'Windows') directUrl = windowsUrl
-			if(directUrl) $('.cta').attr('href', directUrl)
+			if(platform === 'Mac OS') { 
+				$('.cta').data('platform', 'Mac').attr('href', macUrl)
+			}
+			else if(platform === 'Windows') {
+				$('.cta').data('platform', 'Windows').attr('href', windowsUrl)
+			}
 		})
 	}
+
+	$('body').on('click', '.download', (e) => {
+		let platform = $(e.currentTarget).data('platform')
+		console.log(platform)
+		if (platform) ga('send', 'event', 'Download', 'click', platform)
+		else ga('send', 'event', 'Download', 'click', 'Download Page')
+	})
 
 	var waypoint1 = $('.feature-focus').waypoint({
 		offset: 200,

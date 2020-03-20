@@ -20,9 +20,9 @@ bodyClass: gray-bg
 				<h3>Download the desktop app</h3>
 				<p>The full desktop experience</p>
 				<div class="btn-container">
-					<a data-platform="Mac" id="download-mac" class="btn btn-default btn-xl" href="https://github.com/jetlej/slash-releases/releases/latest" target="_blank">MacOS</a>
-					<a data-platform="Windows" id="download-windows" class="btn btn-default btn-xl" href="https://github.com/jetlej/slash-releases/releases/latest">Windows</a>
-					<a data-platform="Linux" class="btn btn-default btn-xl" href="/linux">Linux</a>
+					<a data-platform="Mac" id="download-mac" class="btn btn-default btn-xl download" href="https://github.com/jetlej/slash-releases/releases/latest" target="_blank">MacOS</a>
+					<a data-platform="Windows" id="download-windows" class="btn btn-default btn-xl download" href="https://github.com/jetlej/slash-releases/releases/latest">Windows</a>
+					<a data-platform="Linux" class="btn btn-default btn-xl download" href="/linux">Linux</a>
 				</div>
 			</div>
 		</div>
@@ -33,10 +33,10 @@ bodyClass: gray-bg
 				<h3>Download the mobile app</h3>
 				<p>Simple companion app for adding tasks on-the-go</p>
 				<div class="btn-container">
-					<a data-platform="iOS" href="https://apps.apple.com/us/app/slash-list/id1471831108" target="_blank">
+					<a class="download" data-platform="iOS" href="https://apps.apple.com/us/app/slash-list/id1471831108" target="_blank">
 						<img src="/images/app-store.png"/>
 					</a>
-					<a data-platform="Android" href="https://play.google.com/store/apps/details?id=co.getslash" target="_blank">
+					<a class="download" data-platform="Android" href="https://play.google.com/store/apps/details?id=co.getslash" target="_blank">
 						<img src="/images/google-play.png"/>
 					</a>
 				</div>
@@ -58,11 +58,6 @@ bodyClass: gray-bg
 </section>
 
 <script>
-	$('.download-buttons').on('click', (e) => {
-		let platform = $(e.currentTarget).data('platform')
-		if (platform) ga('send', 'event', 'Download', 'click', platform)
-	})
-
 	$('.get-started > div > div, .page-title, .subtitle').each(function(i){
 		console.log(i)
 		let offset = 500 + i * 1000

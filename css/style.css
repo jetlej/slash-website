@@ -5089,14 +5089,21 @@ p {
         font-size: 1.4rem; } }
   .get-started .download-buttons > div {
     width: 500px;
-    max-width: 100%; }
+    max-width: 100%;
+    margin: auto; }
     .get-started .download-buttons > div h3 {
       font-size: 1.7rem;
       margin-bottom: 5px;
       margin-top: 0; }
+      @media (max-width: 991px) {
+        .get-started .download-buttons > div h3 {
+          text-align: center; } }
     .get-started .download-buttons > div p {
       color: #8f96a8;
       font-size: 1.1rem; }
+      @media (max-width: 991px) {
+        .get-started .download-buttons > div p {
+          text-align: center; } }
 
 .download {
   background: #f5f6f9; }

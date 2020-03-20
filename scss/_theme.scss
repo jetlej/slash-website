@@ -1877,16 +1877,25 @@ p{
 		> div{	
 			width: 500px;
 			max-width: 100%;
+			margin: auto;
 
 			h3{
 				font-size: 1.7rem;
 				margin-bottom: 5px;
 				margin-top: 0;
+
+				@media (max-width: $screen-sm-max) {
+					text-align: center;
+				}
 			}
 
 		 	p{
 				color: $gray;
 				font-size: 1.1rem;
+
+				@media (max-width: $screen-sm-max) {
+					text-align: center;
+				}
 		 	}
 		}
 	}

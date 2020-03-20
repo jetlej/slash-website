@@ -8,7 +8,7 @@ bodyClass: gray-bg
 ---
 
 <section class="get-started">
-	<div class="container">
+	<div class="container container-sm">
 		<h1 class="page-title has-subtitle">
 			Welcome to <b>Slash</b>.
 		</h1>
@@ -21,8 +21,8 @@ bodyClass: gray-bg
 				<p>The full desktop experience</p>
 				<div class="btn-container">
 					<a data-platform="Mac" id="download-mac" class="btn btn-default btn-xl" href="https://github.com/jetlej/slash-releases/releases/latest" target="_blank">MacOS</a>
-					<a data-platform="Windows" class="btn btn-default btn-xl" href="/windows">Windows</a>
-					<a data-platform="Linux" class="btn btn-default btn-xl" href="/windows">Linux</a>
+					<a data-platform="Windows" id="download-windows" class="btn btn-default btn-xl" href="https://github.com/jetlej/slash-releases/releases/latest">Windows</a>
+					<a data-platform="Linux" class="btn btn-default btn-xl" href="/linux">Linux</a>
 				</div>
 			</div>
 		</div>
@@ -58,17 +58,6 @@ bodyClass: gray-bg
 </section>
 
 <script>
-	$.getJSON('https://api.github.com/repos/jetlej/slash-releases/releases/latest').done(function(release) {
-		let mac, pc, linux
-		release.assets.forEach(function(asset){
-			console.log(asset.name)
-			if(asset.name.endsWith('.dmg')){
-				mac = asset.browser_download_url
-				if(mac) $('#download-mac').attr('href', mac)
-			}
-		});
-	});
-
 	$('.download-buttons').on('click', (e) => {
 		let platform = $(e.currentTarget).data('platform')
 		if (platform) ga('send', 'event', 'Download', 'click', platform)

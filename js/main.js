@@ -30,8 +30,9 @@ $(function(){
 		let platform = $(e.currentTarget).data('platform')
 		if(!platform) platform = 'Download Page'
 		console.log(platform)
-		gtag('event', 'download', {
-			'platform': platform
+		gtag('event', 'Download', {
+			'event_category': 'Downloads',
+			'event_label': platform,
 		})
 	})
 

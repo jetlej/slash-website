@@ -1,6 +1,11 @@
 $(function(){
 
-	let platform = getOS()
+	let tapfiliateId = null
+    tap('getTrackingId', null, function(trackingId) {
+      tapfiliateId = trackingId
+    })
+
+    let platform = getOS()
 
 	if (!['Mac OS', 'Windows'].includes(platform)){
 		return true
@@ -83,83 +88,108 @@ $(function(){
 		changeStep(stepNumber)
 	})
 
-	$(document).on('submit', 'form', function(e){
+	$(document).on('submit', '.button-form', function(e){
+		e.preventDefault()
 
-		e.preventDefault();
-
-		if($(this).parent().hasClass('subscribe')){
+		if ($(this).parent().hasClass('subscribe')) {
 
 			$(this).closest('.subscribe-form').removeClass('subscribe').addClass('submit')
 			$(this).find('input').focus()
 
-		}else if($(this).parent().hasClass('submit')){
+		} else if($(this).parent().hasClass('submit')) {
 
-			ajaxMailChimpForm($(this), $(".result"))
-
-			function ajaxMailChimpForm($form, $resultElement){
-				// Hijack the submission. We'll submit the form manually.
-
-				if (!isValidEmail($form)) {
-					var error =  "Please enter a valid email";
-					$resultElement.addClass('error');
-					$resultElement.html(error);
-				} else {
-					$resultElement.html('');
-					$resultElement.removeClass('error');
-					submitSubscribeForm($form, $resultElement);
-				}
-			}
-
-			// Validate the email address in the form
-			function isValidEmail($form) {
-				// If email is empty, show error message.
-				// contains just one @
-				var email = $form.find("input[type='email']").val();
-				if (!email || !email.length) {
-					return false;
-				} else if (email.indexOf("@") == -1) {
-					return false;
-				}
-				return true;
-			}
-
-			// Submit the form with an ajax/jsonp request.
-			// Based on http://stackoverflow.com/a/15120409/215821
-			function submitSubscribeForm($form, $resultElement) {
-
-				$('.subscribe-form').removeClass('submit').addClass('submitting')
-
-				$.ajax({
-					type: "GET",
-					url: "https://getslash.us5.list-manage.com/subscribe/post-json?u=2e58ea2720a92579a1fd9ba6a&amp;id=bda01cf26f",
-					data: $form.serialize(),
-					cache: false,
-					dataType: "jsonp",
-					jsonp: "c", // trigger MailChimp to return a JSONP response
-					contentType: "application/json; charset=utf-8",
-					error: function(error){
-						// According to jquery docs, this is never called for cross-domain JSONP requests
-					},
-					success: function(data){
-						if (data.result != "success") {
-							var message = data.msg || "Something went wrong! Please refresh the page and try again."
-							$resultElement.addClass('error')
-							if (data.msg && data.msg.indexOf("already subscribed") >= 0) {
-								message = "You're already subscribed."
-								$resultElement.removeClass('error')
-							}
-							$resultElement.html(message);
-							$('.subscribe-form').removeClass('submitting').addClass('submit')
-						} else {
-							$resultElement.removeClass('error')
-							$resultElement.html('Keep an eye on your inbox')
-							$form.find('span').text('You\'re on the list').closest('.subscribe-form').removeClass('submitting').addClass('success')
-						}
-					}
-				})
-			}
+			let action = $(this).parent().hasClass('download-form') ? 'download' : 'subscribe'
+			ajaxMailChimpForm($(this), $(".result"), action)
 		}
 	})
+
+	function ajaxMailChimpForm($form, $resultElement, action) {
+
+		if (!isValidEmail($form)) {
+			var error =  "Please enter a valid email"
+			$resultElement.addClass('error')
+			$resultElement.html(error)
+		} else {
+			$resultElement.html('')
+			$resultElement.removeClass('error')
+
+			if (action === 'download') {
+				registerEmail($form, $resultElement)
+			} else { 
+				mailchimpSubscribe($form, $resultElement)
+			}
+		}
+	}
+
+	// Validate the email address in the form
+	function isValidEmail($form) {
+		var email = $form.find("input[type='email']").val()
+		if (!email || !email.length) {
+			return false
+		} else if (email.indexOf("@") == -1) {
+			return false
+		}
+		return true
+	}
+
+	function registerEmail($form, $resultElement) {
+
+		$('.subscribe-form').removeClass('submit').addClass('submitting')
+
+		let data = { email: $form.find('input').val() }
+    	if (tapfiliateId) data.affiliateId = tapfiliateId
+
+    	$.ajax({
+    		type: 'POST',
+    		dataType: 'json',
+    		//url: 'https://api.taskslayer.io/auth/register',
+    		url: 'https://localhost:3000/auth/register',
+    		data: data,
+    		success: function (message) {
+    			console.log(message)
+    			$resultElement.removeClass('error')
+    			$resultElement.html('We just emailed you a link')
+    			$form.find('span').text('Check your span just in case').closest('.subscribe-form').removeClass('submitting').addClass('success')
+    		},
+    		error: function (xhr, error) {
+    			var message = xhr.responseText || "Something went wrong! Please refresh the page and try again."
+    			$resultElement.addClass('error')
+    			$resultElement.html(message);
+    			$('.subscribe-form').removeClass('submitting').addClass('submit')
+    		}
+    	})
+	}
+
+	function mailchimpSubscribe($form, $resultElement) {
+
+		$('.subscribe-form').removeClass('submit').addClass('submitting')
+
+		$.ajax({
+			type: "GET",
+			url: "https://getslash.us5.list-manage.com/subscribe/post-json?u=2e58ea2720a92579a1fd9ba6a&amp;id=bda01cf26f",
+			data: $form.serialize(),
+			cache: false,
+			dataType: "jsonp",
+			jsonp: "c",
+			contentType: "application/json; charset=utf-8",
+			success: function(data){
+				if (data.result != "success") {
+					var message = data.msg || "Something went wrong! Please refresh the page and try again."
+					$resultElement.addClass('error')
+					if (data.msg && data.msg.indexOf("already subscribed") >= 0) {
+						message = "You're already subscribed."
+						$resultElement.removeClass('error')
+					}
+					$resultElement.html(message);
+					$('.subscribe-form').removeClass('submitting').addClass('submit')
+				} else {
+					$resultElement.removeClass('error')
+					$resultElement.html('Keep an eye on your inbox')
+					$form.find('span').text('You\'re on the list').closest('.subscribe-form').removeClass('submitting').addClass('success')
+				}
+			}
+		})
+	}
 })
 
 let interval

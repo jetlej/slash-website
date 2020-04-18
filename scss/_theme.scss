@@ -363,20 +363,21 @@ p{
 
 	h1{
 		color: black;
-		font-size: 3rem;
+		font-size: 3.7rem;
 		max-width: 800px;
-		margin: 0 auto;
-		font-weight: 300;
+		margin: 0 auto 30px;
+		font-weight: 500;
 
 		span{
 			color: $brand-primary;
-			font-weight: 600;
+			font-weight: 900;
 		}
 
 		b{
-			font-weight: 600;
+			font-weight: 900;
 			//text-decoration: underline;
 			color: black;
+			color: $brand-primary;
 		}
 
 		br{
@@ -408,12 +409,37 @@ p{
 	}
 
 	h2{
-		margin-top: 15px;
-		color: $gray-dark;
+		width: 800px;
+		max-width: 100%;
+		margin: 15px auto 0;
+		color: darken($gray-darker, 4%);
+		font-size: 1.7rem;
+		font-weight: 300;
+
+		br{
+			display:block;
+			content:"";
+			margin-top:0.5em;
+			line-height:190%;
+			vertical-align:top;
+		}
+
+		@media (max-width: $screen-xs-max) {
+			font-size: 1.5rem;	
+		}
+
+		@media (max-width: 385px) {
+			font-size: 1.3rem;	
+		}
 
 		b{
-			font-weight: 500;
+			font-weight: 600;
 			color: $gray-darker;
+		}
+
+		u{
+			color: $gray-darker;
+			font-weight: 500;
 		}
 	}
 
@@ -510,6 +536,7 @@ p{
 	background: white;
 	position: relative;
 	z-index: 2;
+	overflow: hidden;
 
 	.icons{
 		display: flex;
@@ -2003,13 +2030,20 @@ footer{
 	a, span{
 		display: inline-block;
 		margin: 0 7px;
-		font-size: 11px;
-		color: #aaa;
+		font-size: 14px;
+		color: $gray;
 		font-weight: 500;
 
 		&:hover{
 			color: #555;
 		}
+	}
+
+	span{
+		display: block;
+		font-size: 10px;
+		padding-top: 30px;
+		color: #aaa;
 	}
 }
 

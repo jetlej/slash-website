@@ -3,7 +3,7 @@ $(function(){
 	let platform = getOS()
 
 	if (!['Mac OS', 'Windows'].includes(platform)){
-		return true
+
 	} else {
 		$.getJSON('https://api.github.com/repos/jetlej/slash-releases/releases/latest').done(function(release) {
 			let directUrl, macUrl, windowsUrl

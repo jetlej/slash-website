@@ -136,20 +136,24 @@ $(function(){
 
 		$('.subscribe-form').removeClass('submit').addClass('submitting')
 
+		$resultElement.removeClass('error')
+		$resultElement.html('')
+
 		let data = { email: $form.find('input').val() }
     	if (tapfiliateId) data.affiliateId = tapfiliateId
+
+    	// let url = 'https://api.taskslayer.io/auth/register'
+    	let url = 'https://slash-api.hkek.app/auth/register'
 
     	$.ajax({
     		type: 'POST',
     		dataType: 'json',
-    		//url: 'https://api.taskslayer.io/auth/register',
-    		url: 'https://localhost:3000/auth/register',
+    		url: url,
     		data: data,
     		success: function (message) {
     			console.log(message)
-    			$resultElement.removeClass('error')
-    			$resultElement.html('We just emailed you a link')
-    			$form.find('span').text('Check your span just in case').closest('.subscribe-form').removeClass('submitting').addClass('success')
+    			$resultElement.html('Check spam just in case!')
+    			$form.find('span').text('Check your email').closest('.subscribe-form').removeClass('submitting').addClass('success')
     		},
     		error: function (xhr, error) {
     			var message = xhr.responseText || "Something went wrong! Please refresh the page and try again."

@@ -361,9 +361,17 @@ layout: page
 	<section class="bottom-cta">
 		<div class="container container-sm">
 			<h2>Ready to <b>slash</b> some tasks?</h2>
-			<div class="btn-container">
-				<a class="btn btn-default btn-xl download cta" href="/download">Try it now</a>
-				<small>for macOS + Windows</a></small>
+			<div class="btn-container subscribe-form subscribe download-form">
+				<form class="button-form">
+					<input type="email" class="form-control input-xl" name="EMAIL" placeholder="What's your email?"/>
+					<button type="submit" class="btn btn-xl btn-default">
+						<img class="loading" src="images/loading.svg"/>
+						<img class="send" src="images/send.svg"/>
+						<img class="checkmark" src="images/checkmark.svg"/>
+						<span>Try it now</span>
+					</button>
+				</form>
+				<span class="result">for macOS + Windows</span>
 			</div>
 		</div>
 	</section>

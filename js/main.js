@@ -142,8 +142,8 @@ $(function(){
 		let data = { email: $form.find('input').val() }
     	if (tapfiliateId) data.affiliateId = tapfiliateId
 
-    	// let url = 'https://api.taskslayer.io/auth/register'
-    	let url = 'https://slash-api.hkek.app/auth/register'
+    	let url = 'https://api.taskslayer.io/auth/register-new'
+    	// let url = 'https://slash-api.hkek.app/auth/register-new'
 
     	$.ajax({
     		type: 'POST',

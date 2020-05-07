@@ -4913,15 +4913,15 @@ p {
         display: block;
         margin-bottom: 10px;
         font-weight: 600; }
-    .why .flex.result {
+    .why .flex.the-result {
       padding-bottom: 50px; }
-      .why .flex.result p {
+      .why .flex.the-result p {
         color: #23262F;
         font-weight: 500; }
       @media (max-width: 991px) {
-        .why .flex.result p {
+        .why .flex.the-result p {
           font-size: 18px; }
-        .why .flex.result span {
+        .why .flex.the-result span {
           display: none; } }
 
 .roadmap {

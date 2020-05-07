@@ -2,7 +2,7 @@
 layout: page
 title: Slash — Sign Up
 description: A productivity machine that forces you to work smart and destroy your tasks one-by-one.
-permalink: /signup-old
+permalink: /signup-alpha
 layout: page
 headerClass: hidden
 footerClass: hidden
@@ -53,7 +53,7 @@ bodyClass: gray-bg
       $.ajax({
         type: 'POST',
         dataType: 'json',
-        url: 'https://api.taskslayer.io/auth/register',
+        url: 'https://slash-api.hkek.app/auth/register',
         data: data,
         success: function (message) {
           console.log(message)

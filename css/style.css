@@ -338,7 +338,7 @@ html {
       font-size: 80%; } }
 
 body {
-  font-family: "Avenir LT", "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "GT-Walsheim", "Avenir LT", "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 1.428571429;
   color: #5E6271;
@@ -622,7 +622,7 @@ ol {
     font-size: 14px !important;
     line-height: 100%;
     margin: 5px 0 15px;
-    font-family: "Avenir LT", "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+    font-family: "GT-Walsheim", "Avenir LT", "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif; }
 
 .list-lg li {
   padding-bottom: 15px; }
@@ -2106,8 +2106,8 @@ output {
     margin-top: 5px; }
   .form-control.error {
     color: #e5002c;
-    background: #faecec;
-    border: 2px solid #CA3737 !important;
+    background: white;
+    border: 2px solid #FF3535 !important;
     border-radius: 0; }
     .form-control.error:focus {
       box-shadow: none; }
@@ -2225,15 +2225,15 @@ select[multiple].input-lg {
   height: auto; }
 
 .input-xl {
-  height: 53px;
+  height: 58px;
   padding: 12px 22px;
-  font-size: 18px;
-  line-height: 53px;
+  font-size: 21px;
+  line-height: 58px;
   border-radius: 10px; }
 
 select.input-xl {
-  height: 53px;
-  line-height: 53px; }
+  height: 58px;
+  line-height: 58px; }
 
 textarea.input-xl,
 select[multiple].input-xl {
@@ -2518,40 +2518,40 @@ select[multiple].input-xl {
 
 .btn-warning {
   color: #fff;
-  background-color: #FF3535; }
+  background-color: #F52F6E; }
   .btn-warning:hover, .btn-warning:focus, .btn-warning:active, .btn-warning.active {
     color: #fff;
-    background-color: #ff1c1c; }
+    background-color: #f4175d; }
   .open .btn-warning.dropdown-toggle {
     color: #fff;
-    background-color: #ff0c0c; }
+    background-color: #f00c54; }
   .btn-warning:active, .btn-warning.active {
     background-image: none; }
   .open .btn-warning.dropdown-toggle {
     background-image: none; }
   .btn-warning.disabled, .btn-warning.disabled:hover, .btn-warning.disabled:focus, .btn-warning.disabled:active, .btn-warning.disabled.active, .btn-warning[disabled], .btn-warning[disabled]:hover, .btn-warning[disabled]:focus, .btn-warning[disabled]:active, .btn-warning[disabled].active, fieldset[disabled] .btn-warning, fieldset[disabled] .btn-warning:hover, fieldset[disabled] .btn-warning:focus, fieldset[disabled] .btn-warning:active, fieldset[disabled] .btn-warning.active {
-    background-color: #FF3535; }
+    background-color: #F52F6E; }
   .btn-warning .badge {
-    color: #FF3535;
+    color: #F52F6E;
     background-color: #fff; }
 
 .btn-danger {
   color: #fff;
-  background-color: #CA3737; }
+  background-color: #FF3535; }
   .btn-danger:hover, .btn-danger:focus, .btn-danger:active, .btn-danger.active {
     color: #fff;
-    background-color: #b73030; }
+    background-color: #ff1c1c; }
   .open .btn-danger.dropdown-toggle {
     color: #fff;
-    background-color: #ab2d2d; }
+    background-color: #ff0c0c; }
   .btn-danger:active, .btn-danger.active {
     background-image: none; }
   .open .btn-danger.dropdown-toggle {
     background-image: none; }
   .btn-danger.disabled, .btn-danger.disabled:hover, .btn-danger.disabled:focus, .btn-danger.disabled:active, .btn-danger.disabled.active, .btn-danger[disabled], .btn-danger[disabled]:hover, .btn-danger[disabled]:focus, .btn-danger[disabled]:active, .btn-danger[disabled].active, fieldset[disabled] .btn-danger, fieldset[disabled] .btn-danger:hover, fieldset[disabled] .btn-danger:focus, fieldset[disabled] .btn-danger:active, fieldset[disabled] .btn-danger.active {
-    background-color: #CA3737; }
+    background-color: #FF3535; }
   .btn-danger .badge {
-    color: #CA3737;
+    color: #FF3535;
     background-color: #fff; }
 
 .btn-white {
@@ -2594,9 +2594,9 @@ select[multiple].input-xl {
 
 .btn-xl {
   padding: 0 22px;
-  height: 53px;
-  font-size: 18px;
-  line-height: 53px;
+  height: 58px;
+  font-size: 21px;
+  line-height: 58px;
   border-radius: 10px;
   padding-left: 30px;
   padding-right: 30px; }
@@ -3709,7 +3709,7 @@ a.js {
   color: #00c109 !important; }
 
 .yellow {
-  color: #FF3535 !important; }
+  color: #F52F6E !important; }
 
 .clearfix {
   width: 100% !important;
@@ -3886,7 +3886,7 @@ h3 {
     font-weight: 500;
     color: #8f96a8; }
     .subscribe-form .result.error {
-      color: #FF3535; }
+      color: #F52F6E; }
   .subscribe-form .btn {
     position: relative;
     z-index: 6;
@@ -3945,7 +3945,7 @@ h3 {
 
 header {
   text-align: center;
-  padding: 40px 0 0; }
+  padding: 20px 0 0; }
   @media (max-width: 767px) {
     header {
       padding: 25px 0 0; } }
@@ -3954,10 +3954,10 @@ header {
     justify-content: space-between;
     align-items: center; }
   header img {
-    width: 130px; }
+    width: 150px; }
     @media (max-width: 991px) {
       header img {
-        width: 110px; } }
+        width: 130px; } }
   header nav a {
     font-size: .9rem;
     display: inline-block;
@@ -4039,7 +4039,7 @@ p {
 
 .hero {
   text-align: center;
-  background: #f5f6f9;
+  background: #181818;
   margin-bottom: -10px;
   margin-top: -100px;
   padding: 200px 0 0; }
@@ -4051,18 +4051,19 @@ p {
     .hero .container {
       padding: 0 30px; } }
   .hero h1 {
-    color: black;
-    font-size: 3.7rem;
+    color: white;
+    font-size: 5rem;
     max-width: 800px;
     margin: 0 auto 30px;
-    font-weight: 500; }
+    font-weight: 800;
+    line-height: 120%; }
     .hero h1 span {
-      color: #7922FF;
+      color: #F52F6E;
       font-weight: 900; }
     .hero h1 b {
       font-weight: 900;
       color: black;
-      color: #7922FF; }
+      color: #F52F6E; }
     .hero h1 br {
       display: none; }
       @media (max-width: 767px) {
@@ -4070,11 +4071,11 @@ p {
           display: block; } }
     @media (max-width: 991px) {
       .hero h1 {
-        font-size: 2.5rem;
+        font-size: 2.7rem;
         padding: 0 50px; } }
     @media (max-width: 767px) {
       .hero h1 {
-        font-size: 2.7rem;
+        font-size: 3rem;
         text-align: left;
         padding: 0;
         text-align: center;
@@ -4082,13 +4083,13 @@ p {
         max-width: 100%; } }
     @media (max-width: 385px) {
       .hero h1 {
-        font-size: 2rem;
+        font-size: 2.4rem;
         text-align: center; } }
   .hero h2 {
     width: 800px;
     max-width: 100%;
     margin: 15px auto 0;
-    color: #1a1d23;
+    color: #BBBBBB;
     font-size: 1.7rem;
     font-weight: 300; }
     .hero h2 br {
@@ -4104,10 +4105,8 @@ p {
       .hero h2 {
         font-size: 1.3rem; } }
     .hero h2 b {
-      font-weight: 600;
-      color: #23262F; }
+      font-weight: 600; }
     .hero h2 u {
-      color: #23262F;
       font-weight: 500; }
   .hero .btn-container {
     margin: 75px auto 110px !important; }
@@ -4483,16 +4482,15 @@ p {
   .feature .text {
     margin-bottom: 30px;
     text-align: left;
-    width: 500px;
+    width: 600px;
     max-width: 100%;
-    flex-shrink: 1;
     margin-right: 70px; }
     .feature .text span {
       font-size: 12px;
       color: white;
       font-weight: bold;
       line-height: 18px;
-      background: #FF3535;
+      background: #F52F6E;
       padding: 2px 10px;
       border-radius: 5px;
       display: inline-block; }
@@ -4510,6 +4508,10 @@ p {
       width: 330px;
       max-width: 100%;
       margin: 0 auto; }
+    .feature .text h3 {
+      font-size: 4rem;
+      line-height: 120%;
+      font-weight: bold; }
     .feature .text h2 {
       box-sizing: border-box;
       color: #23262F;
@@ -4526,14 +4528,14 @@ p {
         .feature .text p {
           margin: 0 0 10px; } }
       .feature .text p .important {
-        color: #FF3535; }
+        color: #F52F6E; }
       .feature .text p .urgent {
         color: #00c109; }
       .feature .text p .difficult {
         color: #7922FF; }
-  .feature:nth-child(even) .flex {
+  .feature:nth-child(odd) .flex {
     flex-direction: row-reverse; }
-    .feature:nth-child(even) .flex .text {
+    .feature:nth-child(odd) .flex .text {
       margin-right: 0;
       margin-left: 70px; }
   .feature .image {
@@ -4780,7 +4782,7 @@ p {
       display: flex;
       align-items: center;
       justify-content: center;
-      background: #8f96a8; }
+      background: #2A2D39 !important; }
       .feature.feature-integrations .image > div img {
         width: 100px; }
       .feature.feature-integrations .image > div.asana {
@@ -5176,7 +5178,7 @@ p {
     top: -6px;
     right: -6px;
     line-height: 12px;
-    background: #FF3535;
+    background: #F52F6E;
     padding: 3px 10px;
     border-radius: 5px; }
 

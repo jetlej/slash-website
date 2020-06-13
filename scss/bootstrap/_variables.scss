@@ -21,8 +21,8 @@ $gray-lighter:           #f5f6f9 !default;
 $brand-primary:         #7922FF !default;
 $brand-success:         #00c109 !default;
 $brand-info:            $gray !default;
-$brand-warning:         #FF3535 !default;
-$brand-danger:          #CA3737 !default;
+$brand-warning:         #F52F6E !default;
+$brand-danger:          #FF3535 !default;
 
 $brand-lighter: #ECF8F8;
 
@@ -54,7 +54,7 @@ $box-shadow: 0 1px 5px rgba(0,0,0,.2);
 //
 //## Font, line-height, and color for body text, headings, and more.
 
-$font-family-sans-serif:  "Avenir LT", "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$font-family-sans-serif:  "GT-Walsheim", "Avenir LT", "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
 $font-family-serif:      "Times New Roman", Times, serif !default;
 //** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
 $font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace !default;
@@ -62,7 +62,7 @@ $font-family-base:        $font-family-sans-serif !default;
 
 $font-size-base:          14px !default;
 $font-size-xxl:         ceil(($font-size-base * 1.65)) !default;
-$font-size-xl:         ceil(($font-size-base * 1.25)) !default;
+$font-size-xl:         ceil(($font-size-base * 1.5)) !default;
 $font-size-large:         ceil(($font-size-base * 1.25)) !default; // ~18px
 $font-size-medium:         ceil(($font-size-base * 1.125)) !default; // ~18px
 $font-size-small:         ceil(($font-size-base * 0.85)) !default; // ~12px

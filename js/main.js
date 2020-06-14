@@ -41,53 +41,6 @@ $(function(){
 		})
 	})
 
-	var waypoint1 = $('.feature-focus').waypoint({
-		offset: 200,
-		handler: function(direction) {
-			$('.focus-window').addClass('active')
-		}
-	})
-
-	var waypoint2 = $('.feature-flow').waypoint({
-		offset: 200,
-		handler: function(direction) {
-			$('.feature-flow').addClass('active')
-		}
-	})
-
-	var waypoint3 = $('.feature-integrations').waypoint({
-		offset: 200,
-		handler: function(direction) {
-			$('.feature-integrations').addClass('active')
-		}
-	})
-
-	let interval, stepInterval, intervalSet = null
-
-	let waypoint4 = $('.icons').waypoint({
-		offset: 200,
-		handler: function(direction) {
-			if(!intervalSet){
-				intervalSet = true
-				let stepCount = 2
-				setTimeout(()=>{
-					changeStep(stepCount)
-				}, 400)
-				stepInterval = setInterval(function(){
-					stepCount++
-					if(stepCount === 5) stepCount = 1
-					changeStep(stepCount)
-				}, 3000)
-			}
-		}
-	})
-
-	$('.icons > div').on('click', (e) => {
-		clearInterval(stepInterval)
-		let stepNumber = $(event.currentTarget).data('step')
-		changeStep(stepNumber)
-	})
-
 	$(document).on('submit', '.button-form', function(e){
 		e.preventDefault()
 

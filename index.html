@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "Slash / The hyper-focus app &#9889;"
+title: "Slash / The first *do* app."
 description: A new breed of productivity app. Slice through your to-do lists by staying focused and in flow.
 permalink: /
 layout: page
@@ -10,96 +10,36 @@ layout: page
 
 	<section class="hero">
 		<div class="container">
-			<h1>Our mission is to transform how you get stuff done.</h1>
-			<h2>Get 2X more done. Guaranteed.</h2>
-
-			<div class="btn-container subscribe-form subscribe download-form">
-				<form class="button-form">
-					<input type="email" class="form-control input-xl" name="EMAIL" placeholder="What's your email?"/>
-					<button type="submit" class="btn btn-xl btn-primary">
-						<img class="loading" src="images/loading.svg"/>
-						<img class="send" src="images/send.svg"/>
-						<img class="checkmark" src="images/checkmark.svg"/>
-						<span>Take the Slash challenge</span>
-					</button>
-				</form>
-				<span class="result">for macOS + Windows</span>
-			</div>
-
+			<h1>The first <u>do</u> app.</h1>
+			<h2>Get more done than ever before.</h2>
 		</div>
-		<svg fill="#FFFFFF" class="big-half-circle big-half-circle-1" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100" viewBox="0 0 100 100" preserveAspectRatio="none">
-			<path d="M0 100 C40 0 60 0 100 100 Z"></path>
-		</svg>
 	</section>
 
-	<!--
-	<section class="hero">
+	<section class="sub-hero">
 		<div class="container">
-			<h1>To-do lists are <span><span>broken</span></span>.</h1>
-			<h2><span>Slash</span> is the first app that helps you <b>conquer</b> your tasks, not just list them.</h2>
-			
-			<div class="btn-container">
-				<a class="btn btn-default btn-xl cta" href="https://github.com/jetlej/slash-releases/releases/latest" target="_blank">Try it now</a>
-				<small>for macOS / <a href="/download">See all platforms</a></small>
-			</div>
-
-		</div>
-		<svg fill="#FFFFFF" class="big-half-circle big-half-circle-1" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100" viewBox="0 0 100 100" preserveAspectRatio="none">
-			<path d="M0 100 C40 0 60 0 100 100 Z"></path>
-		</svg>
-	</section>
-	-->
-
-	<section class="how">
-		<div class="container">
-			<div class="icons">
-				<div class="active" data-step="1">
-					<img src="images/list.svg?v=2"/>
-					<h2>List</h2>
-				</div>
-				<div data-step="2">
-					<img src="images/slash.svg?v=2"/>
-					<h2>Focus</h2>
-				</div>
-				<div data-step="3">
-					<img src="images/reward.svg?v=2"/>
-					<h2>Reward</h2>
-				</div>
-				<div data-step="4">
-					<img src="images/repeat.svg?v=2"/>
-					<h2>Repeat</h2>
-				</div>
-			</div>
-			<div class="showcase">
-				<img src="/images/macbook.jpg"/>
-				<div class="screen">
-					<div class="app step1 active">
-						<div class="list">
-							<!--
-							<div class="tasks">
-								<div class="task">Buy groceries</div>
-								<div class="task">Finish new homepage design</div>
-								<div class="task">Schedule meeting for tomorrow</div>
-								<a class="btn btn-primary btn-xl">Start Slaying</a>
-							</div>
-							-->
-						</div>
-						<div class="focus">
-							<p class="task-text">Finish website design</p>
-							<span class="timer">0:00</span>
-						</div>
-						<div class="reward">
-							<h3>Nice job!</h3>
-							<img src="https://media.giphy.com/media/l3q2Z6S6n38zjPswo/giphy.gif"/>
-							<p><span>Next task:</span> Send beta invites</p>
-							<button class="btn btn-primary btn-lg">Keep Slashing</button>
-							<small>or <u>take a break</u></small>
-						</div>
-					</div>
-				</div>
-			</div>
+			<h2>
+				<p>Slash is like a little robot on your shoulder that keeps you organized and focused.</p>
+				<p>This is how it works…</p>
+			</h2>
 		</div>
 	</section>
+
+	<div class="app-window">
+		<div class="list">
+			<h4>Today</h4>
+			<div class="tasks">
+				<div>Design new website</div>
+				<div>Take out the trash</div>
+				<div>Answer emails for 30 minutes</div>
+				<input type="text" placeholder="Add task..."/>
+			</div>
+			<a class="btn btn-primary btn-lg btn-block">Start Slashing</a>
+		</div>
+		<div class="focus">
+			<p>Design new website</p>
+			<span class="timer">0:00</span>
+		</div>
+	</div>
 	
 	<!--
 	<section class="science">
@@ -376,21 +316,8 @@ layout: page
 
 </div>
 
-<script>
-	$(function(){
-
-		$('.icons img').each(function(){
-			var $img = $(this)
-			var imgClass = $img.attr('class')
-			var imgURL = $img.attr('src')
-			$.get(imgURL, function(data) {
-				var $svg = $(data).find('svg')
-				if(typeof imgClass !== 'undefined') {
-					$svg = $svg.attr('class', imgClass+' replaced-svg')
-				}
-				$svg = $svg.removeAttr('xmlns:a')
-				$img.replaceWith($svg)
-			}, 'xml')
-		})
-	})
-</script>
+<script type="text/javascript" src="/js/anime.min.js"></script>
+<script type="text/javascript" src="/js/gsap3/gsap.min.js"></script>
+<script type="text/javascript" src="/js/scrollmagic/uncompressed/ScrollMagic.js"></script>
+<script type="text/javascript" src="/js/scrollmagic/uncompressed/plugins/animation.gsap.js"></script>
+<script type="text/javascript" src="/js/homepage.js"></script>

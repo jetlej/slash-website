@@ -227,7 +227,7 @@ header{
 	}
 
 	img{
-		width: 150px;
+		width: 140px;
 
 		@media (max-width: $screen-sm-max) {
 			width: 130px;
@@ -237,7 +237,7 @@ header{
 	nav{
 
 		a{
-			font-size: .9rem;
+			font-size: .9rem !important;
 			display: inline-block;
 			margin-left: 25px;
 			color: $gray-dark;
@@ -342,13 +342,98 @@ p{
 	}
 }
 
+.app-window{
+	background: #121318;
+	color: white;
+	position: fixed;
+	bottom: -15%;
+	width: 850px;
+	height: 550px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	left: 50%;
+	transform: translate(-50%, 0);
+	z-index: 9999;
+	border-radius: 15px;
+
+	.list{
+		width: 500px;
+		height: 100%;
+		padding-top: 50px;
+
+		h4{
+			color: #5E6271;
+			font-weight: 600;
+			margin-bottom: 20px;
+		}
+
+		.tasks{
+			margin-bottom: 20px;
+
+			div, input{
+				font-size: 1.4rem;
+				font-weight: 600;
+			}
+
+			div{
+				margin-bottom: 15px;
+			}
+
+			input{
+				border: none;
+				border-bottom: 2px solid #5E6271;
+				background: none;
+				line-height: 40px;
+				-webkit-appearance: none;
+				appearance: none;
+				box-shadow: none;
+				margin: 0;
+				display: block;
+				width: 100%;
+				padding: 0;
+				margin-top: 25px;
+
+				&:focus{
+					box-shadow: none;
+					outline: none;
+				}
+			}
+		}
+
+		.btn{
+			font-size: 1.6rem;
+			border-radius: 5px;
+		}
+	}
+
+	.focus{
+		color: white;
+		text-align: center;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		p{
+			font-size: 1rem;
+			font-weight: bold;
+			margin: 0;
+			color: white;
+			margin-right: 10px;
+		}
+
+		span{
+			font-weight: 400;
+			font-size: .9rem;
+		}
+	}
+}
+
 .hero{
 	text-align: center;
-	background: #181818;
-	//border-bottom: 1px solid $gray-light;
-	margin-bottom: -10px;
-	margin-top: -100px;
-	padding: 200px 0 0;
+	padding: 70px 0 0;
+	min-height: calc(100vh - 100px);
 
 	@media (max-width: $screen-sm-max) {
 		padding-top: 150px;
@@ -362,31 +447,15 @@ p{
 	}
 
 	h1{
-		color: white;
-		font-size: 5rem;
+		font-size: 5.7rem;
 		max-width: 800px;
-		margin: 0 auto 30px;
+		margin: 0 auto 15px;
 		font-weight: 800;
 		line-height: 120%;
+		letter-spacing: -2px;
 
-		span{
-			color: $brand-warning;
-			font-weight: 900;
-		}
-
-		b{
-			font-weight: 900;
-			//text-decoration: underline;
-			color: black;
-			color: $brand-warning;
-		}
-
-		br{
-			display: none;
-
-			@media (max-width: $screen-xs-max) {
-				display: block;
-			}
+		u{
+			text-decoration-color: $brand-warning;
 		}
 
 		@media (max-width: $screen-sm-max) {
@@ -412,17 +481,17 @@ p{
 	h2{
 		width: 800px;
 		max-width: 100%;
-		margin: 15px auto 0;
-		color: #BBBBBB;
-		font-size: 1.7rem;
+		margin: 0 auto;
+		color: $gray;
+		font-size: 1.9rem;
 		font-weight: 300;
 
 		br{
-			display:block;
-			content:"";
-			margin-top:0.5em;
-			line-height:190%;
-			vertical-align:top;
+			display: block;
+			content: "";
+			margin-top: 0.5em;
+			line-height: 190%;
+			vertical-align: top;
 		}
 
 		@media (max-width: $screen-xs-max) {
@@ -435,11 +504,9 @@ p{
 
 		b{
 			font-weight: 600;
-			// color: white;
 		}
 
 		u{
-			// color: white;
 			font-weight: 500;
 		}
 	}
@@ -456,6 +523,25 @@ p{
 		//filter: drop-shadow( 0px -5px 10px rgba(0, 0, 0, .03));
 	}
 
+}
+
+.sub-hero{
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	p{
+		font-size: 3rem;
+		line-height: 140%;
+		color: black;
+		margin-bottom: 50px;
+		text-align: center;
+
+		&:last-child{
+			margin: 0;
+		}
+	}
 }
 
 .science{

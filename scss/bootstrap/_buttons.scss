@@ -166,7 +166,7 @@
 }
 .btn-sm{
   // line-height: ensure proper height of button next to small input
-  @include button-size($padding-small-vertical, $padding-small-horizontal, $font-size-small, $input-height-small, $input-border-radius);
+  @include button-size($padding-small-vertical, $padding-small-horizontal, $font-size-small, $input-height-small, $border-radius-small);
 }
 .btn-xs{
   min-width: 22px;

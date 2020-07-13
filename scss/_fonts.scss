@@ -1,41 +1,54 @@
 @font-face {
-font-family: 'Avenir LT';
-font-style: normal;
-font-weight: 300;
-src: local('Avenir LT Std 55 Roman'), url('../fonts/AvenirLTStd-Roman.woff') format('woff');
+    font-family: 'GT Walsheim';
+    src: url('../fonts/GTWalsheim-BoldOblique.woff2') format('woff2'),
+        url('../fonts/GTWalsheim-BoldOblique.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
 }
 
 @font-face {
-font-family: 'Avenir LT';
-font-style: normal;
-font-weight: 200;
-src: local('Avenir LT'), url('../fonts/AvenirLTStd-Light.woff') format('woff');
+    font-family: 'GT Walsheim';
+    src: url('../fonts/GTWalsheim-Bold.woff2') format('woff2'),
+        url('../fonts/GTWalsheim-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
-font-family: 'Avenir LT';
-font-style: normal;
-font-weight: 400;
-src: local('Avenir LT'), url('../fonts/AvenirLTStd-Book.woff') format('woff');
+    font-family: 'GT Walsheim';
+    src: url('../fonts/GTWalsheim-LightOblique.woff2') format('woff2'),
+        url('../fonts/GTWalsheim-LightOblique.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
 }
 
 @font-face {
-font-family: 'Avenir LT';
-font-style: normal;
-font-weight: 500;
-src: local('Avenir LT'), url('../fonts/AvenirLTStd-Medium.woff') format('woff');
+    font-family: 'GT Walsheim';
+    src: url('../fonts/GTWalsheim-RegularOblique.woff2') format('woff2'),
+        url('../fonts/GTWalsheim-RegularOblique.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
 }
 
 @font-face {
-font-family: 'Avenir LT';
-font-style: normal;
-font-weight: 600;
-src: local('Avenir LT'), url('../fonts/AvenirLTStd-Heavy.woff') format('woff');
+    font-family: 'GT Walsheim';
+    src: url('../fonts/GTWalsheim-Light.woff2') format('woff2'),
+        url('../fonts/GTWalsheim-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
-font-family: 'Avenir LT';
-font-style: normal;
-font-weight: 800;
-src: local('Avenir LT'), url('../fonts/AvenirLTStd-Black.woff') format('woff');
+    font-family: 'GT Walsheim';
+    src: url('../fonts/GTWalsheim-Regular.woff2') format('woff2'),
+        url('../fonts/GTWalsheim-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
 }
+

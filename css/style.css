@@ -250,35 +250,41 @@ th {
   .table-bordered td {
     border: 1px solid #ddd !important; } }
 @font-face {
-  font-family: 'Avenir LT';
+  font-family: 'GT Walsheim';
+  src: url("../fonts/GTWalsheim-BoldOblique.woff2") format("woff2"), url("../fonts/GTWalsheim-BoldOblique.woff") format("woff");
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap; }
+@font-face {
+  font-family: 'GT Walsheim';
+  src: url("../fonts/GTWalsheim-Bold.woff2") format("woff2"), url("../fonts/GTWalsheim-Bold.woff") format("woff");
+  font-weight: bold;
   font-style: normal;
+  font-display: swap; }
+@font-face {
+  font-family: 'GT Walsheim';
+  src: url("../fonts/GTWalsheim-LightOblique.woff2") format("woff2"), url("../fonts/GTWalsheim-LightOblique.woff") format("woff");
   font-weight: 300;
-  src: local("Avenir LT Std 55 Roman"), url("../fonts/AvenirLTStd-Roman.woff") format("woff"); }
+  font-style: italic;
+  font-display: swap; }
 @font-face {
-  font-family: 'Avenir LT';
-  font-style: normal;
-  font-weight: 200;
-  src: local("Avenir LT"), url("../fonts/AvenirLTStd-Light.woff") format("woff"); }
+  font-family: 'GT Walsheim';
+  src: url("../fonts/GTWalsheim-RegularOblique.woff2") format("woff2"), url("../fonts/GTWalsheim-RegularOblique.woff") format("woff");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap; }
 @font-face {
-  font-family: 'Avenir LT';
+  font-family: 'GT Walsheim';
+  src: url("../fonts/GTWalsheim-Light.woff2") format("woff2"), url("../fonts/GTWalsheim-Light.woff") format("woff");
+  font-weight: 300;
   font-style: normal;
-  font-weight: 400;
-  src: local("Avenir LT"), url("../fonts/AvenirLTStd-Book.woff") format("woff"); }
+  font-display: swap; }
 @font-face {
-  font-family: 'Avenir LT';
+  font-family: 'GT Walsheim';
+  src: url("../fonts/GTWalsheim-Regular.woff2") format("woff2"), url("../fonts/GTWalsheim-Regular.woff") format("woff");
+  font-weight: normal;
   font-style: normal;
-  font-weight: 500;
-  src: local("Avenir LT"), url("../fonts/AvenirLTStd-Medium.woff") format("woff"); }
-@font-face {
-  font-family: 'Avenir LT';
-  font-style: normal;
-  font-weight: 600;
-  src: local("Avenir LT"), url("../fonts/AvenirLTStd-Heavy.woff") format("woff"); }
-@font-face {
-  font-family: 'Avenir LT';
-  font-style: normal;
-  font-weight: 800;
-  src: local("Avenir LT"), url("../fonts/AvenirLTStd-Black.woff") format("woff"); }
+  font-display: swap; }
 @font-face {
   font-family: "icons";
   src: url("../fonts/icons-648cdfe70f578a65237517c5f07b0228.eot");
@@ -338,7 +344,7 @@ html {
       font-size: 80%; } }
 
 body {
-  font-family: "GT-Walsheim", "Avenir LT", "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "GT Walsheim", "Avenir", "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 1.428571429;
   color: #5E6271;
@@ -622,7 +628,7 @@ ol {
     font-size: 14px !important;
     line-height: 100%;
     margin: 5px 0 15px;
-    font-family: "GT-Walsheim", "Avenir LT", "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+    font-family: "GT Walsheim", "Avenir", "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif; }
 
 .list-lg li {
   padding-bottom: 15px; }
@@ -3808,7 +3814,6 @@ a.js {
 body {
   font-size: 16px;
   font-weight: 200;
-  background: white;
   color: black; }
   body.dark {
     color: white;
@@ -3985,6 +3990,36 @@ header {
       header nav a {
         margin-left: 15px; } }
 
+.flow .step {
+  height: 30vh;
+  width: 90%;
+  max-width: 1600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; }
+  .flow .step h3 {
+    font-size: 3rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    margin: 0 0 20px; }
+    .flow .step h3 span {
+      color: #FF3366;
+      width: 3.5rem;
+      height: 3.5rem;
+      font-size: 1.5rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid #FF3366;
+      border-radius: 100%;
+      margin-right: 20px; }
+  .flow .step p {
+    font-size: 1.5rem;
+    margin: 0; }
+
 .top {
   min-height: calc(100vh - 113px); }
 
@@ -4051,7 +4086,8 @@ p {
   left: 50%;
   transform: translate(-50%, 0);
   z-index: 9999;
-  border-radius: 15px; }
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.075); }
   .app-window .list {
     width: 500px;
     height: 100%;
@@ -4172,12 +4208,25 @@ p {
   display: flex;
   justify-content: center;
   align-items: center; }
+  .sub-hero .bg {
+    background: url(../images/mac-desktop.jpg);
+    background-size: cover;
+    background-position: center bottom;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    z-index: 2; }
   .sub-hero p {
-    font-size: 3rem;
+    font-size: 2.8rem;
     line-height: 140%;
-    color: black;
+    color: white;
+    font-weight: bold;
     margin-bottom: 50px;
-    text-align: center; }
+    text-align: center;
+    position: relative;
+    z-index: 3; }
     .sub-hero p:last-child {
       margin: 0; }
 
@@ -5000,14 +5049,14 @@ p {
     display: block;
     width: 540px;
     max-width: 100%;
-    border: 1px solid #6101EA;
+    border: 1px solid #FF3366;
     border-radius: 10px;
     margin: 0 auto;
     color: #6101EA;
     padding: 25px;
     transition: all .25s ease-in-out; }
     .roadmap a:hover {
-      background: #dbc2ff; }
+      background: white; }
     .roadmap a h3 {
       font-size: 1.6rem;
       font-weight: 600;
@@ -5017,7 +5066,7 @@ p {
       font-weight: 500;
       font-size: 1.2rem;
       margin: 0;
-      color: #6101EA; }
+      color: #FF3366; }
 
 .big-half-circle-2 {
   filter: drop-shadow(0px -5px 10px rgba(0, 0, 0, 0.03));

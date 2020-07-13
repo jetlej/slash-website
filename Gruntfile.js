@@ -39,6 +39,12 @@ module.exports = function(grunt) {
                 ],
                 tasks: ['cachebreaker:mainjs']
             },
+            homepagejs:{
+                files: [
+                'js/homepage.js',
+                ],
+                tasks: ['cachebreaker:homepagejs']
+            },
             icons:{
                 files: ['images/icons/*'],
                 tasks: ['webfont:icons']
@@ -79,6 +85,14 @@ module.exports = function(grunt) {
             }
         },
         cachebreaker: {
+            homepagejs: {
+                options: {
+                    match: ['homepage.js'],
+                },
+                files: {
+                    src: ['index.html']
+                }
+            },
             mainjs: {
                 options: {
                     match: ['main.js'],

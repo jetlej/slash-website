@@ -402,44 +402,53 @@ p{
 	.list{
 		width: 500px;
 		height: 100%;
-		padding-top: 50px;
+		padding-top: 40px;
+		pointer-events: none;
 
 		h4{
 			color: #5E6271;
-			font-weight: 600;
+			font-weight: 400;
 			margin-bottom: 20px;
 		}
 
 		.tasks{
-			margin-bottom: 20px;
-
-			div, input{
-				font-size: 1.4rem;
-				font-weight: 600;
-			}
 
 			div{
 				margin-bottom: 15px;
+				animation: taskIn .3s ease-in-out;
 			}
 
-			input{
-				border: none;
-				border-bottom: 2px solid #5E6271;
-				background: none;
-				line-height: 40px;
-				-webkit-appearance: none;
-				appearance: none;
-				box-shadow: none;
-				margin: 0;
-				display: block;
-				width: 100%;
-				padding: 0;
-				margin-top: 25px;
-
-				&:focus{
-					box-shadow: none;
-					outline: none;
+			@keyframes taskIn {
+				0%{
+					opacity: 0;
+					transform: translate(0, 10px);
 				}
+			}
+		}
+
+		.tasks div, input{
+			font-size: 1.4rem;
+			font-weight: 600;
+		}
+
+		input{
+			border: none;
+			border-bottom: 2px solid #5E6271;
+			background: none;
+			line-height: 40px;
+			-webkit-appearance: none;
+			appearance: none;
+			box-shadow: none;
+			margin: 0;
+			display: block;
+			width: 100%;
+			padding: 0;
+			margin-bottom: 20px;
+			margin-top: -5px;
+
+			&:focus{
+				box-shadow: none;
+				outline: none;
 			}
 		}
 
@@ -495,8 +504,27 @@ p{
 		line-height: 120%;
 		letter-spacing: -2px;
 
-		u{
-			text-decoration-color: $brand-warning;
+		span{
+			position: relative;
+
+			&:after{
+				content: '';
+				background: $brand-warning;
+				height: 12px;
+				width: 0;
+				bottom: 0px;
+				left: 0;
+				position: absolute;
+				border-radius: 1px;
+				animation: underline .35s ease-in-out forwards;
+				animation-delay: .5s;
+			}
+		}
+
+		@keyframes underline {
+			100% {
+				width: 100%;
+			}
 		}
 
 		@media (max-width: $screen-sm-max) {
@@ -585,7 +613,7 @@ p{
 	}
 
 	p{
-		font-size: 2.8rem;
+		font-size: 3.1rem;
 		line-height: 140%;
 		color: white;
 		font-weight: bold;

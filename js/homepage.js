@@ -1,5 +1,89 @@
 $(function(){
 
+	anime.timeline({loop: false})
+	.add({
+		targets: '.hero h1',
+		translateY: [-20,0],
+		translateZ: 0,
+		opacity: [0,1],
+		easing: "easeOutExpo",
+		duration: 1000,
+		delay: 200
+	})
+	.add({
+		targets: '.hero h2',
+		translateY: [-20,0],
+		translateZ: 0,
+		opacity: [0,1],
+		easing: "easeOutExpo",
+		duration: 1000
+	}, '-=200')
+	.add({
+		targets: '.app-window',
+		width: [300, 800],
+		height: [50, 500],
+		opacity: [0,1],
+		easing: "easeOutExpo",
+		duration: 750
+	}, '-=600')
+	.add({
+		targets: '.app-window .list',
+		translateY: [-20,0],
+		translateZ: 0,
+		opacity: [0,1],
+		easing: "easeOutExpo",
+		duration: 1000
+	}, '-=400')
+	.add({
+		targets: '.header',
+		translateY: [-20,0],
+		translateZ: 0,
+		opacity: [0,1],
+		easing: "easeOutExpo",
+		duration: 400
+	}, '-=1000')
+
+	function addTasks () {
+		let tasks = [
+			'Learn about Slash',
+			'Answer emails for 30 minutes',
+			'Buy flight to Portgual'
+		]
+
+		let timer = 3000
+		let val = ''
+
+		tasks.forEach(function(task){
+
+			timer += 500
+
+			var string = task.split('')
+
+			string.forEach(function(letter) {
+				let max = 120
+				let min = 30
+				let rand = Math.floor(Math.random() * (max - min + 1)) + min
+				timer += rand
+				val += letter
+				var setValue = val
+				setTimeout(function(){
+					$('.app-window .list input').val(setValue) 
+				}, timer)
+			})
+
+			val = ''
+			timer += 150
+
+			setTimeout(function(){
+				$('.app-window .list input').val('') 
+				$('.app-window .tasks').append('<div>' + task + '</div>')
+			}, timer)
+
+		})
+	}
+
+	addTasks()
+
 	var controller = new ScrollMagic.Controller();
 
 	var focusMode1 = new ScrollMagic.Scene({triggerElement: ".hero", triggerHook: 'onLeave', duration: 1000})
@@ -10,7 +94,7 @@ $(function(){
 	.setTween(TweenMax.to(".app-window .list", 1, {opacity: 0,display: 'none', ease: "expo.out"}))
 	.addTo(controller)
 
-	var focusMode3 = new ScrollMagic.Scene({triggerElement: ".hero", triggerHook: 'onLeave', offset: 500, duration: 350})
+	var focusMode3 = new ScrollMagic.Scene({triggerElement: ".hero", triggerHook: 'onLeave', offset: 750, duration: 350})
 	.setTween(TweenMax.from(".app-window .focus", 1, {opacity: 0, ease: "power1.inOut"}))
 	.addTo(controller)
 
@@ -32,33 +116,32 @@ $(function(){
 	.on('leave', startTimer)
 	.addTo(controller)
 
-	var subHeroPin = new ScrollMagic.Scene({triggerElement: ".step1", triggerHook: 'onEnter', duration: 500, offset: -500})
+	var subHeroPin = new ScrollMagic.Scene({triggerElement: ".flow", triggerHook: 'onEnter', duration: 500, offset: -500})
 	.setTween(TweenMax.to(".sub-hero h2", 1, {opacity: 0}))
 	.addTo(controller)
 
-	var step1 = new ScrollMagic.Scene({triggerElement: ".step1", triggerHook: 'onEnter', duration: 500, offset: -500})
+	var step1 = new ScrollMagic.Scene({triggerElement: ".flow", triggerHook: 'onEnter', duration: 500, offset: -500})
 	.setTween(TweenMax.to(".sub-hero .bg", 1, {opacity: 0}))
 	.addTo(controller)
 
-	var step1 = new ScrollMagic.Scene({triggerElement: ".step1", triggerHook: 'onEnter', duration: 1000})
+	var step1 = new ScrollMagic.Scene({triggerElement: ".flow", triggerHook: 'onEnter', duration: 1000})
 	.setTween(TweenMax.to(".app-window", 1, {width: 800, height: 500, bottom: '5%', borderRadius: '12px', ease: "power2.inOut"}))
 	.addTo(controller)
 
-	var step1a = new ScrollMagic.Scene({triggerElement: ".step1", triggerHook: 'onEnter', duration: 500})
+	var step1a = new ScrollMagic.Scene({triggerElement: ".flow", triggerHook: 'onEnter', duration: 500})
 	.setTween(TweenMax.to(".app-window .focus", 1, {opacity: 0}))
 	.addTo(controller)
 
-	var step1a = new ScrollMagic.Scene({triggerElement: ".step1", triggerHook: 'onEnter', duration: 500, offset: 500})
+	var step1a = new ScrollMagic.Scene({triggerElement: ".flow", triggerHook: 'onEnter', duration: 500, offset: 500})
 	.setTween(TweenMax.to(".app-window .step1", 1, {opacity: 1}))
 	.addTo(controller)
 
 	$('.flow > div').each(function(i){
 
-		console.log(i)
-
 		let step = this
+		let name = $(this).data('step')
 
-		var subHeroPin = new ScrollMagic.Scene({triggerElement: step, triggerHook: 'onLeave', duration: 3000})
+		var subHeroPin = new ScrollMagic.Scene({triggerElement: step, triggerHook: 'onLeave', duration: 2000})
 		.setPin(step, {pushFollowers: true})
 		.addTo(controller)
 
@@ -66,13 +149,13 @@ $(function(){
 		.setTween(TweenMax.fromTo(step, 1, {y: 20, opacity: 0}, {y: 0, opacity: 1}))
 		.addTo(controller)
 
-		var textFadeOut = new ScrollMagic.Scene({triggerElement: step, triggerHook: 'onLeave',  duration: 500, offset: 2500})
+		var textFadeOut = new ScrollMagic.Scene({triggerElement: step, triggerHook: 'onLeave',  duration: 500, offset: 1500})
 		.setTween(TweenMax.to(step, 1, {y: -20, opacity: 0}))
 		.addTo(controller)
 
-		if (i === 2) {
+		if (name === 'focus') {
 			var focusMode1 = new ScrollMagic.Scene({triggerElement: step, triggerHook: 'onLeave', duration: 1000})
-			.setTween(TweenMax.to(".app-window", 1, {width: 350, height: 50, bottom: '60px', borderRadius: '7px', ease: "power2.inOut"}))
+			.setTween(TweenMax.to(".app-window", 1, {width: 350, height: 50, bottom: '30px', borderRadius: '7px', ease: "power2.inOut"}))
 			.addTo(controller)
 
 			var focusMode2 = new ScrollMagic.Scene({triggerElement: step, triggerHook: 'onLeave', duration: 375})
@@ -84,7 +167,7 @@ $(function(){
 			.addTo(controller)
 		}
 
-		if (i === 3) {
+		if (name === 'done') {
 			var step1 = new ScrollMagic.Scene({triggerElement: step, triggerHook: 'onEnter', duration: 1000})
 			.setTween(TweenMax.to(".app-window", 1, {width: 800, height: 500, bottom: '5%', borderRadius: '12px', ease: "power2.inOut"}))
 			.addTo(controller)

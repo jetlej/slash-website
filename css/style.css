@@ -4087,38 +4087,43 @@ p {
   transform: translate(-50%, 0);
   z-index: 9999;
   border-radius: 15px;
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.075); }
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.075); }
   .app-window .list {
     width: 500px;
     height: 100%;
-    padding-top: 50px; }
+    padding-top: 40px;
+    pointer-events: none; }
     .app-window .list h4 {
       color: #5E6271;
-      font-weight: 600;
+      font-weight: 400;
       margin-bottom: 20px; }
-    .app-window .list .tasks {
-      margin-bottom: 20px; }
-      .app-window .list .tasks div, .app-window .list .tasks input {
-        font-size: 1.4rem;
-        font-weight: 600; }
-      .app-window .list .tasks div {
-        margin-bottom: 15px; }
-      .app-window .list .tasks input {
-        border: none;
-        border-bottom: 2px solid #5E6271;
-        background: none;
-        line-height: 40px;
-        -webkit-appearance: none;
-        appearance: none;
+    .app-window .list .tasks div {
+      margin-bottom: 15px;
+      animation: taskIn .3s ease-in-out; }
+@keyframes taskIn {
+  0% {
+    opacity: 0;
+    transform: translate(0, 10px); } }
+    .app-window .list .tasks div, .app-window .list input {
+      font-size: 1.4rem;
+      font-weight: 600; }
+    .app-window .list input {
+      border: none;
+      border-bottom: 2px solid #5E6271;
+      background: none;
+      line-height: 40px;
+      -webkit-appearance: none;
+      appearance: none;
+      box-shadow: none;
+      margin: 0;
+      display: block;
+      width: 100%;
+      padding: 0;
+      margin-bottom: 20px;
+      margin-top: -5px; }
+      .app-window .list input:focus {
         box-shadow: none;
-        margin: 0;
-        display: block;
-        width: 100%;
-        padding: 0;
-        margin-top: 25px; }
-        .app-window .list .tasks input:focus {
-          box-shadow: none;
-          outline: none; }
+        outline: none; }
     .app-window .list .btn {
       font-size: 1.6rem;
       border-radius: 5px; }
@@ -4156,8 +4161,22 @@ p {
     font-weight: 800;
     line-height: 120%;
     letter-spacing: -2px; }
-    .hero h1 u {
-      text-decoration-color: #FF3366; }
+    .hero h1 span {
+      position: relative; }
+      .hero h1 span:after {
+        content: '';
+        background: #FF3366;
+        height: 12px;
+        width: 0;
+        bottom: 0px;
+        left: 0;
+        position: absolute;
+        border-radius: 1px;
+        animation: underline .35s ease-in-out forwards;
+        animation-delay: .5s; }
+@keyframes underline {
+  100% {
+    width: 100%; } }
     @media (max-width: 991px) {
       .hero h1 {
         font-size: 2.7rem;
@@ -4219,7 +4238,7 @@ p {
     width: 100%;
     z-index: 2; }
   .sub-hero p {
-    font-size: 2.8rem;
+    font-size: 3.1rem;
     line-height: 140%;
     color: white;
     font-weight: bold;

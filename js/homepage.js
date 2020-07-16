@@ -1,5 +1,7 @@
 $(function(){
 
+	$('.content-hider').hide()
+
 	anime.timeline({loop: false})
 	.add({
 		targets: '.hero h1',
@@ -8,7 +10,7 @@ $(function(){
 		opacity: [0,1],
 		easing: "easeOutExpo",
 		duration: 1000,
-		delay: 200
+		delay: 300
 	})
 	.add({
 		targets: '.hero h2',
@@ -27,7 +29,7 @@ $(function(){
 		duration: 750
 	}, '-=600')
 	.add({
-		targets: '.app-window .list',
+		targets: '.app-window .hero-list',
 		translateY: [-20,0],
 		translateZ: 0,
 		opacity: [0,1],
@@ -55,8 +57,6 @@ $(function(){
 
 		tasks.forEach(function(task){
 
-			timer += 500
-
 			var string = task.split('')
 
 			string.forEach(function(letter) {
@@ -67,7 +67,7 @@ $(function(){
 				val += letter
 				var setValue = val
 				setTimeout(function(){
-					$('.app-window .list input').val(setValue) 
+					$('.app-window .hero-list input').val(setValue) 
 				}, timer)
 			})
 
@@ -75,9 +75,11 @@ $(function(){
 			timer += 150
 
 			setTimeout(function(){
-				$('.app-window .list input').val('') 
-				$('.app-window .tasks').append('<div>' + task + '</div>')
+				$('.app-window .hero-list input').val('') 
+				$('.app-window .hero-list .tasks').append('<div>' + task + '</div>')
 			}, timer)
+
+			timer += 500
 
 		})
 	}
@@ -91,11 +93,11 @@ $(function(){
 	.addTo(controller)
 
 	var focusMode2 = new ScrollMagic.Scene({triggerElement: ".hero", triggerHook: 'onLeave', duration: 375})
-	.setTween(TweenMax.to(".app-window .list", 1, {opacity: 0,display: 'none', ease: "expo.out"}))
+	.setTween(TweenMax.to(".app-window .hero-list", 1, {opacity: 0,display: 'none', ease: "expo.out"}))
 	.addTo(controller)
 
 	var focusMode3 = new ScrollMagic.Scene({triggerElement: ".hero", triggerHook: 'onLeave', offset: 750, duration: 350})
-	.setTween(TweenMax.from(".app-window .focus", 1, {opacity: 0, ease: "power1.inOut"}))
+	.setTween(TweenMax.to(".app-window .focus", 1, {opacity: 1, ease: "power1.inOut"}))
 	.addTo(controller)
 
 	var bgShow = new ScrollMagic.Scene({triggerElement: ".sub-hero", triggerHook: 'onLeave', duration: 500})
@@ -153,17 +155,27 @@ $(function(){
 		.setTween(TweenMax.to(step, 1, {y: -20, opacity: 0}))
 		.addTo(controller)
 
+		if (name === 'day') {
+			var focusMode3 = new ScrollMagic.Scene({triggerElement: step, triggerHook: 'onEnter', duration: 500})
+			.setTween(TweenMax.to(".app-window .focus", 1, {opacity: 0, ease: "power1.inOut"}))
+			.addTo(controller)
+
+			var focusMode2 = new ScrollMagic.Scene({triggerElement: step, triggerHook: 'onLeave', duration: 375})
+			.setTween(TweenMax.to(".app-window .plan-day", 1, {opacity: 1, ease: "expo.out"}))
+			.addTo(controller)	
+		}
+
 		if (name === 'focus') {
+			var focusMode3 = new ScrollMagic.Scene({triggerElement: step, triggerHook: 'onEnter', duration: 500})
+			.setTween(TweenMax.to(".app-window .plan-day", 1, {opacity: 0, ease: "power1.inOut"}))
+			.addTo(controller)
+
 			var focusMode1 = new ScrollMagic.Scene({triggerElement: step, triggerHook: 'onLeave', duration: 1000})
 			.setTween(TweenMax.to(".app-window", 1, {width: 350, height: 50, bottom: '30px', borderRadius: '7px', ease: "power2.inOut"}))
 			.addTo(controller)
 
-			var focusMode2 = new ScrollMagic.Scene({triggerElement: step, triggerHook: 'onLeave', duration: 375})
-			.setTween(TweenMax.to(".app-window .list", 1, {opacity: 0,display: 'none', ease: "expo.out"}))
-			.addTo(controller)
-
 			var focusMode3 = new ScrollMagic.Scene({triggerElement: step, triggerHook: 'onLeave', offset: 500, duration: 350})
-			.setTween(TweenMax.from(".app-window .focus", 1, {opacity: 0, ease: "power1.inOut"}))
+			.setTween(TweenMax.to(".app-window .focus", 1, {opacity: 1, ease: "power1.inOut"}))
 			.addTo(controller)
 		}
 
@@ -177,7 +189,17 @@ $(function(){
 			.addTo(controller)
 
 			var step1a = new ScrollMagic.Scene({triggerElement: step, triggerHook: 'onEnter', duration: 500, offset: 500})
-			.setTween(TweenMax.to(".app-window .step1", 1, {opacity: 1}))
+			.setTween(TweenMax.to(".app-window .done", 1, {opacity: 1}))
+			.addTo(controller)
+		}
+
+		if (name === 'end') {
+			var step1a = new ScrollMagic.Scene({triggerElement: step, triggerHook: 'onEnter', duration: 500})
+			.setTween(TweenMax.to(".app-window .done", 1, {opacity: 0}))
+			.addTo(controller)
+
+			var step1a = new ScrollMagic.Scene({triggerElement: step, triggerHook: 'onEnter', duration: 500, offset: 500})
+			.setTween(TweenMax.to(".app-window .end-day", 1, {opacity: 1}))
 			.addTo(controller)
 		}
 

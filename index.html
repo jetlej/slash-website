@@ -4,9 +4,12 @@ title: "Slash / The first DO app."
 description: A new breed of productivity app. Slice through your to-do lists by staying focused and in flow.
 permalink: /
 layout: page
+headerClass: homepage
 ---
 
 <div class="homepage">
+
+	<div class="content-hider"></div>
 
 	<section class="hero">
 		<div class="container">
@@ -26,15 +29,55 @@ layout: page
 	</section>
 
 	<div class="app-window">
-		<div class="list">
-			<h4>Today</h4>
-			<div class="tasks"></div>
-			<input type="text" placeholder="Add task..."/>
-			<a class="btn btn-primary btn-lg btn-block">Start Slashing</a>
+		<div class="hero-list">
+			<div class="list">
+				<h4>Today</h4>
+				<div class="tasks"></div>
+				<input type="text" placeholder="Add task..."/>
+				<a class="btn btn-primary btn-lg btn-block">Start Slashing</a>
+			</div>
 		</div>
 		<div class="focus">
 			<p>Learn about Slash</p>
 			<span class="timer">0:00</span>
+		</div>
+		<div class="plan-day" data-step="day">
+			<div class="list">
+				<h4>This Week</h4>
+				<div class="tasks">
+					<div>Learn about Slash</div>
+					<div>Answer emails for 30 minutes</div>
+					<div>Buy flight to Portugal</div>
+					<div>Finish V2 of pitch deck</div>
+					<div>Find a new book to read</div>
+					<div>Research date ideas for this weekend</div>
+				</div>
+			</div>
+			<div class="list">
+				<h4>Today</h4>
+				<div class="tasks"></div>
+			</div>
+		</div>
+		<div class="done">
+			<div>
+				<h3>Nice job! Your next task is:</h3>
+				<p>Feed the cat</p>
+				<button class="btn btn-primary btn-lg">Next Task</button>
+				<small>or <u>take a break</u></small>
+			</div>
+		</div>
+		<div class="end-day">
+			<div>
+				<h3>Nice job! Your next task is:</h3>
+				<div class="tasks">
+					<div>Learn about Slash</div>
+					<div>Answer emails for 30 minutes</div>
+					<div>Buy flight to Portugal</div>
+					<div>Finish V2 of pitch deck</div>
+					<div>Find a new book to read</div>
+					<div>Research date ideas for this weekend</div>
+				</div>
+			</div>
 		</div>
 	</div>
 	
@@ -58,24 +101,27 @@ layout: page
 		-->
 		<div class="step step2" data-step="day">
 			<h3><span>1</span> Plan your day</h3>
-			<p>From those tasks, pick the ones you'll complete today.</p>
+			<p>Each morning, select your tasks for the day from your 'This Week' list.</p>
 		</div>
 		<div class="step step3" data-step="focus">
 			<h3><span>2</span> Enter focus mode</h3>
-			<p>From those tasks, pick the ones you'll complete today.</p>
+			<p>Hyper-focus on one task at a time with a constant reminder of what you're working on.</p>
 		</div>
 		<div class="step step4" data-step="done">
 			<h3><span>3</span> Do the task!</h3>
-			<p>From those tasks, pick the ones you'll complete today.</p>
+			<p>Click 'Done' when you're finished and go to the next task.<br/> Never leave flow state.</p>
 		</div>
 		<div class="step step5" data-step="end">
 			<h3><span>4</span> End Your Day</h3>
-			<p>From those tasks, pick the ones you'll complete today.</p>
+			<p>Consciously decide when your work day is over, and get a satisfying summary of your progress.</p>
 		</div>
 	</section>
 
 	<section class="features">
 
+		<h2 class="center">...and there's so much more</h2>
+	
+		<!--
 		<section class="feature feature-focus">
 			<div class="container">
 				<div class="flex">
@@ -117,6 +163,7 @@ layout: page
 				</div>
 			</div>
 		</section>
+		-->
 
 		<section class="feature feature-integrations">
 			<div class="container">
@@ -342,4 +389,4 @@ layout: page
 <script type="text/javascript" src="/js/gsap3/gsap.min.js"></script>
 <script type="text/javascript" src="/js/scrollmagic/uncompressed/ScrollMagic.js"></script>
 <script type="text/javascript" src="/js/scrollmagic/uncompressed/plugins/animation.gsap.js"></script>
-<script type="text/javascript" src="/js/homepage.js?rel=1594657213956"></script>
+<script type="text/javascript" src="/js/homepage.js?rel=1594936432859"></script>

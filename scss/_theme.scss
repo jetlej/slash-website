@@ -306,8 +306,28 @@ header{
 		}
 
 		p{
-			font-size: 1.5rem;
-			margin: 0;
+			font-size: 1.8rem;
+			margin: 0 auto;
+			max-width: 900px;
+		}
+	}
+
+	.step3{
+		h3, p{
+			color: white;
+			position: relative;
+		}
+
+		.bg{
+			background: url(../images/mac-desktop.jpg);
+			background-size: cover;
+			background-position: center bottom;
+			position: absolute;
+			left: 0;
+			top: 0;
+			height: 100vh;
+			width: 100%;
+			z-index: 2;
 		}
 	}
 }
@@ -388,34 +408,69 @@ p{
 	bottom: -15%;
 	width: 850px;
 	height: 550px;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
 	left: 50%;
 	transform: translate(-50%, 0);
-	z-index: 9999;
+	z-index: 500;
 	border-radius: 15px;
 	// border: 1px solid rgba(255,255,255,.1);
 	box-shadow: 0 0 12px rgba(255,255,255,.075);
+	// pointer-events: none;
+
+	> div{
+		opacity: 0;
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.hero-list{
+		justify-content: start;
+
+		> div{
+			width: 500px;
+		}
+	}
+
+	.plan-day{
+		flex-direction: row;
+		align-items: flex-start;
+
+		.list{
+			height: 100%;
+		}
+
+		> div{
+			flex: 1;
+			padding-left: 40px;
+			padding-right: 40px;
+
+			&:first-child{
+				border-right: 1px solid rgba(255,255,255,.1);
+			}
+		}
+	}
 
 	.list{
-		width: 500px;
-		height: 100%;
-		padding-top: 40px;
-		pointer-events: none;
-
+		padding-top: 30px;
+		
 		h4{
 			color: #5E6271;
 			font-weight: 400;
-			margin-bottom: 20px;
+			margin-bottom: 30px;
 		}
 
 		.tasks{
 
 			div{
-				margin-bottom: 15px;
+				margin-bottom: 20px;
 				animation: taskIn .3s ease-in-out;
+				line-height: 120%;
 			}
 
 			@keyframes taskIn {
@@ -426,8 +481,8 @@ p{
 			}
 		}
 
-		.tasks div, input{
-			font-size: 1.4rem;
+		.tasks div, input, .btn{
+			font-size: 1.2rem;
 			font-weight: 600;
 		}
 
@@ -453,7 +508,6 @@ p{
 		}
 
 		.btn{
-			font-size: 1.6rem;
 			border-radius: 5px;
 		}
 	}
@@ -461,7 +515,7 @@ p{
 	.focus{
 		color: white;
 		text-align: center;
-		display: flex;
+		flex-direction: row;
 		justify-content: center;
 		align-items: center;
 
@@ -478,6 +532,16 @@ p{
 			font-size: .9rem;
 		}
 	}
+}
+
+.content-hider{
+	background: white;
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	z-index: 1000;
 }
 
 .hero{
@@ -599,18 +663,6 @@ p{
 	display: flex;
 	justify-content: center;
 	align-items: center;
-
-	.bg{
-		background: url(../images/mac-desktop.jpg);
-		background-size: cover;
-		background-position: center bottom;
-		position: absolute;
-		left: 0;
-		top: 0;
-		height: 100vh;
-		width: 100%;
-		z-index: 2;
-	}
 
 	p{
 		font-size: 3.1rem;
@@ -1113,6 +1165,11 @@ p{
 
 .features{
 	padding-bottom: 0;
+
+	h2{
+		font-size: 3rem;
+		padding-bottom: 50vh;
+	}
 }
 
 .feature{

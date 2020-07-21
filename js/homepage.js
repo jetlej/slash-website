@@ -1,3 +1,7 @@
+$(window).on('beforeunload', function() {
+    $(window).scrollTop(0)
+})
+
 $(function(){
 
 	$('.content-hider').hide()
@@ -101,7 +105,7 @@ $(function(){
 	.addTo(controller)
 
 	var bgShow = new ScrollMagic.Scene({triggerElement: ".sub-hero", triggerHook: 'onLeave', duration: 500})
-	.setTween(TweenMax.from(".sub-hero .bg", 1, {opacity: 0}))
+	.setTween(TweenMax.from(".sub-hero .desktop-bg", 1, {opacity: 0}))
 	.addTo(controller)
 
 	var subHeroPin = new ScrollMagic.Scene({triggerElement: ".sub-hero", triggerHook: 'onLeave', duration: 3000})
@@ -123,7 +127,7 @@ $(function(){
 	.addTo(controller)
 
 	var step1 = new ScrollMagic.Scene({triggerElement: ".flow", triggerHook: 'onEnter', duration: 500, offset: -500})
-	.setTween(TweenMax.to(".sub-hero .bg", 1, {opacity: 0}))
+	.setTween(TweenMax.to(".sub-hero .desktop-bg", 1, {opacity: 0}))
 	.addTo(controller)
 
 	var step1 = new ScrollMagic.Scene({triggerElement: ".flow", triggerHook: 'onEnter', duration: 1000})

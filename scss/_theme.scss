@@ -314,20 +314,7 @@ header{
 
 	.step3{
 		h3, p{
-			color: white;
 			position: relative;
-		}
-
-		.bg{
-			background: url(../images/mac-desktop.jpg);
-			background-size: cover;
-			background-position: center bottom;
-			position: absolute;
-			left: 0;
-			top: 0;
-			height: 100vh;
-			width: 100%;
-			z-index: 2;
 		}
 	}
 }
@@ -663,6 +650,18 @@ p{
 	display: flex;
 	justify-content: center;
 	align-items: center;
+
+	.desktop-bg{
+		background: url(../images/mac-desktop.jpg);
+		background-size: cover;
+		background-position: center bottom;
+		position: absolute;
+		left: 0;
+		top: 0;
+		height: 100vh;
+		width: 100%;
+		z-index: 2;
+	}
 
 	p{
 		font-size: 3.1rem;
@@ -1226,7 +1225,7 @@ p{
 		}
 
 		div{
-			width: 330px;
+			width: 400px;
 			max-width: 100%;
 			margin: 0 auto;
 		}

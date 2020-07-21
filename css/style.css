@@ -4021,18 +4021,7 @@ header {
     margin: 0 auto;
     max-width: 900px; }
 .flow .step3 h3, .flow .step3 p {
-  color: white;
   position: relative; }
-.flow .step3 .bg {
-  background: url(../images/mac-desktop.jpg);
-  background-size: cover;
-  background-position: center bottom;
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 100vh;
-  width: 100%;
-  z-index: 2; }
 
 .top {
   min-height: calc(100vh - 113px); }
@@ -4269,6 +4258,16 @@ p {
   display: flex;
   justify-content: center;
   align-items: center; }
+  .sub-hero .desktop-bg {
+    background: url(../images/mac-desktop.jpg);
+    background-size: cover;
+    background-position: center bottom;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    z-index: 2; }
   .sub-hero p {
     font-size: 3.1rem;
     line-height: 140%;
@@ -4675,7 +4674,7 @@ p {
         margin-right: 0 !important;
         margin-left: 0 !important; } }
     .feature .text div {
-      width: 330px;
+      width: 400px;
       max-width: 100%;
       margin: 0 auto; }
     .feature .text h3 {

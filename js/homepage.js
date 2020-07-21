@@ -4,8 +4,10 @@ $(window).on('beforeunload', function() {
 
 $(function(){
 
-	$('.content-hider').hide()
-
+	setTimeout(function(){
+		$('.content-hider').hide()
+	}, 200)
+	
 	anime.timeline({loop: false})
 	.add({
 		targets: '.hero h1',

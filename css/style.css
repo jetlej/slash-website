@@ -285,6 +285,40 @@ th {
   font-weight: normal;
   font-style: normal;
   font-display: swap; }
+/*
+@font-face {
+  font-family: 'Eina';
+  src: local('Eina 03 Bold'),
+       url('../fonts/eina-03-bold.woff2') format('woff2'),
+       url('../fonts/eina-03-bold.woff') format('woff'),
+       url('../fonts/eina-03-bold.ttf') format('ttf'),
+       url('../fonts/eina-03-bold.eot?#iefix') format('eot');
+  font-weight: 700;
+  unicode-range: U+000-5FF;
+}
+
+@font-face {
+  font-family: 'Eina';
+  src: local('Eina 03 SemiBold'),
+       url('../fonts/eina-03-semibold.woff2') format('woff2'),
+       url('../fonts/eina-03-semibold.woff') format('woff'),
+       url('../fonts/eina-03-semibold.ttf') format('ttf'),
+       url('../fonts/eina-03-semibold.eot?#iefix') format('eot');
+  font-weight: 600;
+  unicode-range: U+000-5FF;
+}
+
+@font-face {
+  font-family: 'Eina';
+  src: local('Eina 03 Regular'),
+       url('../fonts/eina-03-regular.woff2') format('woff2'),
+       url('../fonts/eina-03-regular.woff') format('woff'),
+       url('../fonts/eina-03-regular.ttf') format('ttf'),
+       url('../fonts/eina-03-regular.eot?#iefix') format('eot');
+  font-weight: 400;
+  unicode-range: U+000-5FF;
+}
+*/
 @font-face {
   font-family: "icons";
   src: url("../fonts/icons-648cdfe70f578a65237517c5f07b0228.eot");
@@ -2427,7 +2461,7 @@ select[multiple].input-xl {
     outline: 5px auto -webkit-focus-ring-color;
     outline-offset: -2px; }
   .btn:hover, .btn:focus {
-    color: #6101EA;
+    color: #FF3366;
     text-decoration: none; }
   .btn:active, .btn.active {
     outline: 0;
@@ -2447,13 +2481,13 @@ select[multiple].input-xl {
       background: #7b8398; }
 
 .btn-default, .generic-button .send-message {
-  color: #6101EA;
+  color: #FF3366;
   background-color: white; }
   .btn-default:hover, .btn-default:focus, .btn-default:active, .btn-default.active, .generic-button .send-message:hover, .generic-button .send-message:focus, .generic-button .send-message:active, .generic-button .send-message.active {
-    color: #6101EA;
+    color: #FF3366;
     background-color: #f2f2f2; }
   .open .btn-default.dropdown-toggle, .open .generic-button .send-message.dropdown-toggle {
-    color: #6101EA;
+    color: #FF3366;
     background-color: #ebebeb; }
   .btn-default:active, .btn-default.active, .generic-button .send-message:active, .generic-button .send-message.active {
     background-image: none; }
@@ -2463,7 +2497,7 @@ select[multiple].input-xl {
     background-color: white; }
   .btn-default .badge, .generic-button .send-message .badge {
     color: white;
-    background-color: #6101EA; }
+    background-color: #FF3366; }
 
 .btn-primary, .generic-button a.follow {
   color: #fff;
@@ -5105,7 +5139,7 @@ p {
     border: 1px solid #FF3366;
     border-radius: 10px;
     margin: 0 auto;
-    color: #6101EA;
+    color: #FF3366;
     padding: 25px;
     transition: all .25s ease-in-out; }
     .roadmap a:hover {
@@ -5144,8 +5178,6 @@ p {
     text-align: center;
     margin-bottom: 60px;
     font-size: 2.5rem; }
-    .bottom-cta h2 b {
-      color: #6101EA; }
     @media (max-width: 991px) {
       .bottom-cta h2 {
         font-size: 1.8rem;

@@ -54,7 +54,7 @@ $box-shadow: 0 1px 5px rgba(0,0,0,.2);
 //
 //## Font, line-height, and color for body text, headings, and more.
 
-$font-family-sans-serif:  "GT Walsheim", "Avenir", "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$font-family-sans-serif:  "Eina", "GT Walsheim", "Avenir", "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
 $font-family-serif:      "Times New Roman", Times, serif !default;
 //** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
 $font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace !default;
@@ -167,7 +167,7 @@ $btn-font-weight:                600 !default;
 
 $btn-default-color:              $brand-warning !default;
 $btn-default-bg:                 white !default;
-$btn-default-border:             white !default;
+$btn-default-border:             $brand-warning !default;
 
 $btn-primary-color:              #fff !default;
 $btn-primary-bg:                 $brand-primary !default;

@@ -27,64 +27,68 @@ headerClass: homepage
 			</h2>
 		</div>
 	</section>
-
-	<div class="app-window">
-		<div class="hero-list">
-			<div class="list">
-				<h4>Today</h4>
-				<div class="tasks"></div>
-				<input type="text" placeholder="Add task..."/>
-				<a class="btn btn-primary btn-lg btn-block">Start Slashing</a>
-			</div>
-		</div>
-		<div class="focus">
-			<p>Learn about Slash</p>
-			<span class="timer">0:00</span>
-		</div>
-		<div class="plan-day" data-step="day">
-			<div class="list">
-				<h4>This Week</h4>
-				<div class="tasks">
-					<div>Learn about Slash</div>
-					<div>Answer emails for 30 minutes</div>
-					<div>Buy flight to Portugal</div>
-					<div>Finish V2 of pitch deck</div>
-					<div>Find a new book to read</div>
-					<div>Research date ideas for this weekend</div>
-				</div>
-			</div>
-			<div class="list">
-				<h4>Today</h4>
-				<div class="tasks"></div>
-			</div>
-		</div>
-		<div class="done">
-			<div>
-				<img src=""/>
-				<div class="progress">
-					<div class="bar">
-						<div></div>
-					</div>
-					<div class="text">
-						<div>3/6 done</div>
-						<div>50%</div>
+	
+	<div class="app-window-container">
+		<div class="app-window">
+			<div class="screens">
+				<div class="hero-list">
+					<div class="list">
+						<h4>Today</h4>
+						<div class="tasks"></div>
+						<input type="text" placeholder="Add task..."/>
+						<a class="btn btn-primary btn-lg btn-block">Start Slashing</a>
 					</div>
 				</div>
-				<p>Next Task: Answer emails for 30 minutes</p>
-				<button class="btn btn-primary btn-lg">Next Task</button>
-				<small>or <u>take a break</u></small>
-			</div>
-		</div>
-		<div class="end-day">
-			<div>
-				<h3>Nice job! Your next task is:</h3>
-				<div class="tasks">
-					<div>Learn about Slash</div>
-					<div>Answer emails for 30 minutes</div>
-					<div>Buy flight to Portugal</div>
-					<div>Finish V2 of pitch deck</div>
-					<div>Find a new book to read</div>
-					<div>Research date ideas for this weekend</div>
+				<div class="focus">
+					<p>Learn about Slash</p>
+					<span class="timer">0:00</span>
+				</div>
+				<div class="plan-day" data-step="day">
+					<div class="list">
+						<h4>This Week</h4>
+						<div class="tasks">
+							<div>Learn about Slash</div>
+							<div>Answer emails for 30 minutes</div>
+							<div>Buy flight to Portugal</div>
+							<div>Finish V2 of pitch deck</div>
+							<div>Find a new book to read</div>
+							<div>Research date ideas for this weekend</div>
+						</div>
+					</div>
+					<div class="list">
+						<h4>Today</h4>
+						<div class="tasks"></div>
+					</div>
+				</div>
+				<div class="done">
+					<div>
+						<img src="/images/winning.gif"/>
+						<div class="progress">
+							<div class="bar">
+								<div></div>
+							</div>
+							<div class="text">
+								<div>3/6 done</div>
+								<div>50%</div>
+							</div>
+						</div>
+						<p>Next: Answer emails for 30 minutes</p>
+						<button class="btn btn-primary btn-lg">Keep Slashing</button>
+						<!--<small>or <u>take a break</u></small>-->
+					</div>
+				</div>
+				<div class="end-day">
+					<div>
+						<h3>Nice job! Your next task is:</h3>
+						<div class="tasks">
+							<div>Learn about Slash</div>
+							<div>Answer emails for 30 minutes</div>
+							<div>Buy flight to Portugal</div>
+							<div>Finish V2 of pitch deck</div>
+							<div>Find a new book to read</div>
+							<div>Research date ideas for this weekend</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -109,20 +113,48 @@ headerClass: homepage
 		</div>
 		-->
 		<div class="step step2" data-step="day">
-			<h3><span>1</span> Plan your day</h3>
-			<p>Each morning, select your tasks for the day from your 'This Week' list.</p>
+			<div>
+				<div>
+					<div class="number">1</div>
+					<h3>
+						<span><span>Plan your day</span></span>.
+					</h3>
+				</div>
+				<p>Select tasks for today from your 'This Week' list. <b>Prioritize.</b></p>
+			</div>
 		</div>
 		<div class="step step3" data-step="focus">
-			<h3><span>2</span> Enter focus mode</h3>
-			<p>Hyper-focus on one task at a time with a constant reminder of what you're working on.</p>
+			<div>
+				<div>
+					<div class="number">2</div>
+					<h3>
+						<span><span>Enter focus mode</span></span>.
+					</h3>
+				</div>
+				<p>See a constant reminder of your current task. <b>Stay focused.</b></p>
+			</div>
 		</div>
 		<div class="step step4" data-step="done">
-			<h3><span>3</span> Mark the task as done</h3>
-			<p>Get a reward and move on to the next task.<br/> Never leave flow state.</p>
+			<div>
+				<div>
+					<div class="number">3</div>
+					<h3>
+						<span><span>Complete your task</span></span>. 
+					</h3>
+				</div>
+				<p>Then move on to your next task. <b>Stay in flow state.</b></p>
+			</div>
 		</div>
 		<div class="step step5" data-step="end">
-			<h3><span>4</span> End your day</h3>
-			<p>Consciously decide when your work day is over, and get a satisfying summary of your progress.</p>
+			<div>
+				<div>
+					<div class="number">4</div>
+					<h3>
+						<span><span>End your day</span></span>.
+					</h3>
+				</div>
+				<p>See a satisfying summary of your progress. <b>Stop working & rest.</b></p>
+			</div>
 		</div>
 	</section>
 
@@ -237,7 +269,7 @@ headerClass: homepage
 				<div class="flex">
 					<div class="text">
 						<div>
-							<h3>Time-Driven Tasks</h3>
+							<h3>Time Limit Tasks</h3>
 							<p>A task titled "Answers emails for 20 minutes" will automatically start with a 20 min timer.</p>
 						</div>
 					</div>
@@ -335,7 +367,6 @@ headerClass: homepage
 
 	<section class="extras">
 		<div class="container container-lg">
-			<h2>More features to keep you focused.</h2>
 			<div class="hider">
 				<div class="flex">
 					<div>
@@ -373,12 +404,12 @@ headerClass: homepage
 						<p>Save links, comments and other details for each task.</p>
 					</div>
 					<div>
-						<img class="note" src="images/icon-calendar.svg"/>
+						<img class="recurring" src="images/icon-recurring.svg"/>
 						<h3>Recurring Tasks</h3>
 						<p>Schedule tasks to be automatically created on a regular schedule</p>
 					</div>
 					<div>
-						<img class="note" src="images/icon-calendar.svg"/>
+						<img class="scheduling" src="images/icon-calendar.svg"/>
 						<h3>Task Scheduling</h3>
 						<p>Quickly schedule tasks to show up in your list on a later date.</p>
 					</div>
@@ -388,7 +419,7 @@ headerClass: homepage
 						<p>16 and counting. Do it all at light-speed with no mouse.</p>
 					</div>
 					<div>
-						<img src="images/icon-eisenhower-matrix.svg"/>
+						<img src="images/icon-theme.svg"/>
 						<h3>Dark + Light Modes</h3>
 						<p>..and the option to automatically switch based on time of day.</p>
 					</div>
@@ -444,7 +475,7 @@ headerClass: homepage
 			<div class="btn-container subscribe-form subscribe download-form">
 				<form class="button-form">
 					<input type="email" class="form-control input-xl" name="EMAIL" placeholder="What's your email?"/>
-					<button type="submit" class="btn btn-xl btn-warning">
+					<button type="submit" class="btn btn-xl btn-default">
 						<img class="loading" src="images/loading.svg"/>
 						<img class="send" src="images/send.svg"/>
 						<img class="checkmark" src="images/checkmark.svg"/>
@@ -462,4 +493,4 @@ headerClass: homepage
 <script type="text/javascript" src="/js/gsap3/gsap.min.js"></script>
 <script type="text/javascript" src="/js/scrollmagic/uncompressed/ScrollMagic.js"></script>
 <script type="text/javascript" src="/js/scrollmagic/uncompressed/plugins/animation.gsap.js"></script>
-<script type="text/javascript" src="/js/homepage.js?rel=1595798411108"></script>
+<script type="text/javascript" src="/js/homepage.js?rel=1595862819504"></script>

@@ -248,7 +248,7 @@ headerClass: homepage
 			</div>
 		</section>
 
-		<section class="feature feature-stats even">
+		<section class="feature feature-time-tracking">
 			<div class="container">
 				<div class="flex">
 					<div class="text">
@@ -257,14 +257,55 @@ headerClass: homepage
 							<p>Detailed analytics of your time for charging clients or tracking your own productivity.</p>
 						</div>
 					</div>
-					<div class="image image-border">
-						<img src="/images/stats.jpg?v=2"/>
+					<div class="image">
+						<div>
+							<canvas width="200" height="200" id="time-chart"></canvas>
+							<div class="time-legend">
+								<div>
+									<div style="background: #BC83FF;" class="circle"></div>
+									<div>
+										<p>Slash</p>
+										<span>14hr 20min</span>
+									</div>
+								</div>
+								<div>
+									<div style="background: #666666;" class="circle"></div>
+									<div>
+										<p>Freelance #2</p>
+										<span>7hr 51min</span>
+									</div>
+								</div>
+								<div>
+									<div style="background: #F62F6F;" class="circle"></div>
+									<div>
+										<p>Personal</p>
+										<span>4hr 5min</span>
+									</div>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
 		</section>
 
-		<section class="feature feature-customizable">
+		<section class="feature feature-stats">
+			<div class="container">
+				<div class="flex">
+					<div class="text">
+						<div>
+							<h3>Work Analytics</h3>
+							<p>Any and all links in your task notes will open in your browser when you start the task.</p>
+						</div>
+					</div>
+					<div class="image">
+						<img src="/images/stats.jpg"/>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="feature feature-time-limit">
 			<div class="container">
 				<div class="flex">
 					<div class="text">
@@ -280,23 +321,7 @@ headerClass: homepage
 			</div>
 		</section>
 
-		<section class="feature feature-customizable">
-			<div class="container">
-				<div class="flex">
-					<div class="text">
-						<div>
-							<h3>Work Analytics</h3>
-							<p>Any and all links in your task notes will open in your browser when you start the task.</p>
-						</div>
-					</div>
-					<div class="image">
-						<img src="/images/workflow.png?v=2"/>
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<section class="feature feature-customizable">
+		<section class="feature feature-global-entry">
 			<div class="container">
 				<div class="flex">
 					<div class="text">
@@ -493,4 +518,4 @@ headerClass: homepage
 <script type="text/javascript" src="/js/gsap3/gsap.min.js"></script>
 <script type="text/javascript" src="/js/scrollmagic/uncompressed/ScrollMagic.js"></script>
 <script type="text/javascript" src="/js/scrollmagic/uncompressed/plugins/animation.gsap.js"></script>
-<script type="text/javascript" src="/js/homepage.js?rel=1595862819504"></script>
+<script type="text/javascript" src="/js/homepage.js?rel=1595875554228"></script>

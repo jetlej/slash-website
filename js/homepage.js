@@ -1,8 +1,25 @@
-$(window).on('beforeunload', function() {
-    $(window).scrollTop(0)
-})
-
 $(function(){
+
+	var ctx = $("#time-chart")[0].getContext('2d')
+	var timeChart = new Chart(ctx, {
+		type: 'doughnut',
+		data: {
+			datasets: [{
+				data: [
+					14,
+					8,
+					4,
+				],
+				backgroundColor: [
+					"#BC83FF",
+					"#666666",
+					"#F62F6F",
+				],
+				label: 'Dataset 1'
+			}]
+		},
+		options: {}
+	})
 
 	setTimeout(function(){
 		$('.content-hider').hide()

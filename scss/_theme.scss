@@ -290,6 +290,7 @@ header{
 .flow{
 
 	.step {
+		width: 100% !important;
 
 		> div{
 			display: flex;
@@ -297,7 +298,7 @@ header{
 			align-items: center;
 			justify-content: center;
 			width: 90%;
-			max-width: 800px;
+			max-width: 700px;
 			margin: 0 auto;
 			height: calc(100vh - 500px);
 
@@ -321,6 +322,7 @@ header{
 					margin-right: 30px;
 					flex-shrink: 0;
 					margin-left: -30px;
+					font-family: 'Helvetica Neue', Helvetica, sans-serif;
 				}
 
 				h3{
@@ -1261,6 +1263,50 @@ p{
 
 	}
 
+	&.feature-time-tracking{
+
+		.image{
+			> div{
+				display: flex; 
+				align-items: center;
+				justify-content: center;
+			}
+		}
+
+		canvas{
+			width: 400px !important;
+			height: auto !important;
+		}
+
+		.time-legend{
+			flex-shrink: 0;
+			padding-left: 50px;
+
+			> div{
+				display: flex;
+				align-items: center;
+				margin-bottom: 20px;
+
+				.circle{
+					width: 15px;
+					height: 15px;
+					border-radius: 100%;
+					margin-right: 15px;
+				}
+
+				p{
+					margin: 0 0 3px;
+					color: black;
+				}
+
+				span{
+					color: $gray;
+					font-size: 1.5rem;
+				}
+			}
+		}
+	}
+
 	&.feature-integrations{
 
 		.image{
@@ -1448,7 +1494,7 @@ p{
 	h2{
 		text-align: center;
 		margin: 0 0 55px;
-		font-size: 36px;
+		font-size: 3rem;
 
 		b{
 			color: $brand-primary;
@@ -1557,19 +1603,6 @@ p{
 	}
 }
 
-.big-half-circle-2{
-	filter: drop-shadow( 0px -5px 10px rgba(0, 0, 0, .03));
-	margin-bottom: -10px;
-}
-
-.big-half-circle{
-	height: 55px;
-
-	@media (max-width: $screen-sm-max) {
-		height: 20px !important;
-	}
-}
-
 .bottom-cta{
 	position: relative;
 	background: $gray-lighter;
@@ -1586,7 +1619,7 @@ p{
 	h2{
 		text-align: center;
 		margin-bottom: 60px;
-		font-size: 2.5rem;
+		font-size: 3rem;
 
 		b{
 			// color: $brand-warning;

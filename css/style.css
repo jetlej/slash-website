@@ -249,42 +249,61 @@ th {
   .table-bordered th,
   .table-bordered td {
     border: 1px solid #ddd !important; } }
+/*
 @font-face {
-  font-family: 'GT Walsheim';
-  src: url("../fonts/GTWalsheim-BoldOblique.woff2") format("woff2"), url("../fonts/GTWalsheim-BoldOblique.woff") format("woff");
-  font-weight: bold;
-  font-style: italic;
-  font-display: swap; }
+    font-family: 'GT Walsheim';
+    src: url('../fonts/GTWalsheim-BoldOblique.woff2') format('woff2'),
+        url('../fonts/GTWalsheim-BoldOblique.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
 @font-face {
-  font-family: 'GT Walsheim';
-  src: url("../fonts/GTWalsheim-Bold.woff2") format("woff2"), url("../fonts/GTWalsheim-Bold.woff") format("woff");
-  font-weight: bold;
-  font-style: normal;
-  font-display: swap; }
+    font-family: 'GT Walsheim';
+    src: url('../fonts/GTWalsheim-Bold.woff2') format('woff2'),
+        url('../fonts/GTWalsheim-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
 @font-face {
-  font-family: 'GT Walsheim';
-  src: url("../fonts/GTWalsheim-LightOblique.woff2") format("woff2"), url("../fonts/GTWalsheim-LightOblique.woff") format("woff");
-  font-weight: 300;
-  font-style: italic;
-  font-display: swap; }
+    font-family: 'GT Walsheim';
+    src: url('../fonts/GTWalsheim-LightOblique.woff2') format('woff2'),
+        url('../fonts/GTWalsheim-LightOblique.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
 @font-face {
-  font-family: 'GT Walsheim';
-  src: url("../fonts/GTWalsheim-RegularOblique.woff2") format("woff2"), url("../fonts/GTWalsheim-RegularOblique.woff") format("woff");
-  font-weight: normal;
-  font-style: italic;
-  font-display: swap; }
+    font-family: 'GT Walsheim';
+    src: url('../fonts/GTWalsheim-RegularOblique.woff2') format('woff2'),
+        url('../fonts/GTWalsheim-RegularOblique.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
 @font-face {
-  font-family: 'GT Walsheim';
-  src: url("../fonts/GTWalsheim-Light.woff2") format("woff2"), url("../fonts/GTWalsheim-Light.woff") format("woff");
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap; }
+    font-family: 'GT Walsheim';
+    src: url('../fonts/GTWalsheim-Light.woff2') format('woff2'),
+        url('../fonts/GTWalsheim-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
 @font-face {
-  font-family: 'GT Walsheim';
-  src: url("../fonts/GTWalsheim-Regular.woff2") format("woff2"), url("../fonts/GTWalsheim-Regular.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap; }
+    font-family: 'GT Walsheim';
+    src: url('../fonts/GTWalsheim-Regular.woff2') format('woff2'),
+        url('../fonts/GTWalsheim-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+*/
 @font-face {
   font-family: 'Eina';
   src: local("Eina"), url("../fonts/eina-01-bold.woff2") format("woff2"), url("../fonts/eina-01-bold.woff") format("woff"), url("../fonts/eina-01-bold.ttf") format("ttf"), url("../fonts/eina-01-bold.eot?#iefix") format("eot");
@@ -4022,69 +4041,72 @@ header {
       header nav a {
         margin-left: 15px; } }
 
-.flow .step > div {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 90%;
-  max-width: 800px;
-  margin: 0 auto;
-  height: calc(100vh - 500px); }
-  .flow .step > div > div {
+.flow .step {
+  width: 100% !important; }
+  .flow .step > div {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center; }
-    .flow .step > div > div .number {
-      color: #FF3366;
-      width: 4rem;
-      height: 4rem;
-      font-size: 2rem;
-      font-style: default;
-      font-weight: bold;
+    justify-content: center;
+    width: 90%;
+    max-width: 700px;
+    margin: 0 auto;
+    height: calc(100vh - 500px); }
+    .flow .step > div > div {
       display: flex;
-      justify-content: center;
       align-items: center;
-      border: 2px solid #FF3366;
-      border-radius: 100%;
-      margin-right: 30px;
-      flex-shrink: 0;
-      margin-left: -30px; }
-    .flow .step > div > div h3 {
-      font-size: 4.1rem;
-      font-weight: bold;
-      color: black;
-      position: relative;
-      line-height: 140%;
-      margin: 0;
-      letter-spacing: -1px; }
-      .flow .step > div > div h3 > span {
-        position: relative; }
-        .flow .step > div > div h3 > span:before {
-          content: '';
-          background: #FF3366;
-          height: 10px;
-          width: 0;
-          bottom: -1px;
-          left: 0;
-          position: absolute;
-          border-radius: 1px;
-          animation: underline .35s ease-in-out forwards;
-          animation-delay: .5s;
-          z-index: 1; }
-        .flow .step > div > div h3 > span > span {
-          position: relative;
-          z-index: 2; }
-  .flow .step > div p {
-    font-weight: 500;
-    font-size: 2.8rem;
-    line-height: 120%;
-    color: #babec9;
-    margin: 20px 0 0;
-    letter-spacing: -0.4px; }
-    .flow .step > div p b {
-      color: #8f96a8;
-      letter-spacing: -0.75px; }
+      justify-content: center; }
+      .flow .step > div > div .number {
+        color: #FF3366;
+        width: 4rem;
+        height: 4rem;
+        font-size: 2rem;
+        font-style: default;
+        font-weight: bold;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 2px solid #FF3366;
+        border-radius: 100%;
+        margin-right: 30px;
+        flex-shrink: 0;
+        margin-left: -30px;
+        font-family: 'Helvetica Neue', Helvetica, sans-serif; }
+      .flow .step > div > div h3 {
+        font-size: 4.1rem;
+        font-weight: bold;
+        color: black;
+        position: relative;
+        line-height: 140%;
+        margin: 0;
+        letter-spacing: -1px; }
+        .flow .step > div > div h3 > span {
+          position: relative; }
+          .flow .step > div > div h3 > span:before {
+            content: '';
+            background: #FF3366;
+            height: 10px;
+            width: 0;
+            bottom: -1px;
+            left: 0;
+            position: absolute;
+            border-radius: 1px;
+            animation: underline .35s ease-in-out forwards;
+            animation-delay: .5s;
+            z-index: 1; }
+          .flow .step > div > div h3 > span > span {
+            position: relative;
+            z-index: 2; }
+    .flow .step > div p {
+      font-weight: 500;
+      font-size: 2.8rem;
+      line-height: 120%;
+      color: #babec9;
+      margin: 20px 0 0;
+      letter-spacing: -0.4px; }
+      .flow .step > div p b {
+        color: #8f96a8;
+        letter-spacing: -0.75px; }
 
 .top {
   min-height: calc(100vh - 113px); }
@@ -4694,6 +4716,31 @@ p {
   .feature.feature-customizable .image {
     width: 700px;
     margin-bottom: -40px; }
+  .feature.feature-time-tracking .image > div {
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+  .feature.feature-time-tracking canvas {
+    width: 400px !important;
+    height: auto !important; }
+  .feature.feature-time-tracking .time-legend {
+    flex-shrink: 0;
+    padding-left: 50px; }
+    .feature.feature-time-tracking .time-legend > div {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px; }
+      .feature.feature-time-tracking .time-legend > div .circle {
+        width: 15px;
+        height: 15px;
+        border-radius: 100%;
+        margin-right: 15px; }
+      .feature.feature-time-tracking .time-legend > div p {
+        margin: 0 0 3px;
+        color: black; }
+      .feature.feature-time-tracking .time-legend > div span {
+        color: #8f96a8;
+        font-size: 1.5rem; }
   .feature.feature-integrations .image {
     display: flex;
     flex-wrap: wrap;
@@ -4812,7 +4859,7 @@ p {
   .why h2 {
     text-align: center;
     margin: 0 0 55px;
-    font-size: 36px; }
+    font-size: 3rem; }
     .why h2 b {
       color: #6101EA;
       padding-right: 10px;
@@ -4886,16 +4933,6 @@ p {
       margin: 0;
       color: #FF3366; }
 
-.big-half-circle-2 {
-  filter: drop-shadow(0px -5px 10px rgba(0, 0, 0, 0.03));
-  margin-bottom: -10px; }
-
-.big-half-circle {
-  height: 55px; }
-  @media (max-width: 991px) {
-    .big-half-circle {
-      height: 20px !important; } }
-
 .bottom-cta {
   position: relative;
   background: #f5f6f9; }
@@ -4908,7 +4945,7 @@ p {
   .bottom-cta h2 {
     text-align: center;
     margin-bottom: 60px;
-    font-size: 2.5rem; }
+    font-size: 3rem; }
     @media (max-width: 991px) {
       .bottom-cta h2 {
         font-size: 1.8rem;

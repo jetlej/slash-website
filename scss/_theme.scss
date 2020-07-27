@@ -810,6 +810,7 @@ p{
 
 .features{
 	padding-bottom: 0;
+	padding-top: 0;
 
 	h2{
 		font-size: 3rem;
@@ -1274,7 +1275,7 @@ p{
 		}
 
 		canvas{
-			width: 400px !important;
+			width: 370px !important;
 			height: auto !important;
 		}
 
@@ -1285,7 +1286,11 @@ p{
 			> div{
 				display: flex;
 				align-items: center;
-				margin-bottom: 20px;
+				margin-bottom: 25px;
+
+				&:last-child{
+					margin-bottom: 0;
+				}
 
 				.circle{
 					width: 15px;
@@ -1297,11 +1302,50 @@ p{
 				p{
 					margin: 0 0 3px;
 					color: black;
+					line-height: 100%;
 				}
 
 				span{
 					color: $gray;
 					font-size: 1.5rem;
+				}
+			}
+		}
+	}
+
+	&.feature-quick-entry{
+
+		.quick-entry{
+
+			input{
+				background: $black;
+				color: white;
+				height: 80px;
+				border-radius: 16px;
+				font-size: 1.8rem;
+				width: 100%;
+				letter-spacing: -.5px;
+				font-weight: 500;
+				box-shadow: 0 4px 32px rgba(0,0,0,.32);
+				border: 1px solid white;
+
+				&::placeholder{
+					color: rgba(255,255,255,.45);
+				}
+			}
+		}
+	}
+
+	&.feature-time-limit-tasks{
+		
+		.time-limit-tasks{
+
+			p{
+				font-size: 2.5rem;
+				color: $gray;
+
+				span{
+					border-bottom: 3px dashed $gray;
 				}
 			}
 		}
@@ -1332,7 +1376,7 @@ p{
 				display: flex;
 				align-items: center;
 				justify-content: center;
-				background: #2A2D39 !important;
+				background: #2A2D39;
 
 				img{
 					width: 100px;

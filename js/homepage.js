@@ -1,25 +1,31 @@
 $(function(){
 
-	var ctx = $("#time-chart")[0].getContext('2d')
-	var timeChart = new Chart(ctx, {
-		type: 'doughnut',
-		data: {
-			datasets: [{
-				data: [
+	function createTimeChart() {
+		var ctx = $("#time-chart")[0].getContext('2d')
+		var timeChart = new Chart(ctx, {
+			type: 'doughnut',
+			data: {
+				datasets: [{
+					data: [
 					14,
 					8,
 					4,
-				],
-				backgroundColor: [
+					],
+					backgroundColor: [
 					"#BC83FF",
 					"#666666",
 					"#F62F6F",
-				],
-				label: 'Dataset 1'
-			}]
-		},
-		options: {}
-	})
+					],
+					label: 'Dataset 1'
+				}]
+			},
+			options: {
+				tooltips: {
+					enabled: false
+				}
+			}
+		})
+	}
 
 	setTimeout(function(){
 		$('.content-hider').hide()
@@ -273,14 +279,14 @@ $(function(){
 		}, 1000)
 	}
 
-	var waypoint1 = $('.feature-focus').waypoint({
+	var waypoint1 = $('.feature-time-tracking').waypoint({
 		offset: 200,
 		handler: function(direction) {
-			$('.focus-window').addClass('active')
+			createTimeChart()
 		}
 	})
 
-	var waypoint2 = $('.feature-flow').waypoint({
+	var waypoint2 = $('.feature-quick-entry').waypoint({
 		offset: 200,
 		handler: function(direction) {
 			$('.feature-flow').addClass('active')

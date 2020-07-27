@@ -4415,7 +4415,8 @@ p {
     font-size: 3rem; }
 
 .features {
-  padding-bottom: 0; }
+  padding-bottom: 0;
+  padding-top: 0; }
   .features h2 {
     font-size: 3rem;
     padding-bottom: 50vh; }
@@ -4593,7 +4594,7 @@ p {
     .feature.feature-flow .image > div {
       padding: 40px 0;
       border-radius: 6px;
-      background: #111111;
+      background: #121318;
       text-align: center;
       height: 360px;
       display: flex;
@@ -4721,7 +4722,7 @@ p {
     align-items: center;
     justify-content: center; }
   .feature.feature-time-tracking canvas {
-    width: 400px !important;
+    width: 370px !important;
     height: auto !important; }
   .feature.feature-time-tracking .time-legend {
     flex-shrink: 0;
@@ -4729,7 +4730,9 @@ p {
     .feature.feature-time-tracking .time-legend > div {
       display: flex;
       align-items: center;
-      margin-bottom: 20px; }
+      margin-bottom: 25px; }
+      .feature.feature-time-tracking .time-legend > div:last-child {
+        margin-bottom: 0; }
       .feature.feature-time-tracking .time-legend > div .circle {
         width: 15px;
         height: 15px;
@@ -4737,10 +4740,29 @@ p {
         margin-right: 15px; }
       .feature.feature-time-tracking .time-legend > div p {
         margin: 0 0 3px;
-        color: black; }
+        color: black;
+        line-height: 100%; }
       .feature.feature-time-tracking .time-legend > div span {
         color: #8f96a8;
         font-size: 1.5rem; }
+  .feature.feature-quick-entry .quick-entry input {
+    background: #121318;
+    color: white;
+    height: 80px;
+    border-radius: 16px;
+    font-size: 1.8rem;
+    width: 100%;
+    letter-spacing: -.5px;
+    font-weight: 500;
+    box-shadow: 0 4px 32px rgba(0, 0, 0, 0.32);
+    border: 1px solid white; }
+    .feature.feature-quick-entry .quick-entry input::placeholder {
+      color: rgba(255, 255, 255, 0.45); }
+  .feature.feature-time-limit-tasks .time-limit-tasks p {
+    font-size: 2.5rem;
+    color: #8f96a8; }
+    .feature.feature-time-limit-tasks .time-limit-tasks p span {
+      border-bottom: 3px dashed #8f96a8; }
   .feature.feature-integrations .image {
     display: flex;
     flex-wrap: wrap;
@@ -4762,7 +4784,7 @@ p {
       display: flex;
       align-items: center;
       justify-content: center;
-      background: #2A2D39 !important; }
+      background: #2A2D39; }
       .feature.feature-integrations .image > div img {
         width: 100px; }
       .feature.feature-integrations .image > div.asana {

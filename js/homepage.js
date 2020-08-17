@@ -1,5 +1,113 @@
 $(function(){
 
+	function planDay () {
+		let count = 0
+		let top = 20
+		let tasksInterval = setInterval(() => {
+			count++
+			$this = $('.plan-day .tasks > div:nth-child(' + count + ')')
+			$this.addClass('moving')
+			// $('.plan-day .list:first-child .tasks').css({'transform' : 'translateY(-' + count * top +'px)'});
+			if (count === 3) clearInterval(tasksInterval)
+		}, 2000)
+	}
+
+	function endDay () {
+		let delay = 0
+
+		anime({
+			targets: '.end-day .task-list',
+			opacity: [0, 1],
+			duration: 1,
+			easing: 'easeOutQuad',
+		})
+
+		$('.end-day .completed-task').each(( index, task ) => {
+			
+			let line = task.querySelector('.line')
+			let text = task.querySelector('.text')
+
+			setTimeout(function(){
+				anime({
+					targets: line,
+					width: [
+					{ value: 0, duration: 1, delay: 0 },
+					{ value: '100%', duration: 200, delay: 200 },
+					],
+					easing: 'easeOutQuad',
+				})
+
+				anime({
+					targets: text,
+					opacity: [
+					{ value: 1, duration: 1, delay: 0 },
+					{ value: .5, duration: 200, delay: 200 },
+					],
+					easing: 'easeOutQuad',
+				})
+
+				anime({
+					targets: task,
+					translateX: [
+					{ value: -50, duration: 1, delay: 0 },
+					{ value: '0%', duration: 300, delay: 0, easing: 'easeOutElastic(1, 1.2)' },
+					],
+					scale: [
+					{ value: 1, duration: 1, delay: 0 },
+					{ value: .5, duration: 200, delay: 450 },
+					],
+					opacity: [
+					{ value: 0, duration: 1, delay: 0 },
+					{ value: 1, duration: 200, delay: 0 },
+					{ value: .5, duration: 200, delay: 150 }
+					],
+					easing: 'easeOutQuad',
+				})
+			}, delay)
+
+			delay += 400
+		})
+
+		delay += 500
+		setTimeout(function(){
+			anime({
+				targets: '.end-day .task-list',
+				opacity: 0,
+				duration: 400,
+				easing: 'easeOutQuad',
+			})
+			anime({
+				targets: '.end-day .part2',
+				opacity: [0, 1],
+				duration: 400,
+				easing: 'easeOutQuad',
+			})
+		}, delay)
+
+		delay += 400
+		setTimeout(() => { 
+			$('.end-day .part2 .progress').addClass('visible')
+			anime({
+				targets: '.progress .bar > div',
+				width: ['0%', '66%'],
+				duration: 400,
+				easing: 'easeOutQuad',
+			})
+		}, delay)
+
+		/*
+		delay += 750
+		setTimeout(() => { 
+			this.showCarousel = true
+		}, delay)
+		*/
+
+		delay += 1500
+		setTimeout(() => { 
+			$('.end-day .part2 .button').addClass('visible')
+		}, delay)
+	}
+	
 	function createTimeChart() {
 		var ctx = $("#time-chart")[0].getContext('2d')
 		var timeChart = new Chart(ctx, {
@@ -201,6 +309,10 @@ $(function(){
 		.addTo(controller)
 
 		if (name === 'day') {
+			subHeroPin.on('enter', function (){
+				planDay()
+			}).addTo(controller)
+
 			var focusMode3 = new ScrollMagic.Scene({triggerElement: step, triggerHook: 'onEnter', duration: 500})
 			.setTween(TweenMax.to(".app-window .focus", 1, {opacity: 0, ease: "power1.inOut"}))
 			.addTo(controller)
@@ -239,6 +351,11 @@ $(function(){
 		}
 
 		if (name === 'end') {
+			subHeroPin.on('enter', function (){
+				console.log('Leaving the end day scene')
+				endDay()
+			}).addTo(controller)
+
 			var step1a = new ScrollMagic.Scene({triggerElement: step, triggerHook: 'onEnter', duration: 500})
 			.setTween(TweenMax.to(".app-window .done", 1, {opacity: 0}))
 			.addTo(controller)

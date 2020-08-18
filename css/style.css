@@ -4187,19 +4187,20 @@ p {
     top: 0;
     bottom: 0; }
     .app-window .screens > div {
+      display: none;
       opacity: 0;
       position: absolute;
       left: 0;
       right: 0;
       top: 0;
       bottom: 0;
-      display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center; }
     .app-window .screens .hero-list {
       justify-content: start;
-      opacity: 1; }
+      opacity: 1;
+      display: flex; }
       .app-window .screens .hero-list > div {
         width: 500px; }
     .app-window .screens .plan-day {
@@ -4255,11 +4256,6 @@ p {
           box-shadow: 0 1px rgba(255, 255, 255, 0.3);
           background: #6d21ff;
           border-radius: 100%; }
-    .app-window .screens .end-day .part2 > div {
-      opacity: 0;
-      transition: opacity .2s ease-in-out; }
-      .app-window .screens .end-day .part2 > div.visible {
-        opacity: 1; }
     .app-window .screens .end-day .part2 .progress {
       width: 50%;
       text-align: center; }
@@ -4277,6 +4273,7 @@ p {
             left: 0;
             top: 0;
             bottom: 0;
+            width: 0;
             background: #00C109;
             animation: bar 1.25s cubic-bezier(0.61, 0.18, 0.56, 1.04);
             transition: width 0.25s cubic-bezier(0.61, 0.18, 0.56, 1.04); }
@@ -4295,28 +4292,37 @@ p {
       .app-window .screens .list .tasks div {
         margin-bottom: 20px;
         animation: taskIn .3s ease-in-out;
-        line-height: 120%;
-        transition: 0.2s all ease-in-out;
-        /*
-        &.moving{
-        	height: 0;
-        	line-height: 0;
-        	margin: 0;
-        	padding: 0;
-        	overflow: hidden;
-        }
-        */ }
+        line-height: 25px;
+        transition: 0.4s all ease-in-out; }
+        .app-window .screens .list .tasks div span {
+          display: block; }
+        .app-window .screens .list .tasks div:nth-child(1).moving span {
+          animation: yAxis1 .75s forwards ease-in-out; }
+        .app-window .screens .list .tasks div:nth-child(2).moving span {
+          animation: yAxis2 .75s forwards ease-in-out; }
+        .app-window .screens .list .tasks div:nth-child(3).moving span {
+          animation: yAxis3 .75s forwards ease-in-out; }
         .app-window .screens .list .tasks div.moving {
-          animation: xAxis 1s forwards ease-in-out; }
-          .app-window .screens .list .tasks div.moving span {
-            display: block;
-            height: 20px;
-            animation: yAxis 1s forwards ease-in-out; }
-@keyframes yAxis {
+          height: 0;
+          line-height: 0;
+          margin: 0;
+          padding: 0;
+          animation: xAxis .75s forwards ease-in-out; }
+@keyframes yAxis1 {
   50% {
     transform: translateY(-50px); }
   100% {
     transform: translateY(10px); } }
+@keyframes yAxis2 {
+  50% {
+    transform: translateY(-50px); }
+  100% {
+    transform: translateY(55px); } }
+@keyframes yAxis3 {
+  50% {
+    transform: translateY(-50px); }
+  100% {
+    transform: translateY(100px); } }
 @keyframes xAxis {
   100% {
     transform: translateX(400px); } }

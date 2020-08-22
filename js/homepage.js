@@ -227,7 +227,10 @@ $(function(){
 
 	addTasks()
 
-	let appHeightMax = 450
+	let windowWidth = $(window).width()
+	let mobile = windowWidth < 600
+
+	let appHeightMax = mobile ? 270 : 450
 	let appWidthMax = 800
 
 	let appHeightMin = 50

@@ -4052,6 +4052,11 @@ header {
     max-width: 700px;
     margin: 0 auto;
     height: calc(100vh - 500px); }
+    @media (max-width: 991px) {
+      .flow .step > div {
+        justify-content: flex-start;
+        height: calc(100vh - 300px);
+        padding-top: 40px; } }
     .flow .step > div > div {
       display: flex;
       align-items: center;
@@ -4072,6 +4077,12 @@ header {
         flex-shrink: 0;
         margin-left: -30px;
         font-family: 'Helvetica Neue', Helvetica, sans-serif; }
+        @media (max-width: 991px) {
+          .flow .step > div > div .number {
+            display: none; } }
+        @media (max-width: 767px) {
+          .flow .step > div > div .number {
+            display: none; } }
       .flow .step > div > div h3 {
         font-size: 4.1rem;
         font-weight: bold;
@@ -4080,33 +4091,54 @@ header {
         line-height: 140%;
         margin: 0;
         letter-spacing: -1px; }
+        @media (max-width: 991px) {
+          .flow .step > div > div h3 {
+            font-size: 3.2rem; } }
+        @media (max-width: 767px) {
+          .flow .step > div > div h3 {
+            font-size: 2.7rem; } }
         .flow .step > div > div h3 > span {
           position: relative; }
-          .flow .step > div > div h3 > span:before {
-            content: '';
-            background: #FF3366;
-            height: 10px;
-            width: 0;
-            bottom: -1px;
-            left: 0;
-            position: absolute;
-            border-radius: 1px;
-            animation: underline .35s ease-in-out forwards;
-            animation-delay: .5s;
-            z-index: 1; }
           .flow .step > div > div h3 > span > span {
             position: relative;
             z-index: 2; }
+            .flow .step > div > div h3 > span > span:before {
+              content: '';
+              background: #FF3366;
+              height: 10px;
+              width: 0;
+              bottom: -1px;
+              left: 0;
+              position: absolute;
+              border-radius: 1px;
+              animation: underline .35s ease-in-out forwards;
+              animation-delay: .5s;
+              z-index: 1; }
+              @media (max-width: 991px) {
+                .flow .step > div > div h3 > span > span:before {
+                  height: 6px;
+                  bottom: -1px; } }
     .flow .step > div p {
       font-weight: 500;
       font-size: 2.8rem;
       line-height: 120%;
-      color: #babec9;
+      color: #acb1be;
       margin: 20px 0 0;
       letter-spacing: -0.4px; }
+      @media (max-width: 991px) {
+        .flow .step > div p {
+          margin-top: 10px;
+          font-size: 2.2rem;
+          font-weight: 400; } }
+      @media (max-width: 767px) {
+        .flow .step > div p {
+          font-size: 1.8rem; } }
       .flow .step > div p b {
         color: #8f96a8;
         letter-spacing: -0.75px; }
+        @media (max-width: 991px) {
+          .flow .step > div p b {
+            font-weight: 500; } }
 
 .top {
   min-height: calc(100vh - 113px); }
@@ -4166,7 +4198,8 @@ p {
   left: 0;
   right: 0;
   top: 0;
-  z-index: 10000; }
+  z-index: 10000;
+  pointer-events: none; }
 
 .app-window {
   background: #121318;
@@ -4174,12 +4207,16 @@ p {
   position: absolute;
   bottom: -15%;
   width: 850px;
+  max-width: 90vw;
   height: 550px;
   left: 50%;
   transform: translate(-50%, 0);
   z-index: 500;
   border-radius: 15px;
   box-shadow: 0 0 12px rgba(255, 255, 255, 0.075); }
+  @media (max-width: 1023px) {
+    .app-window {
+      height: 30vh; } }
   .app-window .screens {
     position: absolute;
     left: 0;
@@ -4436,13 +4473,18 @@ p {
         border-radius: 1px;
         animation: underline .35s ease-in-out forwards;
         animation-delay: .5s; }
+        @media (max-width: 991px) {
+          .hero h1 span:after {
+            height: 6px;
+            bottom: -1px; } }
 @keyframes underline {
   100% {
     width: 100%; } }
     @media (max-width: 991px) {
       .hero h1 {
-        font-size: 2.7rem;
-        padding: 0 50px; } }
+        font-size: 2.4rem;
+        padding: 0 50px;
+        letter-spacing: 0; } }
     @media (max-width: 767px) {
       .hero h1 {
         font-size: 3rem;
@@ -4453,7 +4495,7 @@ p {
         max-width: 100%; } }
     @media (max-width: 385px) {
       .hero h1 {
-        font-size: 2.4rem;
+        font-size: 2.6rem;
         text-align: center; } }
   .hero h2 {
     width: 800px;
@@ -4507,7 +4549,16 @@ p {
     margin-bottom: 50px;
     text-align: center;
     position: relative;
-    z-index: 3; }
+    z-index: 3;
+    text-shadow: 0 0 20px black; }
+    @media (max-width: 991px) {
+      .sub-hero p {
+        font-size: 2.2rem;
+        text-align: left; } }
+    @media (max-width: 767px) {
+      .sub-hero p {
+        font-size: 1.8rem;
+        text-align: left; } }
     .sub-hero p:last-child {
       margin: 0; }
 
@@ -4571,6 +4622,9 @@ p {
       font-size: 4rem;
       line-height: 120%;
       font-weight: bold; }
+      @media (max-width: 991px) {
+        .feature .text h3 {
+          font-size: 3rem; } }
     .feature .text h2 {
       box-sizing: border-box;
       color: black;
@@ -4825,16 +4879,27 @@ p {
     display: flex;
     align-items: center;
     justify-content: center; }
+    @media (max-width: 991px) {
+      .feature.feature-time-tracking .image > div {
+        flex-direction: column; } }
   .feature.feature-time-tracking canvas {
     width: 370px !important;
-    height: auto !important; }
+    height: auto !important;
+    max-width: 80%; }
   .feature.feature-time-tracking .time-legend {
     flex-shrink: 0;
     padding-left: 50px; }
+    @media (max-width: 991px) {
+      .feature.feature-time-tracking .time-legend {
+        padding-left: 0;
+        padding-top: 20px; } }
     .feature.feature-time-tracking .time-legend > div {
       display: flex;
       align-items: center;
       margin-bottom: 25px; }
+      @media (max-width: 991px) {
+        .feature.feature-time-tracking .time-legend > div {
+          margin-bottom: 15px; } }
       .feature.feature-time-tracking .time-legend > div:last-child {
         margin-bottom: 0; }
       .feature.feature-time-tracking .time-legend > div .circle {
@@ -4848,7 +4913,7 @@ p {
         line-height: 100%; }
       .feature.feature-time-tracking .time-legend > div span {
         color: #8f96a8;
-        font-size: 1.5rem; }
+        font-size: 1.2rem; }
   .feature.feature-quick-entry .quick-entry input {
     background: #121318;
     color: white;
@@ -4860,11 +4925,19 @@ p {
     font-weight: 500;
     box-shadow: 0 4px 32px rgba(0, 0, 0, 0.32);
     border: 1px solid white; }
+    @media (max-width: 991px) {
+      .feature.feature-quick-entry .quick-entry input {
+        font-size: 1.4rem; } }
     .feature.feature-quick-entry .quick-entry input::placeholder {
       color: rgba(255, 255, 255, 0.45); }
   .feature.feature-time-limit-tasks .time-limit-tasks p {
     font-size: 2.5rem;
-    color: #8f96a8; }
+    color: #5b6376;
+    line-height: 130%; }
+    @media (max-width: 991px) {
+      .feature.feature-time-limit-tasks .time-limit-tasks p {
+        font-size: 2rem;
+        margin-bottom: 30px; } }
     .feature.feature-time-limit-tasks .time-limit-tasks p span {
       border-bottom: 3px dashed #8f96a8; }
   .feature.feature-integrations .image {

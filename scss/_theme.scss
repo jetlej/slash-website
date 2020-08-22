@@ -302,6 +302,16 @@ header{
 			margin: 0 auto;
 			height: calc(100vh - 500px);
 
+			@media (max-width: $screen-sm-max) {
+				justify-content: flex-start;
+				height: calc(100vh - 300px);
+				padding-top: 40px;
+			}
+
+			@media (max-width: $screen-xs-max) {
+				// height: calc(100vh - 500px);
+			}
+
 			> div {
 				display: flex;
 				align-items: center;
@@ -323,6 +333,14 @@ header{
 					flex-shrink: 0;
 					margin-left: -30px;
 					font-family: 'Helvetica Neue', Helvetica, sans-serif;
+
+					@media (max-width: $screen-sm-max) {
+						display: none;
+					}
+
+					@media (max-width: $screen-xs-max) {
+						display: none;
+					}
 				}
 
 				h3{
@@ -334,26 +352,42 @@ header{
 					margin: 0;
 					letter-spacing: -1px;
 
+					@media (max-width: $screen-sm-max) {
+						font-size: 3.2rem;
+					}
+
+					@media (max-width: $screen-xs-max) {
+						font-size: 2.7rem;
+					}
+
 					> span{
 						position: relative;
-
-						&:before{
-							content: '';
-							background: $brand-warning;
-							height: 10px;
-							width: 0;
-							bottom: -1px;
-							left: 0;
-							position: absolute;
-							border-radius: 1px;
-							animation: underline .35s ease-in-out forwards;
-							animation-delay: .5s;
-							z-index: 1;
-						}
 
 						> span{
 							position: relative;
 							z-index: 2;
+
+							&:before{
+								content: '';
+								background: $brand-warning;
+								height: 10px;
+								width: 0;
+								bottom: -1px;
+								left: 0;
+								position: absolute;
+								border-radius: 1px;
+								animation: underline .35s ease-in-out forwards;
+								animation-delay: .5s;
+								z-index: 1;
+
+								@media (max-width: $screen-sm-max) {
+									height: 6px;
+									bottom: -1px;
+								}
+
+								@media (max-width: $screen-xs-max) {
+								}
+							}
 						}
 					}
 				}
@@ -363,14 +397,28 @@ header{
 				font-weight: 500;
 				font-size: 2.8rem;
 				line-height: 120%;
-				color: lighten($gray, 15%);
+				color: lighten($gray, 10%);
 				margin: 20px 0 0;
 				letter-spacing: -0.4px;
+
+				@media (max-width: $screen-sm-max) {
+					margin-top: 10px;
+					font-size: 2.2rem;
+					font-weight: 400;
+				}
+
+				@media (max-width: $screen-xs-max) {
+					font-size: 1.8rem;
+				}
 
 				b{
 					color: $gray;
 					// font-weight: 400;
 					letter-spacing: -0.75px;
+
+					@media (max-width: $screen-sm-max) {
+						font-weight: 500;
+					}
 				}
 			}
 		}
@@ -453,6 +501,7 @@ p{
 	right: 0;
 	top: 0;
 	z-index: 10000;
+	pointer-events: none;
 }
 
 .app-window{
@@ -461,6 +510,7 @@ p{
 	position: absolute;
 	bottom: -15%;
 	width: 850px;
+	max-width: 90vw;
 	height: 550px;
 	left: 50%;
 	transform: translate(-50%, 0);
@@ -468,7 +518,10 @@ p{
 	border-radius: 15px;
 	// border: 1px solid rgba(255,255,255,.1);
 	box-shadow: 0 0 12px rgba(255,255,255,.075);
-	// pointer-events: none;
+
+	@media (max-width: $screen-md-max) {
+		height: 30vh;
+	}
 
 	.screens{
 		position: absolute;
@@ -846,6 +899,11 @@ p{
 				border-radius: 1px;
 				animation: underline .35s ease-in-out forwards;
 				animation-delay: .5s;
+
+				@media (max-width: $screen-sm-max) {
+					height: 6px;
+					bottom: -1px;
+				}
 			}
 		}
 
@@ -856,8 +914,9 @@ p{
 		}
 
 		@media (max-width: $screen-sm-max) {
-			font-size: 2.7rem;
+			font-size: 2.4rem;
 			padding: 0 50px;
+			letter-spacing: 0;
 		}
 
 		@media (max-width: $screen-xs-max) {
@@ -870,7 +929,7 @@ p{
 		}
 
 		@media (max-width: 385px) {
-			font-size: 2.4rem;
+			font-size: 2.6rem;
 			text-align: center;
 		}
 	}
@@ -949,6 +1008,17 @@ p{
 		text-align: center;
 		position: relative;
 		z-index: 3;
+		text-shadow: 0 0 20px rgba(0,0,0,1);
+
+		@media (max-width: $screen-sm-max) {
+			font-size: 2.2rem;
+			text-align: left;
+		}
+
+		@media (max-width: $screen-xs-max) {
+			font-size: 1.8rem;
+			text-align: left;
+		}
 
 		&:last-child{
 			margin: 0;
@@ -1039,6 +1109,10 @@ p{
 			font-size: 4rem;
 			line-height: 120%;
 			font-weight: bold;
+
+			@media (max-width: $screen-sm-max) {
+				font-size: 3rem;
+			}
 		}
 
 		h2{
@@ -1429,22 +1503,36 @@ p{
 				display: flex; 
 				align-items: center;
 				justify-content: center;
+
+				@media (max-width: $screen-sm-max) {
+					flex-direction: column;
+				}
 			}
 		}
 
 		canvas{
 			width: 370px !important;
 			height: auto !important;
+			max-width: 80%;
 		}
 
 		.time-legend{
 			flex-shrink: 0;
 			padding-left: 50px;
 
+			@media (max-width: $screen-sm-max) {
+				padding-left: 0;
+				padding-top: 20px;
+			}
+
 			> div{
 				display: flex;
 				align-items: center;
 				margin-bottom: 25px;
+
+				@media (max-width: $screen-sm-max) {
+					margin-bottom: 15px;
+				}
 
 				&:last-child{
 					margin-bottom: 0;
@@ -1465,7 +1553,7 @@ p{
 
 				span{
 					color: $gray;
-					font-size: 1.5rem;
+					font-size: 1.2rem;
 				}
 			}
 		}
@@ -1487,6 +1575,10 @@ p{
 				box-shadow: 0 4px 32px rgba(0,0,0,.32);
 				border: 1px solid white;
 
+				@media (max-width: $screen-sm-max) {
+					font-size: 1.4rem;
+				}
+
 				&::placeholder{
 					color: rgba(255,255,255,.45);
 				}
@@ -1500,7 +1592,13 @@ p{
 
 			p{
 				font-size: 2.5rem;
-				color: $gray;
+				color: darken($gray, 20%);
+				line-height: 130%;
+
+				@media (max-width: $screen-sm-max) {
+					font-size: 2rem;
+					margin-bottom: 30px;
+				}
 
 				span{
 					border-bottom: 3px dashed $gray;

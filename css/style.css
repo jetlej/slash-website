@@ -4038,8 +4038,14 @@ header {
       width: 100%;
       left: 0; }
     @media (max-width: 991px) {
+      header nav a.btn {
+        height: 30px;
+        line-height: 30px;
+        font-size: 1rem !important; } }
+    @media (max-width: 991px) {
       header nav a {
-        margin-left: 15px; } }
+        margin-left: 15px;
+        display: none; } }
 
 .flow .step {
   width: 100% !important; }
@@ -4198,8 +4204,7 @@ p {
   left: 0;
   right: 0;
   top: 0;
-  z-index: 10000;
-  pointer-events: none; }
+  z-index: 10000; }
 
 .app-window {
   background: #121318;
@@ -4216,7 +4221,8 @@ p {
   box-shadow: 0 0 12px rgba(255, 255, 255, 0.075); }
   @media (max-width: 1023px) {
     .app-window {
-      height: 30vh; } }
+      height: 50vh;
+      bottom: 3vh; } }
   .app-window .screens {
     position: absolute;
     left: 0;
@@ -4239,7 +4245,8 @@ p {
       opacity: 1;
       display: flex; }
       .app-window .screens .hero-list > div {
-        width: 500px; }
+        width: 500px;
+        max-width: 85%; }
     .app-window .screens .plan-day {
       flex-direction: row;
       align-items: flex-start; }
@@ -4249,6 +4256,14 @@ p {
         flex: 1;
         padding-left: 40px;
         padding-right: 40px; }
+        @media (max-width: 991px) {
+          .app-window .screens .plan-day > div {
+            padding-left: 20px;
+            padding-right: 20px; } }
+        @media (max-width: 350px) {
+          .app-window .screens .plan-day > div {
+            padding-left: 10px;
+            padding-right: 10px; } }
         .app-window .screens .plan-day > div:first-child {
           border-right: 1px solid rgba(255, 255, 255, 0.1); }
     .app-window .screens .end-day > div > div {
@@ -4296,6 +4311,9 @@ p {
     .app-window .screens .end-day .part2 .progress {
       width: 50%;
       text-align: center; }
+      @media (max-width: 991px) {
+        .app-window .screens .end-day .part2 .progress {
+          width: 80%; } }
       .app-window .screens .end-day .part2 .progress .progress-bar {
         margin: 0 auto 1.8rem; }
         .app-window .screens .end-day .part2 .progress .progress-bar .bar {
@@ -4322,15 +4340,26 @@ p {
           font-size: 1rem; }
     .app-window .screens .list {
       padding-top: 30px; }
+      @media (max-width: 991px) {
+        .app-window .screens .list {
+          padding-top: 10px; } }
       .app-window .screens .list h4 {
         color: #5E6271;
         font-weight: 400;
         margin-bottom: 30px; }
+        @media (max-width: 991px) {
+          .app-window .screens .list h4 {
+            margin-bottom: 20px;
+            font-size: 1rem; } }
       .app-window .screens .list .tasks div {
         margin-bottom: 20px;
         animation: taskIn .3s ease-in-out;
         line-height: 25px;
         transition: 0.4s all ease-in-out; }
+        @media (max-width: 991px) {
+          .app-window .screens .list .tasks div {
+            margin-bottom: 10px;
+            line-height: 20px; } }
         .app-window .screens .list .tasks div span {
           display: block; }
         .app-window .screens .list .tasks div:nth-child(1).moving span {
@@ -4370,6 +4399,9 @@ p {
       .app-window .screens .list .tasks div, .app-window .screens .list input, .app-window .screens .list .btn {
         font-size: 1.2rem;
         font-weight: 600; }
+        @media (max-width: 991px) {
+          .app-window .screens .list .tasks div, .app-window .screens .list input, .app-window .screens .list .btn {
+            font-size: .9rem; } }
       .app-window .screens .list input {
         border: none;
         border-bottom: 2px solid #5E6271;
@@ -4384,11 +4416,20 @@ p {
         padding: 0;
         margin-bottom: 20px;
         margin-top: -5px; }
+        @media (max-width: 991px) {
+          .app-window .screens .list input {
+            margin-top: 0;
+            line-height: 25px;
+            margin-bottom: 15px; } }
         .app-window .screens .list input:focus {
           box-shadow: none;
           outline: none; }
       .app-window .screens .list .btn {
         border-radius: 5px; }
+        @media (max-width: 991px) {
+          .app-window .screens .list .btn {
+            height: 40px;
+            line-height: 40px; } }
     .app-window .screens .focus {
       color: white;
       text-align: center;
@@ -4404,19 +4445,36 @@ p {
       .app-window .screens .focus span {
         font-weight: 400;
         font-size: .9rem; }
+    .app-window .screens .done > div {
+      max-width: 80%; }
     .app-window .screens .done img {
       width: 300px;
+      max-width: 100%;
       display: block;
       margin: 0 auto;
       border-radius: 5px; }
+    .app-window .screens .done p {
+      text-align: center; }
+      @media (max-width: 991px) {
+        .app-window .screens .done p {
+          font-size: 1rem;
+          margin-bottom: 15px; } }
     .app-window .screens .done .btn {
       width: 250px;
+      max-width: 100%;
       font-size: 1.2rem;
       margin: 20px auto 0;
-      display: block; }
+      display: block;
+      border-radius: 5px; }
+      @media (max-width: 991px) {
+        .app-window .screens .done .btn {
+          height: 40px;
+          line-height: 40px;
+          margin-top: 15px; } }
     .app-window .screens .done .progress {
       margin: 20px auto;
-      width: 300px; }
+      width: 300px;
+      max-width: 100%; }
 
 .progress .bar {
   border-radius: 20px;
@@ -4568,6 +4626,9 @@ p {
   align-items: center; }
   .so-much-more h2 {
     font-size: 3rem; }
+    @media (max-width: 991px) {
+      .so-much-more h2 {
+        font-size: 2rem; } }
 
 .features {
   padding-bottom: 0;
@@ -4927,19 +4988,28 @@ p {
     border: 1px solid white; }
     @media (max-width: 991px) {
       .feature.feature-quick-entry .quick-entry input {
-        font-size: 1.4rem; } }
+        font-size: 1.4rem;
+        height: 65px; } }
     .feature.feature-quick-entry .quick-entry input::placeholder {
       color: rgba(255, 255, 255, 0.45); }
   .feature.feature-time-limit-tasks .time-limit-tasks p {
     font-size: 2.5rem;
-    color: #5b6376;
+    color: #23262F;
     line-height: 130%; }
     @media (max-width: 991px) {
       .feature.feature-time-limit-tasks .time-limit-tasks p {
         font-size: 2rem;
         margin-bottom: 30px; } }
+    @media (max-width: 767px) {
+      .feature.feature-time-limit-tasks .time-limit-tasks p {
+        font-size: 2rem; } }
+    @media (max-width: 350px) {
+      .feature.feature-time-limit-tasks .time-limit-tasks p {
+        font-size: 1.65rem;
+        margin-bottom: 20px; } }
     .feature.feature-time-limit-tasks .time-limit-tasks p span {
-      border-bottom: 3px dashed #8f96a8; }
+      color: #6101EA;
+      border-bottom: 3px dashed #6101EA; }
   .feature.feature-integrations .image {
     display: flex;
     flex-wrap: wrap;
@@ -5365,6 +5435,9 @@ footer {
     font-size: 14px;
     color: #8f96a8;
     font-weight: 400; }
+    @media (max-width: 991px) {
+      footer a, footer span {
+        font-size: 1rem; } }
     footer a:hover, footer span:hover {
       color: #555; }
   footer span {

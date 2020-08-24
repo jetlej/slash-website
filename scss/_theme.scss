@@ -280,8 +280,17 @@ header{
 				left: 0; 
 			}
 
+			&.btn{
+				@media (max-width: $screen-sm-max) {
+					height: 30px;
+					line-height: 30px;
+					font-size: 1rem !important;
+				}
+			}
+
 			@media (max-width: $screen-sm-max) {
 				margin-left: 15px;
+				display: none;
 			}
 		}
 	}
@@ -501,7 +510,7 @@ p{
 	right: 0;
 	top: 0;
 	z-index: 10000;
-	pointer-events: none;
+	// pointer-events: none;
 }
 
 .app-window{
@@ -520,7 +529,8 @@ p{
 	box-shadow: 0 0 12px rgba(255,255,255,.075);
 
 	@media (max-width: $screen-md-max) {
-		height: 30vh;
+		height: 50vh;
+		bottom: 3vh;
 	}
 
 	.screens{
@@ -550,6 +560,7 @@ p{
 
 			> div{
 				width: 500px;
+				max-width: 85%;
 			}
 		}
 
@@ -565,6 +576,16 @@ p{
 				flex: 1;
 				padding-left: 40px;
 				padding-right: 40px;
+
+				@media (max-width: $screen-sm-max) {
+					padding-left: 20px;
+					padding-right: 20px;
+				}
+
+				@media (max-width: 350px) {
+					padding-left: 10px;
+					padding-right: 10px;
+				}
 
 				&:first-child{
 					border-right: 1px solid rgba(255,255,255,.1);
@@ -634,6 +655,10 @@ p{
 				.progress{
 					width: 50%;
 					text-align: center;
+
+					@media (max-width: $screen-sm-max) {
+						width: 80%;
+					}
 				
 					.progress-bar{
 						margin: 0 auto 1.8rem;
@@ -673,10 +698,19 @@ p{
 		.list{
 			padding-top: 30px;
 
+			@media (max-width: $screen-sm-max) {
+				padding-top: 10px;
+			}
+
 			h4{
 				color: #5E6271;
 				font-weight: 400;
 				margin-bottom: 30px;
+
+				@media (max-width: $screen-sm-max) {
+					margin-bottom: 20px;
+					font-size: 1rem;
+				}
 			}
 
 			.tasks{
@@ -686,6 +720,11 @@ p{
 					animation: taskIn .3s ease-in-out;
 					line-height: 25px;
 					transition: 0.4s all ease-in-out;
+
+					@media (max-width: $screen-sm-max) {
+						margin-bottom: 10px;
+						line-height: 20px;
+					}
 
 					span{
 						display: block;
@@ -756,6 +795,11 @@ p{
 			.tasks div, input, .btn{
 				font-size: 1.2rem;
 				font-weight: 600;
+
+				@media (max-width: $screen-sm-max) {
+					font-size: .9rem;
+					//font-weight: 500;
+				}
 			}
 
 			input{
@@ -773,6 +817,12 @@ p{
 				margin-bottom: 20px;
 				margin-top: -5px;
 
+				@media (max-width: $screen-sm-max) {
+					margin-top: 0;
+					line-height: 25px;
+					margin-bottom: 15px;
+				}
+
 				&:focus{
 					box-shadow: none;
 					outline: none;
@@ -781,6 +831,11 @@ p{
 
 			.btn{
 				border-radius: 5px;
+
+				@media (max-width: $screen-sm-max) {
+					height: 40px;
+					line-height: 40px;
+				}
 			}
 		}
 
@@ -806,23 +861,51 @@ p{
 		}
 
 		.done{
+			
+			> div{
+				max-width: 80%;
+			}
+
 			img{
 				width: 300px;
+				max-width: 100%;
 				display: block;
 				margin: 0 auto;
 				border-radius: 5px;
+
+				@media (max-width: $screen-sm-max) {
+
+				}
+			}
+
+			p{
+				text-align: center;
+
+				@media (max-width: $screen-sm-max) {
+					font-size: 1rem;
+					margin-bottom: 15px;
+				}
 			}
 
 			.btn{
 				width: 250px;
+				max-width: 100%;
 				font-size: 1.2rem;
 				margin: 20px auto 0;
 				display: block;
+				border-radius: 5px;
+
+				@media (max-width: $screen-sm-max) {
+					height: 40px;
+					line-height: 40px;
+					margin-top: 15px;
+				}
 			}
 
 			.progress{
 				margin: 20px auto;
 				width: 300px;
+				max-width: 100%;
 			}
 		}
 	}
@@ -1033,6 +1116,10 @@ p{
 
 	h2{
 		font-size: 3rem;
+
+		@media (max-width: $screen-sm-max) {
+			font-size: 2rem;
+		}
 	}
 }
 
@@ -1577,6 +1664,7 @@ p{
 
 				@media (max-width: $screen-sm-max) {
 					font-size: 1.4rem;
+					height: 65px;
 				}
 
 				&::placeholder{
@@ -1592,7 +1680,8 @@ p{
 
 			p{
 				font-size: 2.5rem;
-				color: darken($gray, 20%);
+				color: $gray-darker;
+				// color: $brand-primary;
 				line-height: 130%;
 
 				@media (max-width: $screen-sm-max) {
@@ -1600,8 +1689,19 @@ p{
 					margin-bottom: 30px;
 				}
 
+				@media (max-width: $screen-xs-max) {
+					font-size: 2rem;
+				}
+
+				@media (max-width: 350px) {
+					font-size: 1.65rem;
+					margin-bottom: 20px;
+				}
+
 				span{
-					border-bottom: 3px dashed $gray;
+					color: $brand-primary;
+					border-bottom: 3px dashed $brand-primary;
+					// border-bottom: 3px dashed $gray;
 				}
 			}
 		}
@@ -2244,6 +2344,10 @@ footer{
 		font-size: 14px;
 		color: $gray;
 		font-weight: 400;
+
+		@media (max-width: $screen-sm-max) {
+			font-size: 1rem;
+		}
 
 		&:hover{
 			color: #555;

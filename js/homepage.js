@@ -221,7 +221,6 @@ $(function(){
 			}, timer)
 
 			timer += 500
-
 		})
 	}
 
@@ -230,19 +229,21 @@ $(function(){
 	let windowWidth = $(window).width()
 	let mobile = windowWidth < 600
 
-	let appHeightMax = mobile ? 270 : 450
+	let appHeightMax = mobile ? '50vh' : 450
 	let appWidthMax = 800
 
 	let appHeightMin = 50
 	let appWidthMin = 350
 
+	let appWindowBottom = '3vh'
+
 	var controller = new ScrollMagic.Controller();
 
-	var focusMode1 = new ScrollMagic.Scene({triggerElement: ".hero", triggerHook: 'onLeave', duration: 1000})
+	var focusMode1 = new ScrollMagic.Scene({triggerElement: ".hero", triggerHook: 'onLeave', duration: 1000, offset: 100})
 	.setTween(TweenMax.to(".app-window", 1, {width: appWidthMin, height: appHeightMin, bottom: '60px', borderRadius: '7px', ease: "power2.inOut"}))
 	.addTo(controller)
 
-	var focusMode2 = new ScrollMagic.Scene({triggerElement: ".hero", triggerHook: 'onLeave', duration: 375})
+	var focusMode2 = new ScrollMagic.Scene({triggerElement: ".hero", triggerHook: 'onLeave', duration: 375, offset: 100})
 	.setTween(TweenMax.to(".app-window .hero-list", 1, {opacity: 0, display: 'none', ease: "expo.out"}))
 	.addTo(controller)
 
@@ -277,7 +278,7 @@ $(function(){
 	.addTo(controller)
 
 	var step1 = new ScrollMagic.Scene({triggerElement: ".flow", triggerHook: 'onEnter', duration: 1000})
-	.setTween(TweenMax.to(".app-window", 1, {width: appWidthMax, height: appHeightMax, bottom: '5%', borderRadius: '12px', ease: "power2.inOut"}))
+	.setTween(TweenMax.to(".app-window", 1, {width: appWidthMax, height: appHeightMax, bottom: appWindowBottom, borderRadius: '12px', ease: "power2.inOut"}))
 	.addTo(controller)
 
 	var step1a = new ScrollMagic.Scene({triggerElement: ".flow", triggerHook: 'onEnter', duration: 500})
@@ -331,7 +332,7 @@ $(function(){
 
 		if (name === 'done') {
 			var step1 = new ScrollMagic.Scene({triggerElement: step, triggerHook: 'onEnter', duration: 1000})
-			.setTween(TweenMax.to(".app-window", 1, {width: appWidthMax, height: appHeightMax, bottom: '5%', borderRadius: '12px', ease: "power2.inOut"}))
+			.setTween(TweenMax.to(".app-window", 1, {width: appWidthMax, height: appHeightMax, bottom: appWindowBottom, borderRadius: '12px', ease: "power2.inOut"}))
 			.addTo(controller)
 
 			var step1a = new ScrollMagic.Scene({triggerElement: step, triggerHook: 'onEnter', duration: 500})

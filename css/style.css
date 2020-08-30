@@ -4063,6 +4063,9 @@ header {
         justify-content: center;
         height: 42vh;
         padding-top: 0px; } }
+    @media (min-width: 1023px) and (max-height: 900px) {
+      .flow .step > div {
+        height: 42vh; } }
     .flow .step > div > div {
       display: flex;
       align-items: center;
@@ -4110,11 +4113,12 @@ header {
           .flow .step > div > div h3 {
             font-size: 2.8rem; } }
         .flow .step > div > div h3 > span {
-          position: relative; }
+          position: relative;
+          z-index: 1; }
           .flow .step > div > div h3 > span > span {
             position: relative;
             z-index: 2; }
-            .flow .step > div > div h3 > span > span:before {
+            .flow .step > div > div h3 > span > span:after {
               content: '';
               background: #FF3366;
               height: 10px;
@@ -4127,7 +4131,7 @@ header {
               animation-delay: .5s;
               z-index: 1; }
               @media (max-width: 991px) {
-                .flow .step > div > div h3 > span > span:before {
+                .flow .step > div > div h3 > span > span:after {
                   height: 6px;
                   bottom: -1px; } }
     .flow .step > div p {
@@ -4137,6 +4141,9 @@ header {
       color: #acb1be;
       margin: 20px 0 0;
       letter-spacing: -0.4px; }
+      @media (min-width: 1023px) and (max-height: 900px) {
+        .flow .step > div p {
+          font-size: 2.4rem; } }
       @media (max-width: 991px) {
         .flow .step > div p {
           margin-top: 10px;
@@ -4226,6 +4233,10 @@ p {
   z-index: 500;
   border-radius: 15px;
   box-shadow: 0 0 12px rgba(255, 255, 255, 0.075); }
+  @media (min-width: 1023px) and (max-height: 900px) {
+    .app-window {
+      height: 60vh;
+      bottom: -5vh; } }
   @media (max-width: 1023px) {
     .app-window {
       height: 50vh;
@@ -4516,6 +4527,9 @@ p {
       display: block;
       margin: 0 auto;
       border-radius: 5px; }
+      @media (min-width: 1023px) and (max-height: 900px) {
+        .app-window .screens .done img {
+          width: 235px; } }
       @media (max-width: 767px) {
         .app-window .screens .done img {
           width: 250px; } }
@@ -4573,6 +4587,9 @@ p {
   text-align: center;
   padding: 70px 0 0;
   min-height: calc(100vh - 100px); }
+  @media (min-width: 1023px) and (max-height: 900px) {
+    .hero {
+      padding-top: 50px; } }
   @media (max-width: 991px) {
     .hero {
       padding-top: 150px;
@@ -4607,6 +4624,9 @@ p {
 @keyframes underline {
   100% {
     width: 100%; } }
+    @media (min-width: 1023px) and (max-height: 900px) {
+      .hero h1 {
+        font-size: 5.2rem; } }
     @media (max-width: 991px) {
       .hero h1 {
         font-size: 2.4rem;

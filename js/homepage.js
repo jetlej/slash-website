@@ -1,7 +1,9 @@
 $(function(){
 
 	let windowWidth = $(window).width()
+	let windowHeight = $(window).height()
 	let mobile = windowWidth < 600
+	let shortScreen = (!mobile && (windowHeight < 900))
 
 	let taskInterval
 	function planDay () {
@@ -236,7 +238,8 @@ $(function(){
 	addTasks()
 
 	let appHeightMax = mobile ? '50vh' : 450
-	let appWidthMax = 800
+	appHeightMax = shortScreen ? '53vh' : appHeightMax
+	let appWidthMax = shortScreen ? 700 : 800
 
 	let appHeightMin = 50
 	let appWidthMin = 350
@@ -244,7 +247,7 @@ $(function(){
 	let borderRadiusFull = mobile ? '18px' : '12px'
 	let borderRadiusFocus = mobile ? '9px' : '7px'
  
-	let appWindowBottom = '8vh'
+	let appWindowBottom = shortScreen ? '5vh' : '8vh'
 
 	var controller = new ScrollMagic.Controller();
 

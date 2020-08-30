@@ -317,8 +317,8 @@ header{
 				padding-top: 0px;
 			}
 
-			@media (max-width: $screen-xs-max) {
-				// height: calc(100vh - 500px);
+			@media (min-width: $screen-md-max) and (max-height: 900px) {
+				height: 42vh;
 			}
 
 			> div {
@@ -379,12 +379,13 @@ header{
 
 					> span{
 						position: relative;
+						z-index: 1;
 
 						> span{
 							position: relative;
 							z-index: 2;
 
-							&:before{
+							&:after{
 								content: '';
 								background: $brand-warning;
 								height: 10px;
@@ -417,6 +418,10 @@ header{
 				color: lighten($gray, 10%);
 				margin: 20px 0 0;
 				letter-spacing: -0.4px;
+
+				@media (min-width: $screen-md-max) and (max-height: 900px) {
+					font-size: 2.4rem;
+				}
 
 				@media (max-width: $screen-sm-max) {
 					margin-top: 10px;
@@ -535,6 +540,11 @@ p{
 	border-radius: 15px;
 	// border: 1px solid rgba(255,255,255,.1);
 	box-shadow: 0 0 12px rgba(255,255,255,.075);
+
+	@media (min-width: $screen-md-max) and (max-height: 900px) {
+		height: 60vh;
+		bottom: -5vh;
+	}
 
 	@media (max-width: $screen-md-max) {
 		height: 50vh;
@@ -966,6 +976,10 @@ p{
 				margin: 0 auto;
 				border-radius: 5px;
 
+				@media (min-width: $screen-md-max) and (max-height: 900px) {
+				width: 235px;
+				}
+
 				@media (max-width: $screen-xs-max) {
 					width: 250px;
 				}
@@ -1046,6 +1060,10 @@ p{
 	padding: 70px 0 0;
 	min-height: calc(100vh - 100px);
 
+	@media (min-width: $screen-md-max) and (max-height: 900px) {
+		padding-top: 50px;
+	}
+
 	@media (max-width: $screen-sm-max) {
 		padding-top: 150px;
 		margin-top: -75px;
@@ -1091,6 +1109,10 @@ p{
 			100% {
 				width: 100%;
 			}
+		}
+
+		@media (min-width: $screen-md-max) and (max-height: 900px) {
+			font-size: 5.2rem;
 		}
 
 		@media (max-width: $screen-sm-max) {

@@ -312,9 +312,9 @@ header{
 			height: calc(100vh - 500px);
 
 			@media (max-width: $screen-sm-max) {
-				justify-content: flex-start;
-				height: calc(100vh - 300px);
-				padding-top: 40px;
+				justify-content: center;
+				height: 42vh;
+				padding-top: 0px;
 			}
 
 			@media (max-width: $screen-xs-max) {
@@ -707,7 +707,7 @@ p{
 				font-weight: 400;
 				margin-bottom: 30px;
 
-				@media (max-width: $screen-sm-max) {
+				@media (max-width: $screen-xs-max) {
 					margin-bottom: 20px;
 					font-size: 1rem;
 				}
@@ -721,9 +721,9 @@ p{
 					line-height: 25px;
 					transition: 0.4s all ease-in-out;
 
-					@media (max-width: $screen-sm-max) {
-						margin-bottom: 10px;
-						line-height: 20px;
+					@media (max-width: $screen-xs-max) {
+						margin-bottom: 15px;
+						line-height: 15px;
 					}
 
 					span{
@@ -732,22 +732,35 @@ p{
 
 					&:nth-child(1).moving span {
 						animation: yAxis1 .75s forwards ease-in-out;
+
+						@media (max-width: $screen-xs-max) {
+							animation: yAxis1Sm .75s forwards ease-in-out;
+						}
 					}
 
 					&:nth-child(2).moving span {
 						animation: yAxis2 .75s forwards ease-in-out;
+
+						@media (max-width: $screen-xs-max) {
+							animation: yAxis2Sm .75s forwards ease-in-out;
+						}
 					}
 
 					&:nth-child(3).moving span {
 						animation: yAxis3 .75s forwards ease-in-out;
+
+						@media (max-width: $screen-xs-max) {
+							animation: yAxis3Sm .75s forwards ease-in-out;
+						}
 					}
 
 					&.moving {
 						height: 0;
-						line-height: 0;
+						// line-height: 0;
 						margin: 0;
 						padding: 0;
 						animation: xAxis .75s forwards ease-in-out;
+						position: absolute;
 					}
 
 					@keyframes yAxis1 {
@@ -755,7 +768,7 @@ p{
 					    transform: translateY(-50px);
 					  }
 					  100% {
-					    transform: translateY(10px);
+					    transform: translateY(0px);
 					  }
 					}
 
@@ -764,7 +777,7 @@ p{
 					    transform: translateY(-50px);
 					  }
 					  100% {
-					    transform: translateY(55px);
+					    transform: translateY(45px);
 					  }
 					}
 
@@ -773,13 +786,40 @@ p{
 					    transform: translateY(-50px);
 					  }
 					  100% {
-					    transform: translateY(100px);
+					    transform: translateY(90px);
+					  }
+					}
+
+					@keyframes yAxis1Sm {
+					  50% {
+					    transform: translateY(-50px);
+					  }
+					  100% {
+					    transform: translateY(0px);
+					  }
+					}
+
+					@keyframes yAxis2Sm {
+					  50% {
+					    transform: translateY(-50px);
+					  }
+					  100% {
+					    transform: translateY(30px);
+					  }
+					}
+
+					@keyframes yAxis3Sm {
+					  50% {
+					    transform: translateY(-50px);
+					  }
+					  100% {
+					    transform: translateY(60px);
 					  }
 					}
 
 					@keyframes xAxis {
 					  100% {
-					    transform: translateX(400px);
+					    margin-left: 50%;
 					  }
 					}
 				}
@@ -796,7 +836,7 @@ p{
 				font-size: 1.2rem;
 				font-weight: 600;
 
-				@media (max-width: $screen-sm-max) {
+				@media (max-width: $screen-xs-max) {
 					font-size: .9rem;
 					//font-weight: 500;
 				}
@@ -852,11 +892,27 @@ p{
 				margin: 0;
 				color: white;
 				margin-right: 10px;
+
+				@media (max-width: $screen-xs-max) {
+					font-size: 1.5rem;
+				}
+
+				@media (max-width: 350px) {
+					font-size: 1.3rem;
+				}
 			}
 
 			span{
 				font-weight: 400;
 				font-size: .9rem;
+
+				@media (max-width: $screen-xs-max) {
+					font-size: 1.2rem;
+				}
+
+				@media (max-width: 350px) {
+					font-size: 1.1rem;
+				}
 			}
 		}
 
@@ -1099,7 +1155,7 @@ p{
 		}
 
 		@media (max-width: $screen-xs-max) {
-			font-size: 1.8rem;
+			font-size: 2.2rem;
 			text-align: left;
 		}
 

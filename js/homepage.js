@@ -235,12 +235,15 @@ $(function(){
 	let appHeightMin = 50
 	let appWidthMin = 350
 
-	let appWindowBottom = '3vh'
+	let borderRadiusFull = mobile ? '18px' : '12px'
+	let borderRadiusFocus = mobile ? '9px' : '7px'
+ 
+	let appWindowBottom = '8vh'
 
 	var controller = new ScrollMagic.Controller();
 
 	var focusMode1 = new ScrollMagic.Scene({triggerElement: ".hero", triggerHook: 'onLeave', duration: 1000, offset: 100})
-	.setTween(TweenMax.to(".app-window", 1, {width: appWidthMin, height: appHeightMin, bottom: '60px', borderRadius: '7px', ease: "power2.inOut"}))
+	.setTween(TweenMax.to(".app-window", 1, {width: appWidthMin, height: appHeightMin, bottom: appWindowBottom, borderRadius: borderRadiusFocus, ease: "power2.inOut"}))
 	.addTo(controller)
 
 	var focusMode2 = new ScrollMagic.Scene({triggerElement: ".hero", triggerHook: 'onLeave', duration: 375, offset: 100})
@@ -278,7 +281,7 @@ $(function(){
 	.addTo(controller)
 
 	var step1 = new ScrollMagic.Scene({triggerElement: ".flow", triggerHook: 'onEnter', duration: 1000})
-	.setTween(TweenMax.to(".app-window", 1, {width: appWidthMax, height: appHeightMax, bottom: appWindowBottom, borderRadius: '12px', ease: "power2.inOut"}))
+	.setTween(TweenMax.to(".app-window", 1, {width: appWidthMax, height: appHeightMax, bottom: appWindowBottom, borderRadius: borderRadiusFull, ease: "power2.inOut"}))
 	.addTo(controller)
 
 	var step1a = new ScrollMagic.Scene({triggerElement: ".flow", triggerHook: 'onEnter', duration: 500})
@@ -322,7 +325,7 @@ $(function(){
 			.addTo(controller)
 
 			var focusMode1 = new ScrollMagic.Scene({triggerElement: step, triggerHook: 'onLeave', duration: 1000})
-			.setTween(TweenMax.to(".app-window", 1, {width: appWidthMin, height: appHeightMin, bottom: '30px', borderRadius: '7px', ease: "power2.inOut"}))
+			.setTween(TweenMax.to(".app-window", 1, {width: appWidthMin, height: appHeightMin, bottom: '30px', borderRadius: borderRadiusFocus, ease: "power2.inOut"}))
 			.addTo(controller)
 
 			var focusMode3 = new ScrollMagic.Scene({triggerElement: step, triggerHook: 'onLeave', offset: 500, duration: 350})
@@ -332,7 +335,7 @@ $(function(){
 
 		if (name === 'done') {
 			var step1 = new ScrollMagic.Scene({triggerElement: step, triggerHook: 'onEnter', duration: 1000})
-			.setTween(TweenMax.to(".app-window", 1, {width: appWidthMax, height: appHeightMax, bottom: appWindowBottom, borderRadius: '12px', ease: "power2.inOut"}))
+			.setTween(TweenMax.to(".app-window", 1, {width: appWidthMax, height: appHeightMax, bottom: appWindowBottom, borderRadius: borderRadiusFull, ease: "power2.inOut"}))
 			.addTo(controller)
 
 			var step1a = new ScrollMagic.Scene({triggerElement: step, triggerHook: 'onEnter', duration: 500})
@@ -362,7 +365,7 @@ $(function(){
 	})
 
 	var hideAppWindow = new ScrollMagic.Scene({triggerElement: ".so-much-more", triggerHook: 'onEnter', duration: 750, offset: -500})
-	.setTween(TweenMax.to(".app-window", 1, {opacity: 0, width: appWidthMin, height: appHeightMin, bottom: '20px', borderRadius: '7px', display: 'none', ease: "power2.inOut"}))
+	.setTween(TweenMax.to(".app-window", 1, {opacity: 0, width: appWidthMin, height: appHeightMin, bottom: '20px', borderRadius: borderRadiusFocus, display: 'none', ease: "power2.inOut"}))
 	.addTo(controller)
 
 	var hideAppWindow = new ScrollMagic.Scene({triggerElement: ".so-much-more", triggerHook: 'onEnter', duration: 500, offset: -500})

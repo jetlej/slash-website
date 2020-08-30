@@ -4060,9 +4060,9 @@ header {
     height: calc(100vh - 500px); }
     @media (max-width: 991px) {
       .flow .step > div {
-        justify-content: flex-start;
-        height: calc(100vh - 300px);
-        padding-top: 40px; } }
+        justify-content: center;
+        height: 42vh;
+        padding-top: 0px; } }
     .flow .step > div > div {
       display: flex;
       align-items: center;
@@ -4347,7 +4347,7 @@ p {
         color: #5E6271;
         font-weight: 400;
         margin-bottom: 30px; }
-        @media (max-width: 991px) {
+        @media (max-width: 767px) {
           .app-window .screens .list h4 {
             margin-bottom: 20px;
             font-size: 1rem; } }
@@ -4356,42 +4356,66 @@ p {
         animation: taskIn .3s ease-in-out;
         line-height: 25px;
         transition: 0.4s all ease-in-out; }
-        @media (max-width: 991px) {
+        @media (max-width: 767px) {
           .app-window .screens .list .tasks div {
-            margin-bottom: 10px;
-            line-height: 20px; } }
+            margin-bottom: 15px;
+            line-height: 15px; } }
         .app-window .screens .list .tasks div span {
           display: block; }
         .app-window .screens .list .tasks div:nth-child(1).moving span {
           animation: yAxis1 .75s forwards ease-in-out; }
+          @media (max-width: 767px) {
+            .app-window .screens .list .tasks div:nth-child(1).moving span {
+              animation: yAxis1Sm .75s forwards ease-in-out; } }
         .app-window .screens .list .tasks div:nth-child(2).moving span {
           animation: yAxis2 .75s forwards ease-in-out; }
+          @media (max-width: 767px) {
+            .app-window .screens .list .tasks div:nth-child(2).moving span {
+              animation: yAxis2Sm .75s forwards ease-in-out; } }
         .app-window .screens .list .tasks div:nth-child(3).moving span {
           animation: yAxis3 .75s forwards ease-in-out; }
+          @media (max-width: 767px) {
+            .app-window .screens .list .tasks div:nth-child(3).moving span {
+              animation: yAxis3Sm .75s forwards ease-in-out; } }
         .app-window .screens .list .tasks div.moving {
           height: 0;
-          line-height: 0;
           margin: 0;
           padding: 0;
-          animation: xAxis .75s forwards ease-in-out; }
+          animation: xAxis .75s forwards ease-in-out;
+          position: absolute; }
 @keyframes yAxis1 {
   50% {
     transform: translateY(-50px); }
   100% {
-    transform: translateY(10px); } }
+    transform: translateY(0px); } }
 @keyframes yAxis2 {
   50% {
     transform: translateY(-50px); }
   100% {
-    transform: translateY(55px); } }
+    transform: translateY(45px); } }
 @keyframes yAxis3 {
   50% {
     transform: translateY(-50px); }
   100% {
-    transform: translateY(100px); } }
+    transform: translateY(90px); } }
+@keyframes yAxis1Sm {
+  50% {
+    transform: translateY(-50px); }
+  100% {
+    transform: translateY(0px); } }
+@keyframes yAxis2Sm {
+  50% {
+    transform: translateY(-50px); }
+  100% {
+    transform: translateY(30px); } }
+@keyframes yAxis3Sm {
+  50% {
+    transform: translateY(-50px); }
+  100% {
+    transform: translateY(60px); } }
 @keyframes xAxis {
   100% {
-    transform: translateX(400px); } }
+    margin-left: 50%; } }
 @keyframes taskIn {
   0% {
     opacity: 0;
@@ -4399,7 +4423,7 @@ p {
       .app-window .screens .list .tasks div, .app-window .screens .list input, .app-window .screens .list .btn {
         font-size: 1.2rem;
         font-weight: 600; }
-        @media (max-width: 991px) {
+        @media (max-width: 767px) {
           .app-window .screens .list .tasks div, .app-window .screens .list input, .app-window .screens .list .btn {
             font-size: .9rem; } }
       .app-window .screens .list input {
@@ -4442,9 +4466,21 @@ p {
         margin: 0;
         color: white;
         margin-right: 10px; }
+        @media (max-width: 767px) {
+          .app-window .screens .focus p {
+            font-size: 1.5rem; } }
+        @media (max-width: 350px) {
+          .app-window .screens .focus p {
+            font-size: 1.3rem; } }
       .app-window .screens .focus span {
         font-weight: 400;
         font-size: .9rem; }
+        @media (max-width: 767px) {
+          .app-window .screens .focus span {
+            font-size: 1.2rem; } }
+        @media (max-width: 350px) {
+          .app-window .screens .focus span {
+            font-size: 1.1rem; } }
     .app-window .screens .done > div {
       max-width: 80%; }
     .app-window .screens .done img {
@@ -4615,7 +4651,7 @@ p {
         text-align: left; } }
     @media (max-width: 767px) {
       .sub-hero p {
-        font-size: 1.8rem;
+        font-size: 2.2rem;
         text-align: left; } }
     .sub-hero p:last-child {
       margin: 0; }

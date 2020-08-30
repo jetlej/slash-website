@@ -4210,7 +4210,8 @@ p {
   left: 0;
   right: 0;
   top: 0;
-  z-index: 10000; }
+  z-index: 10000;
+  pointer-events: none; }
 
 .app-window {
   background: #121318;

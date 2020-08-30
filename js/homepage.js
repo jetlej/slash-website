@@ -378,19 +378,21 @@ $(function(){
 	.setTween(TweenMax.to(".app-window .end-day", 1, {display: 'none', opacity: 0}))
 	.addTo(controller)
 
-	var subHeroPin = new ScrollMagic.Scene({triggerElement: ".so-much-more", triggerHook: 'onLeave', duration: 2000})
+	/*
+	var soMuchMorePin = new ScrollMagic.Scene({triggerElement: ".so-much-more", triggerHook: 'onLeave', duration: 1000})
 	.setPin(".so-much-more", {pushFollowers: true})
 	.addTo(controller)
 
-	var subHeroPin = new ScrollMagic.Scene({triggerElement: ".so-much-more", triggerHook: 'onLeave', duration: 500, offset: 0})
+	var soMuchMoreShow = new ScrollMagic.Scene({triggerElement: ".so-much-more", triggerHook: 'onLeave', duration: 500, offset: 0})
 	.setTween(TweenMax.from(".so-much-more h2", 1, {opacity: 0}))
 	.on('leave', startTimer)
 	.addTo(controller)
 
-	var subHeroPin = new ScrollMagic.Scene({triggerElement: ".so-much-more", triggerHook: 'onLeave', duration: 500, offset: 1500})
+	var soMuchMoreHide = new ScrollMagic.Scene({triggerElement: ".so-much-more", triggerHook: 'onLeave', duration: 500, offset: 1500})
 	.setTween(TweenMax.to(".so-much-more h2", 1, {opacity: 0}))
 	.on('leave', startTimer)
 	.addTo(controller)
+	*/
 
 	function startTimer() {
 		let time = 0

@@ -4102,7 +4102,13 @@ header {
             font-size: 3.2rem; } }
         @media (max-width: 767px) {
           .flow .step > div > div h3 {
-            font-size: 2.7rem; } }
+            font-size: 3.2rem; } }
+        @media (max-width: 400px) {
+          .flow .step > div > div h3 {
+            font-size: 3rem; } }
+        @media (max-width: 350px) {
+          .flow .step > div > div h3 {
+            font-size: 2.8rem; } }
         .flow .step > div > div h3 > span {
           position: relative; }
           .flow .step > div > div h3 > span > span {
@@ -4222,7 +4228,7 @@ p {
   @media (max-width: 1023px) {
     .app-window {
       height: 50vh;
-      bottom: 3vh; } }
+      bottom: -5vh; } }
   .app-window .screens {
     position: absolute;
     left: 0;
@@ -4247,6 +4253,17 @@ p {
       .app-window .screens .hero-list > div {
         width: 500px;
         max-width: 85%; }
+      @media (max-width: 767px) {
+        .app-window .screens .hero-list .tasks div, .app-window .screens .hero-list input, .app-window .screens .hero-list .btn {
+          font-size: 1.2rem !important;
+          margin-bottom: 20px !important; } }
+      @media (max-width: 350px) {
+        .app-window .screens .hero-list .tasks div, .app-window .screens .hero-list input, .app-window .screens .hero-list .btn {
+          font-size: 1.1rem !important;
+          margin-bottom: 15px !important; } }
+      @media (max-width: 350px) {
+        .app-window .screens .hero-list .tasks div, .app-window .screens .hero-list input, .app-window .screens .hero-list .btn {
+          font-size: .9rem !important; } }
     .app-window .screens .plan-day {
       flex-direction: row;
       align-items: flex-start; }
@@ -4297,6 +4314,15 @@ p {
           white-space: nowrap;
           overflow: hidden;
           text-overflow: ellipsis; }
+          @media (max-width: 767px) {
+            .app-window .screens .end-day .task-list .completed-task .text {
+              font-size: 2.5rem; } }
+          @media (max-width: 400px) {
+            .app-window .screens .end-day .task-list .completed-task .text {
+              font-size: 2.35rem; } }
+          @media (max-width: 350px) {
+            .app-window .screens .end-day .task-list .completed-task .text {
+              font-size: 2.2rem; } }
         .app-window .screens .end-day .task-list .completed-task .line {
           width: 0;
           position: absolute;
@@ -4468,8 +4494,8 @@ p {
         margin-right: 10px; }
         @media (max-width: 767px) {
           .app-window .screens .focus p {
-            font-size: 1.5rem; } }
-        @media (max-width: 350px) {
+            font-size: 1.4rem; } }
+        @media (max-width: 400px) {
           .app-window .screens .focus p {
             font-size: 1.3rem; } }
       .app-window .screens .focus span {
@@ -4478,7 +4504,7 @@ p {
         @media (max-width: 767px) {
           .app-window .screens .focus span {
             font-size: 1.2rem; } }
-        @media (max-width: 350px) {
+        @media (max-width: 400px) {
           .app-window .screens .focus span {
             font-size: 1.1rem; } }
     .app-window .screens .done > div {
@@ -4489,6 +4515,12 @@ p {
       display: block;
       margin: 0 auto;
       border-radius: 5px; }
+      @media (max-width: 767px) {
+        .app-window .screens .done img {
+          width: 250px; } }
+      @media (max-width: 350px) {
+        .app-window .screens .done img {
+          width: 180px; } }
     .app-window .screens .done p {
       text-align: center; }
       @media (max-width: 991px) {
@@ -4581,13 +4613,16 @@ p {
         letter-spacing: 0; } }
     @media (max-width: 767px) {
       .hero h1 {
-        font-size: 3rem;
+        font-size: 3.1rem;
         text-align: left;
         padding: 0;
         text-align: center;
         width: 550px;
         max-width: 100%; } }
     @media (max-width: 385px) {
+      .hero h1 {
+        font-size: 2.9rem; } }
+    @media (max-width: 350px) {
       .hero h1 {
         font-size: 2.6rem;
         text-align: center; } }
@@ -4982,14 +5017,14 @@ p {
   .feature.feature-time-tracking canvas {
     width: 370px !important;
     height: auto !important;
-    max-width: 80%; }
+    max-width: 65%; }
   .feature.feature-time-tracking .time-legend {
     flex-shrink: 0;
     padding-left: 50px; }
     @media (max-width: 991px) {
       .feature.feature-time-tracking .time-legend {
         padding-left: 0;
-        padding-top: 20px; } }
+        padding-top: 30px; } }
     .feature.feature-time-tracking .time-legend > div {
       display: flex;
       align-items: center;

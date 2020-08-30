@@ -1,5 +1,8 @@
 $(function(){
 
+	let windowWidth = $(window).width()
+	let mobile = windowWidth < 600
+
 	let taskInterval
 	function planDay () {
 		if (taskInterval) clearInterval(tasksInterval)
@@ -30,6 +33,8 @@ $(function(){
 
 		let firstOffset = index === 0 ? '+=250' : '-=100'
 
+		let zoomScale = mobile ? .75 : 1
+
 		endDayTimeline
 		.add({
 			targets: task,
@@ -38,7 +43,7 @@ $(function(){
 			{ value: '0%', duration: 300, delay: 0, easing: 'easeOutElastic(1, 1.2)' },
 			],
 			scale: [
-			{ value: 1, duration: 1, delay: 0 },
+			{ value: zoomScale, duration: 1, delay: 0 },
 			{ value: .5, duration: 200, delay: 450 },
 			],
 			opacity: [
@@ -124,6 +129,10 @@ $(function(){
 			options: {
 				tooltips: {
 					enabled: false
+				},
+				animation: {
+					duration: 1000,
+					easing: 'easeOutQuad'
 				}
 			}
 		})
@@ -225,9 +234,6 @@ $(function(){
 	}
 
 	addTasks()
-
-	let windowWidth = $(window).width()
-	let mobile = windowWidth < 600
 
 	let appHeightMax = mobile ? '50vh' : 450
 	let appWidthMax = 800
@@ -401,6 +407,7 @@ $(function(){
 		offset: 200,
 		handler: function(direction) {
 			createTimeChart()
+			waypoint1.destroy()
 		}
 	})
 

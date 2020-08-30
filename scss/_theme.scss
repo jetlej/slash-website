@@ -366,7 +366,15 @@ header{
 					}
 
 					@media (max-width: $screen-xs-max) {
-						font-size: 2.7rem;
+						font-size: 3.2rem;
+					}
+
+					@media (max-width: 400px) {
+						font-size: 3rem;
+					}
+
+					@media (max-width: 350px) {
+						font-size: 2.8rem;
 					}
 
 					> span{
@@ -510,7 +518,7 @@ p{
 	right: 0;
 	top: 0;
 	z-index: 10000;
-	// pointer-events: none;
+	//pointer-events: none;
 }
 
 .app-window{
@@ -530,7 +538,7 @@ p{
 
 	@media (max-width: $screen-md-max) {
 		height: 50vh;
-		bottom: 3vh;
+		bottom: -5vh;
 	}
 
 	.screens{
@@ -561,6 +569,23 @@ p{
 			> div{
 				width: 500px;
 				max-width: 85%;
+			}
+
+			.tasks div, input, .btn{
+
+				@media (max-width: $screen-xs-max) {
+					font-size: 1.2rem !important;
+					margin-bottom: 20px !important;
+				}
+
+				@media (max-width: 350px) {
+					font-size: 1.1rem !important;
+					margin-bottom: 15px !important;
+				}
+
+				@media (max-width: 350px) {
+					font-size: .9rem !important;
+				}
 			}
 		}
 
@@ -632,6 +657,18 @@ p{
 						white-space: nowrap;
 						overflow: hidden;
 						text-overflow: ellipsis;
+
+						@media (max-width: $screen-xs-max) {
+							font-size: 2.5rem;
+						}
+
+						@media (max-width: 400px) {
+							font-size: 2.35rem;
+						}
+
+						@media (max-width: 350px) {
+							font-size: 2.2rem;
+						}
 					}
 
 					.line {
@@ -894,10 +931,10 @@ p{
 				margin-right: 10px;
 
 				@media (max-width: $screen-xs-max) {
-					font-size: 1.5rem;
+					font-size: 1.4rem;
 				}
 
-				@media (max-width: 350px) {
+				@media (max-width: 400px) {
 					font-size: 1.3rem;
 				}
 			}
@@ -910,7 +947,7 @@ p{
 					font-size: 1.2rem;
 				}
 
-				@media (max-width: 350px) {
+				@media (max-width: 400px) {
 					font-size: 1.1rem;
 				}
 			}
@@ -929,8 +966,12 @@ p{
 				margin: 0 auto;
 				border-radius: 5px;
 
-				@media (max-width: $screen-sm-max) {
+				@media (max-width: $screen-xs-max) {
+					width: 250px;
+				}
 
+				@media (max-width: 350px) {
+					width: 180px;
 				}
 			}
 
@@ -1059,7 +1100,7 @@ p{
 		}
 
 		@media (max-width: $screen-xs-max) {
-			font-size: 3rem;
+			font-size: 3.1rem;
 			text-align: left;
 			padding: 0;
 			text-align: center;
@@ -1068,6 +1109,10 @@ p{
 		}
 
 		@media (max-width: 385px) {
+			font-size: 2.9rem;
+		}
+
+		@media (max-width: 350px) {
 			font-size: 2.6rem;
 			text-align: center;
 		}
@@ -1656,7 +1701,7 @@ p{
 		canvas{
 			width: 370px !important;
 			height: auto !important;
-			max-width: 80%;
+			max-width: 65%;
 		}
 
 		.time-legend{
@@ -1665,7 +1710,7 @@ p{
 
 			@media (max-width: $screen-sm-max) {
 				padding-left: 0;
-				padding-top: 20px;
+				padding-top: 30px;
 			}
 
 			> div{

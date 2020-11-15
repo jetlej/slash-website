@@ -21,6 +21,66 @@ body{
 			display: none;
 		}
 	}
+
+	&.locked{
+		overflow: hidden;
+	}
+}
+
+.modal{
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	transition: opacity .15s ease-in-out;
+	pointer-events: none;
+	background: rgba($brand-primary,.1);
+	z-index: 10001;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	> div {
+		background: white;
+		border-radius: 25px;
+		transform: translateY(100px) scale(.9);
+		opacity: 0;
+		pointer-events: none;
+		transition: all .25s ease-in-out;
+		width: 500px;
+		max-width: 95%;
+		margin: 12px;
+		text-align: center;
+		padding: 60px 20px;
+		box-shadow: 0 0 25px rgba(0,0,0,.5);
+
+		@media (max-width: $screen-sm-max) {
+			border-radius: 10px;
+		}
+
+		h2{
+			font-size: 2rem;
+		}
+
+		p{
+			font-size: 1.1rem;
+			margin-bottom: 35px;
+		}
+	}
+
+	&.visible{
+		opacity: 1;
+		pointer-events: auto;
+		backdrop-filter: blur(15px);
+
+		> div {
+			opacity: 1;
+			transform: translateY(0) scale(1);
+			pointer-events: auto;
+		}
+	}
 }
 
 section{
@@ -144,7 +204,15 @@ h3{
 		top: 0;
 		bottom: 0;
 		z-index: 5;
-		border: 1px solid transparent;
+		border: 1px solid $brand-primary;
+
+		@media (max-width: $screen-xs-max) {
+			font-size: 1.4rem;	
+		}
+
+		@media (max-width: 400px) {
+			font-size: 1.2rem;	
+		}
 
 		&:focus, &:active{
 			outline: none;
@@ -172,6 +240,7 @@ h3{
 			border-top-left-radius: 0;
 			border-bottom-left-radius: 0;
 			background: $brand-primary;
+			border-color: $brand-primary;
 
 			span{
 				display: none;
@@ -194,6 +263,7 @@ h3{
 
 		.btn{
 			background: $brand-primary;
+			border-color: $brand-primary;
 		}
 
 		span{
@@ -211,12 +281,40 @@ h3{
 	}
 }
 
+.try-it-fixed{
+	position: fixed;
+	top: 20px;
+	right: 20px;
+	font-size: .9rem !important;
+	z-index: 9001;
+
+	@media (max-width: $screen-sm-max) {
+		height: 30px;
+		line-height: 30px;
+		font-size: 1rem !important;
+		top: 25px;
+		display: none;
+	}
+}
+
 header{
 	text-align: center;
 	padding: 20px 0 0;
+	transform: translate3d(0,0,0) !important;
 
 	@media (max-width: $screen-xs-max) {
 		padding: 25px 0 0;
+	}
+
+	&.homepage{
+
+		.btn{
+			opacity: 0;
+
+			@media (max-width: $screen-sm-max) {
+				opacity: 1;
+			}
+		}
 	}
 
 	> div > div{
@@ -281,6 +379,10 @@ header{
 			}
 
 			&.btn{
+				&:hover:after{
+					display: none;
+				}
+				
 				@media (max-width: $screen-sm-max) {
 					height: 30px;
 					line-height: 30px;
@@ -374,7 +476,7 @@ header{
 					}
 
 					@media (max-width: 350px) {
-						font-size: 2.8rem;
+						font-size: 2.7rem;
 					}
 
 					> span{
@@ -460,6 +562,7 @@ header{
 	&:hover{
 		background: white;
 		border-color: $brand-primary;
+		color: $brand-primary;
 	}
 }
 

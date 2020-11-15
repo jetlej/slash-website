@@ -1,5 +1,19 @@
 $(function(){
 
+	$('.try-it').on('click', function () {
+		$('.modal').addClass('visible').find('button').click()
+		$('body').addClass('locked')
+	})
+
+	$('.modal').on('click', function () {
+		$(this).removeClass('visible')
+		$('body').removeClass('locked')
+	})
+
+	$('.modal > div').on('click', function (e) {
+		e.stopPropagation()
+	})
+
 	let tapfiliateId = null
     tap('getTrackingId', null, function(trackingId) {
       tapfiliateId = trackingId
@@ -57,6 +71,8 @@ $(function(){
 	})
 
 	function ajaxMailChimpForm($form, $resultElement, action) {
+
+		console.log(action)
 
 		if (!isValidEmail($form)) {
 			var error =  "Please enter a valid email"

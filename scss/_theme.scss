@@ -2433,7 +2433,7 @@ p{
 			font-size: 1.4rem;
 
 			@media (max-width: $screen-sm-max) {
-				display: block;
+				display: none;
 				margin: 0 auto 50px;
 				font-size: 1.4rem;
 			}
@@ -2449,8 +2449,16 @@ p{
 				margin-bottom: 5px;
 				margin-top: 0;
 
+				b{
+					display: none;
+				}
+
 				@media (max-width: $screen-sm-max) {
 					text-align: center;
+
+					b{
+						display: inline;
+					}
 				}
 			}
 
@@ -2515,7 +2523,11 @@ p{
 	.btn-container{
 		
 		.btn{
-			width: 140px;
+			width: 170px;
+
+			@media (max-width: $screen-sm-max) {
+				width: 200px;
+			}
 		}
 
 		.btn, img{

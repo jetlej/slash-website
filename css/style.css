@@ -4775,7 +4775,7 @@ p {
     font-size: 1.4rem; }
     @media (max-width: 991px) {
       .get-started .download-buttons > b {
-        display: block;
+        display: none;
         margin: 0 auto 50px;
         font-size: 1.4rem; } }
   .get-started .download-buttons > div {
@@ -4786,9 +4786,13 @@ p {
       font-size: 1.7rem;
       margin-bottom: 5px;
       margin-top: 0; }
+      .get-started .download-buttons > div h3 b {
+        display: none; }
       @media (max-width: 991px) {
         .get-started .download-buttons > div h3 {
-          text-align: center; } }
+          text-align: center; }
+          .get-started .download-buttons > div h3 b {
+            display: inline; } }
     .get-started .download-buttons > div p {
       color: #8f96a8;
       font-size: 1.1rem; }
@@ -4824,7 +4828,10 @@ p {
       margin: 2px 0; }
 
 .download-buttons .btn-container .btn {
-  width: 140px; }
+  width: 170px; }
+  @media (max-width: 991px) {
+    .download-buttons .btn-container .btn {
+      width: 200px; } }
 .download-buttons .btn-container .btn, .download-buttons .btn-container img {
   margin: 0 3px; }
   @media (max-width: 991px) {

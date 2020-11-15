@@ -189,7 +189,7 @@ $(function(){
 		duration: 1000
 	}, '-=800')
 	.add({
-		targets: '.header',
+		targets: '.header, .try-it-fixed',
 		translateY: [-20,0],
 		translateZ: 0,
 		opacity: [0,1],

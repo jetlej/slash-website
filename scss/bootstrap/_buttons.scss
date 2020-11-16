@@ -64,10 +64,10 @@
 // Alternate buttons
 // --------------------------------------------------
 
-.btn-default, .generic-button .send-message {
+.btn-default {
   @include button-variant($btn-default-color, $btn-default-bg, $btn-default-border);
 }
-.btn-primary, .generic-button a.follow{
+.btn-primary{
   @include button-variant($btn-primary-color, $btn-primary-bg, $btn-primary-border);
 }
 // Success appears as green
@@ -166,7 +166,7 @@
 }
 .btn-sm{
   // line-height: ensure proper height of button next to small input
-  @include button-size($padding-small-vertical, $padding-small-horizontal, $font-size-small, $input-height-small, $input-border-radius);
+  @include button-size($padding-small-vertical, $padding-small-horizontal, $font-size-small, $input-height-small, $border-radius-small);
 }
 .btn-xs{
   min-width: 22px;

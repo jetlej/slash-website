@@ -11,18 +11,18 @@ $bootstrap-sass-asset-helper: (twbs-font-path("") != unquote('twbs-font-path("")
 //
 //## Gray and brand colors for use across Bootstrap.
 
-$black: 				 #111111 !default;
+$black: 				 #121318 !default;
 $gray-darker:            #23262F !default;
 $gray-dark:              #5E6271 !default;
 $gray:                   #8f96a8 !default;
 $gray-light:             #E9E9E9 !default;
 $gray-lighter:           #f5f6f9 !default;
 
-$brand-primary:         #7922FF !default;
+$brand-primary:         #6101EA !default;
 $brand-success:         #00c109 !default;
 $brand-info:            $gray !default;
-$brand-warning:         #FF3535 !default;
-$brand-danger:          #CA3737 !default;
+$brand-warning:         #FF3366 !default;
+$brand-danger:          #FF3535 !default;
 
 $brand-lighter: #ECF8F8;
 
@@ -54,7 +54,7 @@ $box-shadow: 0 1px 5px rgba(0,0,0,.2);
 //
 //## Font, line-height, and color for body text, headings, and more.
 
-$font-family-sans-serif:  "Avenir LT", "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$font-family-sans-serif:  "Eina", "GT Walsheim", "Avenir", "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
 $font-family-serif:      "Times New Roman", Times, serif !default;
 //** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
 $font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace !default;
@@ -62,7 +62,7 @@ $font-family-base:        $font-family-sans-serif !default;
 
 $font-size-base:          14px !default;
 $font-size-xxl:         ceil(($font-size-base * 1.65)) !default;
-$font-size-xl:         ceil(($font-size-base * 1.25)) !default;
+$font-size-xl:         ceil(($font-size-base * 1.5)) !default;
 $font-size-large:         ceil(($font-size-base * 1.25)) !default; // ~18px
 $font-size-medium:         ceil(($font-size-base * 1.125)) !default; // ~18px
 $font-size-small:         ceil(($font-size-base * 0.85)) !default; // ~12px
@@ -165,9 +165,9 @@ $table-border-color:          $gray-lighter !default;
 
 $btn-font-weight:                600 !default;
 
-$btn-default-color:              $brand-primary !default;
+$btn-default-color:              $brand-warning !default;
 $btn-default-bg:                 white !default;
-$btn-default-border:             white !default;
+$btn-default-border:             $brand-warning !default;
 
 $btn-primary-color:              #fff !default;
 $btn-primary-bg:                 $brand-primary !default;

@@ -1,116 +1,220 @@
 ---
 layout: page
-title: "Slash / The hyper-focus app &#9889;"
+title: "Slash / The first DO app."
 description: A new breed of productivity app. Slice through your to-do lists by staying focused and in flow.
 permalink: /
 layout: page
+headerClass: homepage
 ---
 
 <div class="homepage">
 
+	<div class="content-hider"></div>
+
+	<a class="btn btn-default btn-sm try-it try-it-fixed" data-toggle="modal" data-target="#tryModal">Try it now</a>
+
 	<section class="hero">
 		<div class="container">
-			<h1>The <b>hyper-focus</b> app.</h1>
-			<!--<h2>Regain your sanity. Focus on one task at a time and finally clear out your entire to-do list.</h2>-->
-			<!--<h2>Regain your sanity. Focus on one task at a time. Slice through your to-do list. Get 2X more done.</h2>-->
-			<!--<h2>Regain your sanity. Slash helps you focus on one task at a time and slice through your <u>entire</u> to-do list.</h2>-->
-			<h2>Other apps only <b>make</b> to-do lists.<br/> Slash <u>slices</u> through them by helping you focus and stay in flow.</h2>
-			<!--<h2>Do more than list your todos. Work <u>2x faster</u> through hyper-focus.</h2>-->
-
-			<div class="btn-container">
-				<a class="btn btn-default btn-xl download cta" href="/download">Try it now</a>
-				<small>for macOS + Windows</small>
-			</div>
-
+			<h1>The first <span>do</span> app.</h1>
+			<h2>Get more done than ever before.</h2>
 		</div>
-		<svg fill="#FFFFFF" class="big-half-circle big-half-circle-1" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100" viewBox="0 0 100 100" preserveAspectRatio="none">
-			<path d="M0 100 C40 0 60 0 100 100 Z"></path>
-		</svg>
 	</section>
 
-	<!--
-	<section class="hero">
+	<section class="sub-hero">
+		<div class="desktop-bg"></div>
 		<div class="container">
-			<h1>To-do lists are <span><span>broken</span></span>.</h1>
-			<h2><span>Slash</span> is the first app that helps you <b>conquer</b> your tasks, not just list them.</h2>
-			
-			<div class="btn-container">
-				<a class="btn btn-default btn-xl cta" href="https://github.com/jetlej/slash-releases/releases/latest" target="_blank">Try it now</a>
-				<small>for macOS / <a href="/download">See all platforms</a></small>
-			</div>
-
+			<h2>
+				<p>Slash is a tiny helper that keeps you organized and focused.</p>
+				<p>This is how it works…</p>
+			</h2>
 		</div>
-		<svg fill="#FFFFFF" class="big-half-circle big-half-circle-1" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100" viewBox="0 0 100 100" preserveAspectRatio="none">
-			<path d="M0 100 C40 0 60 0 100 100 Z"></path>
-		</svg>
 	</section>
-	-->
-
-	<section class="how">
-		<div class="container">
-			<div class="icons">
-				<div class="active" data-step="1">
-					<img src="images/list.svg?v=2"/>
-					<h2>List</h2>
+	
+	<div class="app-window-container">
+		<div class="app-window">
+			<div class="screens">
+				<div class="hero-list">
+					<div class="list">
+						<h4>Today</h4>
+						<div class="tasks"></div>
+						<input type="text" placeholder="Add task..."/>
+						<a class="btn btn-primary btn-lg btn-block">Start Slashing</a>
+					</div>
 				</div>
-				<div data-step="2">
-					<img src="images/slash.svg?v=2"/>
-					<h2>Focus</h2>
+				<div class="focus">
+					<p>Learn about Slash</p>
+					<span class="timer">0:00</span>
 				</div>
-				<div data-step="3">
-					<img src="images/reward.svg?v=2"/>
-					<h2>Reward</h2>
+				<div class="plan-day" data-step="day">
+					<div class="list">
+						<h4>This Week</h4>
+						<div class="tasks">
+							<div><span>Learn about Slash</span></div>
+							<div><span>Answer emails</span></div>
+							<div><span>Buy flight to Portugal</span></div>
+							<div>Finish V2 of pitch deck</div>
+							<div>Find a new book to read</div>
+							<div>Research date ideas</div>
+						</div>
+					</div>
+					<div class="list">
+						<h4>Today</h4>
+						<div class="tasks"></div>
+					</div>
 				</div>
-				<div data-step="4">
-					<img src="images/repeat.svg?v=2"/>
-					<h2>Repeat</h2>
-				</div>
-			</div>
-			<div class="showcase">
-				<img src="/images/macbook.jpg"/>
-				<div class="screen">
-					<div class="app step1 active">
-						<div class="list">
-							<!--
-							<div class="tasks">
-								<div class="task">Buy groceries</div>
-								<div class="task">Finish new homepage design</div>
-								<div class="task">Schedule meeting for tomorrow</div>
-								<a class="btn btn-primary btn-xl">Start Slaying</a>
+				<div class="done">
+					<div>
+						<img src="/images/winning.gif"/>
+						<div class="progress">
+							<div class="bar">
+								<div></div>
 							</div>
-							-->
+							<div class="text">
+								<div>3/6 done</div>
+								<div>50%</div>
+							</div>
 						</div>
-						<div class="focus">
-							<p class="task-text">Finish website design</p>
-							<span class="timer">0:00</span>
+						<p>Next: Answer emails for 30 minutes</p>
+						<button class="btn btn-primary btn-lg">Keep Slashing</button>
+						<!--<small>or <u>take a break</u></small>-->
+					</div>
+				</div>
+				<div class="end-day">
+					<div>
+						<div class="part1 task-list">
+							<div class="completed-task">
+								<div>
+									<span class="text">Learn about Slash</span>
+									<span class="line"></span>
+								</div>
+							</div>
+							<div class="completed-task">
+								<div>
+									<span class="text">Answer emails for 30 minutes</span>
+									<span class="line"></span>
+								</div>
+							</div>
+							<div class="completed-task">
+								<div>
+									<span class="text">Buy flight to Portugal</span>
+									<span class="line"></span>
+								</div>
+							</div>
+							<div class="completed-task">
+								<div>
+									<span class="text">Finish V2 of pitch deck</span>
+									<span class="line"></span>
+								</div>
+							</div>
+							<div class="completed-task">
+								<div>
+									<span class="text">Find a new book to read</span>
+									<span class="line"></span>
+								</div>
+							</div>
+							<div class="completed-task">
+								<div>
+									<span class="text">Research date ideas</span>
+									<span class="line"></span>
+								</div>
+							</div>
 						</div>
-						<div class="reward">
-							<h3>Nice job!</h3>
-							<img src="https://media.giphy.com/media/l3q2Z6S6n38zjPswo/giphy.gif"/>
-							<p><span>Next task:</span> Send beta invites</p>
-							<button class="btn btn-primary btn-lg">Keep Slashing</button>
-							<small>or <u>take a break</u></small>
+						<div class="part2">
+							<div class="fireworks"></div>
+
+							<div class="progress">
+								<h2>Progress This Week</h2>
+								<div class="progress-bar">
+									<div class="bar">
+										<div></div>
+									</div>
+									<div class="text">
+										<div>16 of 24 done</div>
+										<div>66%</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="button"><a class="btn btn-xl btn-primary">Go Celebrate</a></div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-	</section>
-
+	</div>
+	
+	<!--
 	<section class="science">
 		<div class="container">
 			<h2>The powerful <span>Science of Focus</span></h2>	
-			<img class="hidden-xs" src="images/icon-lg.png?v=1"/>
-			<img class="visible-xs" src="images/icon-sm.png?v=1"/>
+			<img src="images/icon-naked.svg"/>
 			<p><span>50%</span> more productive</p>
 			<p><span>50%</span> more free time</p>
 		</div>
 	</section>
+	-->
 
-	<section class="features">
+	<section class="flow">
+		<!--
+		<div class="step step1">
+			<h3><span>1</span> <b>Plan your week</b></h3>
+			<p>Choose all of your tasks for the week, like a sprint.</p>
+		</div>
+		-->
+		<div class="step step2" data-step="day">
+			<div>
+				<div>
+					<div class="number">1</div>
+					<h3>
+						<span><span>Plan</span> your day</span>.
+					</h3>
+				</div>
+				<p>Select tasks for today from your 'This Week' list. <b>Prioritize.</b></p>
+			</div>
+		</div>
+		<div class="step step3" data-step="focus">
+			<div>
+				<div>
+					<div class="number">2</div>
+					<h3>
+						<span>Enter <span>focus mode</span></span>.
+					</h3>
+				</div>
+				<p>See a constant reminder of your current task. <b>Stay focused.</b></p>
+			</div>
+		</div>
+		<div class="step step4" data-step="done">
+			<div>
+				<div>
+					<div class="number">3</div>
+					<h3>
+						<span><span>Finish</span> your task</span>. 
+					</h3>
+				</div>
+				<p>Then move on to your next task. <b>Stay in flow state.</b></p>
+			</div>
+		</div>
+		<div class="step step5" data-step="end">
+			<div>
+				<div>
+					<div class="number">4</div>
+					<h3>
+						<span><span>Win</span> your day</span>.
+					</h3>
+				</div>
+				<p>See a satisfying summary of your progress. <b>Stop working & rest.</b></p>
+			</div>
+		</div>
+	</section>
 
-		<h2 class="center">Features</h2>
+	<section class="so-much-more">
+		<div class="container">
+			<h2 class="center">+30 features to help you get more done</h2>
+		</div>
+	</section>	
 
+	<section class="features">	
+		<!--
 		<section class="feature feature-focus">
 			<div class="container">
 				<div class="flex">
@@ -152,9 +256,10 @@ layout: page
 				</div>
 			</div>
 		</section>
+		-->
 
 		<section class="feature feature-integrations">
-			<div class="container">
+			<div class="container container-lg">
 				<div class="flex">
 					<div class="text">
 						<div>
@@ -192,17 +297,93 @@ layout: page
 			</div>
 		</section>
 
-		<section class="feature feature-stats even">
-			<div class="container">
+		<section class="feature feature-time-tracking">
+			<div class="container container-lg">
 				<div class="flex">
 					<div class="text">
 						<div>
-							<h3>Self-Tracking</h3>
-							<p>Dig into your productivity and watch your progress with our dashboard.</p>
+							<h3>Time Tracking</h3>
+							<p>Detailed analytics of your time for charging clients or tracking your own productivity.</p>
 						</div>
 					</div>
-					<div class="image image-border">
-						<img src="/images/stats.jpg?v=2"/>
+					<div class="image">
+						<div>
+							<canvas width="200" height="200" id="time-chart"></canvas>
+							<div class="time-legend">
+								<div>
+									<div style="background: #BC83FF;" class="circle"></div>
+									<div>
+										<p>Slash</p>
+										<span>14hr 20min</span>
+									</div>
+								</div>
+								<div>
+									<div style="background: #666666;" class="circle"></div>
+									<div>
+										<p>Freelance #2</p>
+										<span>7hr 51min</span>
+									</div>
+								</div>
+								<div>
+									<div style="background: #F62F6F;" class="circle"></div>
+									<div>
+										<p>Personal</p>
+										<span>4hr 5min</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="feature feature-stats">
+			<div class="container container-lg">
+				<div class="flex">
+					<div class="text">
+						<div>
+							<h3>Work Analytics</h3>
+							<p>Any and all links in your task notes will open in your browser when you start the task.</p>
+						</div>
+					</div>
+					<div class="image">
+						<img src="/images/stats.jpg"/>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="feature feature-time-limit-tasks">
+			<div class="container container-lg">
+				<div class="flex">
+					<div class="text">
+						<div>
+							<h3>Time Limit Tasks</h3>
+							<p>A task titled "Answers emails for 20 minutes" will automatically start with a 20 min timer.</p>
+						</div>
+					</div>
+					<div class="image time-limit-tasks">
+						<p>Answer emails for <span>1 hour</span>.</p>
+						<p>Meditate for <span>10 min</span>.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="feature feature-quick-entry">
+			<div class="container container-lg">
+				<div class="flex">
+					<div class="text">
+						<div>
+							<h3>Quick Task Entry</h3>
+							<p>Use the handy global keyboard shortcut to add a task from anywhere without interrupting your workflow.</p>
+						</div>
+					</div>
+					<div class="image">
+						<div class="quick-entry">
+							<input class="form-control input-xl" type="text" placeholder="Enter task and hit enter..."/>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -224,7 +405,6 @@ layout: page
 				</div>
 			</div>
 		</section>
-		-->
 
 		<section class="feature feature-platforms even">
 			<div class="container">
@@ -258,12 +438,12 @@ layout: page
 				</div>
 			</div>
 		</section>
+		-->
 
 	</section>
 
 	<section class="extras">
 		<div class="container container-lg">
-			<h2>More features to keep you focused.</h2>
 			<div class="hider">
 				<div class="flex">
 					<div>
@@ -271,6 +451,7 @@ layout: page
 						<h3>Pomodoros</h3>
 						<p>The technique of working for 25 minutes intervals with 5 minute breaks.</p>
 					</div>
+					<!--
 					<div>
 						<img src="images/icon-time.svg"/>
 						<h3>Time Tracking</h3>
@@ -281,31 +462,43 @@ layout: page
 						<h3>Time-Driven Tasks</h3>
 						<p>A task titled "Emails for 20 minutes" will start with a 20 min timer.</p>
 					</div>
+					-->
 					<div>
 						<img src="images/icon-eisenhower-matrix.svg"/>
 						<h3>Eisenhower Matrix</h3>
 						<p>A special tool to mark tasks as urgent and/or important to automatically prioritize.</p>
 					</div>
+					<!--
 					<div>
 						<img src="images/icon-global-task-entry.svg"/>
 						<h3>Global Task Entry</h3>
 						<p>Easily add tasks from any app without interrupting your flow.</p>
 					</div>
+					-->
 					<div>
 						<img class="note" src="images/icon-note.svg"/>
 						<h3>Task Notes</h3>
 						<p>Save links, comments and other details for each task.</p>
 					</div>
-					<!--
 					<div>
+						<img class="recurring" src="images/icon-recurring.svg"/>
+						<h3>Recurring Tasks</h3>
+						<p>Schedule tasks to be automatically created on a regular schedule</p>
+					</div>
+					<div>
+						<img class="scheduling" src="images/icon-calendar.svg"/>
 						<h3>Task Scheduling</h3>
 						<p>Quickly schedule tasks to show up in your list on a later date.</p>
 					</div>
-					-->
 					<div>
 						<img class="shortcuts" src="images/icon-keyboard-shortcuts.svg"/>
 						<h3>Keyboard Shortcuts</h3>
 						<p>16 and counting. Do it all at light-speed with no mouse.</p>
+					</div>
+					<div>
+						<img src="images/icon-theme.svg"/>
+						<h3>Dark + Light Modes</h3>
+						<p>..and the option to automatically switch based on time of day.</p>
 					</div>
 					<div>
 						<img src="images/icon-link.svg"/>
@@ -356,30 +549,25 @@ layout: page
 	<section class="bottom-cta">
 		<div class="container container-sm">
 			<h2>Ready to <b>slash</b> some tasks?</h2>
-			<div class="btn-container">
-				<a class="btn btn-default btn-xl download cta" href="/download">Try it now</a>
-				<small>for macOS + Windows</a></small>
+			<div class="btn-container subscribe-form subscribe download-form">
+				<form class="button-form">
+					<input type="email" class="form-control input-xl" name="EMAIL" placeholder="What's your email?"/>
+					<button type="submit" class="btn btn-xl btn-default">
+						<img class="loading" src="images/loading.svg"/>
+						<img class="send" src="images/send.svg"/>
+						<img class="checkmark" src="images/checkmark.svg"/>
+						<span>Try it now</span>
+					</button>
+				</form>
+				<span class="result">for macOS + Windows</span>
 			</div>
 		</div>
 	</section>
 
 </div>
 
-<script>
-	$(function(){
-
-		$('.icons img').each(function(){
-			var $img = $(this)
-			var imgClass = $img.attr('class')
-			var imgURL = $img.attr('src')
-			$.get(imgURL, function(data) {
-				var $svg = $(data).find('svg')
-				if(typeof imgClass !== 'undefined') {
-					$svg = $svg.attr('class', imgClass+' replaced-svg')
-				}
-				$svg = $svg.removeAttr('xmlns:a')
-				$img.replaceWith($svg)
-			}, 'xml')
-		})
-	})
-</script>
+<script type="text/javascript" src="/js/anime.min.js"></script>
+<script type="text/javascript" src="/js/gsap3/gsap.min.js"></script>
+<script type="text/javascript" src="/js/scrollmagic/uncompressed/ScrollMagic.js"></script>
+<script type="text/javascript" src="/js/scrollmagic/uncompressed/plugins/animation.gsap.js"></script>
+<script type="text/javascript" src="/js/homepage.js?rel=1605452821311"></script>

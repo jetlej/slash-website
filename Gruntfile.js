@@ -8,7 +8,7 @@ module.exports = function(grunt) {
                 command: 'jekyll build'
             },
             jekyllServe: {
-                command: 'sudo jekyll serve --watch --incremental --host 127.0.0.1 --port 80 --livereload'
+                command: 'sudo bundle exec jekyll serve --watch --incremental --host 127.0.0.1 --port 80 --livereload'
             }
         },
         watch: {
@@ -38,6 +38,12 @@ module.exports = function(grunt) {
                 'js/main.js',
                 ],
                 tasks: ['cachebreaker:mainjs']
+            },
+            homepagejs:{
+                files: [
+                'js/homepage.js',
+                ],
+                tasks: ['cachebreaker:homepagejs']
             },
             icons:{
                 files: ['images/icons/*'],
@@ -79,6 +85,14 @@ module.exports = function(grunt) {
             }
         },
         cachebreaker: {
+            homepagejs: {
+                options: {
+                    match: ['homepage.js'],
+                },
+                files: {
+                    src: ['index.html']
+                }
+            },
             mainjs: {
                 options: {
                     match: ['main.js'],

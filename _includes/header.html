@@ -1,12 +1,31 @@
-<header class="{{ page.headerClass }}">
-	<div class="container">
+<header class="header {{ page.headerClass }}">
+	<div class="container container-full">
 		<div>
-			<a href="/"><img src="/images/logo.svg?v=5"/></a>
+			<a class="logo" href="/"><img src="/images/icon-naked.svg"/><span>Slash</span></a>
 			<nav>
 				<a href="/pricing">Pricing</a>
 				<a class="hidden-xs" href="https://slash.nolt.io/" target="_blank">Support</a>
-				<a href="/download">Download</a>
+				<a class="btn btn-default btn-sm try-it">Try it now</a>
 			</nav>
 		</div>
 	</div>
 </header>
+
+<div class="modal try">
+	<div>
+		<h2>What's your email?</h2>
+		<p>(We'll send you a download link)</p>
+		<div class="btn-container subscribe-form subscribe download-form">
+			<form class="button-form">
+				<input type="email" class="form-control input-xl" name="EMAIL" placeholder="Email"/>
+				<button type="submit" class="btn btn-xl btn-default">
+					<img class="loading" src="images/loading.svg"/>
+					<img class="send" src="images/send.svg"/>
+					<img class="checkmark" src="images/checkmark.svg"/>
+					<span></span>
+				</button>
+			</form>
+			<span class="result"></span>
+		</div>
+	</div>
+</div>

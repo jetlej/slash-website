@@ -3154,7 +3154,7 @@ body {
     margin: 12px;
     text-align: center;
     padding: 60px 20px;
-    box-shadow: 0 0 25px rgba(0, 0, 0, 0.5); }
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25); }
     @media (max-width: 991px) {
       .modal > div {
         border-radius: 10px; } }
@@ -4009,10 +4009,10 @@ p {
     .hero h2 u {
       font-weight: 500; }
   .hero .btn-container {
-    margin: 75px auto !important; }
+    margin: 75px auto 110px !important; }
     @media (max-width: 991px) {
       .hero .btn-container {
-        margin: 50px auto !important; } }
+        margin: 50px auto 85px !important; } }
 
 .sub-hero {
   height: 100vh;
@@ -4038,7 +4038,7 @@ p {
     text-align: center;
     position: relative;
     z-index: 3;
-    text-shadow: 0 0 20px black; }
+    text-shadow: 0 5px 15px rgba(0, 0, 0, 0.5); }
     @media (max-width: 991px) {
       .sub-hero p {
         font-size: 2.2rem;

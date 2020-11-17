@@ -126,6 +126,10 @@ $(function(){
     		},
     		error: function (xhr, error) {
     			var message = xhr.responseText || "Something went wrong! Please refresh the page and try again."
+    			if (message === 'User already exists') {
+    				window.location = '/get-started'
+    				return
+    			}
     			$resultElement.addClass('error')
     			$resultElement.html(message);
     			$('.subscribe-form').removeClass('submitting').addClass('submit')

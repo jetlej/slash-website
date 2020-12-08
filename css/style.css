@@ -4828,10 +4828,10 @@ p {
       margin: 2px 0; }
 
 .download-buttons .btn-container .btn {
-  width: 170px; }
+  min-width: 170px; }
   @media (max-width: 991px) {
     .download-buttons .btn-container .btn {
-      width: 200px; } }
+      min-width: 200px; } }
 .download-buttons .btn-container .btn, .download-buttons .btn-container img {
   margin: 0 3px; }
   @media (max-width: 991px) {

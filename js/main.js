@@ -37,10 +37,10 @@ $(function(){
 			$('#download-mac').attr('href', macUrl)
 			$('#download-windows').attr('href', windowsUrl)
 			if(platform === 'Mac OS') { 
-				$('.cta').data('platform', 'Mac').attr('href', macUrl)
+				$('.download').data('platform', 'Mac').attr('href', macUrl)
 			}
 			else if(platform === 'Windows') {
-				$('.cta').data('platform', 'Windows').attr('href', windowsUrl)
+				$('.download').data('platform', 'Windows').attr('href', windowsUrl)
 			}
 		})
 	}

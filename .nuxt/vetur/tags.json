@@ -16,5 +16,11 @@
   },
   "LazyModalSignup": {
     "description": "Auto imported from components/modal-signup.vue"
+  },
+  "Testimonials": {
+    "description": "Auto imported from components/testimonials.vue"
+  },
+  "LazyTestimonials": {
+    "description": "Auto imported from components/testimonials.vue"
   }
 }

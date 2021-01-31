@@ -214,6 +214,13 @@
       </div>
     </section>
 
+    <div style="margin-top: 2000px;">
+      <h2 class="text-center text-3xl sm:text-5xl leading-tight font-bold m-0">
+        ...and people love Slash
+      </h2>
+      <Testimonials />
+    </div>
+
     <section class="so-much-more">
       <div class="container">
         <h2 class="center">+30 features to help you get more done</h2>
@@ -627,6 +634,7 @@
 <script>
 import { mixin as clickaway } from 'vue-clickaway'
 var validator = require('email-validator')
+import Testimonials from '../components/testimonials'
 
 export default {
   data() {
@@ -642,6 +650,9 @@ export default {
       },
       mobileNavActive: false
     }
+  },
+  components: {
+    Testimonials
   },
   mixins: [clickaway],
   async mounted() {

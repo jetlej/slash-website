@@ -651,7 +651,7 @@ $(function() {
     offset: 200,
     handler: function(direction) {
       createTimeChart()
-      waypoint1.destroy()
+      this.destroy()
     }
   })
 

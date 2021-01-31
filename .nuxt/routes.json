@@ -1,5 +1,33 @@
 [
   {
+    "name": "beta",
+    "path": "/beta",
+    "component": "/Users/jetlej/Projects/Slash/repos/slash-homepage/pages/beta.vue",
+    "chunkName": "pages/beta",
+    "_name": "_3e308f74"
+  },
+  {
+    "name": "download",
+    "path": "/download",
+    "component": "/Users/jetlej/Projects/Slash/repos/slash-homepage/pages/download.vue",
+    "chunkName": "pages/download",
+    "_name": "_12f34fde"
+  },
+  {
+    "name": "get-started",
+    "path": "/get-started",
+    "component": "/Users/jetlej/Projects/Slash/repos/slash-homepage/pages/get-started.vue",
+    "chunkName": "pages/get-started",
+    "_name": "_baa9bdb8"
+  },
+  {
+    "name": "linux",
+    "path": "/linux",
+    "component": "/Users/jetlej/Projects/Slash/repos/slash-homepage/pages/linux.vue",
+    "chunkName": "pages/linux",
+    "_name": "_e2240ce4"
+  },
+  {
     "name": "pricing",
     "path": "/pricing",
     "component": "/Users/jetlej/Projects/Slash/repos/slash-homepage/pages/pricing.vue",
@@ -19,6 +47,13 @@
     "component": "/Users/jetlej/Projects/Slash/repos/slash-homepage/pages/redirect.vue",
     "chunkName": "pages/redirect",
     "_name": "_0985b532"
+  },
+  {
+    "name": "signup",
+    "path": "/signup",
+    "component": "/Users/jetlej/Projects/Slash/repos/slash-homepage/pages/signup.vue",
+    "chunkName": "pages/signup",
+    "_name": "_9c7b7024"
   },
   {
     "name": "terms",

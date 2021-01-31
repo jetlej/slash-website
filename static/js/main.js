@@ -1,6 +1,5 @@
 $(function() {
   $('.try-it').on('click', function() {
-    console.log('clicked')
     $('.modal')
       .addClass('visible')
       .find('button')

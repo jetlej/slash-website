@@ -22,6 +22,12 @@ body {
     }
   }
 
+  &.hide-footer {
+    footer {
+      display: none;
+    }
+  }
+
   &.locked {
     overflow: hidden;
   }
@@ -2540,7 +2546,6 @@ p {
 footer {
   text-align: center;
   padding: 30px 25px 25px;
-  background: white;
 
   small {
     font-weight: 600;

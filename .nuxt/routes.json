@@ -1,0 +1,37 @@
+[
+  {
+    "name": "pricing",
+    "path": "/pricing",
+    "component": "/Users/jetlej/Projects/Slash/repos/slash-homepage/pages/pricing.vue",
+    "chunkName": "pages/pricing",
+    "_name": "_d5d0d240"
+  },
+  {
+    "name": "privacy",
+    "path": "/privacy",
+    "component": "/Users/jetlej/Projects/Slash/repos/slash-homepage/pages/privacy.vue",
+    "chunkName": "pages/privacy",
+    "_name": "_dc572cbc"
+  },
+  {
+    "name": "redirect",
+    "path": "/redirect",
+    "component": "/Users/jetlej/Projects/Slash/repos/slash-homepage/pages/redirect.vue",
+    "chunkName": "pages/redirect",
+    "_name": "_0985b532"
+  },
+  {
+    "name": "terms",
+    "path": "/terms",
+    "component": "/Users/jetlej/Projects/Slash/repos/slash-homepage/pages/terms.vue",
+    "chunkName": "pages/terms",
+    "_name": "_573870a1"
+  },
+  {
+    "name": "index",
+    "path": "/",
+    "component": "/Users/jetlej/Projects/Slash/repos/slash-homepage/pages/index.vue",
+    "chunkName": "pages/index",
+    "_name": "_a58a9b28"
+  }
+]

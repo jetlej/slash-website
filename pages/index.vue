@@ -214,9 +214,9 @@
       </div>
     </section>
 
-    <div style="margin-top: 2000px;">
-      <h2 class="text-center text-3xl sm:text-5xl leading-tight font-bold m-0">
-        ...and people love Slash
+    <div style="margin-top: 3000px;">
+      <h2 class="text-center text-3xl sm:text-5xl leading-tight font-bold mb-10">
+        ...and it works
       </h2>
       <Testimonials />
     </div>

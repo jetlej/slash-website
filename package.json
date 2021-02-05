@@ -23,7 +23,8 @@
     "tailwindcss-container-sizes": "^1.0.2",
     "tls": "0.0.1",
     "vue-clickaway": "^2.2.2",
-    "vue-plyr": "^6.0.4"
+    "vue-plyr": "^6.0.4",
+    "vue-slick-carousel": "^1.0.6"
   },
   "devDependencies": {
     "@nuxtjs/tailwindcss": "^3.1.0",

@@ -1,7 +1,4 @@
 {
-  "name": "slash-website",
-  "short_name": "slash-website",
-  "description": "## Build Setup",
   "icons": [],
   "start_url": "/?standalone=true",
   "display": "standalone",

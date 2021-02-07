@@ -330,7 +330,7 @@ $(function() {
     .setTween(TweenMax.from('.sub-hero .desktop-bg', 1, { opacity: 0 }))
     .addTo(controller)
 
-  var subHeroPin = new ScrollMagic.Scene({
+  var subHeroPin1 = new ScrollMagic.Scene({
     triggerElement: '.sub-hero',
     triggerHook: 'onLeave',
     duration: 3000
@@ -338,7 +338,7 @@ $(function() {
     .setPin('.sub-hero', { pushFollowers: true })
     .addTo(controller)
 
-  var subHeroPin = new ScrollMagic.Scene({
+  var subHeroPin2 = new ScrollMagic.Scene({
     triggerElement: '.sub-hero',
     triggerHook: 'onLeave',
     duration: 500,
@@ -348,7 +348,7 @@ $(function() {
     .on('leave', startTimer)
     .addTo(controller)
 
-  var subHeroPin = new ScrollMagic.Scene({
+  var subHeroPin3 = new ScrollMagic.Scene({
     triggerElement: '.sub-hero',
     triggerHook: 'onLeave',
     duration: 500,
@@ -358,7 +358,7 @@ $(function() {
     .on('leave', startTimer)
     .addTo(controller)
 
-  var subHeroPin = new ScrollMagic.Scene({
+  var subHeroPin4 = new ScrollMagic.Scene({
     triggerElement: '.flow',
     triggerHook: 'onEnter',
     duration: 500,
@@ -667,6 +667,23 @@ $(function() {
     handler: function(direction) {
       $('.feature-integrations').addClass('active')
     }
+  })
+
+  $('.hero').on('click', function () {
+    let offset = subHeroPin4.scrollOffset()
+
+    $('html, body').animate({
+        scrollTop: offset
+    }, {
+      duration: 4000,
+      easing: 'swing'
+    })
+
+    /*window.scroll({
+      top: offset,
+      left: 0,
+      behavior: 'smooth'
+    })*/
   })
 
   /*

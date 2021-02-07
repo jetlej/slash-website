@@ -16,7 +16,7 @@
       </div>
     </section>
 
-    <section class="sub-hero">
+    <section id="focus-mode" class="sub-hero">
       <div class="desktop-bg"></div>
       <div class="container">
         <h2>

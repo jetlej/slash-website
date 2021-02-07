@@ -21,7 +21,7 @@
       <div class="container">
         <h2>
           <p>Slash is a tiny helper that keeps you organized and focused.</p>
-          <p>This is how it works…</p>
+          <p>Scroll down to see how it works…</p>
         </h2>
       </div>
     </section>

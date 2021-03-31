@@ -1,0 +1,26 @@
+@font-face {
+  font-family: 'Eina';
+  src: local('Eina'), url('../fonts/eina-01-bold.woff2') format('woff2'),
+    url('../fonts/eina-01-bold.woff') format('woff'),
+    url('../fonts/eina-01-bold.ttf') format('ttf'),
+    url('../fonts/eina-01-bold.eot?#iefix') format('eot');
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'Eina';
+  src: local('Eina'), url('../fonts/eina-01-semibold.woff2') format('woff2'),
+    url('../fonts/eina-01-semibold.woff') format('woff'),
+    url('../fonts/eina-01-semibold.ttf') format('ttf'),
+    url('../fonts/eina-01-semibold.eot?#iefix') format('eot');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'Eina';
+  src: local('Eina'), url('../fonts/eina-01-regular.woff2') format('woff2'),
+    url('../fonts/eina-01-regular.woff') format('woff'),
+    url('../fonts/eina-01-regular.ttf') format('ttf'),
+    url('../fonts/eina-01-regular.eot?#iefix') format('eot');
+  font-weight: 400;
+}

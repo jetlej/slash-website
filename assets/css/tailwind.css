@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap');
+
+/* purgecss start ignore */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+/* purgecss end ignore */
+@import 'tailwindcss/utilities';
+
+@layer components {
+  .min-h-screen-fixed {
+    min-height: calc(100vh - 42px);
+    min-height: calc(var(--vh, 1vh) * 100 - 42px);
+
+    @screen xs {
+      min-height: calc(100vh - 56px);
+      min-height: calc(var(--vh, 1vh) * 100 - 56px);
+    }
+
+    @screen sm {
+      min-height: 100vh;
+      min-height: calc(var(--vh, 1vh) * 100);
+    }
+  }
+
+  /*
+  .btn {
+    @apply block bg-white text-black font-bold rounded-full max-w-full text-center py-2 w-64 text-xl border-black flex items-center justify-center cursor-pointer;
+    border-width: 3px;
+
+    &.btn-lg {
+      @apply py-3 text-xl;
+      width: 240px;
+
+      @screen xs{
+        @apply text-2xl;
+        width: 240px;
+      }
+
+      @screen sm{
+        @apply py-4;
+        width: 350px;
+      }
+    }
+
+    &.btn-sm {
+      @apply w-56 text-base py-1;
+
+      @screen xs{
+        @apply py-2;
+      }
+
+      @screen sm{
+        @apply text-lg;
+      }
+    }
+
+    &.btn-white {
+      @apply bg-white text-blue border-blue border-2;
+    }
+
+    &.btn-blue {
+      @apply text-white border-0;
+      background: #006caf;
+
+      &:hover{
+        background: #0074b7;
+      }
+    }
+  }
+  */
+}
+
+/*
+
+.input {
+  @apply appearance-none block w-full bg-gray-200 text-gray-700 border-solid border-2 border-gray-500 rounded px-5 leading-tight;
+  height: 40px;
+
+  &:focus {
+    @apply outline-none border-gray-500;
+  }
+
+  &::placeholder {
+    @apply text-gray-600;
+  }
+}
+
+.input-lg {
+  @apply text-base;
+  height: 50px;
+
+  @media (min-width: 640px) {
+    height: 60px;
+  }
+}
+
+*/

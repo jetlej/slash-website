@@ -287,8 +287,8 @@ h3 {
     height: 30px;
     line-height: 30px;
     font-size: 1rem !important;
-    top: 25px;
-    display: none;
+    top: 18px;
+    right: 25px;
   }
 }
 
@@ -298,7 +298,7 @@ header {
   transform: translate3d(0, 0, 0) !important;
 
   @media (max-width: $screen-xs-max) {
-    padding: 25px 0 0;
+    padding: 15px 0 0;
   }
 
   > div > div {
@@ -387,7 +387,7 @@ body.homepage .header {
     opacity: 0;
 
     @media (max-width: $screen-sm-max) {
-      opacity: 1;
+      // opacity: 1;
     }
   }
 }

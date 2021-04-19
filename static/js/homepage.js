@@ -593,8 +593,8 @@ $(function() {
   var hideAppWindow = new ScrollMagic.Scene({
     triggerElement: '.so-much-more',
     triggerHook: 'onEnter',
-    duration: 750,
-    offset: -500
+    duration: 500,
+    offset: -850
   })
     .setTween(
       TweenMax.to('.app-window', 1, {

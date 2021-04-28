@@ -30,7 +30,7 @@ export default {
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.png' }],
     script: [
       { src: '/js/jquery-1.12.0.min.js', body: true },
-      { src: '/js/main.js', body: true }
+      { src: '/js/main.js', body: true },
       { src: 'https://www.googleoptimize.com/optimize.js?id=GTM-WRJRZJC'}
     ]
   },

@@ -1,1 +1,5 @@
-export default []
+import adhd from './adhd'
+
+export default [
+  adhd
+]

@@ -710,13 +710,13 @@ export default {
   },
   head() {
     return {
-      title: 'Slash - The ultimate app for do-ers.',
+      title: 'Slash - The digital cure for ADHD.',
       meta: [
         {
           hid: 'description',
           name: 'description',
           content:
-            'A new breed of productivity app. Slice through your to-do lists by staying focused and in flow.'
+            'Distracted easily? Slash helps you focus on one task at a time and crush your day.'
         }
       ],
       bodyAttrs: {

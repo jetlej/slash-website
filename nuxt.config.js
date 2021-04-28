@@ -31,6 +31,7 @@ export default {
     script: [
       { src: '/js/jquery-1.12.0.min.js', body: true },
       { src: '/js/main.js', body: true }
+      { src: 'https://www.googleoptimize.com/optimize.js?id=GTM-WRJRZJC'}
     ]
   },
 
@@ -48,7 +49,6 @@ export default {
 
   // Modules (https://go.nuxtjs.dev/config-modules)
   modules: [
-    'nuxt-google-optimize',
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
     'cookie-universal-nuxt',

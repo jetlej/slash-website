@@ -48,6 +48,7 @@ export default {
 
   // Modules (https://go.nuxtjs.dev/config-modules)
   modules: [
+    'nuxt-google-optimize',
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
     'cookie-universal-nuxt',

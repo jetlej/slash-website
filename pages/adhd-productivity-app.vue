@@ -11,7 +11,7 @@
 
     <section class="hero">
       <div class="container">
-        <h1>The anti-ADHD app.</h1>
+        <h1>{{ heroH1 }} </h1>
         <h2>Slash helps you <u>focus</u> and <u>crush</u> your todo list.</h2>
       </div>
     </section>
@@ -656,6 +656,9 @@ export default {
   },
   mixins: [clickaway],
   async mounted() {
+    console.log('this.$exp')
+    console.log(this.$exp)
+
     if (process.client) {
       // Mobile 100vh fix
       let vh = window.innerHeight * 0.01
@@ -706,6 +709,12 @@ export default {
   computed: {
     subscribeText() {
       return !this.loading ? 'Submit' : 'Sending...'
+    },
+    heroH1 () {
+      if (this.$exp && this.$exp.name.includes('hero-h1') && this.$exp.$activeVariants && this.$exp.$activeVariants[0].text) {
+        return this.$exp.$activeVariants[0].text
+      }
+      return 'The anti-ADHD app.'
     }
   },
   head() {

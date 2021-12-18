@@ -716,7 +716,7 @@ export default {
           hid: 'description',
           name: 'description',
           content:
-            'A new breed of productivity app. Slice through your to-do lists by staying focused and in flow.'
+            'A new breed of productivity app. Slash through your to-do lists by staying focused and in flow.'
         }
       ],
       bodyAttrs: {

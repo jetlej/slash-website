@@ -5405,9 +5405,9 @@ minimatch@^3.0.4:
     brace-expansion "^1.1.7"
 
 minimist@^1.1.1, minimist@^1.2.0, minimist@^1.2.5:
-  version "1.2.5"
-  resolved "https://registry.yarnpkg.com/minimist/-/minimist-1.2.5.tgz#67d66014b66a6a8aaa0c083c5fd58df4e4e97602"
-  integrity sha512-FM9nNUYrRBAELZQT3xeZQ7fmMOBg6nWNmJKTcgsJeaLstP/UODVpGsr5OhXhhXg6f+qtJ8uiZ+PUxkDWcgIXLw==
+  version "1.2.6"
+  resolved "https://registry.yarnpkg.com/minimist/-/minimist-1.2.6.tgz#8637a5b759ea0d6e98702cfb3a9283323c93af44"
+  integrity sha512-Jsjnk4bw3YJqYzbdyBiNsPWHPfO++UGG749Cxs6peCu5Xg4nrena6OVxOYxrQTqww0Jmwt+Ref8rggumkTLz9Q==
 
 minipass-collect@^1.0.2:
   version "1.0.2"
@@ -5726,6 +5726,14 @@ nuxt-facebook-pixel-module@^1.4.0:
   integrity sha512-TWM7iv1tLD80NMFDqmv4GrdpE4jkPihcztajeJm6B7TklymR0Jgz3NZ14CzeXRS7FJDJeyZaxmpkcPga1uSiRA==
   dependencies:
     minimatch "^3.0.4"
+
+nuxt-google-optimize@^0.5.4:
+  version "0.5.4"
+  resolved "https://registry.yarnpkg.com/nuxt-google-optimize/-/nuxt-google-optimize-0.5.4.tgz#968e3d762858f0d67c2f8df935884732b732a282"
+  integrity sha512-DSa5Y5isQI9mUikeqHbeqqzFDDIWhlilJAdVguvgt9GRU7mZgPlC7w0eL5DYd8Z7SEjzT3B4dLUmdtC7eGutQw==
+  dependencies:
+    cookie "^0.3.1"
+    weighted-random "^0.1.0"
 
 nuxt@^2.14.6:
   version "2.15.3"
@@ -8804,6 +8812,11 @@ webpackbar@^4.0.0:
     std-env "^2.2.1"
     text-table "^0.2.0"
     wrap-ansi "^6.0.0"
+
+weighted-random@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/weighted-random/-/weighted-random-0.1.0.tgz#3a5469a649fc39c067e217d91b18f7402541156d"
+  integrity sha1-OlRppkn8OcBn4hfZGxj3QCVBFW0=
 
 which-boxed-primitive@^1.0.2:
   version "1.0.2"

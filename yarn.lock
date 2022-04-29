@@ -1866,9 +1866,9 @@ async-each@^1.0.1:
   integrity sha512-z/WhQ5FPySLdvREByI2vZiTWwCnF0moMJ1hK9YQwDTHKh6I7/uSckMetoRGb5UBZPC1z0jlw+n/XCgjeH7y1AQ==
 
 async@^2.6.2:
-  version "2.6.3"
-  resolved "https://registry.yarnpkg.com/async/-/async-2.6.3.tgz#d72625e2344a3656e3a3ad4fa749fa83299d82ff"
-  integrity sha512-zflvls11DCy+dQWzTW2dzuilv8Z5X/pjfmZOWba6TNIVDm+2UDaJmXSOXlasHKfNBs8oo3M0aT50fDEWfKZjXg==
+  version "2.6.4"
+  resolved "https://registry.yarnpkg.com/async/-/async-2.6.4.tgz#706b7ff6084664cd7eae713f6f965433b5504221"
+  integrity sha512-mzo5dfJYwAn29PeiJ0zvwTo04zj8HDJj0Mn8TD7sno7q12prdbnasKJHhkm2c1LgrhlJ0teaea8860oxi51mGA==
   dependencies:
     lodash "^4.17.14"
 
@@ -5727,6 +5727,14 @@ nuxt-facebook-pixel-module@^1.4.0:
   dependencies:
     minimatch "^3.0.4"
 
+nuxt-google-optimize@^0.5.4:
+  version "0.5.4"
+  resolved "https://registry.yarnpkg.com/nuxt-google-optimize/-/nuxt-google-optimize-0.5.4.tgz#968e3d762858f0d67c2f8df935884732b732a282"
+  integrity sha512-DSa5Y5isQI9mUikeqHbeqqzFDDIWhlilJAdVguvgt9GRU7mZgPlC7w0eL5DYd8Z7SEjzT3B4dLUmdtC7eGutQw==
+  dependencies:
+    cookie "^0.3.1"
+    weighted-random "^0.1.0"
+
 nuxt@^2.14.6:
   version "2.15.3"
   resolved "https://registry.yarnpkg.com/nuxt/-/nuxt-2.15.3.tgz#6262707de8a824df0718fc88653c74a916aa5122"
@@ -8804,6 +8812,11 @@ webpackbar@^4.0.0:
     std-env "^2.2.1"
     text-table "^0.2.0"
     wrap-ansi "^6.0.0"
+
+weighted-random@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/weighted-random/-/weighted-random-0.1.0.tgz#3a5469a649fc39c067e217d91b18f7402541156d"
+  integrity sha1-OlRppkn8OcBn4hfZGxj3QCVBFW0=
 
 which-boxed-primitive@^1.0.2:
   version "1.0.2"
